@@ -54,12 +54,23 @@ class ContactUSController extends Controller
     {
         try {
             $this->validateRequest($request);
+
             // if (!$request->input('h-captcha-response')) {
             //     Flash::error('Please complete the captcha verification');
             //     return back()->withInput();
             // }
-            // $this->verifyCaptcha($request);
-            $ip = $this->validateIpSubmissions($request);
+            $this->verifyCaptcha($request);
+
+            try {
+                $ip = $this->validateIpSubmissions($request);
+            } catch (\Exception $e) {
+                // Specifically catch and display the IP submission limit error
+                if (strpos($e->getMessage(), 'Daily submission limit reached') !== false) {
+                    Flash::warning($e->getMessage());
+                    return back()->withInput();
+                }
+                throw $e; // Re-throw if it's a different error
+            }
 
             $contactData = $this->processContactData($request);
             $attachment = $this->handleFileUpload($request);
@@ -100,6 +111,7 @@ class ContactUSController extends Controller
         }
     }
 
+
     private function validateRequest(Request $request)
     {
         try {
@@ -111,6 +123,12 @@ class ContactUSController extends Controller
 
             if ($request->from_page == 'contactus') {
                 $rules['phone'] = 'required';
+            }
+
+            // For the WDD page form (service page)
+            if ($request->from_page == 'service') {
+                $rules['phone'] = 'required';
+                $rules['document'] = 'required|file|max:10240'; // 10MB max file size
             }
 
             return $request->validate($rules);
@@ -147,6 +165,10 @@ class ContactUSController extends Controller
     {
         try {
             if (!$request->hasFile('document')) {
+                // For service page form, document is required
+                if ($request->from_page == 'service') {
+                    throw new \Exception('Document upload is required');
+                }
                 return null;
             }
 
@@ -191,7 +213,7 @@ class ContactUSController extends Controller
             'aboutus' => 'Message from About Us page',
             'languages' => 'Message from Languages page',
             'documents' => 'Message from Documents page',
-            'service' => 'Message from Service Page',
+            'service' => 'Message from Web Design & Development Page',
             'bespoke_service' => 'Message from Bespoke Service Page'
         ];
 
