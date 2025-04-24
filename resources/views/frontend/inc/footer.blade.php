@@ -7,11 +7,11 @@
         </div>
         <div class="footer_top_two">
             <div class="footer_top_two_top">
-                <button class="btn footer_link" onclick="window.location.href='{{ route('request_translation') }}'">Our Services</button>
+                <button class="btn footer_link" onclick="window.location.href='#'">Our Services</button>
                 <img src="{{ asset('frontend/Lingosphere/img/circle.svg') }}" alt="" class="img-fluid mobile_none">
                 <button class="btn footer_link" onclick="window.location.href='{{ route('aboutus') }}'">About us</button>
                 <img src="{{ asset('frontend/Lingosphere/img/circle.svg') }}" alt="" class="img-fluid mobile_none">
-                <button class="btn footer_link" onclick="window.location.href='{{ route('careers') }}'">Join us</button>
+                <button class="btn footer_link" onclick="window.location.href='#'">Join us</button>
                 <img src="{{ asset('frontend/Lingosphere/img/circle.svg') }}" alt="" class="img-fluid mobile_none">
                 <button class="btn footer_link" onclick="window.location.href='{{ route('faqs') }}'">FAQ's</button>
                 <img src="{{ asset('frontend/Lingosphere/img/circle.svg') }}" alt="" class="img-fluid mobile_none">

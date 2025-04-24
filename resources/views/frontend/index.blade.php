@@ -25,7 +25,7 @@
                                 seamless interactions across the globe.
                             </p>
                             <button class="btn btn_big_hs1"
-                                onclick="window.location.href='{{ route('request_translation') }}'">
+                                onclick="window.location.href='#'">
                                 Start Here
                                 <div class="circ">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="14" height="15"
@@ -245,7 +245,7 @@
                     </div>
 
                     <button class="btn green_btn forphone_100width"
-                        onclick="window.location.href='{{ route('request_translation') }}'">
+                        onclick="window.location.href='#'">
 
                         <div class="mobile_none">
                             Start Today
@@ -531,7 +531,7 @@
                     </div>
                 </div>
                 <button class="btn green_btn forphone_100width mx-auto"
-                    onclick="window.location.href='{{ route('certified_translation') }}'">
+                    onclick="window.location.href='#'">
                     Explore all services
                 </button>
             </div>

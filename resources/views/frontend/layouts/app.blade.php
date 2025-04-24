@@ -76,23 +76,9 @@
                             <div class="dropped_div d-none" id="service_drop">
                                 <img src="{{ asset('frontend/Lingosphere/img/polygon_trigonal.svg') }}" alt=""
                                     class="img-fluid poly_img">
-                                <button
-                                    class="btn btn_header_service {{ request()->routeIs('certified_translation') ? 'active' : '' }}"
-                                    onclick="window.location.href='{{ route('certified_translation') }}'">Certified
-                                    translation</button>
-                                <button
-                                    class="btn btn_header_service {{ request()->routeIs('standard_translation') ? 'active' : '' }}"
-                                    onclick="window.location.href='{{ route('standard_translation') }}'">Standard
-                                    translation</button>
+                                
                                 <div class="dotted"></div>
-                                <button
-                                    class="btn btn_header_service {{ request()->routeIs('languages') ? 'active' : '' }}"
-                                    onclick="window.location.href='{{ route('languages') }}'">Supported
-                                    languages</button>
-                                <button
-                                    class="btn btn_header_service {{ request()->routeIs('documents') ? 'active' : '' }}"
-                                    onclick="window.location.href='{{ route('documents') }}'">Supported
-                                    documents</button>
+                               
                                 <div class="dotted"></div>
                                 <button class="btn btn_header_service {{ request()->routeIs('seo') ? 'active' : '' }}"
                                     onclick="window.location.href='{{ route('seo') }}'">SEO
@@ -119,10 +105,7 @@
                             onclick="window.location.href='{{ route('aboutus') }}'">
                             About Us
                         </button>
-                        <button class="btn btn_header_link {{ request()->routeIs('careers') ? 'active' : '' }}"
-                            onclick="window.location.href='{{ route('careers') }}'">
-                            Join us
-                        </button>
+                       
                         <button class="btn btn_header_link {{ request()->routeIs('faqs') ? 'active' : '' }}"
                             onclick="window.location.href='{{ route('faqs') }}'">
                             FAQ's
