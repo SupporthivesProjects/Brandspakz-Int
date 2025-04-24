@@ -221,7 +221,7 @@
                 <div class="header_main_container">
                     <div class="header_left">
                         <a href="./index.html">
-                            <img src="./assets/img/header_bg_trans_logo_.svg" alt="" class="img-fluid header_logo">
+                            <img src="{{ asset('frontend/BrandSparkz/assets/img/header_bg_trans_logo_.svg') }}" alt="" class="img-fluid header_logo">
                         </a>
                     </div>
                     <div class="header_center">
