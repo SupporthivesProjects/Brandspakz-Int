@@ -27,15 +27,15 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
-    <link rel="stylesheet" href="{{ ('frontend/BrandSparkz/assets/dist/bootstrap/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ ('public/frontend/BrandSparkz/assets/dist/bootstrap/css/bootstrap.min.css') }}">
 
     
-    <link rel="stylesheet" href="{{ ('frontend/BrandSparkz/assets/dist/owl-carousel/css/owl.carousel.css') }}">
+    <link rel="stylesheet" href="{{ ('public/frontend/BrandSparkz/assets/dist/owl-carousel/css/owl.carousel.css') }}">
 
-    <link rel="stylesheet" href="{{ ('frontend/BrandSparkz/assets/css/m_style.css') }}">
-    <link rel="stylesheet" href="{{ ('frontend/BrandSparkz/assets/css/assets/css/sk_style.css') }}">
-    <link rel="stylesheet" href="{{ ('frontend/BrandSparkz/assets/css/assets/css/main.css') }}">
-    <link rel="stylesheet" href="{{ ('frontend/BrandSparkz/assets/css/assets/css/m_style.css') }}">
+    <link rel="stylesheet" href="{{ ('public/frontend/BrandSparkz/assets/css/m_style.css') }}">
+    <link rel="stylesheet" href="{{ ('public/frontend/BrandSparkz/assets/css/assets/css/sk_style.css') }}">
+    <link rel="stylesheet" href="{{ ('public/frontend/BrandSparkz/assets/css/assets/css/main.css') }}">
+    <link rel="stylesheet" href="{{ ('public/frontend/BrandSparkz/assets/css/assets/css/m_style.css') }}">
 
     <!-- Box Icons -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
@@ -504,14 +504,14 @@
     
 
    
-    <script src="{{ ('frontend/BrandSparkz/assets/dist/bootstrap/js/bootstrap.popper.min.js') }}"></script>
-    <script src="{{ ('frontend/BrandSparkz/assets/dist/bootstrap/js/bootstrap.min.js') }}"></script>
+    <script src="{{ ('public/frontend/BrandSparkz/assets/dist/bootstrap/js/bootstrap.popper.min.js') }}"></script>
+    <script src="{{ ('public/frontend/BrandSparkz/assets/dist/bootstrap/js/bootstrap.min.js') }}"></script>
     
     <!-- Owl Carousel JS Links -->
-    <script src="{{ ('frontend/BrandSparkz/assets/dist/owl-carousel/js/owl.carousel.js') }}"></script>
+    <script src="{{ ('public/frontend/BrandSparkz/assets/dist/owl-carousel/js/owl.carousel.js') }}"></script>
     
     <!-- JS Link -->
-    <script src="{{ ('frontend/BrandSparkz/assets/js/main.js') }}"></script>
+    <script src="{{ ('public/frontend/BrandSparkz/assets/js/main.js') }}"></script>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
