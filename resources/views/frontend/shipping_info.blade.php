@@ -49,37 +49,37 @@
                                 <div class="divitrix">
                                     <div class="">
                                         <input type="text" class="form-control input_global" name="name"
-                                            value="{{ $lastBillingAddress->name }}" placeholder="First Name" form="shippingAddress"
+                                           value="{{ $lastBillingAddress->name ?? '' }}" placeholder="First Name" form="shippingAddress"
                                             required>
                                     </div>
                                     <div class="">
                                         <input type="text" class="form-control input_global" name="lname"
-                                            value="{{ $lastBillingAddress->lname }}" placeholder="Last name" form="shippingAddress"
+                                            value="{{ $lastBillingAddress->lname ?? '' }}" placeholder="Last name" form="shippingAddress"
                                             required>
                                     </div>
                                     <div class="">
                                         <input type="email" class="form-control input_global" name="email"
-                                            value="{{ $lastBillingAddress->email }}" placeholder="Email address" form="shippingAddress"
+                                            value="{{ $lastBillingAddress->email ?? '' }}" placeholder="Email address" form="shippingAddress"
                                             readonly>
                                     </div>
                                     <div class="">
                                         <input type="tel" class="form-control input_global" name="phone"
-                                            value="{{ $lastBillingAddress->phone }}" placeholder="Phone" form="shippingAddress" required>
+                                            value="{{ $lastBillingAddress->phone ?? '' }}" placeholder="Phone" form="shippingAddress" required>
                                     </div>
                                     <div class="">
-                                        <input type="date" class="form-control input_global" value="{{ $lastBillingAddress->dob }}"
+                                        <input type="date" class="form-control input_global" value="{{ $lastBillingAddress->dob ?? '' }}"
                                             id="dob" name="dob" placeholder="Date of birth"
                                             max="@php echo date('Y-m-d',strtotime('18 years ago')); @endphp"
                                             form="shippingAddress" required>
                                     </div>
                                     <div class="">
                                         <input type="text" class="form-control input_global" name="address"
-                                            value="{{ $lastBillingAddress->address }}" placeholder="Address Line 1" form="shippingAddress"
+                                            value="{{ $lastBillingAddress->address ?? '' }}" placeholder="Address Line 1" form="shippingAddress"
                                             required>
                                     </div>
                                     <div class="">
                                         <input type="text" class="form-control input_global" name="addressL2"
-                                            value="{{ $lastBillingAddress->addressL2 }}" placeholder="Address Line 2"
+                                            value="{{ $lastBillingAddress->addressL2 ?? '' }}" placeholder="Address Line 2"
                                             form="shippingAddress">
                                     </div>
                                     <div class="">
@@ -91,18 +91,18 @@
                                             <!--<option value="2">Two</option>-->
                                             <!--<option value="3">Three</option>-->
                                             @foreach (\App\Models\Country::all() as $key => $country)
-                                                <option value="{{ $country->code }}">{{ $country->name }}</option>
+                                                <option value="{{ $country->code ?? '' }}">{{ $country->name }}</option>
                                             @endforeach
                                         </select>
                                     </div>
                                     <div class="">
                                         <input type="text" class="form-control input_global" name="city"
-                                            value="{{ $lastBillingAddress->city }}" placeholder="City/Town" form="shippingAddress"
+                                            value="{{ $lastBillingAddress->city ?? '' }}" placeholder="City/Town" form="shippingAddress"
                                             required>
                                     </div>
                                     <div class="">
                                         <input type="text" class="form-control input_global" name="postal_code"
-                                            value="{{ $lastBillingAddress->postal_code }}" placeholder="Zip / Post Code"
+                                            value="{{ $lastBillingAddress->postal_code ?? '' }}" placeholder="Zip / Post Code"
                                             form="shippingAddress" required>
                                     </div>
                                 </div>
@@ -127,13 +127,14 @@
                                 @endphp
                                 @foreach (Session::get('cart') as $key => $cartItem)
                                     @php
+                                        $product = \App\Models\Product::find($cartItem['id']);
                                         $subtotal = $subtotal + round(convert_price($cartItem['price']), 2);
                                     @endphp
+                                     
                                     <div class="cart_box">
                                         <div class="left_cart_name">
-                                            <h4 class="l_c_t">{{ $cartItem['service_title'] }}</h4>
-                                            <h4 class="l_c_s">{{ $cartItem['service_no_of_pages'] }} pages
-                                                ({{ $cartItem['service_no_of_words'] }} words max)
+                                            <h4 class="l_c_t">{{ $product->name }}</h4>
+                                            <h4 class="l_c_s">{{ $product->subscription }}
                                             </h4>
                                         </div>
                                         <div class="right_cart_name">
