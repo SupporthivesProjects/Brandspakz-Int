@@ -17,7 +17,7 @@
                             expert team delivers precise, culturally relevant translations, ensuring your message resonates
                             globally. </p>
                         <button class="btn green_btn forphone_100width"
-                            onclick="window.location.href='{{ route('certified_translation') }}'">
+                            onclick="window.location.href='#'">
                             Discover all services
                         </button>
                     </div>
@@ -139,7 +139,7 @@
 
                         </div>
                         <button class="btn green_btn forphone_100width"
-                            onclick="window.location.href='{{ route('careers') }}'">
+                            onclick="window.location.href='#'">
                             Find out more
                         </button>
                     </div>

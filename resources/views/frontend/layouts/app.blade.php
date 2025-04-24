@@ -10,10 +10,10 @@
     <meta name="robots" content="index, follow">
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>Lingosphere</title>
+    <title>BrandSparkz</title>
 
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="{{ asset('frontend/Lingosphere/img/Fav.png') }}">
+    <link rel="icon" type="image/x-icon" href="{{ asset('frontend/Lingosphere/img/Fav.png') }}') }}">
 
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
@@ -27,12 +27,15 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
-    <link rel="stylesheet" href="{{ asset('frontend/Lingosphere/dist/css/bootstrap.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('frontend/Lingosphere/css/owl.carousel.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('frontend/Lingosphere/css/main.css') }}">
-    <link rel="stylesheet" href="{{ asset('frontend/Lingosphere/css/m_styles.css') }}">
-    <link rel="stylesheet" href="{{ asset('frontend/Lingosphere/css/tirthak_styles.css') }}">
-    <link rel="stylesheet" href="{{ asset('frontend/Lingosphere/css/saakshi.css') }}">
+
+    <link rel="stylesheet" href="{{ asset('frontend/BrandSparkz/assets/dist/bootstrap/css/bootstrap.min.css') }}">
+
+    
+    <link rel="stylesheet" href="{{ asset('frontend/BrandSparkz/assets/dist/owl-carousel/css/owl.carousel.css') }}">
+    <link rel="stylesheet" href="{{ asset('frontend/BrandSparkz/assets/css/main.css') }}">
+    <link rel="stylesheet" href="{{ asset('frontend/BrandSparkz/assets/css/m_style.css') }}">
+    <link rel="stylesheet" href="{{ asset('frontend/BrandSparkz/assets/css/sk_style.css') }}">
+    <link rel="stylesheet" href="{{ asset('frontend/BrandSparkz/assets/css/t_style.css') }}">
 
     <!-- Box Icons -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
@@ -55,171 +58,264 @@
         }
         Session::put('currency_code', $currency_code);
     @endphp
+    
+
+
+    {{-- new header code --}}
+
     <header class="fixed-top">
         <div class="header_top">
             <div class="container desktop_header p-0">
                 <div class="header_main_container">
                     <div class="header_left">
                         <a href="{{ route('home') }}">
-                            <img src="{{ asset('frontend/Lingosphere/img/header_logo.svg') }}" alt="Logo"
-                                class="img-fluid">
+                            <img src="{{ asset('frontend/BrandSparkz/assets/img/header_bg_trans_logo_.svg') }}" alt="" class="img-fluid header_logo">
                         </a>
                     </div>
-                    <div class="header_right">
-                        <!-- Navigation Links -->
-                        <div class="currency_drop_container">
-                            <button class="btn btn_currency_drop" onclick="justDrop('service_drop', 'roter1')">
-                                Our Services
-                                <img src="{{ asset('frontend/Lingosphere/img/drop.svg') }}" alt=""
-                                    class="img-fluid" id="roter1">
+                    <div class="header_center">
+                        <button class="btn btn_header_link {{ request()->routeIs('aboutus') ? 'active' : '' }}"  onclick="window.location.href='{{ route( 'aboutus') }}'">
+                            About
+                        </button>
+                        <div class="header_center_bar"></div>
+                        <div class="service_drop_container">
+                            <button class="btn btn_header_drop" onclick="justDrop('service_drop', 'roter1', this)">
+                                Services
+                                <img src="{{ asset('frontend/brandsparkz/assets/img/drop.svg') }}" alt="" class="img-fluid" id="roter1">
                             </button>
                             <div class="dropped_div d-none" id="service_drop">
-                                <img src="{{ asset('frontend/Lingosphere/img/polygon_trigonal.svg') }}" alt=""
-                                    class="img-fluid poly_img">
-                                <button
-                                    class="btn btn_header_service {{ request()->routeIs('certified_translation') ? 'active' : '' }}"
-                                    onclick="window.location.href='{{ route('certified_translation') }}'">Certified
-                                    translation</button>
-                                <button
-                                    class="btn btn_header_service {{ request()->routeIs('standard_translation') ? 'active' : '' }}"
-                                    onclick="window.location.href='{{ route('standard_translation') }}'">Standard
-                                    translation</button>
-                                <div class="dotted"></div>
-                                <button
-                                    class="btn btn_header_service {{ request()->routeIs('languages') ? 'active' : '' }}"
-                                    onclick="window.location.href='{{ route('languages') }}'">Supported
-                                    languages</button>
-                                <button
-                                    class="btn btn_header_service {{ request()->routeIs('documents') ? 'active' : '' }}"
-                                    onclick="window.location.href='{{ route('documents') }}'">Supported
-                                    documents</button>
-                                <div class="dotted"></div>
-                                <button class="btn btn_header_service {{ request()->routeIs('seo') ? 'active' : '' }}"
-                                    onclick="window.location.href='{{ route('seo') }}'">SEO
-                                    Services</button>
-                                <button class="btn btn_header_service {{ request()->routeIs('ppc') ? 'active' : '' }}"
-                                    onclick="window.location.href='{{ route('ppc') }}'">PPC
-                                    Services</button>
-                                <button class="btn btn_header_service {{ request()->routeIs('orm') ? 'active' : '' }}"
-                                        onclick="window.location.href='{{ route('orm') }}'">ORM
-                                        Services</button>
-                                <button class="btn btn_header_service {{ request()->routeIs('Social') ? 'active' : '' }}"
-                                        onclick="window.location.href='{{ route('social') }}'">SOCIAL
-                                        Services</button>
-                                <button class="btn btn_header_service {{ request()->routeIs('wdd') ? 'active' : '' }}"
-                                        onclick="window.location.href='{{ route('wdd') }}'">WDD
-                                        Services</button>
-                                <button class="btn btn_header_service {{ request()->routeIs('em') ? 'active' : '' }}"
-                                        onclick="window.location.href='{{ route('em') }}'">EM
-                                        Services</button>
+                                <button class="btn btn_orange_header {{ request()->routeIs('seo') ? 'active' : '' }}" onclick="window.location.href='{{ route('seo') }}'">SEO</button>
+                                <button class="btn btn_orange_header {{ request()->routeIs('ppc') ? 'active' : '' }}" onclick="window.location.href='{{ route('ppc') }}'">PPC</button>
+                                <button class="btn btn_orange_header {{ request()->routeIs('orm') ? 'active' : '' }}" onclick="window.location.href='{{ route('orm') }}'">ORM</button>
+                                <button class="btn btn_orange_header {{ request()->routeIs('wdd') ? 'active' : '' }}" onclick="window.location.href='{{ route('wdd') }}'">UX/UI</button>
+                                <button class="btn btn_orange_header {{ request()->routeIs('em') ? 'active' : '' }}" onclick="window.location.href='{{ route('em') }}'">Email</button>
+                                <button class="btn btn_orange_header {{ request()->routeIs('social') ? 'active' : '' }}" onclick="window.location.href='{{ route('social') }}'">Social Media</button>
                             </div>
                         </div>
-
-                        <button class="btn btn_header_link {{ request()->routeIs('aboutus') ? 'active' : '' }}"
-                            onclick="window.location.href='{{ route('aboutus') }}'">
-                            About Us
-                        </button>
-                        <button class="btn btn_header_link {{ request()->routeIs('careers') ? 'active' : '' }}"
-                            onclick="window.location.href='{{ route('careers') }}'">
-                            Join us
-                        </button>
-                        <button class="btn btn_header_link {{ request()->routeIs('faqs') ? 'active' : '' }}"
-                            onclick="window.location.href='{{ route('faqs') }}'">
+                        <div class="header_center_bar"></div>
+                        <button class="btn btn_header_link {{ request()->routeIs('faqs') ? 'active' : '' }}" onclick="window.location.href='{{ route( 'faqs') }}'">
                             FAQ's
                         </button>
-                        <button class="btn btn_header_link {{ request()->routeIs('contactus') ? 'active' : '' }}"
-                            onclick="window.location.href='{{ route('contactus') }}'">
-                            Support
+                        <div class="header_center_bar"></div>
+                        <button class="btn btn_header_link {{ request()->routeIs('contactus') ? 'active' : '' }}" onclick="window.location.href='{{ route( 'contactus') }}'">
+                            Contact Us
                         </button>
-                        <div class="vertical_bar"></div>
-                        <div class="currency_drop_container">
-                            <button class="btn btn_currency_drop" onclick="justDrop('desk_currency_drop', 'roter2')">
-                                {{ $currency_code }}
-                                <img src="{{ asset('frontend/Lingosphere/img/drop.svg') }}" alt=""
-                                    class="img-fluid" id="roter2">
+                        <div class="header_center_bar"></div>
+                        @auth
+                            <button class="btn btn_header_link" onclick="window.location.href='{{ route( 'dashboard') }}'">
+                                My Accont
                             </button>
-                            <div class="dropped_div_currency d-none" id="desk_currency_drop">
-                                <img src="{{ asset('frontend/Lingosphere/img/polygon_trigonal.svg') }}"
-                                    alt="" class="img-fluid poly_img">
+                        @else
+                            <button class="btn btn_header_link {{ request()->routeIs('user.login') ? 'active' : '' }}" onclick="window.location.href='{{ route( 'user.login') }}'">
+                                Login
+                            </button>
+                            <div class="header_center_bar"></div>
+                            <button class="btn btn_header_link {{ request()->routeIs('user.registration') ? 'active' : '' }}" onclick="window.location.href='{{ route( 'user.registration') }}'">
+                                Sign Up
+                            </button>
+                        @endauth
+                        <div class="header_center_bar"></div>
+                        <div class="currency_drop_container">
+                            <button class="btn btn_header_drop" onclick="justDrop('currency_drop', 'roter2', this)">
+                                {{ $currency_code }}
+                                <img src="{{ asset('frontend/brandsparkz/assets/img/drop.svg') }}" alt="" class="img-fluid" id="roter2">
+                            </button>
+                            <div class="dropped_div d-none" id="currency_drop">
                                 @foreach (\App\Models\Currency::getActiveCurrencies() as $key => $currency)
                                     <button
-                                        class="dropdown-item {{ $currency_code == $currency->code ? 'active' : '' }}"
+                                        class="btn btn_orange_header dropdown-item {{ $currency_code == $currency->code ? 'active' : '' }}"
                                         data-currency="{{ $currency->code }}">
                                         {{ $currency->code }} ({{ $currency->symbol }})
                                     </button>
                                 @endforeach
                             </div>
                         </div>
-
-                        {{-- cart dropdown --}}
-                        <button class="btn btn_header_link" onclick="justDrop('cart_drop1', 'cart_items_sidenav')">
-                            <img src="{{ asset('frontend/Lingosphere/img/cart_basket.svg') }}" alt=""
-                                class="img-fluid">
-                            <span>
-                                {{ Session::has('cart') ? count(Session::get('cart')) : '0' }}
-                            </span>
-                        </button>
-
-                        <div class="cart-dropdown d-none" id="cart_drop1">
-                            <div class="cart-items">
+                    </div>
+                    <div class="header_right">
+                        <div class="cart_drop_container">
+                            <button class="btn btn_global" onclick="justDrop('cart_drop', 'roter5', this)"  >
+                                <img src="{{ asset('frontend/brandsparkz/assets/img/btn_primary_pattern.png') }}" alt="" class="img-fluid btn_global_pattern">
+                                <div class="btn_global_inner">
+                                    <img src="{{ asset('frontend/brandsparkz/assets/img/cart_logo.svg') }}" alt="" class="img-fluid cart_logo">
+                                    <p class="cart_text">View Cart</p>
+                                    <span>
+                                        {{ Session::has('cart') ? count(Session::get('cart')) : '0' }}
+                                    </span>
+                                </div>
+                            </button>
+                            <div class="cart_dropper_div d-none" id="cart_drop">
                                 @if (Session::has('cart') && count(Session::get('cart')) > 0)
                                     @foreach (Session::get('cart') as $key => $cartItem)
                                         @php
                                             $product = \App\Models\Product::find($cartItem['id']);
                                         @endphp
-                                        <div class="cart-item">
-                                            <div class="cart-item-img">
-                                                <img src="{{ asset($product->thumbnail_img) }}"
-                                                    alt="{{ $product->name }}">
-                                            </div>
-                                            <div class="cart-item-details">
-                                                <h4>{{ $product->name }}</h4>
-                                                <p>Quantity: {{ $cartItem['quantity'] }}</p>
-                                                <p>Price: {{ single_price($cartItem['price']) }}</p>
-                                            </div>
-                                            <button class="remove-cart-item"
-                                                onclick="removeFromCart({{ $key }})">
-                                                <i class="fa fa-trash"></i>
-                                            </button>
-</div>
-                                    @endforeach
-                                    <div class="cart-footer">
-                                        <div class="total">
-                                            Total:
-                                            {{ single_price(array_sum(array_column(Session::get('cart')->toArray(), 'price'))) }}
+                                <div class="cart_item">
+                                    
+                                    <div class="cart_item_left">
+                                        <p class="cart_item_title">
+                                            {{ $product->name }}
+                                        </p>
+                                        <div class="cart_item_values_div">
+                                            <p class="cart_item_values">x{{ $cartItem['quantity'] }}</p>
+                                            <p class="cart_item_values">1 Month</p>
+                                            <p class="cart_item_values_bold">{{ single_price($cartItem['price']) }}</p>
                                         </div>
-                                        <a href="{{ route('cart') }}" class="btn btn_redd">View Cart</a>
                                     </div>
+                                    <div class="cart_item_right">
+                                        <button class="btn">
+                                            <img src="{{ asset('frontend/brandsparkz/assets/img/bin.svg') }}" alt="" class="img-fluid" onclick="removeFromCart({{ $key }})">
+                                        </button>
+                                    </div>
+                                </div>
+                               @endforeach
+
+                                <div class="cart_footer">
+                                    <div class="cart_footer_top">
+                                        <p class="cart_item_values_bold">Subtotal</p>
+                                        <p class="cart_item_values_bold">{{ single_price(array_sum(array_column(Session::get('cart')->toArray(), 'price'))) }}</p>
+                                    </div>
+                                    <div class="cart_footer_bottom">
+                                        <button class="btn btn_orange_transparent" onclick="justDrop('cart_drop', 'roter5', this)">Close</button>
+                                        <button class="btn btn_orange" onclick="window.location.href='{{ route( 'checkout.shipping_info') }}'">Checkout</button>
+                                    </div>
+                                </div>
                                 @else
                                     <div class="empty-cart">
                                         <p>Your cart is empty</p>
                                     </div>
                                 @endif
+                               
                             </div>
                         </div>
-
-
-                        <!-- Auth Links -->
-                        @auth
-                            @if (auth()->user()->user_type === 'admin')
-                                <a href="{{ route('admin.dashboard') }}" class="btn btn_header_link">
-                                    <img src="{{ asset('frontend/Lingosphere/img/acc_logo.svg') }}" alt="Admin Account"
-                                        class="img-fluid">
-                                </a>
-                            @else
-                                <a href="{{ route('dashboard') }}" class="btn btn_header_link">
-                                    <img src="{{ asset('frontend/Lingosphere/img/acc_logo.svg') }}" alt="Account"
-                                        class="img-fluid">
-                                </a>
-                            @endif
-                        @else
-                            <a href="{{ route('user.login') }}" class="btn btn_header_link">
-                                <img src="{{ asset('frontend/Lingosphere/img/acc_logo.svg') }}" alt="Login"
-                                    class="img-fluid">
-                            </a>
-                        @endauth
                     </div>
                 </div>
+            </div>
+            <div class="container mobile_header p-0">
+                <div class="header_mobo_main">
+                    <div class="header_mobo_left">
+                        <a href="{{ route('home') }}">
+                            <img src="{{ asset('frontend/brandsparkz/assets/img/header_mobo_bg_trans_logo_.svg') }}" alt="" class="img-fluid">
+                        </a>
+                    </div>
+                    <div class="header_mobo_right">
+                        <div class="hamburger_menu">
+                            <img src="{{ asset('frontend/brandsparkz/assets/img/hamburger_logo.png') }}" alt="" class="img-fluid">
+                        </div>
+                        <div class="hamburger_menu_close" style="display: none;">
+                            <img src="{{ asset('frontend/brandsparkz/assets/img/hamburger_close.svg') }}" alt="" class="img-fluid">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header_mobo_main_slide" style="display: none;">
+            <div class="header_main_mobo">
+                <button class="btn btn_header_link" onclick="window.location.href='{{ route(  'aboutus') }}'">
+                    About
+                </button>
+                <div class="service_drop_container">
+                    <button class="btn btn_header_drop" onclick="justDrop('service_drop_mob', 'roter3', this)">
+                        Services
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"  id="roter3">
+                            <path d="M18 9L12 15L6 9" stroke="#3C3C3C" stroke-width="2"/>
+                        </svg>
+                    </button>
+                    <div class="dropped_div d-none" id="service_drop_mob">
+                        <button class="btn btn_orange_header" onclick="window.location.href='{{ route( 'seo') }}'">SEO</button>
+                        <button class="btn btn_orange_header" onclick="window.location.href='{{ route( 'ppc') }}'">PPC</button>
+                        <button class="btn btn_orange_header" onclick="window.location.href='{{ route( 'orm') }}'">ORM</button>
+                        <button class="btn btn_orange_header" onclick="window.location.href='{{ route( 'wdd') }}'">UX/UI</button>
+                        <button class="btn btn_orange_header" onclick="window.location.href='{{ route( 'em') }}'">Email</button>
+                        <button class="btn btn_orange_header" onclick="window.location.href='{{ route( 'social') }}'">Social Media</button>
+                    </div>
+                </div>
+                <button class="btn btn_header_link" onclick="window.location.href='{{ route( name: 'faqs') }}'">
+                    FAQs
+                </button>
+                <button class="btn btn_header_link" onclick="window.location.href='{{ route( 'contactus') }}'">
+                    Contact Us
+                </button>
+                @auth
+                <button class="btn btn_header_link" onclick="window.location.href='{{ route( 'dashboard') }}'">
+                   My Account
+                </button>
+                @else
+                <button class="btn btn_header_link" onclick="window.location.href='{{ route( 'user.login') }}'">
+                    Login 
+                </button>
+                <button class="btn btn_header_link" onclick="window.location.href='{{ route( 'user.registration') }}'">
+                    Sign up 
+                </button>
+                @endauth
+                <div class="currency_drop_container">
+                    <button class="btn btn_header_drop" onclick="justDrop('currency_drop_mobo', 'roter4', this)">
+                        {{ $currency_code }}
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"  id="roter4">
+                            <path d="M18 9L12 15L6 9" stroke="#3C3C3C" stroke-width="2"/>
+                        </svg>
+                    </button>
+                    <div class="dropped_div d-none" id="currency_drop_mobo">
+                        @foreach (\App\Models\Currency::getActiveCurrencies() as $key => $currency)
+                            <button
+                                class="btn btn_orange_header dropdown-item {{ $currency_code == $currency->code ? 'active' : '' }}"
+                                data-currency="{{ $currency->code }}">
+                                {{ $currency->code }} ({{ $currency->symbol }})
+                            </button>
+                        @endforeach
+                    </div>
+                </div>
+                <button class="btn btn_global cart_menu">
+                    <img src="{{ asset('frontend/brandsparkz/assets/img/btn_primary_pattern.png') }}" alt="" class="img-fluid btn_global_pattern">
+                    <div class="btn_global_inner w-100">
+                        <img src="{{ asset('frontend/brandsparkz/assets/img/cart_logo.svg') }}" alt="" class="img-fluid cart_logo">
+                        <p class="cart_text">View Cart</p>
+                        <span>
+                            {{ Session::has('cart') ? count(Session::get('cart')) : '0' }}
+                        </span>
+                    </div>
+                </button>
+            </div>
+        </div>
+        <div class="header_cart_mobo_main_slide" style="display: none;">
+            <div class="header_cart_main_mobo">
+                @if (Session::has('cart') && count(Session::get('cart')) > 0)
+                    @foreach (Session::get('cart') as $key => $cartItem)
+                        @php
+                            $product = \App\Models\Product::find($cartItem['id']);
+                        @endphp
+                        <div class="cart_item">
+                            <div class="cart_item_left">
+                                <p class="cart_item_title">
+                                    {{ $product->name }}
+                                </p>
+                                <div class="cart_item_values_div">
+                                    <p class="cart_item_values">x{{ $cartItem['quantity'] }}</p>
+                                    <p class="cart_item_values">1 Month</p>
+                                    <p class="cart_item_values_bold">{{ single_price($cartItem['price']) }}</p>
+                                </div>
+                            </div>
+                            <div class="cart_item_right">
+                                <button class="btn">
+                                    <img src="{{ asset('frontend/brandsparkz/assets/img/bin.svg') }}" alt="" class="img-fluid" onclick="removeFromCart({{ $key }})">
+                                </button>
+                            </div>
+                        </div>
+                    @endforeach
+
+                    <div class="cart_footer">
+                        <div class="cart_footer_top">
+                            <p class="cart_item_values_bold">Subtotal</p>
+                            <p class="cart_item_values_bold">{{ single_price(array_sum(array_column(Session::get('cart')->toArray(), 'price'))) }}</p>
+                        </div>
+                        <div class="cart_footer_bottom">
+                            <button class="btn btn_orange_transparent" onclick="closeMobileCart()">Back to menu</button>
+                            <button class="btn btn_orange" onclick="window.location.href='{{ route( 'checkout.shipping_info') }}'">Checkout</button>
+                        </div>
+                    </div>
+                    @else
+                    <div class="empty-cart">
+                        <p>Your cart is empty</p>
+                    </div>
+                @endif  
             </div>
         </div>
     </header>
@@ -230,18 +326,21 @@
     @include('frontend.inc.footer')
     <!-- Essential JavaScript -->
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
-        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-    <script src="{{ asset('frontend/Lingosphere/dist/js/owl.carousel.js') }}"></script>
 
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous">
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
-        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous">
-    </script>
+    
+
+   
+    <script src="{{ asset('frontend/BrandSparkz/assets/dist/bootstrap/js/bootstrap.popper.min.js') }}"></script>
+    <script src="{{ asset('frontend/BrandSparkz/assets/dist/bootstrap/js/bootstrap.min.js') }}"></script>
+    
+    <!-- Owl Carousel JS Links -->
+    <script src="{{ asset('frontend/BrandSparkz/assets/dist/owl-carousel/js/owl.carousel.js') }}"></script>
+    
+    <!-- JS Link -->
+    <script src="{{ asset('frontend/BrandSparkz/assets/js/main.js') }}"></script>
+
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://js.hcaptcha.com/1/api.js" async defer></script>
@@ -340,7 +439,28 @@
 
         //Change Currency
         $(document).ready(function() {
-            $('#desk_currency_drop button').on('click', function() {
+            $('#currency_drop button').on('click', function() {
+                let currency_code = $(this).data('currency');
+
+                $.ajax({
+                    url: '/currency',
+                    type: 'POST',
+                    data: {
+                        currency_code: currency_code,
+                        _token: $('meta[name="csrf-token"]').attr('content')
+                    },
+                    success: function(response) {
+                        if (response.status) {
+                            location.reload();
+                        }
+                    }
+                });
+            });
+        });
+
+        // mobile currency change 
+        $(document).ready(function() {
+            $('#currency_drop_mobo button').on('click', function() {
                 let currency_code = $(this).data('currency');
 
                 $.ajax({

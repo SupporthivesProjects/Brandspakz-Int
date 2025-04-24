@@ -135,16 +135,7 @@ Route::middleware(['admin.log'])->group(function () {
         Route::get('/purchase_history/destroy/{id}', [PurchaseHistoryController::class, 'destroy'])->name('purchase_history.destroy');
     });
 
-    // Translation Routes
-    Route::get('/certified-translation', [TranslationController::class, 'certified_translation'])->name('certified_translation');
-    Route::get('/standard-translation', [TranslationController::class, 'standard_translation'])->name('standard_translation');
-    Route::get('/languages', [HomeController::class, 'languages'])->name('languages');
-    Route::get('/documents', [HomeController::class, 'documents'])->name('documents');
-    Route::get('/request-translation', [TranslationController::class, 'request_translation'])->name('request_translation');
-    Route::post('/cart/addToCart', [TranslationController::class, 'addToCart'])->name('service.addToCart');
-    Route::get('/careers', [TranslationController::class, 'careers'])->name('careers');
-    Route::post('/request-careers', [TranslationController::class, 'request_careers'])->name('request.careers');
-
+   
 
     // About Us
     Route::get('/about-us', [HomeController::class, 'aboutus'])->name('aboutus');
