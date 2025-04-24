@@ -166,3 +166,15 @@ Route::middleware(['admin.log'])->group(function () {
     Route::get('password/reset/{token}', [ResetPasswordController::class, 'showResetForm'])->name('password.reset');
     Route::post('password/reset', [ResetPasswordController::class, 'reset'])->name('password.update');
 });
+
+Route::get('/test-404', function() {
+    abort(404);
+});
+
+Route::get('/test-500', function() {
+    abort(500);
+});
+
+Route::get('/test-403', function() {
+    abort(403);
+});
