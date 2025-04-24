@@ -47,6 +47,7 @@ Route::middleware(['admin.log'])->group(function () {
     Route::post('/home/section/best_sellers', [HomeController::class, 'load_best_sellers_section'])->name('home.section.best_sellers');
     Route::post('/category/nav-element-list', [HomeController::class, 'get_category_items'])->name('category.elements');
 
+    
     // Flash Deals
     Route::get('/flash-deal/{slug}', [HomeController::class, 'flash_deal_details'])->name('flash-deal-details');
 
