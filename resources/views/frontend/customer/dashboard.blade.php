@@ -178,7 +178,7 @@
                                                             <p class="text-muted">Start shopping to see your orders here!
                                                             </p>
                                                             <center>
-                                                            <a href="{{ route('standard_translation') }}"
+                                                            <a href="#"
                                                                 class="btn btn_redd mt-2 w-25">Browse Products</a>
                                                             </center>
                                                         </div>
