@@ -33,10 +33,9 @@
 
     
     <link rel="stylesheet" href="{{ asset('frontend/BrandSparkz/assets/dist/owl-carousel/css/owl.carousel.css') }}">
-
+    <link rel="stylesheet" href="{{ asset('frontend/BrandSparkz/assets/css/assets/css/main.css') }}">
     <link rel="stylesheet" href="{{ asset('frontend/BrandSparkz/assets/css/m_style.css') }}">
     <link rel="stylesheet" href="{{ asset('frontend/BrandSparkz/assets/css/assets/css/sk_style.css') }}">
-    <link rel="stylesheet" href="{{ asset('frontend/BrandSparkz/assets/css/assets/css/main.css') }}">
     <link rel="stylesheet" href="{{ asset('frontend/BrandSparkz/assets/css/assets/css/m_style.css') }}">
 
     <!-- Box Icons -->
