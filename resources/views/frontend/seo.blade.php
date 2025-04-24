@@ -1,22 +1,7 @@
 @extends('frontend.layouts.app')
 @section('content')
-    <style>
-        .ser_s1_inner {
-            background: url("{{ asset('frontend/PushDynamics/image/seo_s1.png') }}");
-            background-size: cover;
-            background-position: right top;
-            background-repeat: no-repeat;
-        }
 
-        @media only screen and (max-width: 600px) {
-            .ser_s1_inner {
-                background: url("{{ asset('frontend/PushDynamics/image/seo_s1_mobo.png') }}");
-                background-size: cover;
-                background-position: right top;
-                background-repeat: no-repeat;
-            }
-        }
-    </style>
+    
 
     {{-- NEW CODE STARTS HERE --}}
 
