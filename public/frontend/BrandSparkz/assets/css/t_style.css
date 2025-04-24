@@ -804,7 +804,7 @@
     width: 22px;
     height: 22px;
     margin-right: 10px;
-    border: 2px solid var(--Almost-Black, #FFF);
+    border: 2px solid var(--Almost-Black, #EE5921);
     background: transparent;
     box-sizing: border-box;
     border-radius: 4px;
@@ -831,7 +831,7 @@ input[type=radio] {
     content: url(../img/filter_tic.svg);
     display: block;
     position: absolute;
-    color: #00173E !important;
+    color: #FFFFFF !important;
     border-radius: 0;
     border: 0;
     font-family: 'Poppins';
@@ -854,6 +854,7 @@ input[type=radio] {
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
+    background: var(--Primary, #EE5921);
 }
 
 .c-checkbox {
@@ -863,7 +864,7 @@ input[type=radio] {
 
 .login_strong {
 
-    color: var(--Neutral-White, #FFF);
+    color: var(--Neutral-White, #656565);
 
     /* Desktop/Body */
     font-family: Poppins;
