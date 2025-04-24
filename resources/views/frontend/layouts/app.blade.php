@@ -144,9 +144,13 @@
                             </button>
                             <div class="cart_dropper_div d-none" id="cart_drop">
                                 @if (Session::has('cart') && count(Session::get('cart')) > 0)
+                                        @php
+                                           $total = 0;
+                                        @endphp
                                     @foreach (Session::get('cart') as $key => $cartItem)
                                         @php
                                             $product = \App\Models\Product::find($cartItem['id']);
+                                            $total = $total + round(convert_price($cartItem['price']), 2);
                                         @endphp
                                 <div class="cart_item">
                                     
@@ -156,7 +160,7 @@
                                         </p>
                                         <div class="cart_item_values_div">
                                             <p class="cart_item_values">x{{ $cartItem['quantity'] }}</p>
-                                            <p class="cart_item_values">1 Month</p>
+                                            <p class="cart_item_values"> {{ $product->subscription }}</p>
                                             <p class="cart_item_values_bold">{{ single_price($cartItem['price']) }}</p>
                                         </div>
                                     </div>
@@ -171,7 +175,7 @@
                                 <div class="cart_footer">
                                     <div class="cart_footer_top">
                                         <p class="cart_item_values_bold">Subtotal</p>
-                                        <p class="cart_item_values_bold">{{ single_price(array_sum(array_column(Session::get('cart')->toArray(), 'price'))) }}</p>
+                                        <p class="cart_item_values_bold">{{ currency_symbol() }}{{ number_format($total,2) }}</p>
                                     </div>
                                     <div class="cart_footer_bottom">
                                         <button class="btn btn_orange_transparent" onclick="justDrop('cart_drop', 'roter5', this)">Close</button>
@@ -278,9 +282,13 @@
         <div class="header_cart_mobo_main_slide" style="display: none;">
             <div class="header_cart_main_mobo">
                 @if (Session::has('cart') && count(Session::get('cart')) > 0)
+                    @php
+                        $total1 = 0;
+                    @endphp
                     @foreach (Session::get('cart') as $key => $cartItem)
                         @php
                             $product = \App\Models\Product::find($cartItem['id']);
+                            $total1 = $total1 + round(convert_price($cartItem['price']), 2);
                         @endphp
                         <div class="cart_item">
                             <div class="cart_item_left">
@@ -289,7 +297,7 @@
                                 </p>
                                 <div class="cart_item_values_div">
                                     <p class="cart_item_values">x{{ $cartItem['quantity'] }}</p>
-                                    <p class="cart_item_values">1 Month</p>
+                                    <p class="cart_item_values">{{ $product->subscription }}</p>
                                     <p class="cart_item_values_bold">{{ single_price($cartItem['price']) }}</p>
                                 </div>
                             </div>
@@ -304,7 +312,7 @@
                     <div class="cart_footer">
                         <div class="cart_footer_top">
                             <p class="cart_item_values_bold">Subtotal</p>
-                            <p class="cart_item_values_bold">{{ single_price(array_sum(array_column(Session::get('cart')->toArray(), 'price'))) }}</p>
+                            <p class="cart_item_values_bold">{{ currency_symbol() }}{{ number_format($total1,2) }}</p>
                         </div>
                         <div class="cart_footer_bottom">
                             <button class="btn btn_orange_transparent" onclick="closeMobileCart()">Back to menu</button>
