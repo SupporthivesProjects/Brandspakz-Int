@@ -10,7 +10,7 @@
     <meta name="robots" content="index, follow">
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>Lingosphere</title>
+    <title>BrandSparkz</title>
 
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="{{ asset('frontend/Lingosphere/img/Fav.png') }}">
