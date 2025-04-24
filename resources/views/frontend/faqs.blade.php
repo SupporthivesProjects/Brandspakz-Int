@@ -2,418 +2,196 @@
 
 @section('content')
     {{-- New Code Start --}}
-    <section>
-        <div class="extra_space">
+    <section class="the_main_section">
 
-        </div>
+        <section class="faq_1">
 
-        <div class="faq_section1">
+            <h1 class="faq_tt">Find Your Answer</h1>
+            <p class="faq_pp">Everything you need to know about out products and billing.</p>
 
-            <div class="faq_in1">
-                <h1 class="faq1_tt">
-                    frequently<br>asked <br class="desktop_none">questions
-                </h1>
-            </div>
+        </section>
 
-            <div class="faq_in2">
-
-                <div class="in_faq2">
-
-                    <div class="faq_left">
-
-                        <div class="allfaqs">
-                            <h1 class="faq_title" data-aos="fade-up">General Questions</h1>
+        <section class="faq_2">
+            <img src="{{ asset('frontend/brandsparkz/assets/img/intersect_tt.png') }}" alt="" class="img-fluid intersect_tt mobile_none">
+            <img src="{{ asset('frontend/brandsparkz/assets/img/mobile_intersect.png') }}" alt="" class="img-fluid intersect_tt_mob desktop_none">
 
 
-                            <div class="main_faq">
-                                <div class="accordion accordion-flush" id="accordionFlushExample">
-                                    <div class="accordion-item">
-                                        <h2 class="accordion-header">
-                                            <button class="accordion-button collapsed text_css" type="button"
-                                                data-bs-toggle="collapse" data-bs-target="#flush-collapseOne"
-                                                aria-expanded="false" aria-controls="flush-collapseOne" data-aos="fade-up">
-                                                What types of documents can be translated?
-                                            </button>
-                                        </h2>
-                                        <div id="flush-collapseOne" class="accordion-collapse collapse"
-                                            data-bs-parent="#accordionFlushExample">
-                                            <div class="accordion-body body_css" data-aos="fade-up">We can translate a wide
-                                                range of documents, including legal contracts, technical manuals, medical
-                                                records, business correspondence, and personal documents like certificates
-                                                and resumes.</div>
-                                        </div>
+            <div class="container custom_padding_faq">
+
+                <div class="in_faq">
+
+                    <div class="left_main">
+                        <div class="left_faq">
+                            <img src="{{ asset('frontend/brandsparkz/assets/img/faq_desktop_prop.png') }}" alt="" class="img-fluid faq_desktop_prop">
+                            <div class="white_faq_bg">
+
+                                <img src="{{ asset('frontend/brandsparkz/assets/img/left_faq_in.png') }}" alt="" class="img-fluid also_img"
+                                    style="margin-bottom: 18px;">
+                                <h1 class="faq_left_tt">can’t find your answer? <span class="faq_left_tt_span">Let’s fix
+                                        that.</span></h1>
+                                <p class="faq_left_pp">Everything you need to know about out products and billing.. Cant
+                                    find the answer you're looking for? Please submit an enquiry via our contact form.</p>
+                                <button class="btn btn_global" onclick="window.location.href='{{ route('contactus') }}'">
+                                    <img src="{{ asset('frontend/brandsparkz/assets/img/btn_primary_pattern.png') }}" alt=""
+                                        class="img-fluid btn_global_pattern">
+                                    <div class="btn_global_inner w-100">
+
+                                        <p class="cart_text">Drop us a line</p>
+                                        <img src="{{ asset('frontend/brandsparkz/assets/img/up_right.svg') }}" alt="" class="img-fluid cart_logo">
                                     </div>
-                                    <div class="accordion-item">
-                                        <h2 class="accordion-header">
-                                            <button class="accordion-button collapsed text_css" type="button"
-                                                data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo"
-                                                aria-expanded="false" aria-controls="flush-collapseTwo" data-aos="fade-up">
-                                                How do I submit my document for translation?
+                                </button>
 
-                                            </button>
-                                        </h2>
-                                        <div id="flush-collapseTwo" class="accordion-collapse collapse"
-                                            data-bs-parent="#accordionFlushExample">
-                                            <div class="accordion-body body_css" data-aos="fade-up">You can submit your
-                                                document via our secure online checkout or by email. We use stringent
-                                                security measures to ensure your document is confidential. </div>
-                                        </div>
-                                    </div>
-                                    <div class="accordion-item">
-                                        <h2 class="accordion-header">
-                                            <button class="accordion-button collapsed text_css" type="button"
-                                                data-bs-toggle="collapse" data-bs-target="#flush-collapseThree"
-                                                aria-expanded="false" aria-controls="flush-collapseThree"
-                                                data-aos="fade-up">
-                                                How are translation quality and accuracy ensured?
-
-                                            </button>
-                                        </h2>
-                                        <div id="flush-collapseThree" class="accordion-collapse collapse"
-                                            data-bs-parent="#accordionFlushExample">
-                                            <div class="accordion-body body_css" data-aos="fade-up">Our translations are
-                                                performed by professionals with expertise in the relevant field. We use
-                                                rigorous quality control processes to ensure your requirements are met.
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="accordion-item">
-                                        <h2 class="accordion-header">
-                                            <button class="accordion-button collapsed text_css" type="button"
-                                                data-bs-toggle="collapse" data-bs-target="#flush-collapseFour"
-                                                aria-expanded="false" aria-controls="flush-collapseFour" data-aos="fade-up">
-                                                What languages do you offer for translation?
-
-                                            </button>
-                                        </h2>
-                                        <div id="flush-collapseFour" class="accordion-collapse collapse"
-                                            data-bs-parent="#accordionFlushExample">
-                                            <div class="accordion-body body_css" data-aos="fade-up">We offer translation
-                                                services in a wide range of languages, including major global languages like
-                                                Spanish, Chinese, French, German, and many more.
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="accordion-item">
-                                        <h2 class="accordion-header">
-                                            <button class="accordion-button collapsed text_css" type="button"
-                                                data-bs-toggle="collapse" data-bs-target="#flush-collapseFive"
-                                                aria-expanded="false" aria-controls="flush-collapseFive" data-aos="fade-up">
-                                                How much does the translation service cost?
-
-                                            </button>
-                                        </h2>
-                                        <div id="flush-collapseFive" class="accordion-collapse collapse"
-                                            data-bs-parent="#accordionFlushExample">
-                                            <div class="accordion-body body_css" data-aos="fade-up">Translation costs vary
-                                                based on document type, length, and complexity. For an accurate quote,
-                                                please provide details of your document through our checkout.
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="accordion-item">
-                                        <h2 class="accordion-header">
-                                            <button class="accordion-button collapsed text_css" type="button"
-                                                data-bs-toggle="collapse" data-bs-target="#flush-collapseSix"
-                                                aria-expanded="false" aria-controls="flush-collapseSix" data-aos="fade-up">
-                                                How long does a translation take?
-
-                                            </button>
-                                        </h2>
-                                        <div id="flush-collapseSix" class="accordion-collapse collapse"
-                                            data-bs-parent="#accordionFlushExample">
-                                            <div class="accordion-body body_css"data-aos="fade-up">The turnaround time
-                                                depends on the document’s length and complexity. Typically, translations are
-                                                completed within a few business days. For urgent requests, fast turnarounds
-                                                are available.
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
                             </div>
+
                         </div>
-
-
-                        <div class="allfaqs">
-                            <h1 class="faq_title" data-aos="fade-up">Standard Translation</h1>
-
-
-                            <div class="main_faq">
-                                <div class="accordion" id="accordionExample">
-                                    <div class="accordion-item">
-                                        <h2 class="accordion-header">
-                                            <button class="accordion-button text_css" type="button"
-                                                data-bs-toggle="collapse" data-bs-target="#collapseOne"
-                                                aria-expanded="true" aria-controls="collapseOne" data-aos="fade-up">
-                                                What is included in a standard translation service?
-
-                                            </button>
-                                        </h2>
-                                        <div id="collapseOne" class="accordion-collapse collapse show"
-                                            data-bs-parent="#accordionExample">
-                                            <div class="accordion-body body_css" data-aos="fade-up">
-                                                Standard translation involves translating text with cultural and contextual
-                                                accuracy, making it suitable for business, personal use, or informal
-                                                documents.
-
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="accordion-item">
-                                        <h2 class="accordion-header">
-                                            <button class="accordion-button collapsed text_css" type="button"
-                                                data-bs-toggle="collapse" data-bs-target="#collapseTwo"
-                                                aria-expanded="false" aria-controls="collapseTwo" data-aos="fade-up">
-                                                How are standard translations different from certified translations?
-
-                                            </button>
-                                        </h2>
-                                        <div id="collapseTwo" class="accordion-collapse collapse"
-                                            data-bs-parent="#accordionExample">
-                                            <div class="accordion-body body_css" data-aos="fade-up">
-                                                Standard translations focus on accuracy and cultural relevance without
-                                                official certification, while certified translations are formally approved
-                                                for official use.
-
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="accordion-item">
-                                        <h2 class="accordion-header">
-                                            <button class="accordion-button collapsed text_css" type="button"
-                                                data-bs-toggle="collapse" data-bs-target="#collapseThree"
-                                                aria-expanded="false" aria-controls="collapseThree" data-aos="fade-up">
-                                                Can I request revisions on a standard translation?
-
-                                            </button>
-                                        </h2>
-                                        <div id="collapseThree" class="accordion-collapse collapse"
-                                            data-bs-parent="#accordionExample">
-                                            <div class="accordion-body body_css" data-aos="fade-up">
-                                                Absolutely! We welcome revision requests to make sure that the final
-                                                translation aligns perfectly with your expectations and requirements.
-
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="accordion-item">
-                                        <h2 class="accordion-header">
-                                            <button class="accordion-button collapsed text_css" type="button"
-                                                data-bs-toggle="collapse" data-bs-target="#collapseThree"
-                                                aria-expanded="false" aria-controls="collapseThree" data-aos="fade-up">
-                                                What languages are available for standard translation services?
-
-
-                                            </button>
-                                        </h2>
-                                        <div id="collapseThree" class="accordion-collapse collapse"
-                                            data-bs-parent="#accordionExample">
-                                            <div class="accordion-body body_css" data-aos="fade-up">
-                                                We offer standard translation services in a wide range of languages which
-                                                are available on our website, including major and less commonly spoken
-                                                languages.
-
-
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-
-                        <div class="allfaqs">
-                            <h1 class="faq_title" data-aos="fade-up">Certified Translation</h1>
-
-
-                            <div class="main_faq">
-                                <div class="accordion" id="accordionExample2">
-                                    <div class="accordion-item">
-                                        <h2 class="accordion-header">
-                                            <button class="accordion-button text_css" type="button"
-                                                data-bs-toggle="collapse" data-bs-target="#collapseOne1"
-                                                aria-expanded="true" aria-controls="collapseOne1" data-aos="fade-up">
-                                                What are certified translations?
-
-                                            </button>
-                                        </h2>
-                                        <div id="collapseOne1" class="accordion-collapse collapse show"
-                                            data-bs-parent="#accordionExample2">
-                                            <div class="accordion-body body_css" data-aos="fade-up">
-                                                Certified translations are officially recognised documents translated by
-                                                qualified professionals, ensuring accuracy and adherence to legal standards.
-
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="accordion-item">
-                                        <h2 class="accordion-header">
-                                            <button class="accordion-button collapsed text_css" type="button"
-                                                data-bs-toggle="collapse" data-bs-target="#collapseTwo2"
-                                                aria-expanded="false" aria-controls="collapseTwo2" data-aos="fade-up">
-                                                Why might I need a certified translation?
-
-                                            </button>
-                                        </h2>
-                                        <div id="collapseTwo2" class="accordion-collapse collapse"
-                                            data-bs-parent="#accordionExample2">
-                                            <div class="accordion-body body_css" data-aos="fade-up">
-                                                Certified translations are often required for legal documents, immigration
-                                                applications, or other official procedures to ensure authenticity and are
-                                                recognised by authorities.
-
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="accordion-item">
-                                        <h2 class="accordion-header">
-                                            <button class="accordion-button collapsed text_css" type="button"
-                                                data-bs-toggle="collapse" data-bs-target="#collapseThree3"
-                                                aria-expanded="false" aria-controls="collapseThree3" data-aos="fade-up">
-                                                How do I obtain a certified translation?
-
-                                            </button>
-                                        </h2>
-                                        <div id="collapseThree3" class="accordion-collapse collapse"
-                                            data-bs-parent="#accordionExample2">
-                                            <div class="accordion-body body_css" data-aos="fade-up">
-                                                To request a certified translation, provide the original document to our
-                                                team of qualified translators, who will translate and certify it according
-                                                to legal standards.
-
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="accordion-item">
-                                        <h2 class="accordion-header">
-                                            <button class="accordion-button collapsed text_css" type="button"
-                                                data-bs-toggle="collapse" data-bs-target="#collapseThree3"
-                                                aria-expanded="false" aria-controls="collapseThree3" data-aos="fade-up">
-                                                Who can provide certified translations?
-
-
-                                            </button>
-                                        </h2>
-                                        <div id="collapseThree3" class="accordion-collapse collapse"
-                                            data-bs-parent="#accordionExample2">
-                                            <div class="accordion-body body_css" data-aos="fade-up">
-                                                Certified translations must be completed by qualified professionals, often
-                                                members of recognised translation organisations, who can provide official
-                                                certification of accuracy.
-
-
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="accordion-item">
-                                        <h2 class="accordion-header">
-                                            <button class="accordion-button collapsed text_css" type="button"
-                                                data-bs-toggle="collapse" data-bs-target="#collapseThree3"
-                                                aria-expanded="false" aria-controls="collapseThree3" data-aos="fade-up">
-                                                How long does a certified translation take?
-
-
-                                            </button>
-                                        </h2>
-                                        <div id="collapseThree3" class="accordion-collapse collapse"
-                                            data-bs-parent="#accordionExample2">
-                                            <div class="accordion-body body_css" data-aos="fade-up">
-                                                The time for a certified translation varies by document length and
-                                                complexity. Let us know how quickly you need it, and we will try to work to
-                                                your timelines.
-
-
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="allfaqs">
-                            <h1 class="aq_title" data-aos="fade-up">Other Questions</h1>
-
-
-                            <div class="main_faq">
-                                <div class="accordion accordion-flush" id="accordionFlushExample4">
-                                    <div class="accordion-item">
-                                        <h2 class="accordion-header">
-                                            <button class="accordion-button collapsed text_css" type="button"
-                                                data-bs-toggle="collapse" data-bs-target="#flush-collapseOne11"
-                                                aria-expanded="false" aria-controls="flush-collapseOne11"
-                                                data-aos="fade-up">
-                                                Can I request revisions to my translated document?
-                                            </button>
-                                        </h2>
-                                        <div id="flush-collapseOne11" class="accordion-collapse collapse"
-                                            data-bs-parent="#accordionFlushExample4">
-                                            <div class="accordion-body body_css" data-aos="fade-up">Yes, we offer revision
-                                                services to ensure our translation meets your expectations. Please review
-                                                the document upon delivery and let us know if any adjustments are needed.
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="accordion-item">
-                                        <h2 class="accordion-header">
-                                            <button class="accordion-button collapsed text_css" type="button"
-                                                data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo22"
-                                                aria-expanded="false" aria-controls="flush-collapseTwo22"
-                                                data-aos="fade-up">
-                                                Are your translation services confidential?
-
-                                            </button>
-                                        </h2>
-                                        <div id="flush-collapseTwo22" class="accordion-collapse collapse"
-                                            data-bs-parent="#accordionFlushExample4">
-                                            <div class="accordion-body body_css" data-aos="fade-up">Absolutely. We
-                                                prioritise the privacy of our clients and their data, ensuring that all
-                                                documents and personal information are handled with the highest level of
-                                                confidentiality.
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="accordion-item">
-                                        <h2 class="accordion-header">
-                                            <button class="accordion-button collapsed text_css" type="button"
-                                                data-bs-toggle="collapse" data-bs-target="#flush-collapseThree33"
-                                                aria-expanded="false" aria-controls="flush-collapseThree33"
-                                                data-aos="fade-up">
-                                                Do you offer certified translations for legal purposes?
-
-                                            </button>
-                                        </h2>
-                                        <div id="flush-collapseThree33" class="accordion-collapse collapse"
-                                            data-bs-parent="#accordionFlushExample4">
-                                            <div class="accordion-body body_css" data-aos="fade-up">Yes, we provide
-                                                certified translations that meet legal standards. Certified translations are
-                                                accompanied by a certification of accuracy, which is suitable for use in
-                                                official and legal contexts.
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>
-
                     </div>
-                    <div class="faq_right">
 
-                        <h1 class="faq_right_tt" data-aos="fade-up">Looking for Something?</h1>
-                        <p class="faq_right_pp" data-aos="fade-up">If you have any remaining questions or need further
-                            assistance, feel free to reach out to us. We're here to help and provide the information you
-                            need.</p>
-                        <button
-                            class="btn green_btn fordesktop_100width forphone_100width"onclick="window.location.href='{{ route('contactus') }}'">
-                            Get In Touch
-                        </button>
+
+                    <div class="right_faq">
+
+                        <div class="only_faq_pad">
+                            <div class="accordion" id="accordionExample">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                            data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                            Can I change my plan later?
+                                        </button>
+                                    </h2>
+                                    <div id="collapseOne" class="accordion-collapse collapse show"
+                                        data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Blandit posuere
+                                            bibendum vel purus sapien, lacus in tortor. Aliquam non est augue commodo
+                                            viverra. Pellentesque imperdiet id euismod varius in scelerisque sagittis urna.
+                                            Ac sit integer sed vestibulum ut tincidunt urna.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                            data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                            What is your cancellation policy?
+                                        </button>
+                                    </h2>
+                                    <div id="collapseTwo" class="accordion-collapse collapse"
+                                        data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Blandit posuere
+                                            bibendum vel purus sapien, lacus in tortor. Aliquam non est augue commodo
+                                            viverra. Pellentesque imperdiet id euismod varius in scelerisque sagittis urna.
+                                            Ac sit integer sed vestibulum ut tincidunt urna.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                            data-bs-target="#collapseThree" aria-expanded="false"
+                                            aria-controls="collapseThree">
+                                            What is your cancellation policy?
+                                        </button>
+                                    </h2>
+                                    <div id="collapseThree" class="accordion-collapse collapse"
+                                        data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Blandit posuere
+                                            bibendum vel purus sapien, lacus in tortor. Aliquam non est augue commodo
+                                            viverra. Pellentesque imperdiet id euismod varius in scelerisque sagittis urna.
+                                            Ac sit integer sed vestibulum ut tincidunt urna.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                            data-bs-target="#collapseFour" aria-expanded="false"
+                                            aria-controls="collapseFour">
+                                            What is your cancellation policy?
+                                        </button>
+                                    </h2>
+                                    <div id="collapseFour" class="accordion-collapse collapse"
+                                        data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Blandit posuere
+                                            bibendum vel purus sapien, lacus in tortor. Aliquam non est augue commodo
+                                            viverra. Pellentesque imperdiet id euismod varius in scelerisque sagittis urna.
+                                            Ac sit integer sed vestibulum ut tincidunt urna.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                            data-bs-target="#collapseFive" aria-expanded="false"
+                                            aria-controls="collapseFive">
+                                            What is your cancellation policy?
+                                        </button>
+                                    </h2>
+                                    <div id="collapseFive" class="accordion-collapse collapse"
+                                        data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Blandit posuere
+                                            bibendum vel purus sapien, lacus in tortor. Aliquam non est augue commodo
+                                            viverra. Pellentesque imperdiet id euismod varius in scelerisque sagittis urna.
+                                            Ac sit integer sed vestibulum ut tincidunt urna.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+
+
+
+
                     </div>
 
                 </div>
+
             </div>
 
-        </div>
+        </section>
 
+
+        <section class="floater_section">
+            <div class="line_div mobile_none">
+
+            </div>
+            <div class="grey_div mobile_none">
+
+            </div>
+
+            <div class="floater_div">
+
+                <div class="inner_floater">
+                    <div>
+                        <h1 class="floater_div_tt">
+                            We’re <span class="floater_div_tt_span">All In</span>, Are You?
+                        </h1>
+                        <p class="floater_div_pp">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer cursus dignissim dictumst leo
+                            at fusce euismod ut eleifend. Lectus blandit amet mi in.
+                        </p>
+
+                    </div>
+
+                    <button class="btn btn_global2 on_phone" onclick="window.location.href='{{ route('user.login') }}'">
+                        <img src="{{ asset('frontend/brandsparkz/assets/img/btn_primary_pattern2.png') }}" alt=""
+                            class="img-fluid btn_global_pattern2">
+                        <div class="btn_global_inner2 on_phone">
+                            <p class="cart_text">Get started!</p>
+                        </div>
+                    </button>
+                </div>
+
+
+
+            </div>
+
+        </section>
 
     </section>
 @endsection
