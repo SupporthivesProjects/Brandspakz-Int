@@ -14,7 +14,7 @@
                     <a href="{{ url('/') }}" class="btn btn-primary btn-lg">
                         <i class="fas fa-home me-2"></i>Go Home
                     </a>
-                    <a href="{{ route('contact') }}" class="btn btn-outline-secondary btn-lg ms-2">
+                    <a href="{{ route('contactus') }}" class="btn btn-outline-secondary btn-lg ms-2">
                         <i class="fas fa-envelope me-2"></i>Contact Support
                     </a>
                 </div>
