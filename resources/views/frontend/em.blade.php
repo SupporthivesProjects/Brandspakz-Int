@@ -1869,10 +1869,6 @@
 
 </script>
 
-@endsection
-
-
-@section('script')
 <script>
     function check_agree(form) {
         if (form.fullname && form.email && form.phone && form.message && form.terms.checked) {
@@ -1917,7 +1913,6 @@
         return false;
     }
 </script>
-
 
 @endsection
 
