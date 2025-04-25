@@ -3,7 +3,7 @@
 @section('content')
 
 
-    <section class="checkout4_page">
+    {{--  <section class="checkout4_page">
         <div class="che_s1">
             <div class="ches1_inner">
                 <h1 class="ches1_title mobile_none">Billing Details</h1>
@@ -216,33 +216,202 @@
                 </div>
             </div>
         </div>
+    </section>--}]
+
+    {{-- new code --}}
+
+    <section class="section_terms">
+        <div class="secure_pay1">
+            <img src="{{ asset('frontend/BrandSparkz/assets/img/intersect.png') }}" alt="" class="intersect">
+            <div class="container">
+                <div class="terms_div1">
+                    <h3 class="terms_heading">Checkout</h3>
+                    <p class="para_terms">Lorem ipsum dolor sit amet consectetur. Purus eget arcu non suscipit id.</p>
+                </div>
+            </div>
+        </div>
+        <div class="term2_main SCmain">
+            <div class="secure_div1">
+                <div class="secure_top">
+                    <div class="div_for_ps_inner SCdivTop">
+                        <h3 class="heading_of_pS">Billing Details</h3>
+                    </div>
+                    <div class="inputSC_main">
+                        <div class="inputSC_inner">
+                            <div class="inputparaSC">
+                                <p class="paraSC">First Name</p>
+                                <input type="text" class="inputSC">
+                            </div>
+                            <div class="inputparaSC">
+                                <p class="paraSC">Phone</p>
+                                <input type="text" class="inputSC">
+                            </div>
+                            <div class="inputparaSC">
+                                <p class="paraSC">Address Line 1</p>
+                                <input type="text" class="inputSC">
+                            </div>
+                            <div class="inputparaSC">
+                                <p class="paraSC">City</p>
+                                <input type="text" class="inputSC">
+                            </div>
+                            <div class="inputparaSC">
+                                <p class="paraSC">County</p>
+                                <input type="text" class="inputSC">
+                            </div>
+                        </div>
+                        <div class="inputSC_inner">
+                            <div class="inputparaSC">
+                                <p class="paraSC">Last Name</p>
+                                <input type="text" class="inputSC">
+                            </div>
+                            <div class="inputparaSC">
+                                <p class="paraSC">Email</p>
+                                <input type="text" class="inputSC">
+                            </div>
+                            <div class="inputparaSC">
+                                <p class="paraSC">Address Line 2</p>
+                                <input type="text" class="inputSC">
+                            </div>
+                            <div class="inputparaSC">
+                                <p class="paraSC">Country</p>
+                                <input type="text" class="inputSC">
+                            </div>
+                            <div class="inputparaSC">
+                                <p class="paraSC">Postcode / Zip</p>
+                                <input type="text" class="inputSC">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="secure_middle">
+
+                </div>
+                <div class="secure_bottom">
+                    <div class="bottomSC_main">
+                        <div class="term2_main">
+                            <div class="div_for_pS forSC">
+                                <div class="div_for_ps_inner">
+                                    <h3 class="heading_of_pS">Order Summary</h3>
+                                </div>
+                                <table class="table table-borderless ">
+                                    <thead>
+                                        <tr class="table_ps">
+                                            <th scope="col">
+                                                <p class="head_ps">Product</p>
+                                            </th>
+                                            <th scope="col">
+                                                <p class="head_ps">No.&nbsp;Months</p>
+                                            </th>
+                                            <th scope="col">
+                                                <p class="head_ps for_center">Qty</p>
+                                            </th>
+                                            <th scope="col">
+                                                <p class="head_ps for_total1">Subtotal</p>
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr class="table_ps">
+                                            <td scope="row">
+                                                <p class="data_ps"><span>SEO</span>- Platnium Package</p>
+                                            </td>
+                                            <td>
+                                                <p class="data_ps">1 Month</p>
+                                            </td>
+                                            <td>
+                                                <p class="data_ps for_center">1</p>
+                                            </td>
+                                            <td>
+                                                <p class=" for_total">£1,839.00</p>
+                                            </td>
+                                        </tr>
+                                        <tr class="table_ps">
+                                            <td scope="row">
+                                                <p class="data_ps"><span>SEO</span>- Platnium Package</p>
+                                            </td>
+                                            <td>
+                                                <p class="data_ps">1 Month</p>
+                                            </td>
+                                            <td>
+                                                <p class="data_ps for_center">1</p>
+                                            </td>
+                                            <td>
+                                                <p class="for_total">£1,839.00</p>
+                                            </td>
+                                        </tr>
+                                        <tr class="table_ps">
+                                            <td scope="row">
+                                                <p class="data_ps"><span>SEO</span>- Platnium Package</p>
+                                            </td>
+                                            <td>
+                                                <p class="data_ps">1 Month</p>
+                                            </td>
+                                            <td>
+                                                <p class="data_ps for_center">1</p>
+                                            </td>
+                                            <td>
+                                                <p class="for_total">£1,839.00</p>
+                                            </td>
+                                        </tr>
+                                        <tr class="table_ps">
+                                            <td scope="row">
+                                                <p class="data_ps"><span>SEO</span>- Platnium Package</p>
+                                            </td>
+                                            <td>
+                                                <p class="data_ps">1 Month</p>
+                                            </td>
+                                            <td>
+                                                <p class="data_ps for_center">1</p>
+                                            </td>
+                                            <td>
+                                                <p class=" for_total">£1,839.00</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td scope="row"></td>
+                                            <td></td>
+                                            <td>
+                                                <p class="head_ps for_subtotal for_center">Total</p>
+                                            </td>
+                                            <td>
+                                                <p class="for_total for_bottom">£7,356.00</p>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="bottomSCdiv2">
+                            <div class="bottomSCbtncp">
+                                <div class="SC_forcoupon">
+                                    <img src="{{ asset('frontend/BrandSparkz/assets/img/cuoponSC.png') }}" alt="cuoponSC" class="img_cpSC">
+                                    <div class="SC_forcoupon2">
+                                        <p class="para_bottom_SC">Have a coupon?</p>
+                                        <div class="line_SC mobile_none"></div>
+                                        <input type="text" class="input_bottom_SC" placeholder="Enter your code here">
+                                    </div>
+                                </div>
+                                <button class="btn btn_button_Sc">Apply Coupon</button>
+                            </div>
+                        </div>
+                        <div class="bottomSCauth">
+                            <div class="bottomdiv_authe">
+                                <input type="checkbox" class="checkbox_SC">
+                                <p class="para_checkboxSC">By ticking this box, you agree to the
+                                    <span>Terms & Conditions</span> & <span>Privacy Policy</span></p>
+                            </div>
+                            <img src="{{ asset('frontend/BrandSparkz/assets/img/SCcapcha.png') }}" alt="" class="SC_capcha">
+                        </div>
+                        <button class="btn btn_SC">Complete Checkout</button>
+                        <img src="{{ asset('frontend/BrandSparkz/assets/img/SCMastercard.png') }}" alt="" class="SC_mastercard">
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
-    {{-- New Code End --}}
-    {{-- <script>
-        function check_agree(form) {
-            var response = hcaptcha.getResponse();
-
-            if (form.terms.checked && response) {
-                return true;
-            }
-
-            if (!form.terms.checked) {
-                Swal.fire({
-                    icon: 'error',
-                    title: 'Oops...',
-                    text: 'Please accept terms and conditions'
-                });
-            } else if (!response) {
-                Swal.fire({
-                    icon: 'error',
-                    title: 'Oops...',
-                    text: 'Please complete the captcha'
-                });
-            }
-            return false;
-        }
-    </script> --}}
+    
+    
 
 @endsection
 
@@ -305,4 +474,29 @@
             $('#GuestCheckout').modal();
         }
     </script>
+
+    <script>
+        function check_agree(form) {
+            var response = hcaptcha.getResponse();
+
+            if (form.terms.checked && response) {
+                return true;
+            }
+
+            if (!form.terms.checked) {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Oops...',
+                    text: 'Please accept terms and conditions'
+                });
+            } else if (!response) {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Oops...',
+                    text: 'Please complete the captcha'
+                });
+            }
+            return false;
+        }
+    </script> 
 @endsection
