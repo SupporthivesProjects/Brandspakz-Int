@@ -1152,7 +1152,7 @@
                                     <input type="file" class="form-control input_upload" style="display: contents;"
                                     id="document" name="document" form="requestform1" required>
                                 </div> --}}
-                                <div class="upload_div" onclick="field_box_file()" type="button">
+                                <div class="upload_div" onclick="field_box_file()" type="button" >
                                     <p class="upload_placeholder" id="upload_placeholder">Upload brief</p>
                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
                                     <path d="M17 9.50195C19.175 9.51395 20.353 9.61095 21.121 10.379C22 11.258 22 12.672 22 15.5V16.5C22 19.329 22 20.743 21.121 21.622C20.243 22.5 18.828 22.5 16 22.5H8C5.172 22.5 3.757 22.5 2.879 21.622C2 20.742 2 19.329 2 16.5V15.5C2 12.672 2 11.258 2.879 10.379C3.647 9.61095 4.825 9.51395 7 9.50195" stroke="url(#paint0_linear_7573_6736)" stroke-width="1.5" stroke-linecap="round"/>
@@ -1169,7 +1169,7 @@
                                     </defs>
                                   </svg>
                                   </div>
-                                  <input type="file" class="form-control input_upload" style="display: contents;" id="document" name="document" required>
+                                  <input type="file" class="form-control input_upload" style="display: contents;" id="document" name="document"  form="requestform1" required>
                             </div>
 
                         </div>
@@ -1230,97 +1230,94 @@
         });
     });
     </script>
+        <script>
+            function check_agree1(form) {
+                var response = grecaptcha.getResponse();
+                console.log(form.email.valid);
+                if (form.fullname && form.email && form.phone && form.message && form.terms.checked) {
     
-@endsection
-
-@section('script')
-
-    <script>
-        function check_agree1(form) {
-            var response = grecaptcha.getResponse();
-            console.log(form.email.valid);
-            if (form.fullname && form.email && form.phone && form.message && form.terms.checked) {
-
-                $('#submit-btn').attr('disabled', true);
-                return true;
-            } else if (!form.fullname.value) {
-                Swal.fire({
-                    icon: 'error',
-                    title: 'Oops...',
-                    text: 'Please Enter Fullname'
-                })
-                return false;
-            } else if (!form.email.value) {
-                Swal.fire({
-                    icon: 'error',
-                    title: 'Oops...',
-                    text: 'Please Enter Email'
-                })
-                return false;
-            } else if (!form.phone.value) {
-                Swal.fire({
-                    icon: 'error',
-                    title: 'Oops...',
-                    text: 'Please Enter Phone'
-                })
-                return false;
-            } else if (!form.message.value) {
-                Swal.fire({
-                    icon: 'error',
-                    title: 'Oops...',
-                    text: 'Please Enter Comments'
-                })
-                return false;
-            } else if (!form.terms.checked) {
-                Swal.fire({
-                    icon: 'error',
-                    title: 'Oops...',
-                    text: 'Please Accept T&C'
-                })
+                    $('#submit-btn').attr('disabled', true);
+                    return true;
+                } else if (!form.fullname.value) {
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Oops...',
+                        text: 'Please Enter Fullname'
+                    })
+                    return false;
+                } else if (!form.email.value) {
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Oops...',
+                        text: 'Please Enter Email'
+                    })
+                    return false;
+                } else if (!form.phone.value) {
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Oops...',
+                        text: 'Please Enter Phone'
+                    })
+                    return false;
+                } else if (!form.message.value) {
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Oops...',
+                        text: 'Please Enter Comments'
+                    })
+                    return false;
+                } else if (!form.terms.checked) {
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Oops...',
+                        text: 'Please Accept T&C'
+                    })
+                    return false;
+                }
                 return false;
             }
-            return false;
-        }
-    </script>
-    <script>
-            $(document).ready(function () {
-                const a = document.querySelectorAll(".service_table tbody tr td:nth-child(2)");
-                const c = document.querySelectorAll(".service_table tbody tr td:last-child");
-                const d = document.querySelectorAll(".service_table tbody tr:first-child td");
-                const e = document.querySelectorAll(".service_table tbody tr:last-child td");
-                const f = document.querySelectorAll(".service_table tbody tr td:last-child");
-                a.forEach(x => {
-                    const b = document.createElement("div");
-                    b.className = "white_box";
-                    x.appendChild(b);
-                })
-                c.forEach(x => {
-                    const b = document.createElement("div");
-                    b.className = "white_box2";
-                    x.appendChild(b);
-                })
-                d.forEach(x => {
-                    const b = document.createElement("div");
-                    b.className = "image_box";
-                    x.appendChild(b);
-                })
-                e.forEach(x => {
-                    const b = document.createElement("div");
-                    b.className = "image_box2";
-                    x.appendChild(b);
-                })
-                f.forEach(x => {
-                    const b = document.createElement("div");
-                    b.className = "image_box3";
-                    const height = x.offsetHeight;
-                    b.style.height = height + "px";
-    
-                    
-                    x.appendChild(b);
-                })
-    
-            }
-            )
-    </script>
+        </script>
+        <script>
+                $(document).ready(function () {
+                    const a = document.querySelectorAll(".service_table tbody tr td:nth-child(2)");
+                    const c = document.querySelectorAll(".service_table tbody tr td:last-child");
+                    const d = document.querySelectorAll(".service_table tbody tr:first-child td");
+                    const e = document.querySelectorAll(".service_table tbody tr:last-child td");
+                    const f = document.querySelectorAll(".service_table tbody tr td:last-child");
+                    a.forEach(x => {
+                        const b = document.createElement("div");
+                        b.className = "white_box";
+                        x.appendChild(b);
+                    })
+                    c.forEach(x => {
+                        const b = document.createElement("div");
+                        b.className = "white_box2";
+                        x.appendChild(b);
+                    })
+                    d.forEach(x => {
+                        const b = document.createElement("div");
+                        b.className = "image_box";
+                        x.appendChild(b);
+                    })
+                    e.forEach(x => {
+                        const b = document.createElement("div");
+                        b.className = "image_box2";
+                        x.appendChild(b);
+                    })
+                    f.forEach(x => {
+                        const b = document.createElement("div");
+                        b.className = "image_box3";
+                        const height = x.offsetHeight;
+                        b.style.height = height + "px";
+        
+                        
+                        x.appendChild(b);
+                    })
+        
+                }
+                )
+        </script>
+
 @endsection
+
                                             
