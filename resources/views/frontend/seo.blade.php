@@ -2776,9 +2776,10 @@
                     </div>
 
                     <input type="file" class="form-control input_upload" style="display: contents;"
-                        id="document" name="document" required>
+                        id="document" name="document" >
                 </div>
 
+                
             </div>
             <div class="spacer"></div>
             <div class="hori_hor">
