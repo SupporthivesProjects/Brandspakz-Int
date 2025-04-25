@@ -1402,7 +1402,7 @@
         </h1>
         <p class="main_pp">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dictum nunc eget molestie
             duis nunc iaculis morbi vestibulum. Massa volutpat nisi, ultrices aenean pellentesque ornare.</p>
-        <button class="btn btn_global">
+        <button class="btn btn_global" onclick="scrollToDiv()">
                 <img src="{{ asset('frontend/BrandSparkz/assets/img/btn_primary_pattern.png') }}" alt="" class="img-fluid btn_global_pattern">
                 <div class="btn_global_inner w-100">
                     
@@ -1642,9 +1642,9 @@
                     </div>
                 </div>
 
-                <button class="btn btn_global2 on_phone">
+                <button class="btn btn_global2 on_phone" onclick="window.location.href='{{ route('aboutus') }}'">
                     <img src="{{ asset('frontend/BrandSparkz/assets/img/btn_primary_pattern2.png') }}" alt="" class="img-fluid btn_global_pattern2">
-                    <div class="btn_global_inner2 on_phone">
+                    <div class="btn_global_inner2 on_phone" >
                         <p class="cart_text">Learn more about us</p>
                         <img src="{{ asset('frontend/BrandSparkz/assets/img/up_right.svg') }}" alt="" class="img-fluid cart_logo">
                     </div>
@@ -1662,14 +1662,14 @@
 
 </section>
 
-<section class="sec8_s">
+<section class="sec8_s" id="targetDiv">
 
     
     <h1 class="table_tt">
         Pricing That <br class="desktop_none">Makes Sense
     </h1>
     <p class="table_pp">No contracts. No Surprise fees.</p>
-    <div class="for_below_table seo_width mx-auto">
+    <div class="for_below_table seo_width mx-auto" >
         <div class="social_tablebar w-100">
             <div class="tab_btnbar">
                 <div class="nav-tabs-container position-relative">
@@ -2776,10 +2776,10 @@
                     </div>
 
                     <input type="file" class="form-control input_upload" style="display: contents;"
-                        id="document" name="document" >
+                        id="document" name="document">
                 </div>
 
-                
+
             </div>
             <div class="spacer"></div>
             <div class="hori_hor">
@@ -2897,13 +2897,79 @@
     
            
     </script>
+    <script>
+      function check_agree(form) {
+            if (!form.fullname.value) {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Oops...',
+                    text: 'Please Enter Fullname'
+                });
+                return false;
+            }
+
+            if (!form.email.value) {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Oops...',
+                    text: 'Please Enter Email'
+                });
+                return false;
+            }
+
+            if (!form.phone.value) {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Oops...',
+                    text: 'Please Enter Phone'
+                });
+                return false;
+            }
+
+            if (!form.document.value) {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Oops...',
+                    text: 'Please Upload a Document'
+                });
+                return false;
+            }
+
+            if (!form.message.value) {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Oops...',
+                    text: 'Please Enter Comments'
+                });
+                return false;
+            }
+
+            if (!form.terms.checked) {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Oops...',
+                    text: 'Please Accept T&C'
+                });
+                return false;
+            }
+
+            return true;
+        }
+    </script>
+    <script>
+        function scrollToDiv() {
+            document.getElementById('targetDiv').scrollIntoView({
+                behavior: 'smooth'
+            });
+        }
+    </script>
 
 @endsection
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 @section('script')
     <script>
         function check_agree(form) {
-            if (form.fullname && form.email && form.phone && form.message && form.terms.checked) {
+            if (form.fullname && form.email && form.phone && form.message && form.terms.checked && form.document) {
                 $('#submit-btn').attr('disabled', true);
                 return true;
             } else if (!form.fullname.value) {
