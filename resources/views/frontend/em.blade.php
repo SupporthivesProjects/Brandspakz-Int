@@ -1871,6 +1871,7 @@
 
 @endsection
 
+
 @section('script')
 <script>
     function check_agree(form) {
