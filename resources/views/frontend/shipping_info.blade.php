@@ -35,38 +35,38 @@
                         <div class="inputSC_inner">
                             <div class="inputparaSC">
                                 <p class="paraSC">First Name</p>
-                                <input type="text" class="inputSC" name="name" id="name" value="{{ $lastBillingAddress->name ?? '' }}" required>
+                                <input type="text" class="inputSC" form="shippingAddress name="name" id="name" value="{{ $lastBillingAddress->name ?? '' }}" required>
                             </div>
                             <div class="inputparaSC">
                                 <p class="paraSC">Phone</p>
-                                <input type="text" class="inputSC" name="phone" id="phone" value="{{ $lastBillingAddress->phone ?? '' }}" required>
+                                <input type="text" class="inputSC" form="shippingAddress name="phone" id="phone" value="{{ $lastBillingAddress->phone ?? '' }}" required>
                             </div>
                             <div class="inputparaSC">
                                 <p class="paraSC">Address Line 1</p>
-                                <input type="text" class="inputSC" name="address" id="address" value="{{ $lastBillingAddress->address ?? '' }}" required>
+                                <input type="text" class="inputSC" form="shippingAddress name="address" id="address" value="{{ $lastBillingAddress->address ?? '' }}" required>
                             </div>
                             <div class="inputparaSC">
                                 <p class="paraSC">City</p>
-                                <input type="text" class="inputSC" name="city" id="city" value="{{ $lastBillingAddress->city ?? '' }}" required>
+                                <input type="text" class="inputSC" form="shippingAddress name="city" id="city" value="{{ $lastBillingAddress->city ?? '' }}" required>
                             </div>
                             <div class="inputparaSC">
                                 <p class="paraSC">Date Of Birth</p>
-                                <input type="date" class="inputSC" value="{{ $lastBillingAddress->dob ?? '' }}" id="dob" name="dob" 
+                                <input type="date" class="inputSC" value="{{ $lastBillingAddress->dob ?? '' }}" id="dob" name="dob"  form="shippingAddress
                                     max="@php echo date('Y-m-d',strtotime('18 years ago')); @endphp" required>
                             </div>
                         </div>
                         <div class="inputSC_inner">
                             <div class="inputparaSC">
                                 <p class="paraSC">Last Name</p>
-                                <input type="text" class="inputSC" name="lname" id="lname" value="{{ $lastBillingAddress->lname ?? '' }}" required>
+                                <input type="text" class="inputSC" form="shippingAddress name="lname" id="lname" value="{{ $lastBillingAddress->lname ?? '' }}" required>
                             </div>
                             <div class="inputparaSC">
                                 <p class="paraSC">Email</p>
-                                <input type="text" class="inputSC" name="email" id="email" value="{{ $user->email ?? '' }}" readonly>
+                                <input type="text" class="inputSC" form="shippingAddress name="email" id="email" value="{{ $user->email ?? '' }}" readonly>
                             </div>
                             <div class="inputparaSC">
                                 <p class="paraSC">Address Line 2</p>
-                                <input type="text" class="inputSC" name="addressL2" id="addressL2" value="{{ $lastBillingAddress->addressL2 ?? '' }}" >
+                                <input type="text" class="inputSC" form="shippingAddress name="addressL2" id="addressL2" value="{{ $lastBillingAddress->addressL2 ?? '' }}" >
                             </div>
                             <div class="inputparaSC">
                                 <p class="paraSC">Country</p>
@@ -80,7 +80,7 @@
                             </div>
                             <div class="inputparaSC">
                                 <p class="paraSC">Postcode / Zip</p>
-                                <input type="text" class="inputSC" name="postal_code" id="postal_code" value="{{ $lastBillingAddress->postal_code ?? '' }}" required>
+                                <input type="text" class="inputSC" form="shippingAddress name="postal_code" id="postal_code" value="{{ $lastBillingAddress->postal_code ?? '' }}" required>
                             </div>
                         </div>
                         @endif
@@ -155,19 +155,17 @@
                             </div>
                         </div>
                         <div class="bottomSCdiv2">
-                           
-                            <div class="bottomSCbtncp">
-                                <div class="SC_forcoupon">
-                                    <img src="{{ asset('frontend/BrandSparkz/assets/img/cuoponSC.png') }}" alt="cuoponSC" class="img_cpSC">
-                                    <div class="SC_forcoupon2">
-                                        <p class="para_bottom_SC">Have a coupon?</p>
-                                        <div class="line_SC mobile_none"></div>
-                                        <input type="text" class="input_bottom_SC" placeholder="Enter your code here">
+                                <div class="bottomSCbtncp">
+                                    <div class="SC_forcoupon">
+                                        <img src="{{ asset('frontend/BrandSparkz/assets/img/cuoponSC.png') }}" alt="cuoponSC" class="img_cpSC">
+                                        <div class="SC_forcoupon2">
+                                            <p class="para_bottom_SC">Have a coupon?</p>
+                                            <div class="line_SC mobile_none"></div>
+                                            <input type="text" class="input_bottom_SC" placeholder="Enter your code here" >
+                                        </div>
                                     </div>
-                                </div>
-                                <button class="btn btn_button_Sc">Apply Coupon</button>
-                            </div>
-                           
+                                    <button class="btn btn_button_Sc" >Apply Coupon</button>
+                                </div>    
                         </div>
                         <div class="bottomSCauth">
                             <div class="bottomdiv_authe">
@@ -251,7 +249,7 @@
         }
     </script>
 
-    <script>
+    {{--  <script>
         function check_agree(form) {
         var response = hcaptcha.getResponse();
        
@@ -276,4 +274,6 @@
         return false;
     }
     </script> 
+
+    
 @endsection
