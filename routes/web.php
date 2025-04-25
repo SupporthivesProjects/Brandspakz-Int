@@ -1,9 +1,11 @@
 <?php
 
+use App\Http\Controllers\Auth\ForgotPasswordController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\RegisterController;
+use App\Http\Controllers\Auth\ResetPasswordController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\CurrencyController;
 use App\Http\Controllers\CartController;
@@ -45,6 +47,7 @@ Route::middleware(['admin.log'])->group(function () {
     Route::post('/home/section/best_sellers', [HomeController::class, 'load_best_sellers_section'])->name('home.section.best_sellers');
     Route::post('/category/nav-element-list', [HomeController::class, 'get_category_items'])->name('category.elements');
 
+    
     // Flash Deals
     Route::get('/flash-deal/{slug}', [HomeController::class, 'flash_deal_details'])->name('flash-deal-details');
 
@@ -158,4 +161,21 @@ Route::middleware(['admin.log'])->group(function () {
 
     // Track Order
     Route::get('/track-order', [HomeController::class, 'trackOrder'])->name('orders.track');
+    // Password Reset Routes...
+    Route::get('password/reset', [ForgotPasswordController::class, 'showLinkRequestForm'])->name('password.request');
+    Route::post('password/email', [ForgotPasswordController::class, 'sendResetLinkEmail'])->name('password.email');
+    Route::get('password/reset/{token}', [ResetPasswordController::class, 'showResetForm'])->name('password.reset');
+    Route::post('password/reset', [ResetPasswordController::class, 'reset'])->name('password.update');
+});
+
+Route::get('/test-404', function() {
+    abort(404);
+});
+
+Route::get('/test-500', function() {
+    abort(500);
+});
+
+Route::get('/test-403', function() {
+    abort(403);
 });
