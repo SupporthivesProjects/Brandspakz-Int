@@ -16,10 +16,10 @@
 
 
 <section class="register_page">
-    <img src="{{ asset('frontend/brandsparkz/assets/img/cutter_top_right.png') }}" alt="" class="img-fluid mobile_none cutter_top_right">
-    <img src="{{ asset('frontend/brandsparkz/assets/img/cutter_bottom_left.png') }}" alt="" class="img-fluid mobile_none cutter_bottom_left">
+    <img src="{{ asset('frontend/Brandsparkz/assets/img/cutter_top_right.png') }}" alt="" class="img-fluid mobile_none cutter_top_right">
+    <img src="{{ asset('frontend/Brandsparkz/assets/img/cutter_bottom_left.png') }}" alt="" class="img-fluid mobile_none cutter_bottom_left">
     <div class="contact_main_div">
-        <img src="{{ asset('frontend/brandsparkz/assets/img/cutter_pattern.png') }}" alt="" class="img-fluid desktop_none cutter_pattern">
+        <img src="{{ asset('frontend/Brandsparkz/assets/img/cutter_pattern.png') }}" alt="" class="img-fluid desktop_none cutter_pattern">
         <div class="cutter_main_div_inner">
             <div class="cutter_main_div_inner_right_login">
                 <form method="POST" action="{{ route('password.update') }}">
@@ -58,11 +58,11 @@
 
                 <div class="contact_input_div">
                     <button class="btn btn_global2 mx-auto">
-                        <img src="{{ asset('frontend/brandsparkz/assets/img/btn_primary_pattern2.png') }}" alt="" class="img-fluid btn_global_pattern2">
+                        <img src="{{ asset('frontend/Brandsparkz/assets/img/btn_primary_pattern2.png') }}" alt="" class="img-fluid btn_global_pattern2">
                         <div class="btn_global_inner2">
                             
                             <button type="submit" class="cart_text" >Reset Password</button>
-                            <img src="{{ asset('frontend/brandsparkz/assets/img/arrow_logo.svg') }}" alt="" class="img-fluid cart_logo">
+                            <img src="{{ asset('frontend/Brandsparkz/assets/img/arrow_logo.svg') }}" alt="" class="img-fluid cart_logo">
                         </div>
                     </button>
                 </div>
