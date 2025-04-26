@@ -155,6 +155,26 @@
                             </div>
                         </div>
                         <div class="bottomSCdiv2">
+                            @php
+                                $coupon_system = \App\Models\BusinessSetting::where('type', 'coupon_system')->first();
+                            @endphp  
+                                @if (Auth::check() && $coupon_system && $coupon_system->value == 1)
+                                @if (Session::has('coupon_discount'))
+                                <form class="common-form" id="form1" action="{{ route('checkout.remove_coupon_code') }}" method="POST" enctype="multipart/form-data">
+                                    @csrf
+                                <div class="bottomSCbtncp">
+                                    <div class="SC_forcoupon">
+                                        <img src="{{ asset('frontend/BrandSparkz/assets/img/cuoponSC.png') }}" alt="cuoponSC" class="img_cpSC">
+                                        <div class="SC_forcoupon2">
+                                            <p class="para_bottom_SC">Have a coupon?</p>
+                                            <div class="line_SC mobile_none"></div>
+                                            <input type="text" class="input_bottom_SC" placeholder="Enter your code here" >
+                                        </div>
+                                    </div>
+                                    <button class="btn btn_button_Sc" type="submit">Apply Coupon</button>
+                                </div>  
+                                </form> 
+                                @else
                                 <div class="bottomSCbtncp">
                                     <div class="SC_forcoupon">
                                         <img src="{{ asset('frontend/BrandSparkz/assets/img/cuoponSC.png') }}" alt="cuoponSC" class="img_cpSC">
@@ -165,7 +185,9 @@
                                         </div>
                                     </div>
                                     <button class="btn btn_button_Sc" >Apply Coupon</button>
-                                </div>    
+                                </div>   
+                                @endif
+                                @endif 
                         </div>
                         <div class="bottomSCauth">
                             <div class="bottomdiv_authe">
