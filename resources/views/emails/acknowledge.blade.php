@@ -1,54 +1,3 @@
-{{--<!DOCTYPE html>
-<html>
-<head>
-    <title>Verify Your Email</title>
-    <style>
-        .container {
-            max-width: 600px;
-            margin: 0 auto;
-            padding: 20px;
-            font-family: Arial, sans-serif;
-        }
-        .header {
-            background: #4A90E2;
-            color: white;
-            padding: 20px;
-            text-align: center;
-        }
-        .content {
-            padding: 20px;
-            line-height: 1.5;
-        }
-        .button {
-            background: #4A90E2;
-            color: white;
-            padding: 12px 24px;
-            text-decoration: none;
-            border-radius: 4px;
-            display: inline-block;
-            margin: 20px 0;
-        }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <div class="header">
-            <h1>Welcome to {{ config('app.name') }}!</h1>
-        </div>
-        <div class="content">
-            <h2>Hi {{ $user->name }},</h2>
-            <p>Thanks for registering! Please verify your email address to get started.</p>
-            
-            <a href="{{ url('verify-email/' . $token) }}" class="button">
-                Verify Email Address
-            </a>
-
-            <p>If you did not create an account, no further action is required.</p>
-        </div>
-    </div>
-</body>
-</html>--}}
-
 
 <!DOCTYPE html>
 <html>
@@ -69,23 +18,26 @@
                     <tr>
                         <td style="padding: 20px 60px;">
                             <div>
-                            <h1 style="font-size:24px; font-weight: 700; text-align: center;color:#3C3C3C;font-family:Arial;text-transform:capitalise;">Contact Form Confirmation</h1>
+                            <h1 style="font-size:24px; font-weight: 700; text-align: center;color:#3C3C3C;font-family:Arial;text-transform:capitalise;">
+                                @if($data['from_page']=="contactus")
+                                    Contact Form Confirmation
+                                @else
+                                    Custom package request
+                                @endif
+                            </h1>
                             <p style="font-size: 16px; font-weight: 500px; color:#656565;text-align: center;line-height: 150%;font-family:Arial;">
                                 Dear {{ $data['fullname'] }},<br><br>
 
-                                  Welcome to {{ config('app.name') }}!
+                                This email is to confirm your submission of the contact form. <br>
+                                 Please allow for XX days for us to respond. <br>
+                                In the meantime, why not browse our services.
                                </p>
                                <table width="100%" cellspacing="0" cellpadding="10" border="0" style="border-collapse: collapse;margin-top:24px;">
                                 <td align="center">
-                                    <h2>Hi {{ $user->name }},</h2>
-                                        <p>Thanks for registering! Please verify your email address to get started.</p>
-                                        
-                                        <a href="{{ url('verify-email/' . $token) }}" class="button">
-                                            Verify Email Address
-                                        </a>
-
-                                        <p>If you did not create an account, no further action is required.</p>
-                                </td>      
+                                    <!--[if mso]><v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="{{ route('seo') }}" style="margin-bottom:25px;margin-top:10px;height:50px; v-text-anchor:middle; width:190px;" arcsize="0%"  stroke="f" fillcolor="#D4B88E"><w:anchorlock/><center style="padding-top:20px;padding-bottom:20px;color:#000000;font-size:20px"><![endif]-->
+                                     <a href="{{ route('seo') }}" style="color:#FFFFFF;background:#EE5921;padding:16px 40px;font-size: 14px;font-weight:600;text-decoration:none;font-family:Arial;line-height:22px;border-radius:2px;text-transform:capitalize;">Browse services</a>
+                                     <!--[if mso]></center></v:roundrect><![endif]-->
+                                </td>   
                                </table> 
                              </div>
 
@@ -121,4 +73,3 @@
     </table>
 </body>
 </html>
-
