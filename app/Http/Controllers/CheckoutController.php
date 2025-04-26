@@ -125,8 +125,11 @@ class CheckoutController extends Controller
 
         foreach (Session::get('cart') as $cartItem) {
             $subtotal += $cartItem['price'] * $cartItem['quantity'];
-            $tax += $cartItem['tax'] * $cartItem['quantity'];
-            $shipping += $cartItem['shipping'] * $cartItem['quantity'];
+            //$tax += $cartItem['tax'] * $cartItem['quantity'];
+            //$shipping += $cartItem['shipping'] * $cartItem['quantity'];
+            $tax += ($cartItem['tax'] ?? 0) * $cartItem['quantity'];
+            $shipping += ($cartItem['shipping'] ?? 0) * $cartItem['quantity'];
+  
         }
 
         $total = $subtotal + $tax + $shipping;
