@@ -12,8 +12,8 @@
         </section>
 
         <section class="faq_2">
-            <img src="{{ asset('frontend/brandsparkz/assets/img/intersect_tt.png') }}" alt="" class="img-fluid intersect_tt mobile_none">
-            <img src="{{ asset('frontend/brandsparkz/assets/img/mobile_intersect.png') }}" alt="" class="img-fluid intersect_tt_mob desktop_none">
+            <img src="{{ asset('frontend/Brandsparkz/assets/img/intersect_tt.png') }}" alt="" class="img-fluid intersect_tt mobile_none">
+            <img src="{{ asset('frontend/Brandsparkz/assets/img/mobile_intersect.png') }}" alt="" class="img-fluid intersect_tt_mob desktop_none">
 
 
             <div class="container custom_padding_faq">
@@ -22,22 +22,22 @@
 
                     <div class="left_main">
                         <div class="left_faq">
-                            <img src="{{ asset('frontend/brandsparkz/assets/img/faq_desktop_prop.png') }}" alt="" class="img-fluid faq_desktop_prop">
+                            <img src="{{ asset('frontend/Brandsparkz/assets/img/faq_desktop_prop.png') }}" alt="" class="img-fluid faq_desktop_prop">
                             <div class="white_faq_bg">
 
-                                <img src="{{ asset('frontend/brandsparkz/assets/img/left_faq_in.png') }}" alt="" class="img-fluid also_img"
+                                <img src="{{ asset('frontend/Brandsparkz/assets/img/left_faq_in.png') }}" alt="" class="img-fluid also_img"
                                     style="margin-bottom: 18px;">
                                 <h1 class="faq_left_tt">can’t find your answer? <span class="faq_left_tt_span">Let’s fix
                                         that.</span></h1>
                                 <p class="faq_left_pp">Everything you need to know about out products and billing.. Cant
                                     find the answer you're looking for? Please submit an enquiry via our contact form.</p>
                                 <button class="btn btn_global" onclick="window.location.href='{{ route('contactus') }}'">
-                                    <img src="{{ asset('frontend/brandsparkz/assets/img/btn_primary_pattern.png') }}" alt=""
+                                    <img src="{{ asset('frontend/Brandsparkz/assets/img/btn_primary_pattern.png') }}" alt=""
                                         class="img-fluid btn_global_pattern">
                                     <div class="btn_global_inner w-100">
 
                                         <p class="cart_text">Drop us a line</p>
-                                        <img src="{{ asset('frontend/brandsparkz/assets/img/up_right.svg') }}" alt="" class="img-fluid cart_logo">
+                                        <img src="{{ asset('frontend/Brandsparkz/assets/img/up_right.svg') }}" alt="" class="img-fluid cart_logo">
                                     </div>
                                 </button>
 
@@ -179,7 +179,7 @@
                     </div>
 
                     <button class="btn btn_global2 on_phone" onclick="window.location.href='{{ route('user.login') }}'">
-                        <img src="{{ asset('frontend/brandsparkz/assets/img/btn_primary_pattern2.png') }}" alt=""
+                        <img src="{{ asset('frontend/Brandsparkz/assets/img/btn_primary_pattern2.png') }}" alt=""
                             class="img-fluid btn_global_pattern2">
                         <div class="btn_global_inner2 on_phone">
                             <p class="cart_text">Get started!</p>
