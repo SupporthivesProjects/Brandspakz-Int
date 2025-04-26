@@ -1,301 +1,410 @@
 @extends('frontend.layouts.app')
 
 @section('content')
-    <section>
-        <div class="extra_space">
+    
+<section>
+
+    <section class="sec1_s">
+        <video class="bg-image d-lg-block d-md-block d-none" loop="" muted="" autoplay=""
+            style="object-fit: cover;">
+            <source src="{{ asset('frontend/brandsparkz/assets/img/aboutus.mp4') }}" type="video/mp4">
+        </video>
+        <video class="bg-image d-lg-none d-md-none d-block" loop="" muted="" autoplay="" style="object-fit: cover;">
+            <source src="{{ asset('frontend/brandsparkz/assets/img/aboutus_mob.mp4') }}" type="video/mp4">
+        </video>
+
+        <div class="aboutus__sec1">
+            <h1 class="main_tt">
+                The Brains Behind <br class="mobile_none">the<span class="aboutus_span">
+                    Brand Sparkz
+                </span>
+            </h1>
+            <p class="main_pp">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dictum nunc eget molestie
+                duis nunc iaculis morbi vestibulum. Massa volutpat nisi, ultrices aenean pellentesque ornare ornare
+                vel. Viverra et lobortis a scelerisque vitae. Turpis non venenatis vel sed. Urna id.</p>
 
         </div>
-        <div class="sec1_au">
-            <div class="in_sec4_au">
-                <div class="left_sec1_au">
 
-                </div>
-                <div class="right_sec1_au">
-                    <div class="sec1_au_div">
-                        <h1 class="sec1_au_tt" data-aos="fade-up">Connecting the World </h1>
-                        <p class="sec1_au_pp" data-aos="fade-up">Translate with us to bridge language gaps seamlessly. Our
-                            expert team delivers precise, culturally relevant translations, ensuring your message resonates
-                            globally. </p>
-                        <button class="btn green_btn forphone_100width"
-                            onclick="window.location.href='#'">
-                            Discover all services
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
 
-        <div class="sec2_au">
-            <div class="in_sec2_au">
-                <div class="thught_wala">
-                    <div class="thought_div">
-                        <p class="img_tt">Hello!</p>
-                    </div>
-                    <div class="thought_div2">
-                        <p class="img_tt">Salut!</p>
-                    </div>
-                    <div class="thought_div">
-                        <p class="img_tt">Bonjour!</p>
-                    </div>
-                </div>
-                <div class="left_sec2_au">
 
-                </div>
-                <div class="right_sec2_au">
 
-                    <div class="in_rightssec2_au">
-                        <div>
-                            <h1 class="his_tt" data-aos="fade-up">Our Expertise</h1>
-                            <p class="sec2_pp" data-aos="fade-up">Our expertise lies in delivering accurate, high-quality
-                                translations across various industries. With a team of certified linguists and specialists,
-                                we ensure each project meets your standards. Our deep understanding of language and culture
-                                guarantees your message resonates globally. <br>We know that language often builds a barrier
-                                to other audiences. Whether you need legal documents, marketing materials, or technical
-                                manuals translated, our translations ensure your message is clear, compelling, and
-                                culturally appropriate, driving your business forward.
-                            </p>
 
-                        </div>
-                        @auth
-                            <button class="btn green_btn forphone_100width"
-                                onclick="window.location.href='{{ route('dashboard') }}'">
-                                My Account
-                            </button>
-                        @else
-                            <button class="btn green_btn forphone_100width"
-                                onclick="window.location.href='{{ route('user.login') }}'">
-                                Sign up
-                            </button>
-                        @endauth
-                    </div>
 
-                    <img src="{{ asset('frontend/Lingosphere/img/sound1_sec2.svg') }}" alt=""
-                        class="img-fluid sound1_sec2 mobile_none">
-                    <img src="{{ asset('frontend/Lingosphere/img/sound2_sec2.svg') }}" alt=""
-                        class="img-fluid sound2_sec2 mobile_none">
-
-                </div>
-            </div>
-        </div>
-
-        <div class="sec3_au">
-            <div class="top_sec3_au">
-                <h1 class="sec3au_tt" data-aos="fade-up">
-                    Our Benefits
-                </h1>
-                <p class="sec3au_pp" data-aos="fade-up">All our translations are provided with the client in mind. We listen
-                    to your requirements, take on board feedback and always strive to ensure customer satisfaction. </p>
-            </div>
-
-            <div class="container p-0">
-                <div class="bottom_sec3_au">
-                    <div class="per_greenbox">
-                        <div class="inner_green_box">
-                        </div>
-                        <div class="topb_box">
-                            30+
-                        </div>
-                        <div class="bottom_box">
-                            Languages
-                        </div>
-                    </div>
-                    <div class="per_greenbox">
-                        <div class="inner_green_box">
-                        </div>
-                        <div class="topb_box">
-                            5 Star
-                        </div>
-                        <div class="bottom_box">
-                            customer satisfaction
-                        </div>
-                    </div>
-                    <div class="per_greenbox">
-                        <div class="inner_green_box">
-                        </div>
-                        <div class="topb_box">
-                            24/7
-                        </div>
-                        <div class="bottom_box">
-                            dedicated support
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-
-        <div class="sec4_au">
-            <div class="in_sec4_au">
-                <div class="left_sec4_au">
-                </div>
-                <div class="right_sec4_au">
-                    <div class="in_rightssec4_au">
-                        <div>
-                            <h1 class="his_tt" data-aos="fade-up">Who We Are</h1>
-                            <p class="his_pp" data-aos="fade-up">Founded with a passion for bridging barriers across the
-                                world, our company has grown from a small team to a global leader in translation services.
-                                Over the years, we've expanded our expertise, embracing new technologies whilst staying true
-                                to our commitment to quality, accuracy, and client satisfaction.</p>
-
-                        </div>
-                        <button class="btn green_btn forphone_100width"
-                            onclick="window.location.href='#'">
-                            Find out more
-                        </button>
-                    </div>
-
-                    <img src="{{ asset('frontend/Lingosphere/img/sound1_sec4.svg') }}" alt=""
-                        class="img-fluid sound1_sec4 mobile_none">
-                    <img src="{{ asset('frontend/Lingosphere/img/sound2_sec4.svg') }}" alt=""
-                        class="img-fluid sound2_sec4 mobile_none">
-                    <img src="{{ asset('frontend/Lingosphere/img/sound3_sec4.svg') }}" alt=""
-                        class="img-fluid sound3_sec4 mobile_none">
-                    <img src="{{ asset('frontend/Lingosphere/img/sound4_sec4.svg') }}" alt=""
-                        class="img-fluid sound4_sec4 mobile_none">
-                </div>
-            </div>
-        </div>
-
-        <div class="sec5_au">
-            <div class="in_sec5_au">
-                <div class="container p-0">
-                    <div class="inner_sec5">
-                        <div class="left_iner5">
-                            <h1 class="leftin5_tt" data-aos="fade-up">Our mission &<br class="desktop_none"> values</h1>
-                            <p class="leftin5_pp" data-aos="fade-up">Our mission is to empower global communication through
-                                accurate, culturally relevant translations. We value excellence, integrity, and client
-                                satisfaction, ensuring every project reflects the highest quality. We strive to build
-                                lasting relationships with our clients, helping you to connect worldwide..</p>
-                        </div>
-                        <div class="right_iner5">
-                            <div class="top_in5">
-                                <div class="benefits_box1">
-                                    <h1 class="crd_tt" data-aos="fade-up">Commitment to Quality</h1>
-                                    <p class="leftin5_pp" data-aos="fade-up">We consistently deliver top-notch translations,
-                                        focusing on accuracy and excellence to meet the highest industry standards in every
-                                        project.</p>
-                                </div>
-                                <div class="benefits_box2">
-                                    <h1 class="crd_tt" data-aos="fade-up">Integrity in Action</h1>
-                                    <p class="leftin5_pp" data-aos="fade-up">We operate with honesty and transparency,
-                                        ensuring trust and ethical practices in all interactions, from client communication
-                                        to service delivery. </p>
-                                </div>
-                            </div>
-                            <div class="bottom_in5">
-                                <div class="benefits_box2">
-                                    <h1 class="crd_tt" data-aos="fade-up">Client-centered</h1>
-                                    <p class="leftin5_pp" data-aos="fade-up">Our clients’ needs are our priority. We
-                                        tailor our services to meet your specific requirements, providing personalised and
-                                        responsive support.</p>
-                                </div>
-                                <div class="benefits_box1">
-                                    <h1 class="crd_tt" data-aos="fade-up">Cultural Sensitivity</h1>
-                                    <p class="leftin5_pp" data-aos="fade-up">We honour cultural differences by delivering
-                                        translations that respect and reflect the nuances and context of each target
-                                        language and audience.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="cont-form">
-
-            <img src="{{ asset('frontend/Lingosphere/img/left_icon_sound.svg') }}" alt=""
-                class="img-fluid left_icon_sound mobile_none">
-            <img src="{{ asset('frontend/Lingosphere/img/right_icon_sound.svg') }}" alt=""
-                class="img-fluid right_icon_sound mobile_none">
-
-            <div class="form-cont">
-                <p class="c-btxt">Get in touch</p>
-                <form id="contactform" class="form-cont" role="form" action="{{ route('contactus.store') }}"
-                    method="post" onsubmit="return check_agree(this);">
-                    @csrf
-                    <input type="hidden" name="from_page" class="form-control" value="contactus">
-                    <div class="inf-f">
-                        <input type="text" class="form-control input_main" name="fullname" id="fullname"
-                            form="contactform" placeholder="Name" required>
-                        <input type="email" class="form-control input_main" name="email" id="email"
-                            form="contactform" placeholder="Email" required>
-                    </div>
-                    <input type="tel" class="form-control input_main" name="phone" id="phone"
-                        form="contactform" placeholder="Phone Number" required>
-                    <textarea name="message" id="message" class="message-f" placeholder="Subject" form="contactform"></textarea>
-                    <div class="checkbox-cont">
-                        <div class="c-checkbox">
-                            <div class="c-div">
-                                <label class="d-flex justify-content-center justify-content-lg-start">
-                                    <input type="checkbox" id="terms" name="terms">
-                                    <label for="terms"></label>
-                                </label>
-                            </div>
-                            <div class="c-text">
-                                <p class="login_strong">By ticking this box, you agree to <a
-                                        href="{{ route('termsandconditions') }}">Terms and Conditions</a>
-                                    and <a href="{{ route('privacypolicy') }}">Privacy Policy.</a></p>
-                            </div>
-                        </div>
-                        <div class="h-captcha mx-auto my_mob_24" data-sitekey="{{ env('H_CAPTCHA_SITE_KEY') }}"></div>
-                    </div>
-                    <button type="submit" class="cont-btn btn" form="contactform">Submit Your message</button>
-                </form>
-            </div>
-        </div>
-
-        <div class="sec7_au">
-            <div class="in_sec7_au">
-            </div>
-        </div>
     </section>
 
 
-    <script>
-        function check_agree(form) {
-            console.log(form.email.valid);
-            if (form.fullname && form.email && form.message && form.terms.checked) {
+    <section class="for_bgonly">
+        <section class="aboutus_2">
+            <img src="{{ asset('frontend/brandsparkz/assets/img/intersect_tt.png') }}" alt="" class="img-fluid intersect_tt mobile_none">
+            <img src="{{ asset('frontend/brandsparkz/assets/img/mobile_intersect.png') }}" alt="" class="img-fluid intersect_tt_mob desktop_none">
 
-                $('#submit-btn').attr('disabled', true);
-                return true;
-            } else if (!form.fullname.value) {
-                Swal.fire({
-                    icon: 'error',
-                    title: 'Oops...',
-                    text: 'Please Enter Fullname'
-                })
-                return false;
-            } else if (!form.email.value) {
-                Swal.fire({
-                    icon: 'error',
-                    title: 'Oops...',
-                    text: 'Please Enter Email'
-                })
-                return false;
-            } else if (!form.phone.value) {
-                Swal.fire({
-                    icon: 'error',
-                    title: 'Oops...',
-                    text: 'Please Enter Phone'
-                })
-                return false;
-            } else if (!form.message.value) {
-                Swal.fire({
-                    icon: 'error',
-                    title: 'Oops...',
-                    text: 'Please Enter Comments'
-                })
-                return false;
-            } else if (!form.terms.checked) {
-                Swal.fire({
-                    icon: 'error',
-                    title: 'Oops...',
-                    text: 'Please Accept T&C'
-                })
-                return false;
-            }
+            <h1 class="about_tt">
+                Our <span class="about_tt_span">Spark</span> by the Numbers
+            </h1>
+            <p class="about_pp">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quam leo velit mi diam sed
+                viverra aenean. Ut et velit molestie consectetur pharetra, platea convallis. Eleifend porttitor
+                viverra sed lectus ipsum vitae ipsum blandit.</p>
+            <div class="container p-0">
+                <div class="image_section">
+                    <div class="img_1_shadow_wrapper">
+                        <img class="img_1_shadow" src="{{ asset('frontend/brandsparkz/assets/img/img_1_shadow.png') }}">
+                        <div class="img_1">
+                            <p class="image_tt mx-auto">Campaigns That Actually work</p>
+                        </div>
+                    </div>
+
+
+
+
+                    <div class="img_2">
+                        <p class="image_tt mx-auto">Support That Doesn’t Sleep</p>
+                    </div>
+                    <div class="img_3">
+                        <p class="image_tt mx-auto">More Than 20 Digital Creators, One Mission</p>
+                    </div>
+                    <div class="img_4_shadow_wrapper">
+                        <img class="img_4_shadow" src="{{ asset('frontend/brandsparkz/assets/img/img_4_shadow.png') }}">
+                        <div class="img_4">
+                            <p class="image_tt mx-auto">Cross-Industry Knowledge</p>
+                        </div>
+                    </div>
+
+
+                </div>
+
+            </div>
+        </section>
+
+        <section class="aboutus_3">
+            <div class="container custom_pad_about">
+                <div class="aboutus3_maincrd">
+
+                    <div class="aucrd_contentouter">
+                        <img src="{{ asset('frontend/brandsparkz/assets/img/aboutusprop.png') }}" alt="" class="img-fluid aboutusprop mobile_none">
+                        <img src="{{ asset('frontend/brandsparkz/assets/img/mobile_au_prop.png') }}" alt=""
+                            class="img-fluid mobile_au_prop desktop_none">
+                        <div class="aucrd_contentinner">
+                            <h1 class="au_tt">
+                                the Minds That Make <span class="au_tt_span">the Magic</span>
+                            </h1>
+                            <p class="au_pp">Lorem ipsum dolor sit amet consectetur. Felis tristique dapibus felis
+                                vestibulum vulputate tincidunt. Nunc quis ut aliquet orci bibendum et placerat
+                                iaculis pellentesque. Accumsan facilisi duis nullam cursus volutpat et molestie
+                                vestibulum. Tellus nullam a egestas elementum ut odio turpis cursus lobortis.
+                                <br>
+                                Amet dictumst nulla ac at nunc sit in adipiscing volutpat. Vulputate nisl cum diam
+                                pulvinar. Ut tellus tellus posuere volutpat tellus aliquam aliquam amet. Ac morbi
+                                sed pulvinar sed amet lacinia. Lectus justo vestibulum ipsum cras leo sagittis.
+                                <br>
+                                Id non sed habitant vel massa. Ipsum leo leo aliquet vel aliquam. Tristique nam
+                                turpis dolor et fames ac. Non non est sed dui at enim pharetra. Dapibus nisl
+                                dictumst dignissim sit dictumst mi sit fames diam. Ut nunc nulla eu urna bibendum
+                                nec penatibus.
+                                <br>
+                                Cras tincidunt in suspendisse fusce quisque sapien dui mi. Accumsan fringilla
+                                gravida venenatis sit consequat commodo quis. Sed massa nec nec turpis.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="desktop_none">
+
+            <div class="only_mob">
+                    <h1 class="only_mob_tt">
+                        Turn Brand Potential Into <span class="only_mob_tt_span">Brand Power</span>
+                    </h1>
+                    <div class="per_section">
+                        <img src="{{ asset('frontend/brandsparkz/assets/img/icon1.png') }}" alt="" class="img-fluid icon_icon">
+                        <div>
+                            <h1 class="per_sec_tt">impact Over Noise</h1>
+                            <p class="per_sec_pp">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Commodo vitae massa integer lorem aliquam turpis fusce. Est arcu mi massa</p>
+                        </div>
+                    </div>
+                    <div class="per_section">
+                        <img src="{{ asset('frontend/brandsparkz/assets/img/icon2.png') }}" alt="" class="img-fluid icon_icon">
+                        <div>
+                            <h1 class="per_sec_tt">impact Over Noise</h1>
+                            <p class="per_sec_pp">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Commodo vitae massa integer lorem aliquam turpis fusce. Est arcu mi massa</p>
+                        </div>
+                    </div>
+                    <div class="per_section">
+                        <img src="{{ asset('frontend/brandsparkz/assets/img/icon3.png') }}" alt="" class="img-fluid icon_icon">
+                        <div>
+                            <h1 class="per_sec_tt">Built for Bold Brands</h1>
+                            <p class="per_sec_pp">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Commodo vitae massa integer lorem aliquam turpis fusce. Est arcu mi massa</p>
+                        </div>
+                    </div>
+            </div>
+
+        </section>
+
+        <section class="aboutus_4">
+            <h1 class="au_tt">
+                The <span class="au_tt_span">Sparkz</span> Menu
+
+            </h1>
+            <p class="au_pp extra_widith">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Justo, feugiat
+                laoreet vel, amet tristique dolor euismod sed diam. Consectetur porttitor diam mattis commodo sed
+                elementum, ultricies.</p>
+            <div class="container main_div_hoverpadding">
+
+                <div class="in_hover">
+
+                    <div class="serv_rw_1">
+                        <div class="serv_c1 js_hv">
+                            <a class=" card_btn" href="#">SEO</a>
+                            <div class="serv_gree">
+                                <h4 data-aos="fade-up">Progressive SEO </h4>
+                                <p data-aos="fade-up">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ornare
+                                    volutpat blandit scelerisque et cursus tristique <span class="mobile_none">hendrerit hendrerit. Nunc urna at
+                                        quis eu enim egestas.</span>
+                                </p>
+                                <button class="btn btn_global2 mx-auto" onclick="window.location.href='{{ route('seo') }}'">
+                                    <img src="{{ asset('frontend/brandsparkz/assets/img/btn_primary_pattern2.png') }}" alt=""
+                                        class="img-fluid btn_global_pattern2">
+                                    <div class="btn_global_inner2 on_phone">
+                                        <h1 class="cart_text">Explore Service</h1>
+                                    </div>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="serv_c2 js_hv">
+                            <a class=" card_btn" href="#">Pay-per-click</a>
+                            <div class="serv_gree">
+                                <h4 data-aos="fade-up">Progressive Pay-per-click </h4>
+                                <p data-aos="fade-up">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ornare
+                                    volutpat blandit scelerisque et cursus tristique <span class="mobile_none">hendrerit hendrerit. Nunc urna at
+                                        quis eu enim egestas.</span>
+                                </p>
+                                <button class="btn btn_global2 mx-auto" onclick="window.location.href='{{ route('ppc') }}'">
+                                    <img src="{{ asset('frontend/brandsparkz/assets/img/btn_primary_pattern2.png') }}" alt=""
+                                        class="img-fluid btn_global_pattern2">
+                                    <div class="btn_global_inner2 on_phone">
+                                        <h1 class="cart_text">Explore Service</h1>
+                                    </div>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="serv_c3 js_hv">
+                            <a class=" card_btn" href="#">ORM</a>
+                            <div class="serv_gree">
+                                <h4 data-aos="fade-up">Progressive ORM </h4>
+                                <p data-aos="fade-up">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ornare
+                                    volutpat blandit scelerisque et cursus tristique <span class="mobile_none">hendrerit hendrerit. Nunc urna at
+                                        quis eu enim egestas.</span>
+                                </p>
+                                <button class="btn btn_global2 mx-auto" onclick="window.location.href='{{ route('orm') }}'">
+                                    <img src="{{ asset('frontend/brandsparkz/assets/img/btn_primary_pattern2.png') }}" alt=""
+                                        class="img-fluid btn_global_pattern2">
+                                    <div class="btn_global_inner2 on_phone">
+                                        <h1 class="cart_text">Explore Service</h1>
+                                    </div>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="serv_rw_1">
+                        <div class="serv_c4 js_hv">
+                            <a class=" card_btn" href="#">UX/UI</a>
+                            <div class="serv_gree">
+                                <h4 data-aos="fade-up">Progressive UX/UI </h4>
+                                <p data-aos="fade-up">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ornare
+                                    volutpat blandit scelerisque et cursus tristique <span class="mobile_none">hendrerit hendrerit. Nunc urna at
+                                        quis eu enim egestas.</span>
+                                </p>
+                                <button class="btn btn_global2 mx-auto" onclick="window.location.href='{{ route('wdd') }}'">
+                                    <img src="{{ asset('frontend/brandsparkz/assets/img/btn_primary_pattern2.png') }}" alt=""
+                                        class="img-fluid btn_global_pattern2">
+                                    <div class="btn_global_inner2 on_phone">
+                                        <h1 class="cart_text">Explore Service</h1>
+                                    </div>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="serv_c5 js_hv">
+                            <a class=" card_btn" href="#">Email Marketing</a>
+                            <div class="serv_gree">
+                                <h4 data-aos="fade-up">Progressive Email Marketing </h4>
+                                <p data-aos="fade-up">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ornare
+                                    volutpat blandit scelerisque et cursus tristique <span class="mobile_none">hendrerit hendrerit. Nunc urna at
+                                        quis eu enim egestas.</span>
+                                </p>
+                                <button class="btn btn_global2 mx-auto" onclick="window.location.href='{{ route('em') }}'">
+                                    <img src="{{ asset('frontend/brandsparkz/assets/img/btn_primary_pattern2.png') }}" alt=""
+                                        class="img-fluid btn_global_pattern2">
+                                    <div class="btn_global_inner2 on_phone">
+                                        <h1 class="cart_text">Explore Service</h1>
+                                    </div>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="serv_c6 js_hv">
+                            <a class=" card_btn" href="#">Social Media</a>
+                            <div class="serv_gree">
+                                <h4 data-aos="fade-up">Progressive Social Media </h4>
+                                <p data-aos="fade-up">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ornare
+                                    volutpat blandit scelerisque et cursus tristique <span class="mobile_none">hendrerit hendrerit. Nunc urna at
+                                        quis eu enim egestas.</span>
+                                </p>
+                                <button class="btn btn_global2 mx-auto" onclick="window.location.href='{{ route(name: 'social') }}'">
+                                    <img src="{{ asset('frontend/brandsparkz/assets/img/btn_primary_pattern2.png') }}" alt=""
+                                        class="img-fluid btn_global_pattern2">
+                                    <div class="btn_global_inner2 on_phone">
+                                        <h1 class="cart_text">Explore Service</h1>
+                                    </div>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+    </section>
+
+    
+
+
+
+
+
+
+
+
+    <section class="floater_section">
+        <div class="line_div mobile_none">
+
+        </div>
+        <div class="grey_div mobile_none">
+
+        </div>
+
+        <div class="floater_div">
+
+            <div class="inner_floater">
+                <div>
+                    <h1 class="floater_div_tt">
+                        We’re <span class="floater_div_tt_span">All In</span>, Are You?
+                    </h1>
+                    <p class="floater_div_pp">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer cursus dignissim dictumst
+                        leo at fusce euismod ut eleifend. Lectus blandit amet mi in.
+                    </p>
+
+                </div>
+
+                <button class="btn btn_global2 on_phone" onclick="window.location.href='{{ route('contactus') }}'">
+                    <img src="{{ asset('frontend/brandsparkz/assets/img/btn_primary_pattern2.png') }}" alt="" class="img-fluid btn_global_pattern2">
+                    <div class="btn_global_inner2 on_phone">
+                        <p class="cart_text">Get started!</p>
+                    </div>
+                </button>
+            </div>
+
+
+
+        </div>
+
+    </section>
+</section>
+
+    
+@endsection
+
+@section('scripts')
+
+<script>
+    const div = document.querySelector('.img_1');
+    const img = document.querySelector('.img_1_shadow');
+
+    // Function to sync image size with div's content box size
+    function syncSize() {
+        const rect = div.getBoundingClientRect();
+        img.style.width = rect.width + 'px';
+        img.style.height = rect.height + 'px';
+    }
+
+    // Set initial size
+    syncSize();
+
+    // Use ResizeObserver to track changes
+    const observer = new ResizeObserver(() => {
+        syncSize();
+    });
+
+    observer.observe(div);
+
+
+    const div4 = document.querySelector('.img_4');
+    const img4 = document.querySelector('.img_4_shadow');
+
+    // Function to sync image size with div's content box size
+    function syncSize4() {
+        const rect = div4.getBoundingClientRect();
+        img4.style.width = rect.width + 'px';
+        img4.style.height = rect.height + 'px';
+    }
+
+    // Set initial size
+    syncSize4();
+
+    // Use ResizeObserver to track changes
+    const observer4 = new ResizeObserver(() => {
+        syncSize4();
+    });
+
+    observer4.observe(div4);
+</script>
+
+<script>
+    function check_agree(form) {
+        console.log(form.email.valid);
+        if (form.fullname && form.email && form.message && form.terms.checked) {
+
+            $('#submit-btn').attr('disabled', true);
+            return true;
+        } else if (!form.fullname.value) {
+            Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text: 'Please Enter Fullname'
+            })
+            return false;
+        } else if (!form.email.value) {
+            Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text: 'Please Enter Email'
+            })
+            return false;
+        } else if (!form.phone.value) {
+            Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text: 'Please Enter Phone'
+            })
+            return false;
+        } else if (!form.message.value) {
+            Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text: 'Please Enter Comments'
+            })
+            return false;
+        } else if (!form.terms.checked) {
+            Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text: 'Please Accept T&C'
+            })
             return false;
         }
-    </script>
+        return false;
+    }
+</script>
+
 @endsection
