@@ -342,22 +342,7 @@
                                                         </div>
                                                     </th>
                                                 @endforeach
-                                                {{-- <th scope="col" class="text-center">
-                                                    <div class="social_tablehead">
-                                                        <p class="social_tabletitle">Silver</p>
-                                                        <p class="social_tableamt">£264</p>
-                                                        <p class="social_tablesubtitle">+VAT</p>
-                                                        <button type="button" class="btn social_tablebtn">Add To Cart</button>
-                                                    </div>
-                                                </th>
-                                                <th scope="col" class="text-center">
-                                                    <div class="social_tablehead">
-                                                        <p class="social_tabletitle">Gold</p>
-                                                        <p class="social_tableamt">£547</p>
-                                                        <p class="social_tablesubtitle">+VAT</p>
-                                                        <button type="button" class="btn social_tablebtn">Add To Cart</button>
-                                                    </div>
-                                                </th> --}}          
+                                                
                                             </tr>
                                         </thead>
                                         
