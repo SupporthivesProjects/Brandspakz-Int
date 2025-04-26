@@ -57,11 +57,9 @@
                 
 
                 <div class="contact_input_div">
-                    <button class="btn btn_global2 mx-auto">
+                    <button class="btn btn_global2 mx-auto" type="submit">Reset Passwords
                         <img src="{{ asset('frontend/brandsparkz/assets/img/btn_primary_pattern2.png') }}" alt="" class="img-fluid btn_global_pattern2">
-                        <div class="btn_global_inner2">
-                            
-                            <button type="submit" class="cart_text" >Reset Password</button>
+                        <div class="btn_global_inner2"> 
                             <img src="{{ asset('frontend/brandsparkz/assets/img/arrow_logo.svg') }}" alt="" class="img-fluid cart_logo">
                         </div>
                     </button>
