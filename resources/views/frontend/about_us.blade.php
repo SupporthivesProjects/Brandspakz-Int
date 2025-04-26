@@ -7,10 +7,10 @@
     <section class="sec1_s">
         <video class="bg-image d-lg-block d-md-block d-none" loop="" muted="" autoplay=""
             style="object-fit: cover;">
-            <source src="{{ asset('frontend/brandsparkz/assets/img/aboutus.mp4') }}" type="video/mp4">
+            <source src="{{ asset('frontend/Brandsparkz/assets/img/aboutus.mp4') }}" type="video/mp4">
         </video>
         <video class="bg-image d-lg-none d-md-none d-block" loop="" muted="" autoplay="" style="object-fit: cover;">
-            <source src="{{ asset('frontend/brandsparkz/assets/img/aboutus_mob.mp4') }}" type="video/mp4">
+            <source src="{{ asset('frontend/Brandsparkz/assets/img/aboutus_mob.mp4') }}" type="video/mp4">
         </video>
 
         <div class="aboutus__sec1">
@@ -24,19 +24,13 @@
                 vel. Viverra et lobortis a scelerisque vitae. Turpis non venenatis vel sed. Urna id.</p>
 
         </div>
-
-
-
-
-
-
     </section>
 
 
     <section class="for_bgonly">
         <section class="aboutus_2">
-            <img src="{{ asset('frontend/brandsparkz/assets/img/intersect_tt.png') }}" alt="" class="img-fluid intersect_tt mobile_none">
-            <img src="{{ asset('frontend/brandsparkz/assets/img/mobile_intersect.png') }}" alt="" class="img-fluid intersect_tt_mob desktop_none">
+            <img src="{{ asset('frontend/Brandsparkz/assets/img/intersect_tt.png') }}" alt="" class="img-fluid intersect_tt mobile_none">
+            <img src="{{ asset('frontend/Brandsparkz/assets/img/mobile_intersect.png') }}" alt="" class="img-fluid intersect_tt_mob desktop_none">
 
             <h1 class="about_tt">
                 Our <span class="about_tt_span">Spark</span> by the Numbers
@@ -47,7 +41,7 @@
             <div class="container p-0">
                 <div class="image_section">
                     <div class="img_1_shadow_wrapper">
-                        <img class="img_1_shadow" src="{{ asset('frontend/brandsparkz/assets/img/img_1_shadow.png') }}">
+                        <img class="img_1_shadow" src="{{ asset('frontend/Brandsparkz/assets/img/img_1_shadow.png') }}">
                         <div class="img_1">
                             <p class="image_tt mx-auto">Campaigns That Actually work</p>
                         </div>
@@ -63,7 +57,7 @@
                         <p class="image_tt mx-auto">More Than 20 Digital Creators, One Mission</p>
                     </div>
                     <div class="img_4_shadow_wrapper">
-                        <img class="img_4_shadow" src="{{ asset('frontend/brandsparkz/assets/img/img_4_shadow.png') }}">
+                        <img class="img_4_shadow" src="{{ asset('frontend/Brandsparkz/assets/img/img_4_shadow.png') }}">
                         <div class="img_4">
                             <p class="image_tt mx-auto">Cross-Industry Knowledge</p>
                         </div>
@@ -80,8 +74,8 @@
                 <div class="aboutus3_maincrd">
 
                     <div class="aucrd_contentouter">
-                        <img src="{{ asset('frontend/brandsparkz/assets/img/aboutusprop.png') }}" alt="" class="img-fluid aboutusprop mobile_none">
-                        <img src="{{ asset('frontend/brandsparkz/assets/img/mobile_au_prop.png') }}" alt=""
+                        <img src="{{ asset('frontend/Brandsparkz/assets/img/aboutusprop.png') }}" alt="" class="img-fluid aboutusprop mobile_none">
+                        <img src="{{ asset('frontend/Brandsparkz/assets/img/mobile_au_prop.png') }}" alt=""
                             class="img-fluid mobile_au_prop desktop_none">
                         <div class="aucrd_contentinner">
                             <h1 class="au_tt">
@@ -117,21 +111,21 @@
                         Turn Brand Potential Into <span class="only_mob_tt_span">Brand Power</span>
                     </h1>
                     <div class="per_section">
-                        <img src="{{ asset('frontend/brandsparkz/assets/img/icon1.png') }}" alt="" class="img-fluid icon_icon">
+                        <img src="{{ asset('frontend/Brandsparkz/assets/img/icon1.png') }}" alt="" class="img-fluid icon_icon">
                         <div>
                             <h1 class="per_sec_tt">impact Over Noise</h1>
                             <p class="per_sec_pp">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Commodo vitae massa integer lorem aliquam turpis fusce. Est arcu mi massa</p>
                         </div>
                     </div>
                     <div class="per_section">
-                        <img src="{{ asset('frontend/brandsparkz/assets/img/icon2.png') }}" alt="" class="img-fluid icon_icon">
+                        <img src="{{ asset('frontend/Brandsparkz/assets/img/icon2.png') }}" alt="" class="img-fluid icon_icon">
                         <div>
                             <h1 class="per_sec_tt">impact Over Noise</h1>
                             <p class="per_sec_pp">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Commodo vitae massa integer lorem aliquam turpis fusce. Est arcu mi massa</p>
                         </div>
                     </div>
                     <div class="per_section">
-                        <img src="{{ asset('frontend/brandsparkz/assets/img/icon3.png') }}" alt="" class="img-fluid icon_icon">
+                        <img src="{{ asset('frontend/Brandsparkz/assets/img/icon3.png') }}" alt="" class="img-fluid icon_icon">
                         <div>
                             <h1 class="per_sec_tt">Built for Bold Brands</h1>
                             <p class="per_sec_pp">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Commodo vitae massa integer lorem aliquam turpis fusce. Est arcu mi massa</p>
@@ -163,7 +157,7 @@
                                         quis eu enim egestas.</span>
                                 </p>
                                 <button class="btn btn_global2 mx-auto" onclick="window.location.href='{{ route('seo') }}'">
-                                    <img src="{{ asset('frontend/brandsparkz/assets/img/btn_primary_pattern2.png') }}" alt=""
+                                    <img src="{{ asset('frontend/Brandsparkz/assets/img/btn_primary_pattern2.png') }}" alt=""
                                         class="img-fluid btn_global_pattern2">
                                     <div class="btn_global_inner2 on_phone">
                                         <h1 class="cart_text">Explore Service</h1>
@@ -180,7 +174,7 @@
                                         quis eu enim egestas.</span>
                                 </p>
                                 <button class="btn btn_global2 mx-auto" onclick="window.location.href='{{ route('ppc') }}'">
-                                    <img src="{{ asset('frontend/brandsparkz/assets/img/btn_primary_pattern2.png') }}" alt=""
+                                    <img src="{{ asset('frontend/Brandsparkz/assets/img/btn_primary_pattern2.png') }}" alt=""
                                         class="img-fluid btn_global_pattern2">
                                     <div class="btn_global_inner2 on_phone">
                                         <h1 class="cart_text">Explore Service</h1>
@@ -197,7 +191,7 @@
                                         quis eu enim egestas.</span>
                                 </p>
                                 <button class="btn btn_global2 mx-auto" onclick="window.location.href='{{ route('orm') }}'">
-                                    <img src="{{ asset('frontend/brandsparkz/assets/img/btn_primary_pattern2.png') }}" alt=""
+                                    <img src="{{ asset('frontend/Brandsparkz/assets/img/btn_primary_pattern2.png') }}" alt=""
                                         class="img-fluid btn_global_pattern2">
                                     <div class="btn_global_inner2 on_phone">
                                         <h1 class="cart_text">Explore Service</h1>
@@ -216,7 +210,7 @@
                                         quis eu enim egestas.</span>
                                 </p>
                                 <button class="btn btn_global2 mx-auto" onclick="window.location.href='{{ route('wdd') }}'">
-                                    <img src="{{ asset('frontend/brandsparkz/assets/img/btn_primary_pattern2.png') }}" alt=""
+                                    <img src="{{ asset('frontend/Brandsparkz/assets/img/btn_primary_pattern2.png') }}" alt=""
                                         class="img-fluid btn_global_pattern2">
                                     <div class="btn_global_inner2 on_phone">
                                         <h1 class="cart_text">Explore Service</h1>
@@ -233,7 +227,7 @@
                                         quis eu enim egestas.</span>
                                 </p>
                                 <button class="btn btn_global2 mx-auto" onclick="window.location.href='{{ route('em') }}'">
-                                    <img src="{{ asset('frontend/brandsparkz/assets/img/btn_primary_pattern2.png') }}" alt=""
+                                    <img src="{{ asset('frontend/Brandsparkz/assets/img/btn_primary_pattern2.png') }}" alt=""
                                         class="img-fluid btn_global_pattern2">
                                     <div class="btn_global_inner2 on_phone">
                                         <h1 class="cart_text">Explore Service</h1>
@@ -250,7 +244,7 @@
                                         quis eu enim egestas.</span>
                                 </p>
                                 <button class="btn btn_global2 mx-auto" onclick="window.location.href='{{ route(name: 'social') }}'">
-                                    <img src="{{ asset('frontend/brandsparkz/assets/img/btn_primary_pattern2.png') }}" alt=""
+                                    <img src="{{ asset('frontend/Brandsparkz/assets/img/btn_primary_pattern2.png') }}" alt=""
                                         class="img-fluid btn_global_pattern2">
                                     <div class="btn_global_inner2 on_phone">
                                         <h1 class="cart_text">Explore Service</h1>
@@ -298,7 +292,7 @@
                 </div>
 
                 <button class="btn btn_global2 on_phone" onclick="window.location.href='{{ route('contactus') }}'">
-                    <img src="{{ asset('frontend/brandsparkz/assets/img/btn_primary_pattern2.png') }}" alt="" class="img-fluid btn_global_pattern2">
+                    <img src="{{ asset('frontend/Brandsparkz/assets/img/btn_primary_pattern2.png') }}" alt="" class="img-fluid btn_global_pattern2">
                     <div class="btn_global_inner2 on_phone">
                         <p class="cart_text">Get started!</p>
                     </div>
