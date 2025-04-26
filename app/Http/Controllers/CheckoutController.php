@@ -75,6 +75,7 @@ class CheckoutController extends Controller
     {
         try {
             // Prepare shipping data
+            
             $data = [
                 'name' => $request->name,
                 'lname' => $request->lname,
@@ -88,6 +89,7 @@ class CheckoutController extends Controller
                 'checkout_type' => $request->checkout_type,
                 'shipping_type' => 'home_delivery'
             ];
+            
 
             // Add optional fields
             if ($request->addressL2) {
