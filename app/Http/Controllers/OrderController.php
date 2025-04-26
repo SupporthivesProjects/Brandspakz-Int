@@ -80,7 +80,8 @@ class OrderController extends Controller
 
     private function updateProductStock($product, $cartItem)
     {
-        if ($cartItem['variant']) {
+        //if ($cartItem['variant']) {
+        if (!empty($cartItem['variant'])) {
             $product->stocks()
                 ->where('variant', $cartItem['variant'])
                 ->decrement('qty', $cartItem['quantity']);
