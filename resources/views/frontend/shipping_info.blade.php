@@ -171,7 +171,7 @@
                         <div class="bottomSCdiv2">
                             <!-- Replace the coupon section (lines 158-192) with this: -->
                             @php
-                                $coupon_system = \App\Models\BusinessSetting::where('type', 'coupon_system')->first();
+                                $coupon_system = \App\Models\BusinessSetting::where('type', 'coupon_system')->first(); 
                             @endphp
                             @if (Auth::check() && $coupon_system && $coupon_system->value == 1)
                                 @if (Session::has('coupon_discount'))
@@ -222,7 +222,7 @@
                                     <span><a href="{{ route('privacypolicy') }}"> Privacy Policy</a></span>
                                 </p>
                             </div>
-                            {{-- <div class="g-recaptcha img-fluid w-100 SC_capcha" data-sitekey="{{ env('H_CAPTCHA_SITE_KEY') }}" form="shippingAddress"></div> --}}
+                            <div class="g-recaptcha img-fluid w-100 SC_capcha" data-sitekey="{{ env('GOOGLE_CAPTCHA_SITE_KEY') }}" form="shippingAddress"></div>
                         </div>
                         <button class="btn btn_SC" form="shippingAddress" type="submit">Complete Checkout</button>
                         <img src="{{ asset('frontend/BrandSparkz/assets/img/SCMastercard.png') }}" alt=""
@@ -314,15 +314,15 @@
                     text: 'Please accept terms and conditions'
                 })
             }
-            // else if (response.length == 0) {
-            //     Swal.fire({
-            //         icon: 'error',
-            //         title: 'Oops...',
-            //         text: 'Please select Captcha'
-            //     })
-            //     return false;
-            // }
-            return false;
+             //else if (response.length == 0) {
+             //   Swal.fire({
+              //      icon: 'error',
+              //      title: 'Oops...',
+              //       text: 'Please select Captcha'
+             //    })
+              //  return false;
+             //}
+            //return false;
         }
     </script>
 @endsection
