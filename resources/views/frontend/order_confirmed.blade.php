@@ -25,7 +25,7 @@
 
     <section class="pay_S">
         <div class="PayS_div1">
-            <img src="{{ asset('frontend/Brandsparkz/assets/img/intersect.png') }}" alt="" class="intersect">
+            <img src="{{ asset('frontend/BrandSparkz/assets/img/intersect.png') }}" alt="" class="intersect">
             <div class="container">
                 <div class="terms_div1">
                     <h3 class="terms_heading">Payment Successful</h3>

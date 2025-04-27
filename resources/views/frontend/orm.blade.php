@@ -9,10 +9,10 @@
         <section class="sec1_s">
             <video class="bg-image d-lg-block d-md-block d-none" loop="" muted="" autoplay=""
                 style="object-fit: cover;">
-                <source src="{{ asset('frontend/Brandsparkz/assets/img/orm.mp4') }}" type="video/mp4">
+                <source src="{{ asset('frontend/BrandSparkz/assets/img/orm.mp4') }}" type="video/mp4">
             </video>
             <video class="bg-image d-lg-none d-md-none d-block" loop="" muted="" autoplay="" style="object-fit: cover;">
-                <source src="{{ asset('frontend/Brandsparkz/assets/img/orm_mobile.mp4') }}" type="video/mp4">
+                <source src="{{ asset('frontend/BrandSparkz/assets/img/orm_mobile.mp4') }}" type="video/mp4">
             </video>
 
             <div class="sec1_video_wd">
@@ -22,11 +22,11 @@
                 <p class="main_pp">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dictum nunc eget molestie
                     duis nunc iaculis morbi vestibulum. Massa volutpat nisi, ultrices aenean pellentesque ornare.</p>
                 <button class="btn btn_global" onclick="window.location='#target-element'">
-                        <img src="{{ asset('frontend/Brandsparkz/assets/img/btn_primary_pattern.png') }}" alt="" class="img-fluid btn_global_pattern">
+                        <img src="{{ asset('frontend/BrandSparkz/assets/img/btn_primary_pattern.png') }}" alt="" class="img-fluid btn_global_pattern">
                         <div class="btn_global_inner w-100">
                             
                             <p class="cart_text">Explore our pricing</p>
-                            <img src="{{ asset('frontend/Brandsparkz/assets/img/down_arrow.svg') }}" alt="" class="img-fluid cart_logo">
+                            <img src="{{ asset('frontend/BrandSparkz/assets/img/down_arrow.svg') }}" alt="" class="img-fluid cart_logo">
                         </div>
                 </button>
             </div>
@@ -67,8 +67,8 @@
         </section>
 
         <section class="sec2_s">
-            <img src="{{ asset('frontend/Brandsparkz/assets/img/intersect_tt.png') }}" alt="" class="img-fluid intersect_tt mobile_none">
-            <img src="{{ asset('frontend/Brandsparkz/assets/img/mobile_intersect.png') }}" alt="" class="img-fluid intersect_tt_mob desktop_none">
+            <img src="{{ asset('frontend/BrandSparkz/assets/img/intersect_tt.png') }}" alt="" class="img-fluid intersect_tt mobile_none">
+            <img src="{{ asset('frontend/BrandSparkz/assets/img/mobile_intersect.png') }}" alt="" class="img-fluid intersect_tt_mob desktop_none">
             <div class="container p-0">
                 <div class="inner_sec2">
                     <div class="left_inner2">
@@ -101,7 +101,7 @@
                 </div>
             </div>
 
-            <!-- <img class="img-fluid inter mobile_none" src="{{ asset('frontend/Brandsparkz/assets/img/Intersect_t.png') }}"> -->
+            <!-- <img class="img-fluid inter mobile_none" src="{{ asset('frontend/BrandSparkz/assets/img/Intersect_t.png') }}"> -->
 
         </section>
 
@@ -118,8 +118,8 @@
 
                 <div class="cards_crd">
 
-                    <img src="{{ asset('frontend/Brandsparkz/assets/img/1.png') }}" alt="" class="img-fluid crd_image mobile_none">
-                    <img src="{{ asset('frontend/Brandsparkz/assets/img/mob_crd.png') }}" alt="" class="img-fluid crd_image desktop_none">
+                    <img src="{{ asset('frontend/BrandSparkz/assets/img/1.png') }}" alt="" class="img-fluid crd_image mobile_none">
+                    <img src="{{ asset('frontend/BrandSparkz/assets/img/mob_crd.png') }}" alt="" class="img-fluid crd_image desktop_none">
                     <div class="context_crd">
                         <h1 class="crd_tt">
                             Creation
@@ -134,8 +134,8 @@
                 </div>
                 <div class="cards_crd">
 
-                    <img src="{{ asset('frontend/Brandsparkz/assets/img/2.png') }}" alt="" class="img-fluid crd_image mobile_none">
-                    <img src="{{ asset('frontend/Brandsparkz/assets/img/mob_crd2.png') }}" alt="" class="img-fluid crd_image desktop_none">
+                    <img src="{{ asset('frontend/BrandSparkz/assets/img/2.png') }}" alt="" class="img-fluid crd_image mobile_none">
+                    <img src="{{ asset('frontend/BrandSparkz/assets/img/mob_crd2.png') }}" alt="" class="img-fluid crd_image desktop_none">
                     <div class="context_crd">
                         <h1 class="crd_tt">
                             Communication
@@ -150,8 +150,8 @@
                 </div>
                 <div class="cards_crd">
 
-                    <img src="{{ asset('frontend/Brandsparkz/assets/img/3.png') }}" alt="" class="img-fluid crd_image mobile_none">
-                    <img src="{{ asset('frontend/Brandsparkz/assets/img/mob_crd3.png') }}" alt="" class="img-fluid crd_image desktop_none">
+                    <img src="{{ asset('frontend/BrandSparkz/assets/img/3.png') }}" alt="" class="img-fluid crd_image mobile_none">
+                    <img src="{{ asset('frontend/BrandSparkz/assets/img/mob_crd3.png') }}" alt="" class="img-fluid crd_image desktop_none">
                     <div class="context_crd">
                         <h1 class="crd_tt">
                             Development
@@ -166,8 +166,8 @@
                 </div>
                 <div class="cards_crd">
 
-                    <img src="{{ asset('frontend/Brandsparkz/assets/img/4.png') }}" alt="" class="img-fluid crd_image mobile_none">
-                    <img src="{{ asset('frontend/Brandsparkz/assets/img/mob_crd4.png') }}" alt="" class="img-fluid crd_image desktop_none">
+                    <img src="{{ asset('frontend/BrandSparkz/assets/img/4.png') }}" alt="" class="img-fluid crd_image mobile_none">
+                    <img src="{{ asset('frontend/BrandSparkz/assets/img/mob_crd4.png') }}" alt="" class="img-fluid crd_image desktop_none">
                     <div class="context_crd">
                         <h1 class="crd_tt">
                             Results
@@ -197,8 +197,8 @@
     
                 <div class="sec4_2">
                     <div class="sec4_crd">
-                        <img src="{{ asset('frontend/Brandsparkz/assets/img/orm_1.png') }}" alt="" class="img-fluid crd_image2 mobile_none">
-                        <img src="{{ asset('frontend/Brandsparkz/assets/img/orm1_mob.png') }}" alt="" class="img-fluid crd_image2 desktop_none">
+                        <img src="{{ asset('frontend/BrandSparkz/assets/img/orm_1.png') }}" alt="" class="img-fluid crd_image2 mobile_none">
+                        <img src="{{ asset('frontend/BrandSparkz/assets/img/orm1_mob.png') }}" alt="" class="img-fluid crd_image2 desktop_none">
                         <div class="sec4_down">
                             <h1 class="crd4_tt">Web Search Position</h1>
                             <p class="crd4_pp">Lorem ipsum dolor sit amet <br class="desktop_none">  consectetur. Neque integer faucibus imperdiet turpis.</p>
@@ -207,8 +207,8 @@
                     </div>
 
                     <div class="sec4_crd">
-                        <img src="{{ asset('frontend/Brandsparkz/assets/img/orm_2.png') }}" alt="" class="img-fluid crd_image2 mobile_none">
-                        <img src="{{ asset('frontend/Brandsparkz/assets/img/orm2_mob.png') }}" alt="" class="img-fluid crd_image2 desktop_none">
+                        <img src="{{ asset('frontend/BrandSparkz/assets/img/orm_2.png') }}" alt="" class="img-fluid crd_image2 mobile_none">
+                        <img src="{{ asset('frontend/BrandSparkz/assets/img/orm2_mob.png') }}" alt="" class="img-fluid crd_image2 desktop_none">
                         <div class="sec4_down">
                             <h1 class="crd4_tt">Email Creation</h1>
                             <p class="crd4_pp">Lorem ipsum dolor sit amet <br class="desktop_none">  consectetur. Neque integer faucibus imperdiet turpis.</p>
@@ -217,8 +217,8 @@
                     </div>
 
                     <div class="sec4_crd">
-                        <img src="{{ asset('frontend/Brandsparkz/assets/img/orm_3.png') }}" alt="" class="img-fluid crd_image2 mobile_none">
-                        <img src="{{ asset('frontend/Brandsparkz/assets/img/orm3_mob.png') }}" alt="" class="img-fluid crd_image2 desktop_none">
+                        <img src="{{ asset('frontend/BrandSparkz/assets/img/orm_3.png') }}" alt="" class="img-fluid crd_image2 mobile_none">
+                        <img src="{{ asset('frontend/BrandSparkz/assets/img/orm3_mob.png') }}" alt="" class="img-fluid crd_image2 desktop_none">
                         <div class="sec4_down">
                             <h1 class="crd4_tt">Monthly Reports</h1>
                             <p class="crd4_pp">Lorem ipsum dolor sit amet <br class="desktop_none"> consectetur. Neque integer faucibus imperdiet turpis.</p>
@@ -247,15 +247,15 @@
         
                             <div class="pointer_p">
                                 <div class="pointer_line">
-                                    <img src="{{ asset('frontend/Brandsparkz/assets/img/pointer.svg') }}" alt="" class="img-fluid">
+                                    <img src="{{ asset('frontend/BrandSparkz/assets/img/pointer.svg') }}" alt="" class="img-fluid">
                                     <p class="pointer_pp">Strategy experience and analytical expertise combine.</p>
                                 </div>
                                 <div class="pointer_line">
-                                    <img src="{{ asset('frontend/Brandsparkz/assets/img/pointer.svg') }}" alt="" class="img-fluid">
+                                    <img src="{{ asset('frontend/BrandSparkz/assets/img/pointer.svg') }}" alt="" class="img-fluid">
                                     <p class="pointer_pp">Strategy experience and analytical expertise combine.</p>
                                 </div>
                                 <div class="pointer_line">
-                                    <img src="{{ asset('frontend/Brandsparkz/assets/img/pointer.svg') }}" alt="" class="img-fluid">
+                                    <img src="{{ asset('frontend/BrandSparkz/assets/img/pointer.svg') }}" alt="" class="img-fluid">
                                     <p class="pointer_pp">Strategy experience and analytical expertise combine.</p>
                                 </div>
         
@@ -263,17 +263,17 @@
                         </div>
         
                         <button class="btn btn_global2 on_phone" onclick="location.href='{{route('aboutus') }}'">
-                            <img src="{{ asset('frontend/Brandsparkz/assets/img/btn_primary_pattern2.png') }}" alt="" class="img-fluid btn_global_pattern2">
+                            <img src="{{ asset('frontend/BrandSparkz/assets/img/btn_primary_pattern2.png') }}" alt="" class="img-fluid btn_global_pattern2">
                             <div class="btn_global_inner2 on_phone">
                                 <p class="cart_text">Learn more about us</p>
-                                <img src="{{ asset('frontend/Brandsparkz/assets/img/up_right.svg') }}" alt="" class="img-fluid cart_logo">
+                                <img src="{{ asset('frontend/BrandSparkz/assets/img/up_right.svg') }}" alt="" class="img-fluid cart_logo">
                             </div>
                         </button>
 
                     </div>
                     <div class="right_sec5">
-                        <img src="{{ asset('frontend/Brandsparkz/assets/img/orm_photo.png') }}" alt="" class="img-fluid mobile_none">
-                        <img src="{{ asset('frontend/Brandsparkz/assets/img/orm_photo_mob.png') }}" alt="" class="img-fluid desktop_none">
+                        <img src="{{ asset('frontend/BrandSparkz/assets/img/orm_photo.png') }}" alt="" class="img-fluid mobile_none">
+                        <img src="{{ asset('frontend/BrandSparkz/assets/img/orm_photo_mob.png') }}" alt="" class="img-fluid desktop_none">
                     </div>
                 </div>
 
@@ -451,7 +451,7 @@
                                                 @foreach ($ormProducts['1_month'] as $product)
                                                     <td class="text-center">
                                                         <img class="img-fluid"
-                                                            src="{{ asset('frontend/Brandsparkz/assets/img/service_tick.svg') }}">
+                                                            src="{{ asset('frontend/BrandSparkz/assets/img/service_tick.svg') }}">
                                                     </td>
                                                 @endforeach
                                             </tr>
@@ -462,7 +462,7 @@
                                                 @foreach ($ormProducts['1_month'] as $product)
                                                     <td class="text-center">
                                                         <img class="img-fluid"
-                                                            src="{{ asset('frontend/Brandsparkz/assets/img/service_tick.svg') }}">
+                                                            src="{{ asset('frontend/BrandSparkz/assets/img/service_tick.svg') }}">
                                                     </td>
                                                 @endforeach
                                             </tr>
@@ -473,7 +473,7 @@
                                                 @foreach ($ormProducts['1_month'] as $product)
                                                     <td class="text-center">
                                                         <img class="img-fluid"
-                                                            src="{{ asset('frontend/Brandsparkz/assets/img/service_tick.svg') }}">
+                                                            src="{{ asset('frontend/BrandSparkz/assets/img/service_tick.svg') }}">
                                                     </td>
                                                 @endforeach
                                             </tr>
@@ -485,10 +485,10 @@
                                                     <td class="text-center">
                                                         @if ($key == 0)
                                                             <img class="img-fluid"
-                                                                src="{{ asset('frontend/Brandsparkz/assets/img/service_wrong.svg') }}">
+                                                                src="{{ asset('frontend/BrandSparkz/assets/img/service_wrong.svg') }}">
                                                         @else
                                                             <img class="img-fluid"
-                                                                src="{{ asset('frontend/Brandsparkz/assets/img/service_tick.svg') }}">
+                                                                src="{{ asset('frontend/BrandSparkz/assets/img/service_tick.svg') }}">
                                                         @endif
                                                     </td>
                                                 @endforeach
@@ -501,10 +501,10 @@
                                                     <td class="text-center">
                                                         @if ($key == 0)
                                                             <img class="img-fluid"
-                                                                src="{{ asset('frontend/Brandsparkz/assets/img/service_wrong.svg') }}">
+                                                                src="{{ asset('frontend/BrandSparkz/assets/img/service_wrong.svg') }}">
                                                         @else
                                                             <img class="img-fluid"
-                                                                src="{{ asset('frontend/Brandsparkz/assets/img/service_tick.svg') }}">
+                                                                src="{{ asset('frontend/BrandSparkz/assets/img/service_tick.svg') }}">
                                                         @endif
                                                     </td>
                                                 @endforeach
@@ -639,7 +639,7 @@
                                                 @foreach ($ormProducts['3_months'] as $product)
                                                     <td class="text-center">
                                                         <img class="img-fluid"
-                                                            src="{{ asset('frontend/Brandsparkz/assets/img/service_tick.svg') }}">
+                                                            src="{{ asset('frontend/BrandSparkz/assets/img/service_tick.svg') }}">
                                                     </td>
                                                 @endforeach
                                             </tr>
@@ -650,7 +650,7 @@
                                                 @foreach ($ormProducts['3_months'] as $product)
                                                     <td class="text-center">
                                                         <img class="img-fluid"
-                                                            src="{{ asset('frontend/Brandsparkz/assets/img/service_tick.svg') }}">
+                                                            src="{{ asset('frontend/BrandSparkz/assets/img/service_tick.svg') }}">
                                                     </td>
                                                 @endforeach
                                             </tr>
@@ -661,7 +661,7 @@
                                                 @foreach ($ormProducts['3_months'] as $product)
                                                     <td class="text-center">
                                                         <img class="img-fluid"
-                                                            src="{{ asset('frontend/Brandsparkz/assets/img/service_tick.svg') }}">
+                                                            src="{{ asset('frontend/BrandSparkz/assets/img/service_tick.svg') }}">
                                                     </td>
                                                 @endforeach
                                             </tr>
@@ -673,10 +673,10 @@
                                                     <td class="text-center">
                                                         @if ($key == 0)
                                                             <img class="img-fluid"
-                                                                src="{{ asset('frontend/Brandsparkz/assets/img/service_wrong.svg') }}">
+                                                                src="{{ asset('frontend/BrandSparkz/assets/img/service_wrong.svg') }}">
                                                         @else
                                                             <img class="img-fluid"
-                                                                src="{{ asset('frontend/Brandsparkz/assets/img/service_tick.svg') }}">
+                                                                src="{{ asset('frontend/BrandSparkz/assets/img/service_tick.svg') }}">
                                                         @endif
                                                     </td>
                                                 @endforeach
@@ -689,10 +689,10 @@
                                                     <td class="text-center">
                                                         @if ($key == 0)
                                                             <img class="img-fluid"
-                                                                src="{{ asset('frontend/Brandsparkz/assets/img/service_wrong.svg') }}">
+                                                                src="{{ asset('frontend/BrandSparkz/assets/img/service_wrong.svg') }}">
                                                         @else
                                                             <img class="img-fluid"
-                                                                src="{{ asset('frontend/Brandsparkz/assets/img/service_tick.svg') }}">
+                                                                src="{{ asset('frontend/BrandSparkz/assets/img/service_tick.svg') }}">
                                                         @endif
                                                     </td>
                                                 @endforeach
@@ -830,7 +830,7 @@
                                                 @foreach ($ormProducts['6_months'] as $product)
                                                     <td class="text-center">
                                                         <img class="img-fluid"
-                                                            src="{{ asset('frontend/Brandsparkz/assets/img/service_tick.svg') }}">
+                                                            src="{{ asset('frontend/BrandSparkz/assets/img/service_tick.svg') }}">
                                                     </td>
                                                 @endforeach
                                             </tr>
@@ -841,7 +841,7 @@
                                                 @foreach ($ormProducts['6_months'] as $product)
                                                     <td class="text-center">
                                                         <img class="img-fluid"
-                                                            src="{{ asset('frontend/Brandsparkz/assets/img/service_tick.svg') }}">
+                                                            src="{{ asset('frontend/BrandSparkz/assets/img/service_tick.svg') }}">
                                                     </td>
                                                 @endforeach
                                             </tr>
@@ -852,7 +852,7 @@
                                                 @foreach ($ormProducts['6_months'] as $product)
                                                     <td class="text-center">
                                                         <img class="img-fluid"
-                                                            src="{{ asset('frontend/Brandsparkz/assets/img/service_tick.svg') }}">
+                                                            src="{{ asset('frontend/BrandSparkz/assets/img/service_tick.svg') }}">
                                                     </td>
                                                 @endforeach
                                             </tr>
@@ -864,10 +864,10 @@
                                                     <td class="text-center">
                                                         @if ($key == 0)
                                                             <img class="img-fluid"
-                                                                src="{{ asset('frontend/Brandsparkz/assets/img/service_wrong.svg') }}">
+                                                                src="{{ asset('frontend/BrandSparkz/assets/img/service_wrong.svg') }}">
                                                         @else
                                                             <img class="img-fluid"
-                                                                src="{{ asset('frontend/Brandsparkz/assets/img/service_tick.svg') }}">
+                                                                src="{{ asset('frontend/BrandSparkz/assets/img/service_tick.svg') }}">
                                                         @endif
                                                     </td>
                                                 @endforeach
@@ -880,10 +880,10 @@
                                                     <td class="text-center">
                                                         @if ($key == 0)
                                                             <img class="img-fluid"
-                                                                src="{{ asset('frontend/Brandsparkz/assets/img/service_wrong.svg') }}">
+                                                                src="{{ asset('frontend/BrandSparkz/assets/img/service_wrong.svg') }}">
                                                         @else
                                                             <img class="img-fluid"
-                                                                src="{{ asset('frontend/Brandsparkz/assets/img/service_tick.svg') }}">
+                                                                src="{{ asset('frontend/BrandSparkz/assets/img/service_tick.svg') }}">
                                                         @endif
                                                     </td>
                                                 @endforeach
@@ -1020,7 +1020,7 @@
                                                 @foreach ($ormProducts['12_months'] as $product)
                                                     <td class="text-center">
                                                         <img class="img-fluid"
-                                                            src="{{ asset('frontend/Brandsparkz/assets/img/service_tick.svg') }}">
+                                                            src="{{ asset('frontend/BrandSparkz/assets/img/service_tick.svg') }}">
                                                     </td>
                                                 @endforeach
                                             </tr>
@@ -1031,7 +1031,7 @@
                                                 @foreach ($ormProducts['12_months'] as $product)
                                                     <td class="text-center">
                                                         <img class="img-fluid"
-                                                            src="{{ asset('frontend/Brandsparkz/assets/img/service_tick.svg') }}">
+                                                            src="{{ asset('frontend/BrandSparkz/assets/img/service_tick.svg') }}">
                                                     </td>
                                                 @endforeach
                                             </tr>
@@ -1042,7 +1042,7 @@
                                                 @foreach ($ormProducts['12_months'] as $product)
                                                     <td class="text-center">
                                                         <img class="img-fluid"
-                                                            src="{{ asset('frontend/Brandsparkz/assets/img/service_tick.svg') }}">
+                                                            src="{{ asset('frontend/BrandSparkz/assets/img/service_tick.svg') }}">
                                                     </td>
                                                 @endforeach
                                             </tr>
@@ -1054,10 +1054,10 @@
                                                     <td class="text-center">
                                                         @if ($key == 0)
                                                             <img class="img-fluid"
-                                                                src="{{ asset('frontend/Brandsparkz/assets/img/service_wrong.svg') }}">
+                                                                src="{{ asset('frontend/BrandSparkz/assets/img/service_wrong.svg') }}">
                                                         @else
                                                             <img class="img-fluid"
-                                                                src="{{ asset('frontend/Brandsparkz/assets/img/service_tick.svg') }}">
+                                                                src="{{ asset('frontend/BrandSparkz/assets/img/service_tick.svg') }}">
                                                         @endif
                                                         
                                                     </td>
@@ -1071,10 +1071,10 @@
                                                     <td class="text-center">
                                                         @if ($key == 0)
                                                             <img class="img-fluid"
-                                                                src="{{ asset('frontend/Brandsparkz/assets/img/service_wrong.svg') }}">
+                                                                src="{{ asset('frontend/BrandSparkz/assets/img/service_wrong.svg') }}">
                                                         @else
                                                             <img class="img-fluid"
-                                                                src="{{ asset('frontend/Brandsparkz/assets/img/service_tick.svg') }}">
+                                                                src="{{ asset('frontend/BrandSparkz/assets/img/service_tick.svg') }}">
                                                         @endif
                                                     </td>
                                                 @endforeach
@@ -1182,14 +1182,14 @@
                                     </div>
                                 </div>
                                 <div class="spacer2"></div>
-                                {{-- <img class="notrobot_1" src="{{ asset('frontend/Brandsparkz/assets/img/not_a_robot.png') }}"> --}}
+                                {{-- <img class="notrobot_1" src="{{ asset('frontend/BrandSparkz/assets/img/not_a_robot.png') }}"> --}}
                                 <script src="https://js.hcaptcha.com/1/api.js" async defer></script>
                                 <div class="h-captcha" form="requestform1" data-sitekey="{{ env('H_CAPTCHA_SITE_KEY') }}"></div>
                             </div>
                         </div>
                     </div>
                     <button class="btn btn_global form_btn_wid" type="submit" form="requestform1">
-                        <img src="{{ asset('frontend/Brandsparkz/assets/img/btn_primary_pattern.png') }}') }}" alt="" class="img-fluid btn_global_pattern">
+                        <img src="{{ asset('frontend/BrandSparkz/assets/img/btn_primary_pattern.png') }}') }}" alt="" class="img-fluid btn_global_pattern">
                         <div class="btn_global_inner w-100" type="submit" form="requestform1">
                             <p class="cart_text">Submit Request</p>
                         </div>

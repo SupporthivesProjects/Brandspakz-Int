@@ -38,7 +38,7 @@
                     </p>
                 </div>
             </div>
-            <img src="{{ asset('frontend/Brandsparkz/assets/img/dash_cutout.png') }}" alt="" class="img-fluid dash_cutout">
+            <img src="{{ asset('frontend/BrandSparkz/assets/img/dash_cutout.png') }}" alt="" class="img-fluid dash_cutout">
         </div>
 
         <div class="dash_s2">
@@ -83,8 +83,8 @@
                 </div>
 
                 <div class="dash_tab_cutout_center">
-                    <img src="{{ asset('frontend/Brandsparkz/assets/img/dash_tab_cutout_img.png') }}" alt="" class="img-fluid mobile_none dash_tab_cutout_img">
-                    <img src="{{ asset('frontend/Brandsparkz/assets/img/dash_split.png') }}" alt="" class="img-fluid desktop_none dash_tab_cutout_img_mobo">
+                    <img src="{{ asset('frontend/BrandSparkz/assets/img/dash_tab_cutout_img.png') }}" alt="" class="img-fluid mobile_none dash_tab_cutout_img">
+                    <img src="{{ asset('frontend/BrandSparkz/assets/img/dash_split.png') }}" alt="" class="img-fluid desktop_none dash_tab_cutout_img_mobo">
                 </div>
 
                 <div class="dash_tabs_movable_right">
