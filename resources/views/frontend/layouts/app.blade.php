@@ -135,7 +135,7 @@
                             <button class="btn btn_global" onclick="justDrop('cart_drop', 'roter5', this)"  >
                                 <img src="{{ asset('frontend/brandsparkz/assets/img/btn_primary_pattern.png') }}" alt="" class="img-fluid btn_global_pattern">
                                 <div class="btn_global_inner">
-                                    <img src="{{ asset('frontend/brandsparkz/assets/img/cart_logo.svg') }}" alt="" class="img-fluid cart_logo">
+                                    <img src="{{ asset('frontend/BrandSparkz/assets/img/cart_logo.svg') }}" alt="" class="img-fluid cart_logo">
                                     <p class="cart_text">View Cart</p>
                                     <span>
                                         {{ Session::has('cart') ? count(Session::get('cart')) : '0' }}
