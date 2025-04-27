@@ -2,21 +2,21 @@
 
 @section('content')
     <section class="contact_page">
-        <img src="{{ asset('frontend/Brandsparkz/assets/img/cutter_top_right.png') }}" alt=""
+        <img src="{{ asset('frontend/BrandSparkz/assets/img/cutter_top_right.png') }}" alt=""
             class="img-fluid mobile_none cutter_top_right">
-        <img src="{{ asset('frontend/Brandsparkz/assets/img/cutter_bottom_left.png') }}" alt=""
+        <img src="{{ asset('frontend/BrandSparkz/assets/img/cutter_bottom_left.png') }}" alt=""
             class="img-fluid mobile_none cutter_bottom_left">
         <div class="contact_main_div">
-            <img src="{{ asset('frontend/Brandsparkz/assets/img/cutter_pattern.png') }}" alt=""
+            <img src="{{ asset('frontend/BrandSparkz/assets/img/cutter_pattern.png') }}" alt=""
                 class="img-fluid desktop_none cutter_pattern">
             <div class="cutter_main_div_inner">
                 <div class="cutter_main_div_inner_left">
-                    <img src="{{ asset('frontend/Brandsparkz/assets/img/contact_cutter_one.png') }}" alt=""
+                    <img src="{{ asset('frontend/BrandSparkz/assets/img/contact_cutter_one.png') }}" alt=""
                         class="img-fluid mobile_none contact_cutter_one">
                     <div class="contact_women_mask_div">
-                        <img src="{{ asset('frontend/Brandsparkz/assets/img/contact_women_mask.png') }}" alt=""
+                        <img src="{{ asset('frontend/BrandSparkz/assets/img/contact_women_mask.png') }}" alt=""
                             class="img-fluid mobile_none contact_women_mask">
-                        <img src="{{ asset('frontend/Brandsparkz/assets/img/contact_women_mask_mobo.png') }}" alt=""
+                        <img src="{{ asset('frontend/BrandSparkz/assets/img/contact_women_mask_mobo.png') }}" alt=""
                             class="img-fluid desktop_none contact_women_mask">
                         <div class="women_mask_text_div wmtd1">
                             <div class="disc_div">
@@ -48,21 +48,21 @@
 
                         <div class="c_box_element">
                             <div class="circ_radial">
-                                <img src="{{ asset('frontend/Brandsparkz/assets/img/ci1.png') }}" alt=""
+                                <img src="{{ asset('frontend/BrandSparkz/assets/img/ci1.png') }}" alt=""
                                     class="img-fluid">
                             </div>
                             <p class="c_box_text">+44 (0)123 456 7890</p>
                         </div>
                         <div class="c_box_element">
                             <div class="circ_radial">
-                                <img src="{{ asset('frontend/Brandsparkz/assets/img/ci2.png') }}" alt=""
+                                <img src="{{ asset('frontend/BrandSparkz/assets/img/ci2.png') }}" alt=""
                                     class="img-fluid">
                             </div>
                             <p class="c_box_text">info@Brandsparkz.com.com</p>
                         </div>
                         <div class="c_box_element">
                             <div class="circ_radial">
-                                <img src="{{ asset('frontend/Brandsparkz/assets/img/ci3.png') }}" alt=""
+                                <img src="{{ asset('frontend/BrandSparkz/assets/img/ci3.png') }}" alt=""
                                     class="img-fluid">
                             </div>
                             <p class="c_box_text">
@@ -129,11 +129,11 @@
 
                     <div class="contact_submit_div">
                         <button class="btn btn_global mx-auto" type="submit">
-                            <img src="{{ asset('frontend/Brandsparkz/assets/img/btn_primary_pattern.png') }}"
+                            <img src="{{ asset('frontend/BrandSparkz/assets/img/btn_primary_pattern.png') }}"
                                 alt="" class="img-fluid btn_global_pattern">
                             <div class="btn_global_inner">
                                 <p class="cart_text">Submit Message</p>
-                                <img src="{{ asset('frontend/Brandsparkz/assets/img/arrow_logo.svg') }}" alt=""
+                                <img src="{{ asset('frontend/BrandSparkz/assets/img/arrow_logo.svg') }}" alt=""
                                     class="img-fluid cart_logo">
                             </div>
                         </button>

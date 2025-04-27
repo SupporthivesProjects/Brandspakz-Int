@@ -102,7 +102,7 @@
                     <!-- Header -->
                     <tr>
                         <td style="padding: 0px;">
-                            <img src="{{ asset('frontend/Brandsparkz/assets/img/email-header.png') }}" alt="" style="margin: auto; display: block;height:87px;">
+                            <img src="{{ asset('frontend/BrandSparkz/assets/img/email-header.png') }}" alt="" style="margin: auto; display: block;height:87px;">
                         </td>
                     </tr>
                     <!-- Header End -->
@@ -170,7 +170,7 @@
                         <td>
                             <!--[if mso]><style>.outlook-back {background: #1F3436 !important;height: 160px;}</style><![endif]--> 
                             <table width="100%" cellspacing="0" cellpadding="" border="0px" style="border-collapse: collapse;"> 
-                                <tr style="background: url('{{ asset('frontend/Brandsparkz/assets/img/footer-bg.png') }}'); height:157px; padding:50px; background-size:cover;">
+                                <tr style="background: url('{{ asset('frontend/BrandSparkz/assets/img/footer-bg.png') }}'); height:157px; padding:50px; background-size:cover;">
                                     <td style="text-align:center;"><img src="img/Logo.png" alt="">
                                    
                                     </td> 
