@@ -135,7 +135,7 @@
                                         @foreach (Session::get('cart') as $key => $cartItem)
                                             @php
                                                 $product = \App\Models\Product::find($cartItem['id']);
-                                                $subtotal = $subtotal + round(convert_price($cartItem['price']), 2);
+                                                $subtotal = $subtotal + round(convert_price($cartItem['price']*$cartItem['quantity']), 2);
                                             @endphp
 
                                             <tr class="table_ps">
@@ -149,7 +149,7 @@
                                                     <p class="data_ps for_center">{{ $cartItem['quantity'] }}</p>
                                                 </td>
                                                 <td>
-                                                    <p class=" for_total">{{ single_price($cartItem['price']) }}</p>
+                                                    <p class=" for_total">{{ single_price($cartItem['price']*$cartItem['quantity']) }}</p>
                                                 </td>
                                             </tr>
                                         @endforeach

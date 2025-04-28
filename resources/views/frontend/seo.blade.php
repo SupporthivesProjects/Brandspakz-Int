@@ -624,7 +624,7 @@
                                                     </p>
                                                     <p class="social_tablesubtitle">+VAT</p>
                                                     <button type="button" class="btn social_tablebtn"
-                                                        onclick="addToCart1Step({{ $product->id }})">Add To
+                                                        onclick="addToCart1Step({{ $product->id }})"  >Add To
                                                         Cart</button>
                                                 </div>
                                             </th>
