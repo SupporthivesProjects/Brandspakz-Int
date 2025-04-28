@@ -328,6 +328,44 @@
         </div>
     </header>
 
+   <!-- Success Modal -->
+
+
+  <div class="modal fade" id="customModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered custom-modal-width2">
+      <div class="modal-content custom_modal">
+
+        <h1 class="modal_tt">
+            Added to Cart
+        </h1>
+
+        <p class="modal_pp">
+            Your chosen service has successfully been added to the cart.
+        </p>
+        <div class="buttons_wala">
+            <button class="btn btn_global2 on_phone"  onClick="window.location.reload();">
+                <img src="./assets/img/btn_primary_pattern2.png" alt="" class="img-fluid btn_global_pattern2">
+                <div class="btn_global_inner2 on_phone">
+                    <p class="cart_text">continue shopping</p>
+                </div>
+            </button>
+            
+        <button class="btn btn_global width_for_checkoutbtn" data-bs-toggle="modal" data-bs-target="#staticBackdrop2" onclick="window.location.href='{{ route( 'checkout.shipping_info') }}'">
+            <img src="./assets/img/btn_primary_pattern.png" alt="" class="img-fluid btn_global_pattern">
+            <div class="btn_global_inner w-100">
+                
+                <p class="cart_text">Checkout</p>
+            </div>
+    </button>
+        </div>
+       
+      </div>
+    </div>
+  </div>
+
+  
+  
+
     <main>
         @yield('content')
     </main>
@@ -566,13 +604,17 @@
                         updateNavCart();
 
                         // Show success message
-                        Swal.fire({
-                            position: 'top-end',
-                            icon: 'success',
-                            title: 'Item added to cart!',
-                            showConfirmButton: false,
-                            timer: 1500
-                        });
+                        // Swal.fire({
+                        //     position: 'top-end',
+
+                        //     icon: 'success',
+                        //     title: 'Item added to cart!',
+                        //     showConfirmButton: false,
+                        //     timer: 1500
+                            
+                        // });
+                        $('#customModal').modal('show');
+                        
                     } else {
                         // Show error message
                         Swal.fire({
@@ -609,7 +651,14 @@
                 }
             });
         }
+
+
     </script>
+
+   
+    
+   
+
 
     @yield('scripts')
 </body>
