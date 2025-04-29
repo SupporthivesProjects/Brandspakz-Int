@@ -58,7 +58,7 @@
                                 @php
                                     $total = 0; 
                                 @endphp
-                                @foreach($order->orderDetails as $key => $orderDetail)
+                                @foreach ($order as $key => $orderDetail)
                                     @if($orderDetail->product != null)
                                         @php
                                             $product = \App\Models\Product::find($orderDetail->product->id);
@@ -67,12 +67,12 @@
                                 <tr>
                                    <td style="width:236px;">
                                         <p style="font-family: Arial;font-weight:400;font-size: 16px;line-height: 27px;letter-spacing: 0px;vertical-align: middle;color: #1C1F26;margin: 0px;">
-                                           <b>{{ $orderDetail->product->name }}</b>
+                                           <b>{{ $product->name }}</b>
                                         </p>
                                    </td>
                                    <td style="width:100px;">
                                     <p style="font-family: Arial;font-weight:400;font-size: 16px;line-height: 27px;letter-spacing: 0px;vertical-align: middle;color: #1C1F26;margin: 0px;text-align: center;">
-                                        {{ $orderDetail->product->subscription }}<
+                                        {{ $product->subscription }}<
                                     </p>
                                </td> 
                                    <td style="width:50px;">
@@ -114,7 +114,7 @@
                          <!--[if mso]><style>.outlook-back {background: #1F3436 !important;height: 160px;}</style><![endif]-->  
                         <table width="100%" cellspacing="0" cellpadding="" border="0px" style="border-collapse: collapse;"> 
                             <tr style="background: url('{{ asset('frontend/BrandSparkz/assets/img/footer-bg.png') }}'); height:157px; padding:50px; background-size:cover;">
-                                <td style="text-align:center;"><img src="img/Logo.png" alt="">
+                                <td style="text-align:center;"><img src="{{ asset('frontend/BrandSparkz/assets/img/Logo.png') }}" alt="">
                                
                                 </td> 
                                 <td style="text-align:right;">
