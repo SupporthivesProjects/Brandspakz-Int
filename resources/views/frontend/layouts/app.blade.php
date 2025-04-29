@@ -272,8 +272,8 @@
                     <div class="btn_global_inner w-100">
                         <img src="{{ asset('frontend/BrandSparkz/assets/img/cart_logo.svg') }}" alt="" class="img-fluid cart_logo">
                         <p class="cart_text">View Cart</p>
-                        <span>
-                            {{ Session::has('cart') ? count(Session::get('cart')) : '0' }}
+                        <span id="cart_items_sidenav">
+                            {{ Session::has('cart') ? (count($cart = Session::get('cart')) > 0 ? count($cart) : 0) : 0 }}
                         </span>
                     </div>
                 </button>
@@ -655,24 +655,32 @@
 
     </script>
 
-    <script>
-        function show_purchase_history_details(order_id)
-        {
-            $('#order-details-modal-body').html(null);
+<script>
+    function show_purchase_history_details(order_id) {
+        $('#order-details-modal-body').html(null);
 
-            if(!$('#modal-size').hasClass('modal-lg')){
-                $('#modal-size').addClass('modal-lg');
-            }
-
-            $.post('{{ route('purchase_history.details') }}', { _token : '{{ @csrf_token() }}', order_id : order_id}, function(data){
-                $('#order-details-modal-body').html(data);
-                $('#order_details').modal('show');
-                $('.c-preloader').hide();
-            });
+        if (!$('#modal-size').hasClass('modal-lg')) {
+            $('#modal-size').addClass('modal-lg');
         }
 
-        
-    </script>
+        $.ajax({
+            type: 'POST',
+            url: '{{ route('purchase_history.details') }}',
+            data: {
+                _token: $('meta[name="csrf-token"]').attr('content'),
+                order_id: order_id
+            },
+            success: function(data) {
+                $('#order-details-modal-body').html(data);
+                $('#order_details').modal("show");
+                $('.c-preloader').hide();
+            },
+            error: function(xhr) {
+                console.error('Error loading purchase details:', xhr.responseText);
+            }
+        });
+    }
+</script>
 
    
     

@@ -1,8 +1,15 @@
 @extends('frontend.layouts.app')
 
 @section('content')
-
-
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+<form class="inputSC_main" id="shippingAddress" data-toggle="validator"  action="{{ route('checkout.store_shipping_infostore') }}" role="form" method="POST" onsubmit="return check_agree(this);">
+@csrf
+@if (Auth::check())
+    @php
+        $user = Auth::user();
+        $lastBillingAddress = \App\Models\LastBillingAddress::getLastBillingAddress($user->id);
+    @endphp
+    
     <section class="section_terms">
         <div class="secure_pay1">
             <img src="{{ asset('frontend/BrandSparkz/assets/img/intersect.png') }}" alt="" class="intersect">
@@ -19,15 +26,16 @@
                     <div class="div_for_ps_inner SCdivTop">
                         <h3 class="heading_of_pS">Billing Details</h3>
                     </div>
-                    <form class="inputSC_main" id="shippingAddress" data-toggle="validator"
-                        action="{{ route('checkout.store_shipping_infostore') }}" role="form" method="POST"
-                        onsubmit="return check_agree(this);">
-                        @csrf
-                        @if (Auth::check())
-                            @php
-                                $user = Auth::user();
-                                $lastBillingAddress = \App\Models\LastBillingAddress::getLastBillingAddress($user->id);
-                            @endphp
+                    @if ($errors->any())
+                        <div class="alert alert-danger">
+                            <ul>
+                                @foreach ($errors->all() as $error)
+                                    <li>{{ $error }}</li>
+                                @endforeach
+                            </ul>
+                        </div>
+                    @endif
+                    <div class="inputSC_main">
                             <input type="hidden" form="shippingAddress" class="form-control" name="user_id"
                                 value="{{ $user->id }}" required />
                             <input type="hidden" class="form-control" form="shippingAddress" name="email"
@@ -56,12 +64,10 @@
                                 </div>
                                 <div class="inputparaSC">
                                     <p class="paraSC">Date Of Birth</p>
-                                    <input type="date" class="inputSC" value="{{ $lastBillingAddress->dob ?? '' }}"
-                                        id="dob" name="dob"
-                                        form="shippingAddress
-                                    max="@php echo date('Y-m-d',strtotime('18 years ago')); @endphp"
-                                        required>
-                                </div>
+                                    <input type="date" class="inputSC" value="{{ $lastBillingAddress->dob ?? '' }}" 
+                                    id="dob" name="dob" form="shippingAddress" 
+                                    max="{{ date('Y-m-d', strtotime('18 years ago')) }}" required>
+                                   </div>
                             </div>
                             <div class="inputSC_inner">
                                 <div class="inputparaSC">
@@ -69,15 +75,16 @@
                                     <input type="text" class="inputSC" form="shippingAddress" name="lname"
                                         id="lname" value="{{ $lastBillingAddress->lname ?? '' }}" required>
                                 </div>
-                                <div class="inputparaSC">
-                                    <p class="paraSC">Email</p>
-                                    <input type="text" class="inputSC" form="shippingAddress" name="email"
-                                        id="email" value="{{ $user->email ?? '' }}" readonly>
-                                </div>
+                               
                                 <div class="inputparaSC">
                                     <p class="paraSC">Address Line 2</p>
                                     <input type="text" class="inputSC" form="shippingAddress" name="addressL2"
                                         id="addressL2" value="{{ $lastBillingAddress->addressL2 ?? '' }}">
+                                </div>
+                                 <div class="inputparaSC">
+                                    <p class="paraSC">StateProvince</p>
+                                    <input type="text" class="inputSC" form="shippingAddress" name="StateProvince"
+                                        id="StateProvince" required placeholder="StateProvince">
                                 </div>
                                 <div class="inputparaSC">
                                     <p class="paraSC">Country</p>
@@ -95,8 +102,8 @@
                                         id="postal_code" value="{{ $lastBillingAddress->postal_code ?? '' }}" required>
                                 </div>
                             </div>
-                        @endif
-                    </form>
+                      
+                    </div>
                 </div>
                 <div class="secure_middle">
 
@@ -135,7 +142,7 @@
                                         @foreach (Session::get('cart') as $key => $cartItem)
                                             @php
                                                 $product = \App\Models\Product::find($cartItem['id']);
-                                                $subtotal = $subtotal + round(convert_price($cartItem['price']*$cartItem['quantity']), 2);
+                                                $subtotal = $subtotal + round(convert_price($cartItem['price']), 2);
                                             @endphp
 
                                             <tr class="table_ps">
@@ -149,7 +156,7 @@
                                                     <p class="data_ps for_center">{{ $cartItem['quantity'] }}</p>
                                                 </td>
                                                 <td>
-                                                    <p class=" for_total">{{ single_price($cartItem['price']*$cartItem['quantity']) }}</p>
+                                                    <p class=" for_total">{{ single_price($cartItem['price']) }}</p>
                                                 </td>
                                             </tr>
                                         @endforeach
@@ -187,14 +194,14 @@
                                                     {{ single_price(Session::get('coupon_discount')) }}</p>
                                             </div>
                                         </div>
-                                        <form action="{{ route('checkout.remove_coupon_code') }}" method="POST">
+                                        <form action="{{ route('checkout.remove_coupon_code') }}" id="Couponremove" method="POST">
                                             @csrf
-                                            <button type="submit" class="btn btn_button_Sc">Remove Coupon</button>
+                                            <button type="submit" form="Couponremove" class="btn btn_button_Sc">Remove Coupon</button>
                                         </form>
                                     </div>
                                 @else
                                     <div class="bottomSCbtncp">
-                                        <form action="{{ route('checkout.apply_coupon_code') }}" method="POST">
+                                        <form action="{{ route('checkout.apply_coupon_code') }}" id="applyCoupon" method="POST">
                                             @csrf
                                             <div class="SC_forcoupon">
                                                 <img src="{{ asset('frontend/BrandSparkz/assets/img/cuoponSC.png') }}"
@@ -202,11 +209,11 @@
                                                 <div class="SC_forcoupon2">
                                                     <p class="para_bottom_SC">Have a coupon?</p>
                                                     <div class="line_SC mobile_none"></div>
-                                                    <input type="text" class="input_bottom_SC" name="code"
+                                                    <input type="text" form="applyCoupon"  class="input_bottom_SC" name="code"
                                                         placeholder="Enter your code here" required>
                                                 </div>
                                             </div>
-                                            <button type="submit" class="btn btn_button_Sc">Apply Coupon</button>
+                                            <button type="submit" form="applyCoupon" class="btn btn_button_Sc">Apply Coupon</button>
                                         </form>
                                     </div>
                                 @endif
@@ -222,7 +229,7 @@
                                     <span><a href="{{ route('privacypolicy') }}"> Privacy Policy</a></span>
                                 </p>
                             </div>
-                            <div class="g-recaptcha img-fluid w-100 SC_capcha" data-sitekey="{{ env('GOOGLE_CAPTCHA_SITE_KEY') }}" form="shippingAddress"></div>
+                            <div class="g-recaptcha" data-sitekey="6LcSKScrAAAAAFTPINNesDgJDwJdGKL3VShi-QvA"></div>
                         </div>
                         <button class="btn btn_SC" form="shippingAddress" type="submit">Complete Checkout</button>
                         <img src="{{ asset('frontend/BrandSparkz/assets/img/SCMastercard.png') }}" alt=""
@@ -232,6 +239,8 @@
             </div>
         </div>
     </section>
+      @endif
+     </form>
 
     
 
@@ -239,7 +248,7 @@
 @endsection
 
 @section('scripts')
-<script src="https://www.google.com/recaptcha/api.js" async defer></script> 
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <script type="text/javascript">
         function removeFromCart1(key) {
             $.post('{{ route('cart.removeFromCart') }}', {
@@ -298,31 +307,34 @@
             $('#GuestCheckout').modal();
         }
     </script>
+    
+  
 
-    <script>
-        function check_agree(form) {
-            // var response = hcaptcha.getResponse();
-            var response = true;
+   <script>
+    function check_agree(form) {
+        var response = grecaptcha.getResponse(); 
 
-            if (form.terms.checked && response) {
-                return true;
-
-            } else if (!form.terms.checked) {
+        if (form.terms.checked && response.length > 0) {
+            
+            return true;
+        } else {
+           
+            if (!form.terms.checked) {
                 Swal.fire({
                     icon: 'error',
                     title: 'Oops...',
-                    text: 'Please accept terms and conditions'
-                })
+                    text: 'Please accept terms and conditions.'
+                });
+            } else if (response.length == 0) {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Oops...',
+                    text: 'Please complete the reCAPTCHA.'
+                });
             }
-             //else if (response.length == 0) {
-             //   Swal.fire({
-              //      icon: 'error',
-              //      title: 'Oops...',
-              //       text: 'Please select Captcha'
-             //    })
-              //  return false;
-             //}
-            //return false;
+            return false;  
         }
-    </script>
+    }
+</script>
+
 @endsection

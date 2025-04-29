@@ -59,7 +59,7 @@
                         @php
                             $total=0;
                         @endphp
-                        @foreach ($order->orderDetails as $key => $orderDetail)
+                        @foreach ($order as $key => $orderDetail)
                         @php
                            $product = \App\Models\Product::find($orderDetail->product->id);
                            $total = $total + round(convert_price($orderDetail->price),2);                           
@@ -69,7 +69,7 @@
                                 <p class="data_ps"><span>{{ $product->name }}</span></p>
                             </td>
                             <td>
-                                <p class="data_ps">1 Month</p>
+                                <p class="data_ps">{{ $product->subscription }}</p>
                             </td>
                             <td>
                                 <p class="data_ps for_center">{{ $orderDetail->quantity }}</p>
