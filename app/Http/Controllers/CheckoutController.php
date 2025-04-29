@@ -18,6 +18,7 @@ class CheckoutController extends Controller
 
             $orderController = new OrderController;
             $orderController->store($request);
+
             $request->session()->put('payment_type', 'cart_payment');
             DB::commit();
             if ($request->session()->get('order_id')) {
@@ -25,6 +26,7 @@ class CheckoutController extends Controller
                 
                 return $response;
             }
+
             DB::rollBack();
             return redirect()->back()->with('error', 'Order creation failed');
         } catch (Exception $e) {
@@ -39,6 +41,7 @@ class CheckoutController extends Controller
         try {
             
             $request->merge(['payment_option' => 'citigate']);
+
             switch ($request->payment_option) {
                 case 'citigate':
                     return (new CitigateController)->index($request);
