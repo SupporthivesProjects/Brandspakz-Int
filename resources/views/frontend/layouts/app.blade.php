@@ -273,7 +273,9 @@
                         <img src="{{ asset('frontend/BrandSparkz/assets/img/cart_logo.svg') }}" alt="" class="img-fluid cart_logo">
                         <p class="cart_text">View Cart</p>
                         <span id="cart_items_sidenav">
+
                             {{ Session::has('cart') ? (count($cart = Session::get('cart')) > 0 ? count($cart) : 0) : 0 }}
+                            
                         </span>
                     </div>
                 </button>
