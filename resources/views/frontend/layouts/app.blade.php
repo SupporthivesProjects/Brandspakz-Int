@@ -80,7 +80,7 @@
                         <div class="service_drop_container">
                             <button class="btn btn_header_drop" onclick="justDrop('service_drop', 'roter1', this)">
                                 Services
-                                <img src="{{ asset('frontend/brandsparkz/assets/img/drop.svg') }}" alt="" class="img-fluid" id="roter1">
+                                <img src="{{ asset('frontend/BrandSparkz/assets/img/drop.svg') }}" alt="" class="img-fluid" id="roter1">
                             </button>
                             <div class="dropped_div d-none" id="service_drop">
                                 <button class="btn btn_orange_header {{ request()->routeIs('seo') ? 'active' : '' }}" onclick="window.location.href='{{ route('seo') }}'">SEO</button>
@@ -117,7 +117,7 @@
                         <div class="currency_drop_container">
                             <button class="btn btn_header_drop" onclick="justDrop('currency_drop', 'roter2', this)">
                                 {{ $currency_code }}
-                                <img src="{{ asset('frontend/brandsparkz/assets/img/drop.svg') }}" alt="" class="img-fluid" id="roter2">
+                                <img src="{{ asset('frontend/BrandSparkz/assets/img/drop.svg') }}" alt="" class="img-fluid" id="roter2">
                             </button>
                             <div class="dropped_div d-none" id="currency_drop">
                                 @foreach (\App\Models\Currency::getActiveCurrencies() as $key => $currency)
@@ -133,7 +133,7 @@
                     <div class="header_right">
                         <div class="cart_drop_container">
                             <button class="btn btn_global" onclick="justDrop('cart_drop', 'roter5', this)"  >
-                                <img src="{{ asset('frontend/brandsparkz/assets/img/btn_primary_pattern.png') }}" alt="" class="img-fluid btn_global_pattern">
+                                <img src="{{ asset('frontend/BrandSparkz/assets/img/btn_primary_pattern.png') }}" alt="" class="img-fluid btn_global_pattern">
                                 <div class="btn_global_inner">
                                     <img src="{{ asset('frontend/BrandSparkz/assets/img/cart_logo.svg') }}" alt="" class="img-fluid cart_logo">
                                     <p class="cart_text">View Cart</p>
@@ -150,7 +150,7 @@
                                     @foreach (Session::get('cart') as $key => $cartItem)
                                         @php
                                             $product = \App\Models\Product::find($cartItem['id']);
-                                            $total = $total + round(convert_price($cartItem['price']), 2);
+                                            $total = $total + round(convert_price($cartItem['price']*$cartItem['quantity']), 2);
                                         @endphp
                                 <div class="cart_item">
                                     
@@ -161,12 +161,12 @@
                                         <div class="cart_item_values_div">
                                             <p class="cart_item_values">x{{ $cartItem['quantity'] }}</p>
                                             <p class="cart_item_values"> {{ $product->subscription }}</p>
-                                            <p class="cart_item_values_bold">{{ single_price($cartItem['price']) }}</p>
+                                            <p class="cart_item_values_bold">{{ single_price($cartItem['price']*$cartItem['quantity']) }}</p>
                                         </div>
                                     </div>
                                     <div class="cart_item_right">
                                         <button class="btn">
-                                            <img src="{{ asset('frontend/brandsparkz/assets/img/bin.svg') }}" alt="" class="img-fluid" onclick="removeFromCart({{ $key }})">
+                                            <img src="{{ asset('frontend/BrandSparkz/assets/img/bin.svg') }}" alt="" class="img-fluid" onclick="removeFromCart({{ $key }})">
                                         </button>
                                     </div>
                                 </div>
@@ -197,15 +197,15 @@
                 <div class="header_mobo_main">
                     <div class="header_mobo_left">
                         <a href="{{ route('home') }}">
-                            <img src="{{ asset('frontend/brandsparkz/assets/img/header_mobo_bg_trans_logo_.svg') }}" alt="" class="img-fluid">
+                            <img src="{{ asset('frontend/BrandSparkz/assets/img/header_mobo_bg_trans_logo_.svg') }}" alt="" class="img-fluid">
                         </a>
                     </div>
                     <div class="header_mobo_right">
                         <div class="hamburger_menu">
-                            <img src="{{ asset('frontend/brandsparkz/assets/img/hamburger_logo.png') }}" alt="" class="img-fluid">
+                            <img src="{{ asset('frontend/BrandSparkz/assets/img/hamburger_logo.png') }}" alt="" class="img-fluid">
                         </div>
                         <div class="hamburger_menu_close" style="display: none;">
-                            <img src="{{ asset('frontend/brandsparkz/assets/img/hamburger_close.svg') }}" alt="" class="img-fluid">
+                            <img src="{{ asset('frontend/BrandSparkz/assets/img/hamburger_close.svg') }}" alt="" class="img-fluid">
                         </div>
                     </div>
                 </div>
@@ -268,12 +268,12 @@
                     </div>
                 </div>
                 <button class="btn btn_global cart_menu">
-                    <img src="{{ asset('frontend/brandsparkz/assets/img/btn_primary_pattern.png') }}" alt="" class="img-fluid btn_global_pattern">
+                    <img src="{{ asset('frontend/BrandSparkz/assets/img/btn_primary_pattern.png') }}" alt="" class="img-fluid btn_global_pattern">
                     <div class="btn_global_inner w-100">
-                        <img src="{{ asset('frontend/brandsparkz/assets/img/cart_logo.svg') }}" alt="" class="img-fluid cart_logo">
+                        <img src="{{ asset('frontend/BrandSparkz/assets/img/cart_logo.svg') }}" alt="" class="img-fluid cart_logo">
                         <p class="cart_text">View Cart</p>
-                        <span>
-                            {{ Session::has('cart') ? count(Session::get('cart')) : '0' }}
+                        <span id="cart_items_sidenav">
+                            {{ Session::has('cart') ? (count($cart = Session::get('cart')) > 0 ? count($cart) : 0) : 0 }}
                         </span>
                     </div>
                 </button>
@@ -288,7 +288,7 @@
                     @foreach (Session::get('cart') as $key => $cartItem)
                         @php
                             $product = \App\Models\Product::find($cartItem['id']);
-                            $total1 = $total1 + round(convert_price($cartItem['price']), 2);
+                            $total1 = $total1 + round(convert_price($cartItem['price']*$cartItem['quantity']), 2);
                         @endphp
                         <div class="cart_item">
                             <div class="cart_item_left">
@@ -298,12 +298,12 @@
                                 <div class="cart_item_values_div">
                                     <p class="cart_item_values">x{{ $cartItem['quantity'] }}</p>
                                     <p class="cart_item_values">{{ $product->subscription }}</p>
-                                    <p class="cart_item_values_bold">{{ single_price($cartItem['price']) }}</p>
+                                    <p class="cart_item_values_bold">{{ single_price($cartItem['price']*$cartItem['quantity']) }}</p>
                                 </div>
                             </div>
                             <div class="cart_item_right">
                                 <button class="btn">
-                                    <img src="{{ asset('frontend/brandsparkz/assets/img/bin.svg') }}" alt="" class="img-fluid" onclick="removeFromCart({{ $key }})">
+                                    <img src="{{ asset('frontend/BrandSparkz/assets/img/bin.svg') }}" alt="" class="img-fluid" onclick="removeFromCart({{ $key }})">
                                 </button>
                             </div>
                         </div>
@@ -654,6 +654,33 @@
 
 
     </script>
+
+<script>
+    function show_purchase_history_details(order_id) {
+        $('#order-details-modal-body').html(null);
+
+        if (!$('#modal-size').hasClass('modal-lg')) {
+            $('#modal-size').addClass('modal-lg');
+        }
+
+        $.ajax({
+            type: 'POST',
+            url: '{{ route('purchase_history.details') }}',
+            data: {
+                _token: $('meta[name="csrf-token"]').attr('content'),
+                order_id: order_id
+            },
+            success: function(data) {
+                $('#order-details-modal-body').html(data);
+                $('#order_details').modal("show");
+                $('.c-preloader').hide();
+            },
+            error: function(xhr) {
+                console.error('Error loading purchase details:', xhr.responseText);
+            }
+        });
+    }
+</script>
 
    
     
