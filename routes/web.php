@@ -168,6 +168,14 @@ Route::middleware(['admin.log'])->group(function () {
     Route::post('password/reset', [ResetPasswordController::class, 'reset'])->name('password.update');
 });
 
+Route::middleware(['auth'])->group(function () {
+    // Email Verification Routes
+    Route::get('/email/verify', [App\Http\Controllers\Auth\VerificationController::class, 'notice'])
+        ->name('verification.notice');
+    Route::post('/email/verification-notification', [App\Http\Controllers\Auth\VerificationController::class, 'resend'])
+        ->name('verification.resend');
+});
+
 Route::get('/test-404', function() {
     abort(404);
 });
