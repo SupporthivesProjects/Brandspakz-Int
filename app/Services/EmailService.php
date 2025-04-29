@@ -16,7 +16,6 @@ class EmailService
             'data' => $data,
             'from' => env('MAIL_FROM_ADDRESS')
         ];
-
         try {
             Mail::to($to)->queue(new GenericEmailManager($emailData));
             return true;

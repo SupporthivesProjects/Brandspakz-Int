@@ -44,13 +44,13 @@
 
                         <div class="contact_input_div">
                             <p class="register_input_title">Password (at least 8 characters)</p>
-                            <input type="text" class="form-control input_global" form="registerform" name="password"
+                            <input type="password" class="form-control input_global" form="registerform" name="password"
                             id="password">
                         </div>
 
                         <div class="contact_input_div">
                             <p class="register_input_title">Confirm Password</p>
-                            <input type="text" class="form-control input_global"  name="password_confirmation" 
+                            <input type="password" class="form-control input_global"  name="password_confirmation" 
                             id="password_confirmation" form="registerform">
                         </div>
 
