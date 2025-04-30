@@ -99,13 +99,6 @@ class OrderController extends Controller
                 'tax' => $cartItem['tax']?? 0 * $cartItem['quantity'],
                 'shipping_type' => 'home_delivery',
                 'quantity' => $cartItem['quantity'],
-                'translation_file' => $cartItem['translation_file'],
-                'from_lang' => $cartItem['from_lang'],
-                'to_lang' => $cartItem['to_lang'],
-                'service_no_of_pages' => $cartItem['service_no_of_pages'],
-                'service_no_of_words' => $cartItem['service_no_of_words'],
-                'delivery_datetime' => $cartItem['delivery_datetime'],
-                'message' => $cartItem['message']
             ]);
             if (!$orderDetail) {
                 Log::error('Order detail creation failed for order ID: ' . $order->id);

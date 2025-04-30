@@ -27,6 +27,27 @@ class CitigateController extends Controller
                 'session_data' => Session::all(),
                 'order_id' => $order->id
             ]);
+
+            // To Test Success Without Payment Gateway
+            // $request = new \Illuminate\Http\Request();
+            // $request->merge([
+            //     'thisTransactionID' => '362282837',
+            //     'MerchantRef' => '389bc7bb1e',
+            //     'TransTypeID' => '1',
+            //     'Currency' => 'USD',
+            //     'Amount' => '3475',
+            //     'BusinessCase' => 'DummyWS',
+            //     'Descriptor' => 'Dummy Descriptor WS',
+            //     'Bank' => 'DummyBank',
+            //     'ResponseCode' => '0',
+            //     'ResponseDescription' => 'Approved',
+            //     'BankCode' => '0',
+            //     'BankDescription' => 'Approved',
+            //     'Signature' => 'd20b9afed79892144814d33c13c949a8a120649a'
+            // ]);
+           
+            // $this->success($request);
+
             $citigate = new Citigate();
             return $citigate->initiate($postData, false);
         } catch (Exception $e) {
@@ -219,16 +240,29 @@ class CitigateController extends Controller
         try {
             $paymentSession = PaymentSession::where('token', $request->MerchantRef)->latest()->first();
             Log::info($request->all());
-
+            
             $sessionData = $paymentSession->session_data;
-            $currencyCode = $sessionData['currency_code'];
-
+            $currencyCode = $sessionData['currency_code'] ?? 'usd';
+            
             GatewayHistory::storeTransaction($request, $currencyCode);
             $this->reactivateSession($paymentSession);
             $paymentSession->update(['status' => 'success']);
+            
+            // Get the order ID from session
+            $order_id = $sessionData['order_id'] ?? $request->session()->get('order_id');
 
-            Flash::success('Payment completed successfully.');
-            return redirect()->route('order_confirmed');
+            // Prepare payment details
+            $payment_details = [
+                'method' => 'citigate',
+                'transaction_id' => $request->MerchantRef,
+                'amount' => $request->Amount / 100,
+                'status' => 'completed',
+                'timestamp' => now()->toDateTimeString(),
+            ];
+           
+            // Call the checkout_done method in CheckoutController
+            $checkoutController = new \App\Http\Controllers\CheckoutController();
+            return $checkoutController->checkout_done($order_id, json_encode($payment_details));
         } catch (Exception $e) {
             Log::error('Payment processing error', [
                 'error' => $e->getMessage(),
@@ -244,6 +278,7 @@ class CitigateController extends Controller
             return redirect()->route('checkout.shipping_info');
         }
     }
+
 
     public function fail(Request $request)
     {
@@ -296,5 +331,26 @@ class CitigateController extends Controller
         $request->session()->forget(['order_id', 'payment_data']);
         session()->flash('paymentcancelled');
         return redirect()->route('checkout.shipping_info');
+    }
+
+    public function handlePaymentSuccess(Request $request)
+    {
+        // Process the payment response from Citigate
+
+        // Get the order ID from session
+        $order_id = $request->session()->get('order_id');
+
+        // Prepare payment details
+        $payment_details = [
+            'method' => 'citigate',
+            'transaction_id' => $request->transaction_id, // Or whatever ID Citigate returns
+            'amount' => $request->amount,
+            'status' => 'completed',
+            'timestamp' => now()->toDateTimeString(),
+        ];
+
+        // Call the checkout_done method in CheckoutController
+        $checkoutController = new \App\Http\Controllers\CheckoutController();
+        return $checkoutController->checkout_done($order_id, json_encode($payment_details));
     }
 }
