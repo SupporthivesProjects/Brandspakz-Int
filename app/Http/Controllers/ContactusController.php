@@ -55,11 +55,11 @@ class ContactUSController extends Controller
         try {
             $this->validateRequest($request);
 
-            // if (!$request->input('h-captcha-response')) {
-            //     Flash::error('Please complete the captcha verification');
-            //     return back()->withInput();
-            // }
-            // $this->verifyCaptcha($request);
+            if (!$request->input('h-captcha-response')) {
+                Flash::error('Please complete the captcha verification');
+                return back()->withInput();
+            }
+             $this->verifyCaptcha($request);
 
             try {
                 $ip = $this->validateIpSubmissions($request);

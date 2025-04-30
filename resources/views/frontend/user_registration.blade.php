@@ -59,7 +59,7 @@
                             <div class="row">
                                 <div class="col-md-12">
                                     {{-- <img src=" {{ asset('frontend/BrandSparkz/assets/img/reCAPTCHA.png') }}" alt="" class="img-fluid d-flex mx-auto mb-3"> --}}
-                                    <script src="https://js.hcaptcha.com/1/api.js" async defer></script>
+                                    
                                         <div class="h-captcha mx-auto my_mob_24" data-sitekey="{{ env('H_CAPTCHA_SITE_KEY') }}">
                                         </div>
                                 </div>
@@ -112,6 +112,12 @@
     </section>
 
 
+    
+@endsection
+
+@section('scripts')
+    <script src="https://js.hcaptcha.com/1/api.js" async defer></script>
+
     <script type="text/javascript">
         function check_agree(form) {
 
@@ -143,4 +149,5 @@
             return false;
         }
     </script>
+
 @endsection

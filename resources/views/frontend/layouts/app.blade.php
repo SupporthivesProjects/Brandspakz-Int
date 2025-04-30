@@ -13,7 +13,7 @@
     <title>BrandSparkz</title>
 
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="{{ asset('frontend/Lingosphere/img/Fav.png') }}') }}">
+    <link rel="icon" type="image/x-icon" href="{{ asset('frontend/BrandSparkz/assets/img/header_bg_trans_logo_.svg') }}">
 
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
@@ -346,14 +346,14 @@
         </p>
         <div class="buttons_wala">
             <button class="btn btn_global2 on_phone"  onClick="window.location.reload();">
-                <img src="./assets/img/btn_primary_pattern2.png" alt="" class="img-fluid btn_global_pattern2">
+                <img src="{{ asset('frontend/BrandSparkz/assets/img/btn_primary_pattern2.png') }}" alt="" class="img-fluid btn_global_pattern2">
                 <div class="btn_global_inner2 on_phone">
                     <p class="cart_text">continue shopping</p>
                 </div>
             </button>
             
         <button class="btn btn_global width_for_checkoutbtn" data-bs-toggle="modal" data-bs-target="#staticBackdrop2" onclick="window.location.href='{{ route( 'checkout.shipping_info') }}'">
-            <img src="./assets/img/btn_primary_pattern.png" alt="" class="img-fluid btn_global_pattern">
+            <img src="{{ asset('frontend/BrandSparkz/assets/img/btn_primary_pattern.png') }}" alt="" class="img-fluid btn_global_pattern">
             <div class="btn_global_inner w-100">
                 
                 <p class="cart_text">Checkout</p>
