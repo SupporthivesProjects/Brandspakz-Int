@@ -92,6 +92,7 @@ class OrderController extends Controller
     private function createOrderDetail($order, $product, $cartItem)
     {
         try {
+            
             $orderDetail = OrderDetail::create([
                 'order_id' => $order->id,
                 'product_id' => $product->id,

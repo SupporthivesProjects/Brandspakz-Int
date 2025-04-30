@@ -333,6 +333,7 @@ class CheckoutController extends Controller
     public function order_confirmed()
     {
         try {
+            
             $order = OrderDetail::where('order_id', Session::get('order_id'))
                 ->with(['product', 'order'])
                 ->get();
