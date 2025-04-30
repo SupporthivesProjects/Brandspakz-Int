@@ -365,7 +365,75 @@
     </div>
   </div>
 
+
+  @if(session('registrationsuccess'))
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            let modal = new bootstrap.Modal(document.getElementById('resetModal'));
+            modal.show();
+        });
+    </script>
+@endif
+
   
+<div class="modal fade" id="registraModal" tabindex="-1" aria-labelledby="registraModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered custom-modal-width">
+      <div class="modal-content custom_modal2 ">
+
+        <h1 class="modal_tt">
+            Registration successful! Please verify your email address.
+        </h1>
+
+        <p class="modal_pp2">
+            Please wait while page refreshes
+        </p>
+
+        <button class="btn btn_global width_closebtn" >
+            <img src="{{ asset('frontend/BrandSparkz/assets/img/btn_primary_pattern.png') }}" alt="" class="img-fluid btn_global_pattern">
+            <div class="btn_global_inner w-100">
+                
+                <p class="cart_text" data-bs-dismiss="modal">ok</p>
+                <img src="{{ asset('frontend/BrandSparkz/assets/img/cross.svg') }}" alt="" class="img-fluid cart_logo">
+            </div>
+    </button>
+        
+      </div>
+    </div>
+  </div>
+
+  @if(session('resetpasswordlinksent'))
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            let modal = new bootstrap.Modal(document.getElementById('resetModal'));
+            modal.show();
+        });
+    </script>
+@endif
+
+<div class="modal fade" id="resetModal" tabindex="-1" aria-labelledby="resetModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered custom-modal-width">
+      <div class="modal-content custom_modal2 ">
+
+        <h1 class="modal_tt">
+            reset passwros link sent!
+        </h1>
+
+        <p class="modal_pp2">
+            Please wait while page refreshes
+        </p>
+
+        <button class="btn btn_global width_closebtn" >
+            <img src="{{ asset('frontend/BrandSparkz/assets/img/btn_primary_pattern.png') }}" alt="" class="img-fluid btn_global_pattern">
+            <div class="btn_global_inner w-100">
+                
+                <p class="cart_text" data-bs-dismiss="modal">ok</p>
+                <img src="{{ asset('frontend/BrandSparkz/assets/img/cross.svg') }}" alt="" class="img-fluid cart_logo">
+            </div>
+    </button>
+        
+      </div>
+    </div>
+  </div>
   
 
     <main>
@@ -392,6 +460,8 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://js.hcaptcha.com/1/api.js" async defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
 
 
     <script>

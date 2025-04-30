@@ -112,7 +112,8 @@ class RegisterController extends Controller
         });
 
         auth()->login($user);
-        Flash::success('Registration successful! Please verify your email address.');
+        //Flash::success('Registration successful! Please verify your email address.');
+        session()->flash('registrationsuccess');
         return redirect()->route('index');
     }
 

@@ -1393,6 +1393,7 @@
                 <form class="form_section" id="requestform1" action="{{ route('contactus.store') }}" method="post"
                 enctype="multipart/form-data" onsubmit="return check_agree1(this);">
                     @csrf
+                    <input type="hidden" name="from_page" form="requestform1" value="service">
                     <div class="hori_hor">
                         <div class="one_section">
                             <p class="label_l">Full Name</p>
