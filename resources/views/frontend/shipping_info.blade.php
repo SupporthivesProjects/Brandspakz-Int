@@ -229,7 +229,7 @@
                                     <span><a href="{{ route('privacypolicy') }}"> Privacy Policy</a></span>
                                 </p>
                             </div>
-                            <div class="g-recaptcha" data-sitekey="6LcSKScrAAAAAFTPINNesDgJDwJdGKL3VShi-QvA"></div>
+                            {{--<div class="g-recaptcha" data-sitekey="6LcSKScrAAAAAFTPINNesDgJDwJdGKL3VShi-QvA"></div>--}}
                         </div>
                         <button class="btn btn_SC" form="shippingAddress" type="submit">Complete Checkout</button>
                         <img src="{{ asset('frontend/BrandSparkz/assets/img/SCMastercard.png') }}" alt=""

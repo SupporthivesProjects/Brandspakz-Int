@@ -15,13 +15,15 @@ class CheckoutController extends Controller
     {
         try {
             DB::beginTransaction();
-
+           
             $orderController = new OrderController;
             $orderController->store($request);
 
             $request->session()->put('payment_type', 'cart_payment');
+            
             DB::commit();
             if ($request->session()->get('order_id')) {
+                
                 $response = $this->processPaymentOption($request);
                 
                 return $response;
@@ -103,15 +105,20 @@ class CheckoutController extends Controller
             if ($request->dob) {
                 $data['dob'] = $request->dob;
             }
-
+            
             // Store shipping info in session
+           
             $request->session()->put('shipping_info', $data);
+            
 
             // Calculate totals
             $totals = $this->calculateOrderTotals();
+            
             // Process checkout
+            
             return $this->checkout($request);
         } catch (Exception $e) {
+            
             Log::error('Shipping info storage error: ' . $e->getMessage());
             return redirect()->back()->with('error', 'Unable to save shipping information');
         }
@@ -307,6 +314,7 @@ class CheckoutController extends Controller
 
     private function clearSessionData(Request $request)
     {
+        //dd($request);
         $request->session()->put('cart', collect([]));
         $request->session()->forget(['delivery_info', 'coupon_id', 'coupon_discount']);
     }
