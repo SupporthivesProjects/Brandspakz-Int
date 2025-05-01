@@ -25,15 +25,19 @@ class PurchaseHistoryController extends Controller
 
     public function purchase_history_details(Request $request)
     {
+       
         try {
+
             $order = Order::findOrFail($request->order_id);
             
             $order->update([
+                
                 'delivery_viewed' => 1,
                 'payment_status_viewed' => 1
             ]);
+            
 
-            return view('frontend.partials.order_details_customer', compact('order'));
+            return view('partials.order_details_customer', compact('order'));
         } catch (\Exception $e) {
             Log::error('Order details error: ' . $e->getMessage());
             return response()->json([
