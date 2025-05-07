@@ -68,15 +68,15 @@
                 <p data-aos="fade-up"class="para_term2">To exercise any of these rights, please contact customer services. </p>
             </div>
             <div class="term2_div" style="margin-left: -113px;">
-                <h3 data-aos="fade-up" class="heading_term2">7.	Children’s privacy /h3>
+                <h3 data-aos="fade-up" class="heading_term2">7.	Children’s privacy </h3>
                 <p data-aos="fade-up"class="para_term2">Our services are not intended for the use of anyone under the age of 18. We do not knowingly collect any personal information from children. </p>
             </div>
              <div class="term2_div">
-                <h3 data-aos="fade-up" class="heading_term2">8.	Policy updates  /h3>
+                <h3 data-aos="fade-up" class="heading_term2">8.	Policy updates  </h3>
                 <p data-aos="fade-up"class="para_term2">We may update this policy from time to time. Any changes will be posted to this page on the website when any changes have been made. Continues use of this website and our services following the update of this policy constitutes and acceptance of those changes. </p>
             </div>
              <div class="term2_div">
-                <h3 data-aos="fade-up" class="heading_term2">9.	Contact us /h3>
+                <h3 data-aos="fade-up" class="heading_term2">9.	Contact us </h3>
                 <p data-aos="fade-up"class="para_term2">If you have any further questions about this privacy policy or how we handle your personal information, please get in touch with us at info@brandsparkz.co. </p>
             </div>
 

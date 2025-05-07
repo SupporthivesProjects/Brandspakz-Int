@@ -42,7 +42,7 @@
                         <div class="footer_link_div">
                             <address class="footer_address">
                                 support@brandsparkz.co<br>
-                                       Mindcraft Vision Media Applications development L.L.C S.O.C ,<br>
+                                       Mindcraft Vision Media Applications development L.L.C S.O.C .<br>
                                         UAE
                             </address>
                         </div>
