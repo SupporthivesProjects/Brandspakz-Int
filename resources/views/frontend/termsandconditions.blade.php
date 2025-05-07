@@ -9,7 +9,7 @@
             <div class="container">
                 <div class="terms_div1">
                     <h3 class="terms_heading" data-aos="fade-up">Terms and conditions</h3>
-                    <p class="para_terms" data-aos="fade-up">Welcome to Brand Sparkz. We are a full-service digital marketing agency based at the website www.brandsparkz.co. By accessing and using our website you agree to be bound by the following terms and conditions. Please make sure you read them carefully before using the website www.brandsparkz.co, registering for an account, or engaging in any of our products and services. </p>
+                    <p class="para_terms" data-aos="fade-up">Welcome to Brand Sparkz. We are a full-service digital marketing agency based at the website www.brandsparkz.co. By accessing and using our website you agree to be bound by the following terms and conditions. Please make sure you read them carefully before using the website www.brandsparkz.co, registering for an account, or engaging in any of our products and services. We are owned and operated by Mindcraft Vision Media Applications development L.L.C S.O.C, our offices are based in the UAE.</p>
                 </div>
             </div>
         </div>
@@ -18,11 +18,11 @@
             <div class="terms_2">
                 <div class="term2_div">
                     <h3 class="heading_term2" data-aos="fade-up">1.	Accounts </h3>
-                    <p class="para_term2" data-aos="fade-up">All users will need to register for an account before they are able to access and use the services offered at www.brandsparkz.co. Customers will need to provide a unique username and account number to be able to use our services, where your account will act as a portal keeping track of all your invoices and campaigns. Please make sure you have fully read and understood these terms and conditions before making an account with us. </p>
+                    <p class="para_term2" data-aos="fade-up">All users will need to register for an account before they are able to access and use the services offered at www.brandsparkz.co. Customers will need to provide a unique username and account number to be able to use our services, where your account will act as a portal keeping track of all your invoices and campaigns. Please make sure you have fully read and understood these terms and conditions before making an account with us.</p>
                 </div>
                 <div class="term2_div">
                     <h3 class="heading_term2" data-aos="fade-up">2.	Acceptance of these terms </h3>
-                    <p class="para_term2" data-aos="fade-up">By accessing and using the website www.brandsparkz.co and using any of its services provided, you agree to be legally bound by these terms and conditions, along with our privacy policy and all other applicable laws and regulations. If you do not agree with the terms as set out in these terms and conditions, please do not use this website. </p>
+                    <p class="para_term2" data-aos="fade-up">By accessing and using the website www.brandsparkz.co and using any of its services provided, you agree to be legally bound by these terms and conditions, along with our privacy policy and all other applicable laws and regulations. If you do not agree with the terms as set out in these terms and conditions, please do not use this website.</p>
                 </div>
                 <div class="term2_div">
                     <h3 class="heading_term2" data-aos="fade-up">3.	Services offered </h3>
@@ -37,7 +37,8 @@
                         </ul>
                     </p>
                     <p class="para_term2" data-aos="fade-up">
-                        When you instruct www.brandsparkz.co to complete these services on your behalf, you may be required to agree to a separate service contract which will outline the scope of the job, including deliverables, pricing, and timelines. 
+                        When you instruct www.brandsparkz.co to complete these services on your behalf, you may be required to agree to a separate service contract which will outline the scope of the job, including deliverables, pricing, and timelines.
+                    
                     </p>
                 </div>
                 <div class="term2_div">
@@ -45,13 +46,13 @@
                     <p class="para_term2" data-aos="fade-up">All payments for services instructed will be made in advance. Customers will be required to agree to the pricing of a project over a set timeline before instructing www.brandsparkz.co to carry out digital marketing services on its behalf. </p>
                     <p class="para_term2" data-aos="fade-up">Prices will be project dependant, but will be clearly communicated to clients in advance. The team at www.brandsparkz.co will be unable to begin work on any campaigns until payment has been received in full. </p>
                     <p class="para_term2" data-aos="fade-up">When the campaign timeline has completed, should the customer wish to continue the service they will need to re-instruct www.brandsparkz.co and arrange payment for the extended works requested in advance. </p>
-                    <p class="para_term2" data-aos="fade-up">All payments will have the billing descriptor shown as: BRANDSPARKZ.</p>
+                    <p class="para_term2" data-aos="fade-up">All payments will have the billing descriptor shown as: BRANDSPARKZ, UAE.</p>
                 </div>
                 <div class="term2_div">
                     <h3 class="heading_term2" data-aos="fade-up">5.	Refunds </h3>
                     <p class="para_term2" data-aos="fade-up">We work hard to deliver expectational results here at www.brandsparkz.co. If for whatever reason you are unhappy with any of the result we produce, then you may enquire about a refund. </p>
                     <p class="para_term2" data-aos="fade-up">Please be advised that refunds will only be issued in very rare and certain circumstances, and must be requested within 14 days of payment being delivered and the project completed. </p>
-                    <p class="para_term2" data-aos="fade-up">If your application for a refund is a success then you will be re-imbursed to the account you originally used to pay for the services. </p>
+                    <p class="para_term2" data-aos="fade-up">If your application for a refund is a success, then you will be re-imbursed to the account you originally used to pay for the services. </p>
                 </div>
                 <div class="term2_div">
                     <h3 class="heading_term2" data-aos="fade-up">6.	Cancellation policy </h3>

@@ -73,7 +73,9 @@
                                     class="img-fluid">
                             </div>
                             <p class="c_box_text" data-aos="fade-up">
-                                <span>TBC</span>
+                                <span>Mindcraft Vision Media Applications development L.L.C S.O.C ,<br> UAE
+
+ </span>
                               
                             </p>
                         </div>

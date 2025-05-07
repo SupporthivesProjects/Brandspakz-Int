@@ -7,7 +7,7 @@
         <div class="container">
             <div class="terms_div1">
                 <h3 data-aos="fade-up" class=" terms_heading PP_heading">Privacy Policy</h3>
-                <p data-aos="fade-up"class="para_terms">Your privacy is important to us here at Brand Sparkz. This privacy policy explains how we collect, use, store, and protect your information when you visit the website www.brandsparkz.co or engage with any of our services. By using this website, you agree to have your information used and collected in accordance with this policy. </p>
+                <p data-aos="fade-up"class="para_terms">Your privacy is important to us here at Brand Sparkz. This privacy policy explains how we collect, use, store, and protect your information when you visit the website www.brandsparkz.co or engage with any of our services. By using this website, you agree to have your information used and collected in accordance with this policy. We are owned and operated by Mindcraft Vision Media Applications development L.L.C S.O.C, our offices are based in the UAE.</p>
             </div>
         </div>
     </div>

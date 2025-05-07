@@ -100,10 +100,9 @@
                                 </td> 
                                 <td style="text-align:right;">
                                     <p style="font-size: 16px; font-weight:400; color:#3C3C3C;font-style: normal;font-family:Arial;line-height:24px;padding-right:40px;">
-                                     support@brandsparkz.co<br>
-                                           TBC<br>
-                                           TBC
-                                    </p>
+                                        support@brandsparkz.co<br>
+                                           Mindcraft Vision Media Applications development L.L.C S.O.C <br> UAE
+                                        </p>
                                 </td>           
                             </tr>
                             <tr>              
