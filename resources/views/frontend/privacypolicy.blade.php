@@ -67,7 +67,7 @@
                 </p>
                 <p data-aos="fade-up"class="para_term2">To exercise any of these rights, please contact customer services. </p>
             </div>
-            <div class="term2_div" style="margin-left: -113px;">
+            <div class="term2_div" style="margin-left: -133px;">
                 <h3 data-aos="fade-up" class="heading_term2">7.	Children’s privacy </h3>
                 <p data-aos="fade-up"class="para_term2">Our services are not intended for the use of anyone under the age of 18. We do not knowingly collect any personal information from children. </p>
             </div>
