@@ -1,12 +1,15 @@
 $(document).ready(function () {
+    const header_logo_mobo = document.getElementById("header_logo_mobo");
     $(".hamburger_menu").click(function () {
         $(".header_mobo_main_slide").fadeIn("slow");
         $(".hamburger_menu").fadeOut("slow");
         $(".hamburger_menu_close").fadeIn("slow");
         $(".header_cart_mobo_main_slide").fadeOut("slow");
+        $(".header_mobo_main").css("background-color", "#FFFFFF");
+        header_logo_mobo.src = "frontend/BrandSparkz/assets/img/header_mobo_bg_dark_logo.svg";
     });
     $(".hamburger_menu_close").click(function () {
-
+        $(".cart_menu").fadeIn("slow");
         if ($(".header_cart_mobo_main_slide").css("display") != "none") {
             $(".header_mobo_main_slide").fadeIn("slow");
             $(".header_cart_mobo_main_slide").fadeOut("slow");
@@ -15,6 +18,8 @@ $(document).ready(function () {
             $(".header_mobo_main_slide").fadeOut("slow");
             $(".hamburger_menu_close").fadeOut("slow");
         }
+        $(".header_mobo_main").css("background-color", "transparent");
+        header_logo_mobo.src = "frontend/BrandSparkz/assets/img/header_mobo_bg_trans_logo_.svg";
     });
     $(".cart_menu").click(function () {
         $(".header_cart_mobo_main_slide").fadeIn("slow");
@@ -147,6 +152,15 @@ const videos_mob = [
         'Email',
         'Social',
     ]
+    
+    const routeMap = {  
+        'Search Engine Optimization': "seo",
+        'Pay-Per-Click': "ppc",
+        'Online Reputation management': "orm",
+        'Web Design & Web Development': "wdd",
+        'Email Marketing': "em",
+        'Social Media Management': "social"
+    };
 
     // Your slider code
     let index = 0;
@@ -169,6 +183,16 @@ const videos_mob = [
 
                     var index_val = index + 1;
                     $('.index_pos span').text('0' + index_val);
+                    
+                    $(".circ_btn, .btn_ark_arr, .btn_mob_ark").off("click").on("click", function () {
+                        const currentText = $(".slide_btm_trix_txt , .navitrix_text").text().trim(); // Get current text
+                        const route = routeMap[currentText]; // Look up the route
+                        if (route) {
+                            window.location.href = route; // Redirect to the route
+                        } else {
+                            console.error("No route found for:", currentText);
+                        }
+                    });
 
                     $("#hs1_vid_desk").fadeOut(100, function () {
                         $("#hs1_vid_desk source").attr("src", videos[index]);
@@ -212,6 +236,173 @@ const videos_mob = [
 
     // Auto-play
     updateSlider();
-    let sliderInterval = setInterval(showNext, 3000);
+    let sliderInterval = setInterval(showNext, 5000);
 });
 
+
+
+
+$(document).ready(function () {
+                const a = document.querySelectorAll(".service_table tbody tr td:nth-child(2)");
+                const c = document.querySelectorAll(".service_table tbody tr td:last-child");
+                const d = document.querySelectorAll(".service_table tbody tr:first-child td");
+                const e = document.querySelectorAll(".service_table tbody tr:last-child td");
+                const f = document.querySelectorAll(".service_table tbody tr td:last-child");
+                a.forEach(x => {
+                    const b = document.createElement("div");
+                    b.className = "white_box";
+                    x.appendChild(b);
+                })
+                c.forEach(x => {
+                    const b = document.createElement("div");
+                    b.className = "white_box2";
+                    x.appendChild(b);
+                })
+                d.forEach(x => {
+                    const b = document.createElement("div");
+                    b.className = "image_box";
+                    x.appendChild(b);
+                })
+                e.forEach(x => {
+                    const b = document.createElement("div");
+                    b.className = "image_box2";
+                    x.appendChild(b);
+                })
+                f.forEach(x => {
+                    const b = document.createElement("div");
+                    b.className = "image_box3";
+                    const height = x.offsetHeight;
+                    b.style.height = height + "px";
+    
+                    
+                    x.appendChild(b);
+                })
+    
+            }
+            )
+
+
+$(document).ready(function () { 
+    let lastScrollTop = 1; 
+    const navbar = document.getElementById('header'); 
+    const header_logo = document.getElementById("header_logo");
+    const header_logo_mobo = document.getElementById("header_logo_mobo");
+    const roter1 = document.getElementById("roter1");
+    const roter2 = document.getElementById("roter2");
+    
+    // navbar.classList.add('navbar-sticky'); 
+    $(document).scroll(function () { 
+        let scroll_pos = $(this).scrollTop(); // Get current scroll position 
+        if (scroll_pos > lastScrollTop) { // Scrolling down 
+            navbar.classList.add('white_header'); 
+            // console.log(header_logo);
+             header_logo.src = "frontend/BrandSparkz/assets/img/header_bg_dark_logo.svg";
+            
+            roter1.src = "frontend/BrandSparkz/assets/img/drop.svg";
+            roter2.src = "frontend/BrandSparkz/assets/img/drop.svg";
+            if (screen.width < 700) {
+                header_logo_mobo.src = "frontend/BrandSparkz/assets/img/header_mobo_bg_dark_logo.svg";
+            }
+            // console.log(header_logo);
+            // header_logo.attr('src', "{{ asset('frontend/BrandSparkz/assets/img/header_bg_trans_logo_.svg') }}");
+        } 
+        else { // Scrolling up (even 1px) 
+            navbar.classList.remove('white_header'); 
+            // console.log(header_logo);
+            header_logo.src = "frontend/BrandSparkz/assets/img/header_bg_trans_logo_.svg";
+            roter1.src = "frontend/BrandSparkz/assets/img/drop_white.svg";
+            roter2.src = "frontend/BrandSparkz/assets/img/drop_white.svg";
+            if (screen.width < 700) {
+                header_logo_mobo.src = "frontend/BrandSparkz/assets/img/header_mobo_bg_trans_logo_.svg";
+            }
+            // console.log(header_logo);
+            // header_logo.attr('src', "{{ asset('frontend/BrandSparkz/assets/img/header_bg_dark_logo.svg') }}");
+        } 
+    // lastScrollTop = scroll_pos;
+}); 
+    
+});
+
+
+$(document).ready(function () {
+        const buttons = document.querySelectorAll('.btn_global');
+
+        buttons.forEach(button => {
+            const img = button.querySelector('.btn_global_pattern');
+
+            const originalSrc = "{{ asset('frontend/BrandSparkz/assets/img/btn_primary_pattern.png') }}";
+            const hoverSrc = "{{ asset('frontend/BrandSparkz/assets/img/btn_primary_pattern_dark.png') }}";
+
+            button.addEventListener('mouseover', () => {
+                img.src = hoverSrc;
+            });
+
+            button.addEventListener('mouseout', () => {
+                img.src = originalSrc;
+            });
+        });
+    });
+
+
+// $(document).ready(function () {
+// const buttons = document.querySelectorAll('.btn_global');
+
+// buttons.forEach(button => {
+//   const img = button.querySelector('.btn_global_pattern'); // Get the image inside this specific button
+
+//   const originalSrc = "frontend/BrandSparkz/assets/img/btn_primary_pattern.png";
+//   const hoverSrc = "frontend/BrandSparkz/assets/img/btn_primary_pattern_dark.png";
+
+//   button.addEventListener('mouseover', () => {
+//     img.src = hoverSrc;
+//   });
+
+//   button.addEventListener('mouseout', () => {
+//     img.src = originalSrc;
+//   });
+// });
+// })
+
+
+
+
+// $(document).ready(function () {
+// const buttons = document.querySelectorAll('.btn_global2');
+
+// buttons.forEach(button => {
+//   const img = button.querySelector('.btn_global_pattern2'); // Get the image inside this specific button
+
+//   const originalSrc = "frontend/BrandSparkz/assets/img/btn_primary_pattern_dark.png";
+//   const hoverSrc = "frontend/BrandSparkz/assets/img/btn_primary_pattern.png";
+
+//   button.addEventListener('mouseover', () => {
+//     img.src = hoverSrc;
+//   });
+
+//   button.addEventListener('mouseout', () => {
+//     img.src = originalSrc;
+//   });
+// });
+
+$(document).ready(function () {
+        const buttons = document.querySelectorAll('.btn_global2');
+
+        buttons.forEach(button => {
+            const img = button.querySelector('.btn_global_pattern2');
+
+            const originalSrc = "{{ asset('frontend/BrandSparkz/assets/img/btn_primary_pattern_dark.png') }}";
+            const hoverSrc = "{{ asset('frontend/BrandSparkz/assets/img/btn_primary_pattern.png') }}";
+
+            button.addEventListener('mouseover', () => {
+                img.src = hoverSrc;
+            });
+
+            button.addEventListener('mouseout', () => {
+                img.src = originalSrc;
+            });
+        });
+    });
+
+
+
+})

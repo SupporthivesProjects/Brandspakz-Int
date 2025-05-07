@@ -11,6 +11,10 @@
             background: transparent;
         }
     }
+    
+    .btn_header_link, .btn_header_drop {
+        color: #3c3c3c !important;
+    }
 </style>
 
 
@@ -57,11 +61,11 @@
                 
 
                 <div class="contact_input_div">
-                    <button class="btn btn_global2 mx-auto">
+                    <button type="submit" class="btn btn_global2 mx-auto" >
                         <img src="{{ asset('frontend/BrandSparkz/assets/img/btn_primary_pattern2.png') }}" alt="" class="img-fluid btn_global_pattern2">
                         <div class="btn_global_inner2">
                             
-                            <button type="submit" class="cart_text" >Reset Password</button>
+                            <p class="cart_text" >Reset Password</p>
                             <img src="{{ asset('frontend/BrandSparkz/assets/img/arrow_logo.svg') }}" alt="" class="img-fluid cart_logo">
                         </div>
                     </button>
@@ -76,3 +80,30 @@
 
 
 @endsection
+
+@section('scripts')
+
+<script>
+      const logo = document.getElementById('header_logo');
+      console.log(window.location.href)
+      logo.src="{{ asset('frontend/BrandSparkz/assets/img/header_bg_dark_logo.svg') }}";
+      
+       const navbar = document.getElementById('header'); 
+         navbar.classList.add('white_header'); 
+        window.addEventListener('scroll', function () {
+          const logochange = document.getElementById('header_logo');
+             
+        
+          if (window.scrollY > 100) {
+            
+            logochange.src="{{ asset('frontend/BrandSparkz/assets/img/header_bg_dark_logo.svg') }}";
+             //navbar.classList.add('white_header'); 
+           } else {
+             
+             logochange.src="{{ asset('frontend/BrandSparkz/assets/img/header_bg_dark_logo.svg') }}";
+              //navbar.classList.remove('white_header');  
+          }
+       });
+</script>
+@endsection
+

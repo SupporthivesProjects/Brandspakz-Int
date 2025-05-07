@@ -9,6 +9,10 @@
     position: absolute;
 }
 
+.white_header {
+    background: var(--Secondary, #F3F3F1)!important;
+}
+
 .btn_global2 {
     padding: 0px;
     display: flex;
@@ -23,6 +27,7 @@
     border-radius: 5px 0px 0px 0px;
 }
 .btn_global_inner2 {
+    height: 39px;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -32,7 +37,9 @@
     border-radius: 0px 5px 5px 5px;
     background: #3C3C3C;
 }
-
+.extra_button{
+    width: 140px;
+}
 .header_main_container {
     max-width: 1330px;
     margin-left: auto;
@@ -47,7 +54,10 @@
 .header_center_bar {
     width: 1.274px;
     height: 12.614px;
-    background: #3C3C3C;
+    background: #FFFFFF;
+}
+.white_header .header_center_bar {
+    background: #3c3c3c;
 }
 .header_center {
     display: flex;
@@ -58,7 +68,7 @@
 }
 .btn_header_drop {
     padding: 0px;
-    color: var(--Neutral-800, #3C3C3C);
+    color: var(--Neutral-800, #FFFFFF);
     font-family: 'Poppins';
     font-size: 16px;
     font-style: normal;
@@ -73,7 +83,7 @@
 }
 .btn_header_link {
     padding: 0px;
-    color: var(--Neutral-800, #3C3C3C);
+    color: var(--Neutral-800, #FFFFFF);
     font-family: 'Poppins';
     font-size: 16px;
     font-style: normal;
@@ -81,8 +91,12 @@
     line-height: 158%; /* 25.28px */
     border: 0px;
 }
+.white_header .btn_header_link, .white_header .btn_header_drop {
+    color: #3c3c3c!important;
+}
 .btn_header_link.active {
     font-weight: 700;
+    color: #FFFFFF;
 }
 .btn_global {
     padding: 0px;
@@ -94,10 +108,25 @@
     border: 0px;
     box-shadow: -4px 4px 0px 0px #383838;
 }
+.btn_global:hover .btn_global_inner {
+    background: var(--Primary, #383838);
+    box-shadow: -4px 4px 0px 0px #EE5921;
+}
+.btn_global:hover {
+    box-shadow: -4px 4px 0px 0px #EE5921;
+}
+.btn_global2:hover .btn_global_inner2 {
+    background: var(--Primary, #EE5921);
+    box-shadow: -4px 4px 0px 0px #383838;
+}
+.btn_global2:hover {
+    box-shadow: -4px 4px 0px 0px #383838;
+}
 .btn_global_pattern {
     border-radius: 5px 0px 0px 0px;
 }
 .btn_global_inner {
+    height: 39px;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -207,6 +236,9 @@
     width: 338px;
     border-bottom: 1px solid #D0D0D0;
 }
+.white_header .header_center.btn_header_link{
+    color: #3c3c3c !important;
+}
 .cart_item_left {
     display: flex;
     flex-direction: column;
@@ -258,8 +290,8 @@
 }
 .cart_item_right button.btn {
     padding: 0px;
-    width: 24px;
-    height: 24px;
+    width: 26px;
+    height: 26px;
 }
 .cart_footer_top {
     display: flex;
@@ -404,7 +436,9 @@
     .mobile_header {
         display: block;
     }
-
+.extra_button{
+    width: 199px;
+}
     .header_mobo_main {
         display: flex;
         flex-direction: row;

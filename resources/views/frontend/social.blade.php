@@ -1,860 +1,7 @@
 @extends('frontend.layouts.app')
 
-<style>
-    .ser_s1_inner {
-        background: url("{{ asset ('frontend/PushDynamics/image/sm_s1.png') }}");
-        background-size: cover;
-        background-position: right top;
-        background-repeat: no-repeat;
-    }
-
-    @media only screen and (max-width: 600px) {
-        .ser_s1_inner {
-            background: url("{{ asset ('frontend/PushDynamics/image/sm_s1_mobo.png') }}");
-            background-size: cover;
-            background-position: right top;
-            background-repeat: no-repeat;
-        }
-    }
-
-</style>
 @section('content')
-{{-- NEW CODE STARTS HERE --}}
-{{-- <section class="service_section">
-        <div class="ser_s1">
-            <div class="ser_s1_inner">
-                <div class="ser_s1_content">
-                    <h6 class="ser_s1_pre_title">PACKAGE AND PRICING</h6>
-                    <h1 class="ser_s1_title" data-aos="fade-up">Social Media</h1>
-                    <p class="ser_s1_subtitle" data-aos="fade-up">
-                        We build social media campaigns to grow your business and engage your followers. 
-                    </p>
-                    <button class="btn btn_global_m mo_mx_auto" onclick="window.location='#target-element'">View Pricing</button>
-                </div>
-            </div>
-        </div>
-        <div class="ser_s2">
-            <div class="container">
-                <div class="ser_s2_frame">
-                    <div class="ser_s2_left">
-                        <h6 class="ser_s2_pre_title" data-aos="fade-up">What is Social Media?</h6>
-                        <h1 class="ser_s2_title" data-aos="fade-up">
-                            The key to brand awareness
-                        </h1>
-                        <div class="ser_s2_bar"></div>
-                        <p class="ser_s2_subtitle" data-aos="fade-up">
-                            Are you a business looking to expand and market your services to your audiences on social media to build brand awareness? Push Dynamics builds social media campaigns for businesses to help grow and engage your followers. We work with you to identify your social media goals, analyse your competitors, and evaluate your customer's online behaviour to make bespoke social media strategies. 
-                        </p>
-                    </div>
-                    <div class="ser_s2_right">
-                        <h6 class="ser_s2_pre_title" data-aos="fade-up">Why is Social Media Important?</h6>
-                        <h1 class="ser_s2_title">  
-                            Bespoke social strategies 
-                        </h1>
-                        <div class="ser_s2_bar"></div>
-                        <p class="ser_s2_subtitle" data-aos="fade-up">
-                            Using advanced data and analytics, we will develop bespoke social media brand management strategies alongside paid influencer campaigns which will be tailored to your specific audience. Our dynamic and data-driven social media marketing campaigns will deliver remarkable results for your business, and turn your clients into brand advocates. Get in touch with Push Dynamics to see how our social media marketing can bolster your brand engagement. 
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="background_socio">
-            <div class="sec2_socio">
-                <div>
-                    <h1 class="title_tt" data-aos="fade-up">How Does it work ?</h1>
-                    <p class="title_pp" data-aos="fade-up">At Push Dynamics we take time to get to know you as a business to understand your individual objectives and costs, from which we develop bespoke digital marketing packages. 
-                    </p>
-                </div>
 
-                <div class="container custom_padding">
-                    <div class="socio_crd_div">
-                        <div class="socio_crd">
-                            <img src="{{ asset('frontend/PushDynamics/image/crd_image.png') }}" alt=""
-class="img-fluid crd_image">
-<div class="crd_content">
-    <h1 class="crd_tt">CREATION</h1>
-    <p class="crd_pp" data-aos="fade-up">We specialise in creating winning campaigns for businesses of all sizes.
-    </p>
-</div>
-</div>
-
-<div class="socio_crd">
-    <img src="{{ asset('frontend/PushDynamics/image/crd_image2.png') }}" alt="" class="img-fluid crd_image">
-    <div class="crd_content">
-        <h1 class="crd_tt">Communication
-        </h1>
-        <p class="crd_pp" data-aos="fade-up">Communication and updating our clients is key to all our campaigns.
-        </p>
-    </div>
-</div>
-
-<div class="socio_crd">
-    <img src="{{ asset('frontend/PushDynamics/image/crd_image3.png') }}" alt="" class="img-fluid crd_image">
-    <div class="crd_content">
-        <h1 class="crd_tt">Development
-        </h1>
-        <p class="crd_pp" data-aos="fade-up">We take time to develop tailor made solutions which will work for you.
-        </p>
-    </div>
-</div>
-
-<div class="socio_crd">
-    <img src="{{ asset('frontend/PushDynamics/image/crd_image4.png') }}" alt="" class="img-fluid crd_image">
-    <div class="crd_content">
-        <h1 class="crd_tt">Results
-        </h1>
-        <p class="crd_pp" data-aos="fade-up">When you work with Push Dynamics, the results will speak for themselves.
-        </p>
-    </div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="background_socio3">
-    <div class="socio_sec3">
-        <div class="container custom_padding2">
-            <div class="main_sec3_socio">
-                <div class="first_div_sec3">
-                    <div class="leftsec3">
-                        <p class="left_socio_pp" data-aos="fade-up">Included Features</p>
-                        <h1 class="left_socio_tt" data-aos="fade-up">How social media helps you succeed
-                        </h1>
-                    </div>
-                    <p class="socio_sec3_pp" data-aos="fade-up">
-                        In addition to increasing overall brand awareness, an added bonus of our social media campaigns
-                        is that they simultaneously positively influence your SEO and other digital marketing efforts,
-                        creating increased leads and revenue streams for your business.
-                    </p>
-                </div>
-
-                <div class="second_div_sec3">
-                    <div class="green_crd">
-                        <img src="{{ asset('frontend/PushDynamics/image/greencrd_icon.svg') }}" alt=""
-                            class="img-fluid">
-                        <div>
-                            <h1 class="green_crd_tt" data-aos="fade-up">Monthly Statistics</h1>
-                            <p class="green_crd_pp" data-aos="fade-up">We provide monthly statistics to track your
-                                social campaigns.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="green_crd">
-                        <img src="{{ asset('frontend/PushDynamics/image/greencrd_icon2.svg') }}" alt=""
-                            class="img-fluid">
-                        <div>
-                            <h1 class="green_crd_tt" data-aos="fade-up">Weekly Posts</h1>
-                            <p class="green_crd_pp" data-aos="fade-up">Weekly posts will keep your audiences updated
-                                with your brand.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="green_crd">
-                        <img src="{{ asset('frontend/PushDynamics/image/greencrd_icon3.svg') }}" alt=""
-                            class="img-fluid">
-                        <div>
-                            <h1 class="green_crd_tt" data-aos="fade-up">Included Ad Spend</h1>
-                            <p class="green_crd_pp" data-aos="fade-up">Ad spend for influencer campaigns is included in
-                                all packages.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="ser_s5">
-    <div class="container">
-        <div class="ser_s5_frame">
-            <div class="ser_s5_left">
-                <img src="{{ asset('frontend/PushDynamics/image/sm_s5.png') }}" alt=""
-                    class="img-fluid ser_s5_left_mobo">
-            </div>
-            <div class="ser_s5_right">
-                <div class="ser_s5_content">
-                    <div class="for_pad">
-                        <h5 class="ser_s5_pre_title">Why Push Dynamics?</h5>
-                        <h1 class="ser_s5_title" data-aos="fade-up">
-                            Social marketing with flair
-                        </h1>
-                        <p class="ser_s5_subtitle" data-aos="fade-up">
-                            Social media marketing can provide quick campaign results. However, we always recommend
-                            exploring additional tactics to complement your social media strategies for maximum results.
-                        </p>
-                    </div>
-                    <div class="ser_s5_inner_content">
-                        <div class="ser_s5_inner_row">
-                            <img src="{{ asset('frontend/PushDynamics/image/green_tic.svg') }}" alt="" class="img-fluid"
-                                style="height: 24px;width: 24px;">
-                            <p class="ser_s5_inner_content_subtitle" data-aos="fade-up">Overall increased brand
-                                awareness
-                            </p>
-                        </div>
-                        <div class="ser_s5_inner_row">
-                            <img src="{{ asset('frontend/PushDynamics/image/green_tic.svg') }}" alt="" class="img-fluid"
-                                style="height: 24px;width: 24px;">
-                            <p class="ser_s5_inner_content_subtitle" data-aos="fade-up">Instant visibility boost for
-                                your business
-                            </p>
-                        </div>
-                        <div class="ser_s5_inner_row">
-                            <img src="{{ asset('frontend/PushDynamics/image/green_tic.svg') }}" alt="" class="img-fluid"
-                                style="height: 24px;width: 24px;">
-                            <p class="ser_s5_inner_content_subtitle" data-aos="fade-up">Gain trust from your customer
-                                base
-                            </p>
-                        </div>
-                    </div>
-                    <button class="btn btn_global_m" onclick="location.href='{{route('aboutus') }}'">Learn More</button>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="blk" id="target-element">
-    <div class="social_s6">
-        <div class="social_c6 s_c6 container">
-            <div class="social_s6titlebar">
-                <h2 class="social_s6title">Simple, transparent Pricing</h2>
-                <p class="social_s6subtitle">No contracts. No Surprise fees.</p>
-            </div>
-            <div class="social_s6line mobile_none"></div>
-            <div class="social_tablebar w-100">
-                <div class="tab_btnbar">
-                    <div class="nav-tabs-container position-relative">
-                        <ul class="nav nav-pills service_tabbar" id="pills-tab" role="tablist">
-                            <li class="nav-item col mb-0" role="presentation">
-                                <button class="active service_tabbtn w-100" id="pills-one-tab" data-bs-toggle="pill"
-                                    data-bs-target="#pills-one" type="button" role="tab" aria-controls="pills-one"
-                                    aria-selected="true">1&nbsp;Month</button>
-                            </li>
-                            <li class="nav-item col mb-0" role="presentation">
-                                <button class="service_tabbtn w-100" id="pills-three-tab" data-bs-toggle="pill"
-                                    data-bs-target="#pills-three" type="button" role="tab" aria-controls="pills-three"
-                                    aria-selected="false">3&nbsp;Months</button>
-                            </li>
-                            <li class="nav-item col mb-0" role="presentation">
-                                <button class="service_tabbtn w-100" id="pills-six-tab" data-bs-toggle="pill"
-                                    data-bs-target="#pills-six" type="button" role="tab" aria-controls="pills-six"
-                                    aria-selected="false">6&nbsp;Months</button>
-                            </li>
-                            <li class="nav-item col mb-0" role="presentation">
-                                <button class="service_tabbtn w-100" id="pills-twelve-tab" data-bs-toggle="pill"
-                                    data-bs-target="#pills-twelve" type="button" role="tab" aria-controls="pills-twelve"
-                                    aria-selected="false">12&nbsp;Months</button>
-                            </li>
-                        </ul>
-                        <div class="progress-line">
-                            <div class="progress-arrow"></div>
-                        </div>
-                    </div>
-                </div>
-                <p class="social_swipetext desktop_none">Swipe left and right to view table</p>
-                <div class="tab_contentbar tab-content">
-                    <div class="tab-content" id="pills-tabContent">
-                        <div class="tab-pane fade show active service_contentmain" id="pills-one" role="tabpanel"
-                            aria-labelledby="pills-one-tab">
-                            <div class="service_tabcontent table-responsive">
-                                <table class="table table-borderless mb-0 service_table">
-                                    <thead class="service_table_header">
-                                        <tr class="align-middle">
-                                            <th scope="col" class="text-center">
-                                            </th>
-                                            @foreach ($socialProducts['1_month'] as $product)
-                                            <th scope="col" class="text-center">
-                                                <div class="social_tablehead">
-                                                    <p class="social_tabletitle">{{ explode(' - ', $product->name)[1] }}
-                                                    </p>
-                                                    <p class="social_tableamt">
-                                                        {{ currency_symbol() }}{{ round(convert_price($product->unit_price), 2) }}
-                                                    </p>
-                                                    <p class="social_tablesubtitle">+VAT</p>
-                                                    <button type="button" class="btn social_tablebtn"
-                                                        onclick="addToCart1Step({{ $product->id }})"
-                                                        style="cursor: pointer;">Add To Cart</button>
-                                                </div>
-                                            </th>
-                                            @endforeach
-                                        </tr>
-                                    </thead>
-                                    <tbody class="service_table_body">
-                                        <tr class="align-middle">
-                                            <td>
-                                                <p class="service_bodytitle">Ad Spend Included</p>
-                                            </td>
-                                            @foreach ($socialProducts['1_month'] as $key => $product)
-                                            <td class="text-center">
-                                                @if ($key < 2) <img class="img-fluid"
-                                                    src="{{ asset('frontend/PushDynamics/image/service_cross.svg') }}">
-                                                    @else
-                                                    <img class="img-fluid"
-                                                        src="{{ asset('frontend/PushDynamics/image/service_tick.svg') }}">
-                                                    @endif
-                                            </td>
-                                            @endforeach
-                                        </tr>
-                                        <tr class="align-middle">
-                                            <td>
-                                                <p class="service_bodytitle">Social Media Profile/Channels</p>
-                                            </td>
-                                            @foreach ($socialProducts['1_month'] as $key => $product)
-                                            <td class="text-center">
-                                                <p class="service_bodytext">
-                                                    @if ($key == 0) 1
-                                                    @elseif ($key == 1) 2
-                                                    @elseif ($key == 2) 2
-                                                    @else 3
-                                                    @endif
-                                                </p>
-                                            </td>
-                                            @endforeach
-                                        </tr>
-                                        <tr class="align-middle">
-                                            <td>
-                                                <p class="service_bodytitle">Posts Per Week</p>
-                                            </td>
-                                            @foreach ($socialProducts['1_month'] as $key => $product)
-                                            <td class="text-center">
-                                                <p class="service_bodytext">
-                                                    @if ($key < 2) {{ $key == 0 ? '2' : '3' }} @else 5 @endif </p> </td>
-                                                        @endforeach </tr> <tr class="align-middle">
-                                            <td>
-                                                <p class="service_bodytitle">Written & Designed Posts</p>
-                                            </td>
-                                            @foreach ($socialProducts['1_month'] as $product)
-                                            <td class="text-center">
-                                                <img class="img-fluid"
-                                                    src="{{ asset('frontend/PushDynamics/image/service_tick.svg') }}">
-                                            </td>
-                                            @endforeach
-                                        </tr>
-                                        <tr class="align-middle">
-                                            <td>
-                                                <p class="service_bodytitle">Interaction & Responses</p>
-                                            </td>
-                                            @foreach ($socialProducts['1_month'] as $product)
-                                            <td class="text-center">
-                                                <img class="img-fluid"
-                                                    src="{{ asset('frontend/PushDynamics/image/service_tick.svg') }}">
-                                            </td>
-                                            @endforeach
-                                        </tr>
-                                        <tr class="align-middle">
-                                            <td>
-                                                <p class="service_bodytitle">Monthly Statistics/Analytics</p>
-                                            </td>
-                                            @foreach ($socialProducts['1_month'] as $key => $product)
-                                            <td class="text-center">
-                                                @if ($key < 2) <img class="img-fluid"
-                                                    src="{{ asset('frontend/PushDynamics/image/service_cross.svg') }}">
-                                                    @else
-                                                    <img class="img-fluid"
-                                                        src="{{ asset('frontend/PushDynamics/image/service_tick.svg') }}">
-                                                    @endif
-                                            </td>
-                                            @endforeach
-                                        </tr>
-                                        <tr class="align-middle">
-                                            <td>
-                                                <p class="service_bodytitle">Support, 7 days a week</p>
-                                            </td>
-                                            @foreach ($socialProducts['1_month'] as $key => $product)
-                                            <td class="text-center">
-                                                @if ($key < 3) <img class="img-fluid"
-                                                    src="{{ asset('frontend/PushDynamics/image/service_cross.svg') }}">
-                                                    @else
-                                                    <img class="img-fluid"
-                                                        src="{{ asset('frontend/PushDynamics/image/service_tick.svg') }}">
-                                                    @endif
-                                            </td>
-                                            @endforeach
-                                        </tr>
-                                        <tr class="align-middle">
-                                            <td>
-                                                <p class="service_bodytitle">No Contract - Cancel Anytime</p>
-                                            </td>
-                                            @foreach ($socialProducts['1_month'] as $product)
-                                            <td class="text-center">
-                                                <img class="img-fluid"
-                                                    src="{{ asset('frontend/PushDynamics/image/service_cross.svg') }}">
-                                            </td>
-                                            @endforeach
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-
-                        <div class="tab-pane fade service_contentmain" id="pills-three" role="tabpanel"
-                            aria-labelledby="pills-three-tab">
-                            <div class="service_tabcontent table-responsive">
-                                <table class="table table-borderless mb-0 service_table">
-                                    <thead class="service_table_header">
-                                        <tr class="align-middle">
-                                            <th scope="col" class="text-center">
-                                            </th>
-                                            @foreach ($socialProducts['3_months'] as $product)
-                                            <th scope="col" class="text-center">
-                                                <div class="social_tablehead">
-                                                    <p class="social_tabletitle">{{ explode(' - ', $product->name)[1] }}
-                                                    </p>
-                                                    <p class="social_tableamt">
-                                                        {{ currency_symbol() }}{{ round(convert_price($product->unit_price), 2) }}
-                                                    </p>
-                                                    <p class="social_tablesubtitle">+VAT</p>
-                                                    <button type="button" class="btn social_tablebtn"
-                                                        onclick="addToCart1Step({{ $product->id }})"
-                                                        style="cursor: pointer;">Add To Cart</button>
-                                                </div>
-                                            </th>
-                                            @endforeach
-                                        </tr>
-                                    </thead>
-                                    <tbody class="service_table_body">
-                                        <tr class="align-middle">
-                                            <td>
-                                                <p class="service_bodytitle">Ad Spend Included</p>
-                                            </td>
-                                            @foreach ($socialProducts['3_months'] as $key => $product)
-                                            <td class="text-center">
-                                                @if ($key < 2) <img class="img-fluid"
-                                                    src="{{ asset('frontend/PushDynamics/image/service_cross.svg') }}">
-                                                    @else
-                                                    <img class="img-fluid"
-                                                        src="{{ asset('frontend/PushDynamics/image/service_tick.svg') }}">
-                                                    @endif
-                                            </td>
-                                            @endforeach
-                                        </tr>
-                                        <tr class="align-middle">
-                                            <td>
-                                                <p class="service_bodytitle">Social Media Profile/Channels</p>
-                                            </td>
-                                            @foreach ($socialProducts['3_months'] as $key => $product)
-                                            <td class="text-center">
-                                                <p class="service_bodytext">
-                                                    @if ($key == 0) 1
-                                                    @elseif ($key == 1) 2
-                                                    @elseif ($key == 2) 2
-                                                    @else 3
-                                                    @endif
-                                                </p>
-                                            </td>
-                                            @endforeach
-                                        </tr>
-                                        <tr class="align-middle">
-                                            <td>
-                                                <p class="service_bodytitle">Posts Per Week</p>
-                                            </td>
-                                            @foreach ($socialProducts['3_months'] as $key => $product)
-                                            <td class="text-center">
-                                                <p class="service_bodytext">
-                                                    @if ($key < 2) {{ $key == 0 ? '2' : '3' }} @else 5 @endif </p> </td>
-                                                        @endforeach </tr> <tr class="align-middle">
-                                            <td>
-                                                <p class="service_bodytitle">Written & Designed Posts</p>
-                                            </td>
-                                            @foreach ($socialProducts['3_months'] as $product)
-                                            <td class="text-center">
-                                                <img class="img-fluid"
-                                                    src="{{ asset('frontend/PushDynamics/image/service_tick.svg') }}">
-                                            </td>
-                                            @endforeach
-                                        </tr>
-                                        <tr class="align-middle">
-                                            <td>
-                                                <p class="service_bodytitle">Interaction & Responses</p>
-                                            </td>
-                                            @foreach ($socialProducts['3_months'] as $product)
-                                            <td class="text-center">
-                                                <img class="img-fluid"
-                                                    src="{{ asset('frontend/PushDynamics/image/service_tick.svg') }}">
-                                            </td>
-                                            @endforeach
-                                        </tr>
-                                        <tr class="align-middle">
-                                            <td>
-                                                <p class="service_bodytitle">Monthly Statistics/Analytics</p>
-                                            </td>
-                                            @foreach ($socialProducts['3_months'] as $key => $product)
-                                            <td class="text-center">
-                                                @if ($key < 2) <img class="img-fluid"
-                                                    src="{{ asset('frontend/PushDynamics/image/service_cross.svg') }}">
-                                                    @else
-                                                    <img class="img-fluid"
-                                                        src="{{ asset('frontend/PushDynamics/image/service_tick.svg') }}">
-                                                    @endif
-                                            </td>
-                                            @endforeach
-                                        </tr>
-                                        <tr class="align-middle">
-                                            <td>
-                                                <p class="service_bodytitle">Support, 7 days a week</p>
-                                            </td>
-                                            @foreach ($socialProducts['3_months'] as $key => $product)
-                                            <td class="text-center">
-                                                @if ($key < 3) <img class="img-fluid"
-                                                    src="{{ asset('frontend/PushDynamics/image/service_cross.svg') }}">
-                                                    @else
-                                                    <img class="img-fluid"
-                                                        src="{{ asset('frontend/PushDynamics/image/service_tick.svg') }}">
-                                                    @endif
-                                            </td>
-                                            @endforeach
-                                        </tr>
-                                        <tr class="align-middle">
-                                            <td>
-                                                <p class="service_bodytitle">No Contract - Cancel Anytime</p>
-                                            </td>
-                                            @foreach ($socialProducts['3_months'] as $product)
-                                            <td class="text-center">
-                                                <img class="img-fluid"
-                                                    src="{{ asset('frontend/PushDynamics/image/service_cross.svg') }}">
-                                            </td>
-                                            @endforeach
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-
-                        <div class="tab-pane fade service_contentmain" id="pills-six" role="tabpanel"
-                            aria-labelledby="pills-six-tab">
-                            <div class="service_tabcontent table-responsive">
-                                <table class="table table-borderless mb-0 service_table">
-                                    <thead class="service_table_header">
-                                        <tr class="align-middle">
-                                            <th scope="col" class="text-center">
-                                            </th>
-                                            @foreach ($socialProducts['6_months'] as $product)
-                                            <th scope="col" class="text-center">
-                                                <div class="social_tablehead">
-                                                    <p class="social_tabletitle">{{ explode(' - ', $product->name)[1] }}
-                                                    </p>
-                                                    <p class="social_tableamt">
-                                                        {{ currency_symbol() }}{{ round(convert_price($product->unit_price), 2) }}
-                                                    </p>
-                                                    <p class="social_tablesubtitle">+VAT</p>
-                                                    <button type="button" class="btn social_tablebtn"
-                                                        onclick="addToCart1Step({{ $product->id }})"
-                                                        style="cursor: pointer;">Add To Cart</button>
-                                                </div>
-                                            </th>
-                                            @endforeach
-                                        </tr>
-                                    </thead>
-                                    <tbody class="service_table_body">
-                                        <tr class="align-middle">
-                                            <td>
-                                                <p class="service_bodytitle">Ad Spend Included</p>
-                                            </td>
-                                            @foreach ($socialProducts['6_months'] as $key => $product)
-                                            <td class="text-center">
-                                                @if ($key < 2) <img class="img-fluid"
-                                                    src="{{ asset('frontend/PushDynamics/image/service_cross.svg') }}">
-                                                    @else
-                                                    <img class="img-fluid"
-                                                        src="{{ asset('frontend/PushDynamics/image/service_tick.svg') }}">
-                                                    @endif
-                                            </td>
-                                            @endforeach
-                                        </tr>
-                                        <tr class="align-middle">
-                                            <td>
-                                                <p class="service_bodytitle">Social Media Profile/Channels</p>
-                                            </td>
-                                            @foreach ($socialProducts['6_months'] as $key => $product)
-                                            <td class="text-center">
-                                                <p class="service_bodytext">
-                                                    @if ($key == 0) 1
-                                                    @elseif ($key == 1) 2
-                                                    @elseif ($key == 2) 2
-                                                    @else 3
-                                                    @endif
-                                                </p>
-                                            </td>
-                                            @endforeach
-                                        </tr>
-                                        <tr class="align-middle">
-                                            <td>
-                                                <p class="service_bodytitle">Posts Per Week</p>
-                                            </td>
-                                            @foreach ($socialProducts['6_months'] as $key => $product)
-                                            <td class="text-center">
-                                                <p class="service_bodytext">
-                                                    @if ($key < 2) {{ $key == 0 ? '2' : '3' }} @else 5 @endif </p> </td>
-                                                        @endforeach </tr> <tr class="align-middle">
-                                            <td>
-                                                <p class="service_bodytitle">Written & Designed Posts</p>
-                                            </td>
-                                            @foreach ($socialProducts['6_months'] as $product)
-                                            <td class="text-center">
-                                                <img class="img-fluid"
-                                                    src="{{ asset('frontend/PushDynamics/image/service_tick.svg') }}">
-                                            </td>
-                                            @endforeach
-                                        </tr>
-                                        <tr class="align-middle">
-                                            <td>
-                                                <p class="service_bodytitle">Interaction & Responses</p>
-                                            </td>
-                                            @foreach ($socialProducts['6_months'] as $product)
-                                            <td class="text-center">
-                                                <img class="img-fluid"
-                                                    src="{{ asset('frontend/PushDynamics/image/service_tick.svg') }}">
-                                            </td>
-                                            @endforeach
-                                        </tr>
-                                        <tr class="align-middle">
-                                            <td>
-                                                <p class="service_bodytitle">Monthly Statistics/Analytics</p>
-                                            </td>
-                                            @foreach ($socialProducts['6_months'] as $key => $product)
-                                            <td class="text-center">
-                                                @if ($key < 2) <img class="img-fluid"
-                                                    src="{{ asset('frontend/PushDynamics/image/service_cross.svg') }}">
-                                                    @else
-                                                    <img class="img-fluid"
-                                                        src="{{ asset('frontend/PushDynamics/image/service_tick.svg') }}">
-                                                    @endif
-                                            </td>
-                                            @endforeach
-                                        </tr>
-                                        <tr class="align-middle">
-                                            <td>
-                                                <p class="service_bodytitle">Support, 7 days a week</p>
-                                            </td>
-                                            @foreach ($socialProducts['6_months'] as $key => $product)
-                                            <td class="text-center">
-                                                @if ($key < 3) <img class="img-fluid"
-                                                    src="{{ asset('frontend/PushDynamics/image/service_cross.svg') }}">
-                                                    @else
-                                                    <img class="img-fluid"
-                                                        src="{{ asset('frontend/PushDynamics/image/service_tick.svg') }}">
-                                                    @endif
-                                            </td>
-                                            @endforeach
-                                        </tr>
-                                        <tr class="align-middle">
-                                            <td>
-                                                <p class="service_bodytitle">No Contract - Cancel Anytime</p>
-                                            </td>
-                                            @foreach ($socialProducts['6_months'] as $product)
-                                            <td class="text-center">
-                                                <img class="img-fluid"
-                                                    src="{{ asset('frontend/PushDynamics/image/service_cross.svg') }}">
-                                            </td>
-                                            @endforeach
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-
-                        <div class="tab-pane fade service_contentmain" id="pills-twelve" role="tabpanel"
-                            aria-labelledby="pills-twelve-tab">
-                            <div class="service_tabcontent table-responsive">
-                                <table class="table table-borderless mb-0 service_table">
-                                    <thead class="service_table_header">
-                                        <tr class="align-middle">
-                                            <th scope="col" class="text-center">
-                                            </th>
-                                            @foreach ($socialProducts['12_months'] as $product)
-                                            <th scope="col" class="text-center">
-                                                <div class="social_tablehead">
-                                                    <p class="social_tabletitle">{{ explode(' - ', $product->name)[1] }}
-                                                    </p>
-                                                    <p class="social_tableamt">
-                                                        {{ currency_symbol() }}{{ round(convert_price($product->unit_price), 2) }}
-                                                    </p>
-                                                    <p class="social_tablesubtitle">+VAT</p>
-                                                    <button type="button" class="btn social_tablebtn"
-                                                        onclick="addToCart1Step({{ $product->id }})"
-                                                        style="cursor: pointer;">Add To Cart</button>
-                                                </div>
-                                            </th>
-                                            @endforeach
-                                        </tr>
-                                    </thead>
-                                    <tbody class="service_table_body">
-                                        <tr class="align-middle">
-                                            <td>
-                                                <p class="service_bodytitle">Ad Spend Included</p>
-                                            </td>
-                                            @foreach ($socialProducts['12_months'] as $key => $product)
-                                            <td class="text-center">
-                                                @if ($key < 2) <img class="img-fluid"
-                                                    src="{{ asset('frontend/PushDynamics/image/service_cross.svg') }}">
-                                                    @else
-                                                    <img class="img-fluid"
-                                                        src="{{ asset('frontend/PushDynamics/image/service_tick.svg') }}">
-                                                    @endif
-                                            </td>
-                                            @endforeach
-                                        </tr>
-                                        <tr class="align-middle">
-                                            <td>
-                                                <p class="service_bodytitle">Social Media Profile/Channels</p>
-                                            </td>
-                                            @foreach ($socialProducts['12_months'] as $key => $product)
-                                            <td class="text-center">
-                                                <p class="service_bodytext">
-                                                    @if ($key == 0) 1
-                                                    @elseif ($key == 1) 2
-                                                    @elseif ($key == 2) 2
-                                                    @else 3
-                                                    @endif
-                                                </p>
-                                            </td>
-                                            @endforeach
-                                        </tr>
-                                        <tr class="align-middle">
-                                            <td>
-                                                <p class="service_bodytitle">Posts Per Week</p>
-                                            </td>
-                                            @foreach ($socialProducts['12_months'] as $key => $product)
-                                            <td class="text-center">
-                                                <p class="service_bodytext">
-                                                    @if ($key < 2) {{ $key == 0 ? '2' : '3' }} @else 5 @endif </p> </td>
-                                                        @endforeach </tr> <tr class="align-middle">
-                                            <td>
-                                                <p class="service_bodytitle">Written & Designed Posts</p>
-                                            </td>
-                                            @foreach ($socialProducts['12_months'] as $product)
-                                            <td class="text-center">
-                                                <img class="img-fluid"
-                                                    src="{{ asset('frontend/PushDynamics/image/service_tick.svg') }}">
-                                            </td>
-                                            @endforeach
-                                        </tr>
-                                        <tr class="align-middle">
-                                            <td>
-                                                <p class="service_bodytitle">Interaction & Responses</p>
-                                            </td>
-                                            @foreach ($socialProducts['12_months'] as $product)
-                                            <td class="text-center">
-                                                <img class="img-fluid"
-                                                    src="{{ asset('frontend/PushDynamics/image/service_tick.svg') }}">
-                                            </td>
-                                            @endforeach
-                                        </tr>
-                                        <tr class="align-middle">
-                                            <td>
-                                                <p class="service_bodytitle">Monthly Statistics/Analytics</p>
-                                            </td>
-                                            @foreach ($socialProducts['12_months'] as $key => $product)
-                                            <td class="text-center">
-                                                @if ($key < 2) <img class="img-fluid"
-                                                    src="{{ asset('frontend/PushDynamics/image/service_cross.svg') }}">
-                                                    @else
-                                                    <img class="img-fluid"
-                                                        src="{{ asset('frontend/PushDynamics/image/service_tick.svg') }}">
-                                                    @endif
-                                            </td>
-                                            @endforeach
-                                        </tr>
-                                        <tr class="align-middle">
-                                            <td>
-                                                <p class="service_bodytitle">Support, 7 days a week</p>
-                                            </td>
-                                            @foreach ($socialProducts['12_months'] as $key => $product)
-                                            <td class="text-center">
-                                                @if ($key < 3) <img class="img-fluid"
-                                                    src="{{ asset('frontend/PushDynamics/image/service_cross.svg') }}">
-                                                    @else
-                                                    <img class="img-fluid"
-                                                        src="{{ asset('frontend/PushDynamics/image/service_tick.svg') }}">
-                                                    @endif
-                                            </td>
-                                            @endforeach
-                                        </tr>
-                                        <tr class="align-middle">
-                                            <td>
-                                                <p class="service_bodytitle">No Contract - Cancel Anytime</p>
-                                            </td>
-                                            @foreach ($socialProducts['12_months'] as $product)
-                                            <td class="text-center">
-                                                <img class="img-fluid"
-                                                    src="{{ asset('frontend/PushDynamics/image/service_cross.svg') }}">
-                                            </td>
-                                            @endforeach
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="for_white">
-    <div class="ser_s7">
-        <div class="container">
-            <h1 class="ser_s7_title" data-aos="fade-up">Need a custom package?</h1>
-            <p class="ser_s7_subtitle" data-aos="fade-up">
-                Pick and choose what features you would like in your very own custom package <br>
-                Simply upload a document of your brief and our team will get back to you.
-            </p>
-
-            <form class="ser_s7_content_form" id="requestform1" action="{{ route('contactus.store') }}" method="post"
-                enctype="multipart/form-data" onsubmit="return check_agree1(this);">
-                @csrf
-                <input type="hidden" name="from_page" form="requestform1" value="service">
-                <div class="ser_s7_form_elememt">
-                    <p class="ser_s7_form_label">Username</p>
-                    <input type="text" class="form-control input_global_m" id="fullname" name="fullname"
-                        form="requestform1" required>
-                </div>
-                <div class="ser_s7_form_elememt">
-                    <p class="ser_s7_form_label">Email</p>
-                    <input type="email" class="form-control input_global_m" id="email" name="email" form="requestform1"
-                        required>
-                </div>
-                <div class="ser_s7_form_elememt">
-                    <p class="ser_s7_form_label">Phone</p>
-                    <input type="tel" class="form-control input_global_m" id="phone" name="phone" form="requestform1"
-                        required>
-                </div>
-                <div class="ser_s7_form_elememt">
-                    <p class="ser_s7_form_label">Upload Brief</p>
-                    <input type="file" class="form-control input_global_m" id="document" name="document"
-                        form="requestform1" required>
-                </div>
-                <div class="ser_s7_form_elememt">
-                    <p class="ser_s7_form_label">Additional Information</p>
-                    <textarea class="form-control textarea_global_m" id="message" name="message" form="requestform1"
-                        required></textarea>
-                </div>
-                <div class="ser_s7_form_elememt">
-                    <p class="ser_s7_form_label">&nbsp;</p>
-                    <div class="c-checkbox">
-                        <div class="c-div">
-                            <label class="d-flex justify-content-center justify-content-lg-start">
-                                <input type="checkbox" id="terms" name="terms" form="requestform1">
-                                <label for="terms"></label>
-                            </label>
-                        </div>
-                        <div class="c-text">
-                            <p class="login_strong">By ticking this box, you agree to the <a
-                                    href="{{ route('termsandconditions') }}">Terms & Conditions</a> & <a
-                                    href="{{ route('privacypolicy') }}">Privacy Policy.</a></p>
-                        </div>
-                    </div>
-                    <script src="https://js.hcaptcha.com/1/api.js" async defer></script>
-                    <div class="h-captcha" form="requestform1" data-sitekey="{{ env('H_CAPTCHA_SITE_KEY') }}"></div>
-                </div>
-            </form>
-            <button class="btn btn_global_m" type="submit" form="requestform1">Submit Request</button>
-        </div>
-    </div>
-</div>
-</section> --}}
-
-{{-- new code starts here --}}
 <section>
 
     <section class="sec1_s">
@@ -866,17 +13,16 @@ class="img-fluid crd_image">
         </video>
 
         <div class="sec1_video">
-            <h1 class="main_tt">
+            <h1 class="main_tt" data-aos="fade-up" >
                 Social Media
             </h1>
-            <p class="main_pp">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dictum nunc eget molestie
-                duis nunc iaculis morbi vestibulum. Massa volutpat nisi, ultrices aenean pellentesque ornare.</p>
+            <p class="main_pp" data-aos="fade-up" >Harness the power of social media to connect, engage, and grow your audience where they spend time the most – on social media channels. </p>
             <button class="btn btn_global" onclick="scrollToDiv()">
                 <img src="{{ asset('frontend/BrandSparkz/assets/img/btn_primary_pattern.png') }}" alt=""
                     class="img-fluid btn_global_pattern">
                 <div class="btn_global_inner w-100">
 
-                    <p class="cart_text">Explore our pricing</p>
+                    <p class="cart_text" data-aos="fade-up" >Explore our pricing</p>
                     <img src="{{ asset('frontend/BrandSparkz/assets/img/down_arrow.svg') }}" alt=""
                         class="img-fluid cart_logo">
                 </div>
@@ -889,7 +35,7 @@ class="img-fluid crd_image">
                     <circle cx="19.5" cy="19.5" r="19.5" fill="white" fill-opacity="0.56" />
                     <circle cx="19.5" cy="19.5" r="9.5" fill="white" />
                 </svg>
-                <p class="prop_pp ">Post Creation</p>
+                <p class="prop_pp " data-aos="fade-up" >Post Creation</p>
             </div>
         </div>
 
@@ -899,13 +45,13 @@ class="img-fluid crd_image">
                     <circle cx="19.5" cy="19.5" r="19.5" fill="white" fill-opacity="0.56" />
                     <circle cx="19.5" cy="19.5" r="9.5" fill="white" />
                 </svg>
-                <p class="prop_pp ">Interaction & Responses</p>
+                <p class="prop_pp " data-aos="fade-up" >Interaction & Responses</p>
             </div>
         </div>
 
         <div class="mobile_none">
             <div class="prop3">
-                <p class="prop_pp ">Analytic Report</p>
+                <p class="prop_pp " data-aos="fade-up" >Analytic Report</p>
                 <svg xmlns="http://www.w3.org/2000/svg" width="39" height="39" viewBox="0 0 39 39" fill="none">
                     <circle cx="19.5" cy="19.5" r="19.5" fill="white" fill-opacity="0.56" />
                     <circle cx="19.5" cy="19.5" r="9.5" fill="white" />
@@ -927,27 +73,19 @@ class="img-fluid crd_image">
                 <div class="left_inner2">
 
                     <div class="inin_div">
-                        <h1 class="div2_tt">
+                        <h1 class="div2_tt" data-aos="fade-up" >
                             What is social media management?
                         </h1>
-                        <p class="div2_pp">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ullamcorper nunc
-                            hendrerit eget sed iaculis felis, quis viverra. Quisque donec purus ac amet fusce duis
-                            tellus facilisis pharetra. Imperdiet pellentesque nisl in tellus. Consectetur magnis at
-                            aliquet sed elementum. Pellentesque volutpat a vitae risus nunc et pharetra leo.
-                            Tristique sem mi porttitor morbi vel enim proin. Nisl ac neque, id euismod.</p>
+                        <p class="div2_pp" data-aos="fade-up" >Social media isn’t just about likes and shares – used correctly, it can be a powerful business tool for building brand awareness, fostering relationships with your customers, and driving real results. From strategy to content creation and campaign management, Brand Sparkz will help you turn social platforms into growth engines for your business to ignite new and existing interest in your products and brand. </p>
 
                     </div>
                 </div>
                 <div class="right_inner2">
                     <div class="inin_div">
-                        <h1 class="div2_tt">
-                            build business relations through social media
+                        <h1 class="div2_tt" data-aos="fade-up" >
+                           Build business relations through social media 
                         </h1>
-                        <p class="div2_pp">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ullamcorper nunc
-                            hendrerit eget sed iaculis felis, quis viverra. Quisque donec purus ac amet fusce duis
-                            tellus facilisis pharetra. Imperdiet pellentesque nisl in tellus. Consectetur magnis at
-                            aliquet sed elementum. Pellentesque volutpat a vitae risus nunc et pharetra leo.
-                            Tristique sem mi porttitor morbi vel enim proin. Nisl ac neque, id euismod.</p>
+                        <p class="div2_pp" data-aos="fade-up" >Through platforms such as Facebook, Instagram, LinkedIn, and TikTok, you can tap into billions of worldwide users through social media. By creating a strong brand presence on social media channels, Brand Sparkz will use consistent and strategic content to build brand recognition and loyalty over a period of time while at the same time allowing you to interact with your audience daily. </p>
 
                     </div>
                 </div>
@@ -961,10 +99,8 @@ class="img-fluid crd_image">
     <section class="sec3_s">
 
         <div class="sec3_1div">
-            <h1 class="sec3_tt">How We <span class="sec3_spantt">Make<br class="desktop_none"> It Happen</span></h1>
-            <p class="sec_pp">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quam leo velit mi diam sed
-                viverra aenean. Ut et velit molestie consectetur pharetra, platea convallis. Eleifend porttitor
-                viverra sed lectus ipsum vitae ipsum blandit.</p>
+            <h1 class="sec3_tt" data-aos="fade-up" >How We <span class="sec3_spantt">Make<br class="desktop_none"> It Happen</span></h1>
+            <p class="sec_pp" data-aos="fade-up" >At Brand Sparkz we take time to get to know you and your business so we know what is likely to resonate with your audience and ignite new interest within your customer base. </p>
         </div>
 
         <div class="cards_div container custom_padding">
@@ -976,12 +112,12 @@ class="img-fluid crd_image">
                 <img src="{{ asset('frontend/BrandSparkz/assets/img/mob_crd.png') }}" alt=""
                     class="img-fluid crd_image desktop_none">
                 <div class="context_crd">
-                    <h1 class="crd_tt">
+                    <h1 class="crd_tt" data-aos="fade-up" >
                         Creation
                     </h1>
 
-                    <p class="crd_pp">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit arcu aliquam vitae.
+                    <p class="crd_pp" data-aos="fade-up" >
+                        Our talented team of creatives will create bespoke plans to meet your needs. 
                     </p>
 
                 </div>
@@ -994,12 +130,12 @@ class="img-fluid crd_image">
                 <img src="{{ asset('frontend/BrandSparkz/assets/img/mob_crd2.png') }}" alt=""
                     class="img-fluid crd_image desktop_none">
                 <div class="context_crd">
-                    <h1 class="crd_tt">
+                    <h1 class="crd_tt" data-aos="fade-up" >
                         Communication
                     </h1>
 
-                    <p class="crd_pp">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit arcu aliquam vitae.
+                    <p class="crd_pp" data-aos="fade-up" >
+                        Communication is key and we keep you informed every step of the way. 
                     </p>
 
                 </div>
@@ -1012,12 +148,12 @@ class="img-fluid crd_image">
                 <img src="{{ asset('frontend/BrandSparkz/assets/img/mob_crd3.png') }}" alt=""
                     class="img-fluid crd_image desktop_none">
                 <div class="context_crd">
-                    <h1 class="crd_tt">
+                    <h1 class="crd_tt" data-aos="fade-up" >
                         Development
                     </h1>
 
-                    <p class="crd_pp">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit arcu aliquam vitae.
+                    <p class="crd_pp" data-aos="fade-up" >
+                        Our development team work tirelessly in the background to build campaigns that deliver. 
                     </p>
 
                 </div>
@@ -1030,12 +166,12 @@ class="img-fluid crd_image">
                 <img src="{{ asset('frontend/BrandSparkz/assets/img/mob_crd4.png') }}" alt=""
                     class="img-fluid crd_image desktop_none">
                 <div class="context_crd">
-                    <h1 class="crd_tt">
+                    <h1 class="crd_tt" data-aos="fade-up" >
                         Results
                     </h1>
 
-                    <p class="crd_pp">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit arcu aliquam vitae.
+                    <p class="crd_pp" data-aos="fade-up" >
+                        The results speak for themselves with ROI and boosted leads and conversions. 
                     </p>
 
                 </div>
@@ -1051,10 +187,8 @@ class="img-fluid crd_image">
         <div class="container custom_padding2">
             <div class="sec4_1">
 
-                <h1 class="sec4_tt">Powering Brands<br> <span class="sec4_tt_span">That Mean Business</span></h1>
-                <p class="sec4_pp">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ullamcorper nunc hendrerit
-                    eget sed iaculis felis, quis viverra. Quisque donec purus ac amet fusce duis tellus facilisis
-                    pharetra. Imperdiet pellentesque nisl in tellus. Consectetur magnis at aliquet sed. </p>
+                <h1 class="sec4_tt" data-aos="fade-up" >What’s included <br> <span class="sec4_tt_span">with social media </span></h1>
+                <p class="sec4_pp" data-aos="fade-up" >Whether you’re looking to grow your following, drive new traffic, boost sales, or create social strategies which align with your brand and business objectives we can build you campaigns which will turn your social presence into a competitive advantage. </p>
 
             </div>
 
@@ -1065,9 +199,8 @@ class="img-fluid crd_image">
                     <img src="{{ asset('frontend/BrandSparkz/assets/img/crd_img_mob.png') }}" alt=""
                         class="img-fluid crd_image2 desktop_none">
                     <div class="sec4_down">
-                        <h1 class="crd4_tt">Included Ad Spend</h1>
-                        <p class="crd4_pp">Lorem ipsum dolor sit amet <br class="desktop_none"> consectetur. Neque
-                            integer faucibus imperdiet turpis.</p>
+                        <h1 class="crd4_tt" data-aos="fade-up" >Included Ad Spend</h1>
+                        <p class="crd4_pp" data-aos="fade-up" >Ad spend is included with all our campaigns for maximum results. </p>
 
                     </div>
                 </div>
@@ -1078,9 +211,8 @@ class="img-fluid crd_image">
                     <img src="{{ asset('frontend/BrandSparkz/assets/img/crd_img_mob2.png') }}" alt=""
                         class="img-fluid crd_image2 desktop_none">
                     <div class="sec4_down">
-                        <h1 class="crd4_tt">Monthly Statistics</h1>
-                        <p class="crd4_pp">Lorem ipsum dolor sit amet <br class="desktop_none"> consectetur. Neque
-                            integer faucibus imperdiet turpis.</p>
+                        <h1 class="crd4_tt" data-aos="fade-up" >Monthly Statistics</h1>
+                        <p class="crd4_pp" data-aos="fade-up" >Keep track of your campaigns with monthly statistics to show what’s working. </p>
 
                     </div>
                 </div>
@@ -1091,9 +223,8 @@ class="img-fluid crd_image">
                     <img src="{{ asset('frontend/BrandSparkz/assets/img/crd_img_mob3.png') }}" alt=""
                         class="img-fluid crd_image2 desktop_none">
                     <div class="sec4_down">
-                        <h1 class="crd4_tt">Weekly Posts</h1>
-                        <p class="crd4_pp">Lorem ipsum dolor sit amet <br class="desktop_none"> consectetur. Neque
-                            integer faucibus imperdiet turpis.</p>
+                        <h1 class="crd4_tt" data-aos="fade-up" >Weekly Posts</h1>
+                        <p class="crd4_pp" data-aos="fade-up" >Weekly posts using expertly crafted content and images and audience responses. </p>
 
                     </div>
                 </div>
@@ -1110,29 +241,26 @@ class="img-fluid crd_image">
             <div class="inner_sec5">
                 <div class="left_sec5">
                     <div class="inin_sec5">
-                        <h1 class="sec5_tt">Digital Marketing <br><span class="span_sec5_tt">That Hits Different!</span>
+                        <h1 class="sec5_tt" data-aos="fade-up" >Digital Marketing <br><span class="span_sec5_tt">That Hits Different!</span>
                         </h1>
-                        <p class="sec5_pp">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ullamcorper nunc
-                            hendrerit eget sed iaculis felis, quis viverra. Quisque donec purus ac amet fusce duis
-                            tellus
-                            facilisis pharetra..
+                        <p class="sec5_pp" data-aos="fade-up" >The results speak for themselves when you work with Brand Sparkz. Get in touch today to find out more about us and how we can ignite your business ambitions. 
                         </p>
 
                         <div class="pointer_p">
                             <div class="pointer_line">
                                 <img src="{{ asset('frontend/BrandSparkz/assets/img/pointer.svg') }}" alt=""
                                     class="img-fluid">
-                                <p class="pointer_pp">Strategy experience and analytical expertise combine.</p>
+                                <p class="pointer_pp" data-aos="fade-up" >Expertly crafted campaigns that always deliver results. </p>
                             </div>
                             <div class="pointer_line">
                                 <img src="{{ asset('frontend/BrandSparkz/assets/img/pointer.svg') }}" alt=""
                                     class="img-fluid">
-                                <p class="pointer_pp">Strategy experience and analytical expertise combine.</p>
+                                <p class="pointer_pp" data-aos="fade-up" >Tailor made and bespoke packages for maximum impact. </p>
                             </div>
                             <div class="pointer_line">
                                 <img src="{{ asset('frontend/BrandSparkz/assets/img/pointer.svg') }}" alt=""
                                     class="img-fluid">
-                                <p class="pointer_pp">Strategy experience and analytical expertise combine.</p>
+                                <p class="pointer_pp" data-aos="fade-up" >Constantly tracked and analysed campaigns.</p>
                             </div>
 
                         </div>
@@ -1751,9 +879,10 @@ class="img-fluid crd_image">
             <div class="insec7_s">
 
                 <div>
-                    <h1 class="form_tt">Need a something <span class="span_form_tt">bespoke?</span> </h1>
-                    <p class="form_pp">Pick and choose what features you would like in your very own custom package
-                        Simply upload a document of your brief and our team will get back to you.</p>
+                    <h1 class="form_tt" data-aos="fade-up" >Need a something <span class="span_form_tt">bespoke?</span> </h1>
+                    <p class="form_pp" data-aos="fade-up" >We can build bespoke packages based on your unique needs as a business. <br>
+                        Simply fill in the form below and someone will come back to you. 
+                        </p>
                 </div>
 
                 
@@ -1762,6 +891,7 @@ class="img-fluid crd_image">
                 <form class="form_section" id="requestform1" action="{{ route('contactus.store') }}" method="post"
                 enctype="multipart/form-data" onsubmit="return check_agree1(this);">
                     @csrf
+                    <input type="hidden" name="from_page" form="requestform1" value="service">
                     <div class="hori_hor">
                         <div class="one_section">
                             <p class="label_l">Full Name</p>
@@ -1810,7 +940,7 @@ class="img-fluid crd_image">
 
                         </div>
 
-                        <div class="for_robot_checkbox">
+                        <div class="for_robot_checkbox_seo">
                             <div class="c-checkbox">
                                 <div class="c-div">
                                     <label class="d-flex justify-content-center justify-content-lg-start">
@@ -1862,9 +992,7 @@ class="img-fluid crd_image">
 
 
 @endsection
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
-    integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
-    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
 @section('scripts')
 <script>
     $(document).ready(function () {
@@ -1927,66 +1055,7 @@ class="img-fluid crd_image">
 </script>
 
 
-<script>
-    function check_agree(form) {
-        if (!form.fullname.value) {
-            Swal.fire({
-                icon: 'error',
-                title: 'Oops...',
-                text: 'Please Enter Fullname'
-            });
-            return false;
-        }
 
-        if (!form.email.value) {
-            Swal.fire({
-                icon: 'error',
-                title: 'Oops...',
-                text: 'Please Enter Email'
-            });
-            return false;
-        }
-
-        if (!form.phone.value) {
-            Swal.fire({
-                icon: 'error',
-                title: 'Oops...',
-                text: 'Please Enter Phone'
-            });
-            return false;
-        }
-
-        if (!form.document.value) {
-            Swal.fire({
-                icon: 'error',
-                title: 'Oops...',
-                text: 'Please Upload a Document'
-            });
-            return false;
-        }
-
-        if (!form.message.value) {
-            Swal.fire({
-                icon: 'error',
-                title: 'Oops...',
-                text: 'Please Enter Comments'
-            });
-            return false;
-        }
-
-        if (!form.terms.checked) {
-            Swal.fire({
-                icon: 'error',
-                title: 'Oops...',
-                text: 'Please Accept T&C'
-            });
-            return false;
-        }
-
-        return true;
-    }
-
-</script>
 <script>
     function scrollToDiv() {
         document.getElementById('targetDiv').scrollIntoView({
@@ -2055,20 +1124,6 @@ class="img-fluid crd_image">
         }
 
 </script>
-<script>
-    function scrollToDiv() {
-        document.getElementById('target-element').scrollIntoView({
-            behavior: 'smooth'
-        });
-    }
 
-</script>
-<script>
-    document.querySelectorAll('.service_tabbtn').forEach((button, index) => {
-        button.addEventListener('click', function () {
-            document.querySelector('.progress-arrow').style.transform = `translateX(${index * 90}px)`;
-        });
-    });
 
-</script>
 @endsection

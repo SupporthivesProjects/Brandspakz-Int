@@ -1,5 +1,4 @@
 @extends('frontend.layouts.app')
-
 @if (Auth::check())
     @php
         $user = Auth::user();
@@ -199,9 +198,9 @@
                                         <th scope="col">
                                             <p class="head_ps">Order</p>
                                         </th>
-                                        <th scope="col">
+                                        {{--<th scope="col">
                                             <p class="head_ps text_center">Qty</p>
-                                        </th>
+                                        </th>--}}
                                         <th scope="col">
                                             <p class="head_ps text_center">Date</p>
                                         </th>
@@ -214,12 +213,17 @@
                                     @forelse ($orders as $key => $order)
                                         <tr class="table_ps">
                                             <td scope="row">
-                                                <button class="btn btn_dash_pop"
-                                                onclick="show_purchase_history_details({{ $order->id }})">#{{ $order->code }}</button>
+                                                <!--<button class="btn btn_dash_pop"-->
+                                                <!--onclick="show_purchase_history_details({{ $order->id }})">#{{ $order->code }}</button>-->
+                                                <a href="{{ route('purchase_history.details', $order->id) }}" class="btn btn_dash_pop">
+                                                    #{{ $order->code }}
+                                                </a>
+
+
                                             </td>
-                                            <td>
+                                            {{--<td>
                                                 <p class="dash_tab_text">{{ $order->quantity }}</p>
-                                            </td>
+                                            </td>--}}
                                             <td>
                                                 <p class="dash_tab_text text_center">{{ date('d-m-Y', $order->date) }}</p>
                                             </td>

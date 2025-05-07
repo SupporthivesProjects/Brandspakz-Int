@@ -8,6 +8,7 @@ use App\Mail\InvoiceEmailManager;
 use App\Services\EmailService;
 use Illuminate\Support\Facades\{Auth, Session, Mail, Log, DB};
 use Exception;
+use Laracasts\Flash\Flash;
 
 class CheckoutController extends Controller
 {
@@ -196,13 +197,14 @@ class CheckoutController extends Controller
             $order->payment_status = 'paid';
             $order->payment_details = $payment;
             $order->save();
-
+           
             $this->processOrderDetails($order);
             $this->sendOrderEmail($order);
             $this->clearAllSessionData();
 
             DB::commit();
-            Session::flash('paymentsuccess');
+            
+            session()->flash('paymentsuccess');
             return redirect()->route('order_confirmed');
         } catch (Exception $e) {
             DB::rollBack();
@@ -217,12 +219,14 @@ class CheckoutController extends Controller
             foreach ($order->orderDetails as $orderDetail) {
                 $orderDetail->payment_status = 'paid';
                 $orderDetail->save();
-
-                if ($orderDetail->product->user->user_type == 'seller') {
+                
+                $userId= $orderDetail->product['user_id'];
+                $user = User::where('id', $userId)->first();
+                $userType= $user['user_type'];
+                if ($userType == 'seller') {
                     $this->processSellerCommission($orderDetail);
                 }
             }
-
             $order->commission_calculated = 1;
             $order->save();
         } catch (Exception $e) {
@@ -230,6 +234,7 @@ class CheckoutController extends Controller
             throw new Exception('Failed to process order details');
         }
     }
+
 
     private function processSellerCommission($orderDetail)
     {
@@ -263,15 +268,17 @@ class CheckoutController extends Controller
             }
 
             $emailData = $this->prepareEmailData($order);
-            $customerEmail = json_decode($order->shipping_address)->email;
+            $customerEmail = $order->shipping_address->email;
             $adminEmail = User::where('user_type', 'admin')->first()->email;
 
             $emailService = new EmailService();
 
+            Log::info('Order email data: ' . $emailData['order']) ;
+            Log::info('Order data: ' . $order) ;
             // Send to customer
             $emailService->send(
                 'invoice',
-                $emailData['order'],
+                $emailData,
                 $customerEmail,
                 'Order Placed - ' . $order->code
             );

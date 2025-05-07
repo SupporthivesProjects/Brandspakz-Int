@@ -22,7 +22,7 @@ class OrderController extends Controller
             
             if ($order) {
                 $this->processOrderItems($order);
-                $this->generateAndSendInvoice($order, $request);
+                //$this->generateAndSendInvoice($order, $request);
                 $request->session()->put('order_id', $order->id);
                 DB::commit();
                 return true;

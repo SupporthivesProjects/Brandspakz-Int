@@ -56,9 +56,9 @@
                                     </td> 
                                     <td style="text-align:right;">
                                         <p style="font-size: 16px; font-weight:400; color:#3C3C3C;font-style: normal;font-family:Arial;line-height:24px;padding-right:40px;">
-                                        info@Companyname.com<br>
-                                        123 Main Street, <br>
-                                        New York, 10030 
+                                        support@brandsparkz.co<br>
+                                           TBC<br>
+                                           TBC
                                         </p>
                                     </td>           
                                 </tr>

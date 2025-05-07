@@ -16,16 +16,15 @@
             </video>
 
             <div class="sec1_video_wd">
-                <h1 class="main_tt">
+                <h1 class="main_tt" data-aos="fade-up">
                     Online reputation management
                 </h1>
-                <p class="main_pp">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dictum nunc eget molestie
-                    duis nunc iaculis morbi vestibulum. Massa volutpat nisi, ultrices aenean pellentesque ornare.</p>
+                <p class="main_pp" data-aos="fade-up">Your online reputation is your digital currency – at Brand Sparkz we help you take control of the narrative and build lasting trust with your customer base. </p>
                 <button class="btn btn_global" onclick="window.location='#target-element'">
                         <img src="{{ asset('frontend/BrandSparkz/assets/img/btn_primary_pattern.png') }}" alt="" class="img-fluid btn_global_pattern">
                         <div class="btn_global_inner w-100">
                             
-                            <p class="cart_text">Explore our pricing</p>
+                            <p class="cart_text" data-aos="fade-up">Explore our pricing</p>
                             <img src="{{ asset('frontend/BrandSparkz/assets/img/down_arrow.svg') }}" alt="" class="img-fluid cart_logo">
                         </div>
                 </button>
@@ -37,7 +36,7 @@
                         <circle cx="19.5" cy="19.5" r="19.5" fill="white" fill-opacity="0.56" />
                         <circle cx="19.5" cy="19.5" r="9.5" fill="white" />
                     </svg>
-                    <p class="prop_pp ">Article Writing</p>
+                    <p class="prop_pp " data-aos="fade-up">Article Writing</p>
                 </div>
             </div>
 
@@ -47,14 +46,14 @@
                         <circle cx="19.5" cy="19.5" r="19.5" fill="white" fill-opacity="0.56" />
                         <circle cx="19.5" cy="19.5" r="9.5" fill="white" />
                     </svg>
-                    <p class="prop_pp ">Protected And<br>
+                    <p class="prop_pp " data-aos="fade-up">Protected And<br>
                         Monitored Phrases</p>
                 </div>
             </div>
 
             <div class="mobile_none">
                 <div class="prop3">
-                    <p class="prop_pp ">Web Search Position</p>
+                    <p class="prop_pp " data-aos="fade-up">Web Search Position</p>
                     <svg xmlns="http://www.w3.org/2000/svg" width="39" height="39" viewBox="0 0 39 39" fill="none">
                         <circle cx="19.5" cy="19.5" r="19.5" fill="white" fill-opacity="0.56" />
                         <circle cx="19.5" cy="19.5" r="9.5" fill="white" />
@@ -74,27 +73,19 @@
                     <div class="left_inner2">
 
                         <div class="inin_div">
-                            <h1 class="div2_tt">
+                            <h1 class="div2_tt" data-aos="fade-up">
                                 What is online reputation management?
                             </h1>
-                            <p class="div2_pp">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ullamcorper nunc
-                                hendrerit eget sed iaculis felis, quis viverra. Quisque donec purus ac amet fusce duis
-                                tellus facilisis pharetra. Imperdiet pellentesque nisl in tellus. Consectetur magnis at
-                                aliquet sed elementum. Pellentesque volutpat a vitae risus nunc et pharetra leo.
-                                Tristique sem mi porttitor morbi vel enim proin. Nisl ac neque, id euismod.</p>
+                            <p class="div2_pp" data-aos="fade-up">In the digital world where a single review or social post can shape public perception of your brand, managing your online reputation is more important than ever. Whether you’re recovering from a negative review or proactively looking to build a positive image, our reputation management services will ensure your brand is always seen in the best possible light. </p>
 
                         </div>
                     </div>
                     <div class="right_inner2">
                         <div class="inin_div">
-                            <h1 class="div2_tt">
+                            <h1 class="div2_tt" data-aos="fade-up">
                                 learn why you should consider reputation
                             </h1>
-                            <p class="div2_pp">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ullamcorper nunc
-                                hendrerit eget sed iaculis felis, quis viverra. Quisque donec purus ac amet fusce duis
-                                tellus facilisis pharetra. Imperdiet pellentesque nisl in tellus. Consectetur magnis at
-                                aliquet sed elementum. Pellentesque volutpat a vitae risus nunc et pharetra leo.
-                                Tristique sem mi porttitor morbi vel enim proin. Nisl ac neque, id euismod.</p>
+                            <p class="div2_pp" data-aos="fade-up">Ninety per cent of customers will check online reviews before making a purchase, meaning that what they find can make or break trust in your brand. By building you a strong and positive online presence we will safeguard your business from any misinformation, fake reviews, or unfair criticism. Our ORM strategies will help show your customers you care and boost your credibility. </p>
 
                         </div>
                     </div>
@@ -108,10 +99,8 @@
         <section class="sec3_s">
 
             <div class="sec3_1div">
-                <h1 class="sec3_tt">How We <span class="sec3_spantt">Make<br class="desktop_none"> It Happen</span></h1>
-                <p class="sec_pp">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quam leo velit mi diam sed
-                    viverra aenean. Ut et velit molestie consectetur pharetra, platea convallis. Eleifend porttitor
-                    viverra sed lectus ipsum vitae ipsum blandit.</p>
+                <h1 class="sec3_tt" data-aos="fade-up">How We <span class="sec3_spantt">Make<br class="desktop_none"> It Happen</span></h1>
+                <p class="sec_pp" data-aos="fade-up">At Brand Sparkz we take time to get to know you and your business so we know what is likely to resonate with your audience and ignite new interest within your customer base. </p>
             </div>
 
             <div class="cards_div container custom_padding">
@@ -121,12 +110,12 @@
                     <img src="{{ asset('frontend/BrandSparkz/assets/img/1.png') }}" alt="" class="img-fluid crd_image mobile_none">
                     <img src="{{ asset('frontend/BrandSparkz/assets/img/mob_crd.png') }}" alt="" class="img-fluid crd_image desktop_none">
                     <div class="context_crd">
-                        <h1 class="crd_tt">
+                        <h1 class="crd_tt" data-aos="fade-up">
                             Creation
                         </h1>
 
-                        <p class="crd_pp">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit arcu aliquam vitae.
+                        <p class="crd_pp" data-aos="fade-up">
+                            Our talented team of creatives will create bespoke plans to meet your needs. 
                         </p>
 
                     </div>
@@ -137,12 +126,12 @@
                     <img src="{{ asset('frontend/BrandSparkz/assets/img/2.png') }}" alt="" class="img-fluid crd_image mobile_none">
                     <img src="{{ asset('frontend/BrandSparkz/assets/img/mob_crd2.png') }}" alt="" class="img-fluid crd_image desktop_none">
                     <div class="context_crd">
-                        <h1 class="crd_tt">
+                        <h1 class="crd_tt" data-aos="fade-up">
                             Communication
                         </h1>
 
-                        <p class="crd_pp">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit arcu aliquam vitae.
+                        <p class="crd_pp" data-aos="fade-up">
+                            Communication is key and we keep you informed every step of the way. 
                         </p>
 
                     </div>
@@ -153,12 +142,12 @@
                     <img src="{{ asset('frontend/BrandSparkz/assets/img/3.png') }}" alt="" class="img-fluid crd_image mobile_none">
                     <img src="{{ asset('frontend/BrandSparkz/assets/img/mob_crd3.png') }}" alt="" class="img-fluid crd_image desktop_none">
                     <div class="context_crd">
-                        <h1 class="crd_tt">
+                        <h1 class="crd_tt" data-aos="fade-up">
                             Development
                         </h1>
 
-                        <p class="crd_pp">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit arcu aliquam vitae.
+                        <p class="crd_pp" data-aos="fade-up">
+                            Our development team work tirelessly in the background to build campaigns that deliver. 
                         </p>
 
                     </div>
@@ -169,12 +158,12 @@
                     <img src="{{ asset('frontend/BrandSparkz/assets/img/4.png') }}" alt="" class="img-fluid crd_image mobile_none">
                     <img src="{{ asset('frontend/BrandSparkz/assets/img/mob_crd4.png') }}" alt="" class="img-fluid crd_image desktop_none">
                     <div class="context_crd">
-                        <h1 class="crd_tt">
+                        <h1 class="crd_tt" data-aos="fade-up">
                             Results
                         </h1>
 
-                        <p class="crd_pp">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit arcu aliquam vitae.
+                        <p class="crd_pp" data-aos="fade-up">
+                            The results speak for themselves with ROI and boosted leads and conversions. 
                         </p>
 
                     </div>
@@ -190,8 +179,8 @@
             <div class="container custom_padding2">
                 <div class="sec4_1">
 
-                    <h1 class="sec4_tt">Powering Brands<br> <span class="sec4_tt_span">That Mean Business</span></h1>
-                    <p class="sec4_pp">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ullamcorper nunc hendrerit eget sed iaculis felis, quis viverra. Quisque donec purus ac amet fusce duis tellus facilisis pharetra. Imperdiet pellentesque nisl in tellus. Consectetur magnis at aliquet sed. </p>
+                    <h1 class="sec4_tt" data-aos="fade-up">What’s included <br> <span class="sec4_tt_span"> with ORM</span></h1>
+                    <p class="sec4_pp" data-aos="fade-up">Whether you’re looking to build trust from the ground up or looking to protect your hard-earned reputation, at Brand Sparkz we provide all the tools and strategies your business needs to keep your online presence strong, professional, and resilient. </p>
     
                 </div>
     
@@ -200,8 +189,8 @@
                         <img src="{{ asset('frontend/BrandSparkz/assets/img/orm_1.png') }}" alt="" class="img-fluid crd_image2 mobile_none">
                         <img src="{{ asset('frontend/BrandSparkz/assets/img/orm1_mob.png') }}" alt="" class="img-fluid crd_image2 desktop_none">
                         <div class="sec4_down">
-                            <h1 class="crd4_tt">Web Search Position</h1>
-                            <p class="crd4_pp">Lorem ipsum dolor sit amet <br class="desktop_none">  consectetur. Neque integer faucibus imperdiet turpis.</p>
+                            <h1 class="crd4_tt" data-aos="fade-up">Web Search Position</h1>
+                            <p class="crd4_pp" data-aos="fade-up">Maintain your SEO rankings  <br class="desktop_none">  and positive results position.</p>
     
                         </div>
                     </div>
@@ -210,8 +199,8 @@
                         <img src="{{ asset('frontend/BrandSparkz/assets/img/orm_2.png') }}" alt="" class="img-fluid crd_image2 mobile_none">
                         <img src="{{ asset('frontend/BrandSparkz/assets/img/orm2_mob.png') }}" alt="" class="img-fluid crd_image2 desktop_none">
                         <div class="sec4_down">
-                            <h1 class="crd4_tt">Email Creation</h1>
-                            <p class="crd4_pp">Lorem ipsum dolor sit amet <br class="desktop_none">  consectetur. Neque integer faucibus imperdiet turpis.</p>
+                            <h1 class="crd4_tt" data-aos="fade-up">Email Creation</h1>
+                            <p class="crd4_pp" data-aos="fade-up">We will conduct a full audit  <br class="desktop_none">  and risk assessment of your brand.</p>
     
                         </div>
                     </div>
@@ -220,8 +209,8 @@
                         <img src="{{ asset('frontend/BrandSparkz/assets/img/orm_3.png') }}" alt="" class="img-fluid crd_image2 mobile_none">
                         <img src="{{ asset('frontend/BrandSparkz/assets/img/orm3_mob.png') }}" alt="" class="img-fluid crd_image2 desktop_none">
                         <div class="sec4_down">
-                            <h1 class="crd4_tt">Monthly Reports</h1>
-                            <p class="crd4_pp">Lorem ipsum dolor sit amet <br class="desktop_none"> consectetur. Neque integer faucibus imperdiet turpis.</p>
+                            <h1 class="crd4_tt" data-aos="fade-up">Monthly Reports</h1>
+                            <p class="crd4_pp" data-aos="fade-up">We conduct monthly review monitoring  <br class="desktop_none">  and response management reports.</p>
     
                         </div>
                     </div>
@@ -238,25 +227,23 @@
                 <div class="inner_sec5_ulta">
                     <div class="left_sec5">
                         <div class="inin_sec5">
-                            <h1 class="sec5_tt">Digital Marketing <br><span class="span_sec5_tt">That Hits Different!</span>
+                            <h1 class="sec5_tt" data-aos="fade-up">Digital Marketing <br><span class="span_sec5_tt">That Hits Different!</span>
                             </h1>
-                            <p class="sec5_pp">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ullamcorper nunc
-                                hendrerit eget sed iaculis felis, quis viverra. Quisque donec purus ac amet fusce duis tellus
-                                facilisis pharetra..
+                            <p class="sec5_pp" data-aos="fade-up">The results speak for themselves when you work with Brand Sparkz. Get in touch today to find out more about us and how we can ignite your business ambitions. 
                             </p>
         
                             <div class="pointer_p">
                                 <div class="pointer_line">
                                     <img src="{{ asset('frontend/BrandSparkz/assets/img/pointer.svg') }}" alt="" class="img-fluid">
-                                    <p class="pointer_pp">Strategy experience and analytical expertise combine.</p>
+                                    <p class="pointer_pp" data-aos="fade-up">Expertly crafted campaigns that always deliver results. </p>
                                 </div>
                                 <div class="pointer_line">
                                     <img src="{{ asset('frontend/BrandSparkz/assets/img/pointer.svg') }}" alt="" class="img-fluid">
-                                    <p class="pointer_pp">Strategy experience and analytical expertise combine.</p>
+                                    <p class="pointer_pp" data-aos="fade-up">Tailor made and bespoke packages for maximum impact. </p>
                                 </div>
                                 <div class="pointer_line">
                                     <img src="{{ asset('frontend/BrandSparkz/assets/img/pointer.svg') }}" alt="" class="img-fluid">
-                                    <p class="pointer_pp">Strategy experience and analytical expertise combine.</p>
+                                    <p class="pointer_pp" data-aos="fade-up">Constantly tracked and analysed campaigns.</p>
                                 </div>
         
                             </div>
@@ -1092,112 +1079,114 @@
         </section>
 
         <section class="sec7_s">
+
             <div class="insec7_s">
+
                 <div>
-                    <h1 class="form_tt">Need a something <span class="span_form_tt">bespoke?</span> </h1>
-                    <p class="form_pp">Pick and choose what features you would like in your very own custom package
-                        Simply upload a document of your brief and our team will get back to you.</p>
+                    <h1 class="form_tt" data-aos="fade-up">Need a something <span class="span_form_tt">bespoke?</span> </h1>
+                    <p class="form_pp" data-aos="fade-up">We can build bespoke packages based on your unique needs as a business. <br>
+                    Simply fill in the form below and someone will come back to you. 
+                    </p>
                 </div>
-                <form class="ser_s7_content_form" id="requestform1" action="{{ route('contactus.store') }}" method="post" enctype="multipart/form-data" onsubmit="return check_agree1(this);">
+
+                
+
+
+                <form class="form_section" id="requestform1" action="{{ route('contactus.store') }}" method="post"
+                enctype="multipart/form-data" onsubmit="return check_agree1(this);">
                     @csrf
-                    <input type="hidden" name="from_page" form="requestform1" value="service">
-                    <div class="form_section">
-                        <div class="hori_hor">
-                            <div class="one_section">
-                                <p class="label_l">Full Name</p>
-                                <input type="text" id="fname" name="fname" class="input_tag"
-                                id="fullname" name="fullname" form="requestform1" required>
-
-                            </div>
-                            <div class="one_section">
-                                <p class="label_l">Email</p>
-                                <input type="email" id="Email" name="Email" class="input_tag"
-                                id="email" name="email" form="requestform1" required>
-                            </div>
-                        </div>
-                        <div class="spacer2"></div>
-                        <div class="hori_hor">
-                            <div class="one_section">
-                                <p class="label_l">Phone</p>
-                                <input type="tel" id="pno" name="pno" class="input_tag"
-                                id="phone" name="phone" form="requestform1" required>
-                            </div>
-
-                            <div class="one_section">
-                                <p class="label_l">Upload Brief</p>
-                                {{-- <div class="upload_div" onclick="field_box_file()">
-                                    <p class="upload_placeholder" id="upload_placeholder">Upload brief here</p>
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25"
-                                        fill="none">
-                                        <path
-                                            d="M5.89286 15.9289C4.29518 15.9289 3 14.9291 3 13.4631C3 11.9972 4.29518 10.8088 5.89286 10.8088C6.0015 10.8088 6.10875 10.8143 6.21429 10.825V10.8088H6.25407C6.22781 10.6155 6.21429 10.4187 6.21429 10.2189C6.21429 7.61272 8.51682 5.5 11.3571 5.5C13.2805 5.5 14.9573 6.46881 15.8395 7.90361C16.0551 7.87452 16.2756 7.85945 16.5 7.85945C18.9853 7.85945 21 9.70808 21 11.9885C21 13.8657 19.6348 15.2967 17.7656 15.7684M11.858 19.5V12.7258M11.858 12.7258L8.90625 15.5196M11.858 12.7258L14.8125 15.5196"
-                                            stroke="#3C3C3C" stroke-width="1.5" stroke-linecap="round"
-                                            stroke-linejoin="round" />
-                                    </svg>
-                                    <input type="file" class="form-control input_upload" style="display: contents;"
-                                    id="document" name="document" form="requestform1" required>
-                                </div> --}}
-                                <div class="upload_div" onclick="field_box_file()" type="button" >
-                                    <p class="upload_placeholder" id="upload_placeholder">Upload brief</p>
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
-                                    <path d="M17 9.50195C19.175 9.51395 20.353 9.61095 21.121 10.379C22 11.258 22 12.672 22 15.5V16.5C22 19.329 22 20.743 21.121 21.622C20.243 22.5 18.828 22.5 16 22.5H8C5.172 22.5 3.757 22.5 2.879 21.622C2 20.742 2 19.329 2 16.5V15.5C2 12.672 2 11.258 2.879 10.379C3.647 9.61095 4.825 9.51395 7 9.50195" stroke="url(#paint0_linear_7573_6736)" stroke-width="1.5" stroke-linecap="round"/>
-                                    <path d="M12 15.5V2.5M12 2.5L15 6M12 2.5L9 6" stroke="url(#paint1_linear_7573_6736)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                    <defs>
-                                      <linearGradient id="paint0_linear_7573_6736" x1="2" y1="9.50195" x2="13.8779" y2="27.7785" gradientUnits="userSpaceOnUse">
-                                        <stop stop-color="#8482FF"/>
-                                        <stop offset="1" stop-color="#7723FE"/>
-                                      </linearGradient>
-                                      <linearGradient id="paint1_linear_7573_6736" x1="9" y1="2.5" x2="18.8927" y2="7.06585" gradientUnits="userSpaceOnUse">
-                                        <stop stop-color="#8482FF"/>
-                                        <stop offset="1" stop-color="#7723FE"/>
-                                      </linearGradient>
-                                    </defs>
-                                  </svg>
-                                  </div>
-                                  <input type="file" class="form-control input_upload" style="display: contents;" id="document" name="document"  form="requestform1" required>
-                            </div>
+                     <input type="hidden" name="from_page" form="requestform1" value="service">
+                    <div class="hori_hor">
+                        <div class="one_section">
+                            <p class="label_l">Full Name</p>
+                            <input type="text" id="fullname" name="fullname" class="input_tag"required>
 
                         </div>
-                        <div class="spacer"></div>
-                        <div class="hori_hor">
-                            <div class="one_section">
-                                <p class="label_l">Additional Information</p>
-                                <textarea class="textarea_t" id="message" name="message" form="requestform1" required>
-                                    </textarea>
+                        <div class="one_section">
+                            <p class="label_l">Email</p>
+                            <input type="text" id="email" name="email" class="input_tag" required>
 
-                            </div>
-
-                            <div class="for_robot_checkbox">
-                                <div class="c-checkbox">
-                                    <div class="c-div">
-                                        <label class="d-flex justify-content-center justify-content-lg-start">
-                                            <input type="checkbox" id="terms" name="terms" form="requestform1">
-                                            <label for="terms"></label>
-                                        </label>
-                                    </div>
-                                    <div class="c-text">
-                                        <p class="login_strong">By ticking this box, you agree to the<br> <span
-                                                class="blue_text"><a href="{{ route('termsandconditions') }}">Terms & Conditions</span> & 
-                                                <span class="blue_text"><a href="{{ route('privacypolicy') }}">Privacy Policy</span></p>
-                                    </div>
-                                </div>
-                                <div class="spacer2"></div>
-                                {{-- <img class="notrobot_1" src="{{ asset('frontend/BrandSparkz/assets/img/not_a_robot.png') }}"> --}}
-                                <script src="https://js.hcaptcha.com/1/api.js" async defer></script>
-                                <div class="h-captcha" form="requestform1" data-sitekey="{{ env('H_CAPTCHA_SITE_KEY') }}"></div>
-                            </div>
                         </div>
+
                     </div>
-                    <button class="btn btn_global form_btn_wid" type="submit" form="requestform1">
-                        <img src="{{ asset('frontend/BrandSparkz/assets/img/btn_primary_pattern.png') }}') }}" alt="" class="img-fluid btn_global_pattern">
-                        <div class="btn_global_inner w-100" type="submit" form="requestform1">
-                            <p class="cart_text">Submit Request</p>
+                    <div class="spacer2"></div>
+
+                    <div class="hori_hor">
+                        <div class="one_section">
+                            <p class="label_l">Phone</p>
+                            <input type="text" id="phone" name="phone" class="input_tag" required>
+
                         </div>
-                    </button>
+                        <div class="one_section">
+                            <p class="label_l">Upload Brief</p>
+                            <div class="upload_div" onclick="field_box_file()">
+                                <p class="upload_placeholder" id="upload_placeholder">Upload brief here</p>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25"
+                                    fill="none">
+                                    <path
+                                        d="M5.89286 15.9289C4.29518 15.9289 3 14.9291 3 13.4631C3 11.9972 4.29518 10.8088 5.89286 10.8088C6.0015 10.8088 6.10875 10.8143 6.21429 10.825V10.8088H6.25407C6.22781 10.6155 6.21429 10.4187 6.21429 10.2189C6.21429 7.61272 8.51682 5.5 11.3571 5.5C13.2805 5.5 14.9573 6.46881 15.8395 7.90361C16.0551 7.87452 16.2756 7.85945 16.5 7.85945C18.9853 7.85945 21 9.70808 21 11.9885C21 13.8657 19.6348 15.2967 17.7656 15.7684M11.858 19.5V12.7258M11.858 12.7258L8.90625 15.5196M11.858 12.7258L14.8125 15.5196"
+                                        stroke="#3C3C3C" stroke-width="1.5" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+                            </div>
+
+                            <input type="file" class="form-control input_upload" style="display: contents;"
+                                id="document" name="document" >
+                        </div>
+
+                    </div>
+                    <div class="spacer"></div>
+                    <div class="hori_hor">
+                        <div class="one_section">
+                            <p class="label_l">Additional Information</p>
+                            <textarea class="textarea_t" id="message" name="message"></textarea>
+
+                        </div>
+
+                        <div class="for_robot_checkbox">
+                            <div class="c-checkbox">
+                                <div class="c-div">
+                                    <label class="d-flex justify-content-center justify-content-lg-start">
+                                        <input type="checkbox" id="terms" name="terms">
+                                        <label for="terms"></label>
+                                    </label>
+                                </div>
+                                <div class="c-text">
+                                    <p class="login_strong">By ticking this box, you agree to the<br> <a href="{{ route('termsandconditions') }}"
+
+                                            class="blue_text">Terms & Conditions</a> & <a href="{{ route('privacypolicy') }}" class="blue_text">Privacy
+                                            Policy</a></p>
+                                </div>
+                            </div>
+    
+                            <div class="spacer2"></div>
+    
+                            <!--<img class="notrobot_1" src="./assets/img/not_a_robot.png">-->
+                            <script src="https://js.hcaptcha.com/1/api.js" async defer></script>
+                            <div class="h-captcha" data-sitekey="{{ env('H_CAPTCHA_SITE_KEY') }}"></div>
+                        </div>
+
+                    </div>
                 </form>
+
+
+                <button class="btn btn_global form_btn_wid" type="submit" form="requestform1">
+                    <img src="{{ asset('frontend/BrandSparkz/assets/img/btn_primary_pattern.png') }}" alt="" class="img-fluid btn_global_pattern">
+                    <div class="btn_global_inner w-100">
+                        
+                        <p class="cart_text">Submit Request</p>
+                    </div>
+            </button>
+
+           
+
             </div>
-        </section>
+
     </section>
+    </section>
+    @endsection
+
+@section('scripts')
 
     <script> 
          function field_box_file() {
@@ -1216,52 +1205,65 @@
     });
     </script>
         <script>
-            function check_agree1(form) {
-                var response = grecaptcha.getResponse();
-                console.log(form.email.valid);
-                if (form.fullname && form.email && form.phone && form.message && form.terms.checked) {
-    
-                    $('#submit-btn').attr('disabled', true);
-                    return true;
-                } else if (!form.fullname.value) {
-                    Swal.fire({
-                        icon: 'error',
-                        title: 'Oops...',
-                        text: 'Please Enter Fullname'
-                    })
-                    return false;
-                } else if (!form.email.value) {
-                    Swal.fire({
-                        icon: 'error',
-                        title: 'Oops...',
-                        text: 'Please Enter Email'
-                    })
-                    return false;
-                } else if (!form.phone.value) {
-                    Swal.fire({
-                        icon: 'error',
-                        title: 'Oops...',
-                        text: 'Please Enter Phone'
-                    })
-                    return false;
-                } else if (!form.message.value) {
-                    Swal.fire({
-                        icon: 'error',
-                        title: 'Oops...',
-                        text: 'Please Enter Comments'
-                    })
-                    return false;
-                } else if (!form.terms.checked) {
-                    Swal.fire({
-                        icon: 'error',
-                        title: 'Oops...',
-                        text: 'Please Accept T&C'
-                    })
-                    return false;
-                }
+        function check_agree1(form) {
+            if (!form.fullname.value) {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Oops...',
+                    text: 'Please Enter Fullname'
+                });
                 return false;
             }
-        </script>
+
+            if (!form.email.value) {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Oops...',
+                    text: 'Please Enter Email'
+                });
+                return false;
+            }
+
+            if (!form.phone.value) {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Oops...',
+                    text: 'Please Enter Phone'
+                });
+                return false;
+            }
+
+            if (!form.document.value) {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Oops...',
+                    text: 'Please Upload a Document'
+                });
+                return false;
+            }
+
+            if (!form.message.value) {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Oops...',
+                    text: 'Please Enter Additional Information'
+                });
+                return false;
+            }
+
+            if (!form.terms.checked) {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Oops...',
+                    text: 'Please Accept Terms & Conditions'
+                });
+                return false;
+            }
+
+            return true;
+        }
+
+</script>
         <script>
                 $(document).ready(function () {
                     const a = document.querySelectorAll(".service_table tbody tr td:nth-child(2)");

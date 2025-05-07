@@ -1,15 +1,6 @@
 @extends('frontend.layouts.app')
 @section('content')
 
-
-
-{{-- NEW CODE STARTS HERE --}}
-
-
-
-
-
-{{--new code starts here --}}
 <section>
     <section class="sec1_s">
         <video class="bg-image d-lg-block d-md-block d-none" loop="" muted="" autoplay="" style="object-fit: cover;">
@@ -20,17 +11,16 @@
         </video>
 
         <div class="sec1_video_wd">
-            <h1 class="main_tt">
+            <h1 class="main_tt" data-aos="fade-up">
                 Search Engine Optimisation
             </h1>
-            <p class="main_pp">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dictum nunc eget molestie
-                duis nunc iaculis morbi vestibulum. Massa volutpat nisi, ultrices aenean pellentesque ornare.</p>
+            <p class="main_pp" data-aos="fade-up">Ranking on search engines isn’t luck – it is carefully planned strategy. Our SEO services will help your website rise to the top and stay there. </p>
             <button class="btn btn_global" onclick="scrollToDiv()">
                 <img src="{{ asset('frontend/BrandSparkz/assets/img/btn_primary_pattern.png') }}" alt=""
                     class="img-fluid btn_global_pattern">
                 <div class="btn_global_inner w-100">
 
-                    <p class="cart_text">Explore our pricing</p>
+                    <p class="cart_text" data-aos="fade-up">Explore our pricing</p>
                     <img src="{{ asset('frontend/BrandSparkz/assets/img/down_arrow.svg') }}" alt=""
                         class="img-fluid cart_logo">
                 </div>
@@ -43,7 +33,7 @@
                     <circle cx="19.5" cy="19.5" r="19.5" fill="white" fill-opacity="0.56" />
                     <circle cx="19.5" cy="19.5" r="9.5" fill="white" />
                 </svg>
-                <p class="prop_pp ">Keyword Analysis</p>
+                <p class="prop_pp " data-aos="fade-up">Keyword Analysis</p>
             </div>
         </div>
 
@@ -53,13 +43,13 @@
                     <circle cx="19.5" cy="19.5" r="19.5" fill="white" fill-opacity="0.56" />
                     <circle cx="19.5" cy="19.5" r="9.5" fill="white" />
                 </svg>
-                <p class="prop_pp ">Technical Optimisation</p>
+                <p class="prop_pp " data-aos="fade-up">Technical Optimisation</p>
             </div>
         </div>
 
         <div class="mobile_none">
             <div class="prop3">
-                <p class="prop_pp ">Link Building</p>
+                <p class="prop_pp " data-aos="fade-up">Link Building</p>
                 <svg xmlns="http://www.w3.org/2000/svg" width="39" height="39" viewBox="0 0 39 39" fill="none">
                     <circle cx="19.5" cy="19.5" r="19.5" fill="white" fill-opacity="0.56" />
                     <circle cx="19.5" cy="19.5" r="9.5" fill="white" />
@@ -81,27 +71,19 @@
                 <div class="left_inner2">
 
                     <div class="inin_div">
-                        <h1 class="div2_tt">
+                        <h1 class="div2_tt" data-aos="fade-up">
                             What is search engine optimization?
                         </h1>
-                        <p class="div2_pp">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ullamcorper nunc
-                            hendrerit eget sed iaculis felis, quis viverra. Quisque donec purus ac amet fusce duis
-                            tellus facilisis pharetra. Imperdiet pellentesque nisl in tellus. Consectetur magnis at
-                            aliquet sed elementum. Pellentesque volutpat a vitae risus nunc et pharetra leo.
-                            Tristique sem mi porttitor morbi vel enim proin. Nisl ac neque, id euismod.</p>
+                        <p class="div2_pp" data-aos="fade-up">SEO is the backbone of any digital strategy which ensures long-term digital success. It’s how your audience finds you, how you compete in your industry, and how you build sustainable and organic traffic to your website. At Brand Sparkz we optimise every element of your online presence to improve your online visibility, drive qualified traffic, and help you grow your business organically. </p>
 
                     </div>
                 </div>
                 <div class="right_inner2">
                     <div class="inin_div">
-                        <h1 class="div2_tt">
-                            get to the top of the search engines
+                        <h1 class="div2_tt" data-aos="fade-up">
+                            Get to the top of search engines 
                         </h1>
-                        <p class="div2_pp">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ullamcorper nunc
-                            hendrerit eget sed iaculis felis, quis viverra. Quisque donec purus ac amet fusce duis
-                            tellus facilisis pharetra. Imperdiet pellentesque nisl in tellus. Consectetur magnis at
-                            aliquet sed elementum. Pellentesque volutpat a vitae risus nunc et pharetra leo.
-                            Tristique sem mi porttitor morbi vel enim proin. Nisl ac neque, id euismod.</p>
+                        <p class="div2_pp" data-aos="fade-up">Seventy-five per cent of customers will never scroll past the first page of search results, and our SEO campaigns will help you get there. Moreover, we bring in users who are actively searching for your products and services to bring to them to a well-optimised site which not only ranks well but also earns trust from both search engines and users. </p>
 
                     </div>
                 </div>
@@ -114,10 +96,8 @@
     <section class="sec3_s">
 
         <div class="sec3_1div">
-            <h1 class="sec3_tt">How We <span class="sec3_spantt">Make<br class="desktop_none"> It Happen</span></h1>
-            <p class="sec_pp">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quam leo velit mi diam sed
-                viverra aenean. Ut et velit molestie consectetur pharetra, platea convallis. Eleifend porttitor
-                viverra sed lectus ipsum vitae ipsum blandit.</p>
+            <h1 class="sec3_tt" data-aos="fade-up">How We <span class="sec3_spantt">Make<br class="desktop_none"> It Happen</span></h1>
+            <p class="sec_pp" data-aos="fade-up">At Brand Sparkz we take time to get to know you and your business so we know what is likely to resonate with your audience and ignite new interest within your customer base. </p>
         </div>
 
         <div class="cards_div container custom_padding">
@@ -129,12 +109,12 @@
                 <img src="{{ asset('frontend/BrandSparkz/assets/img/mob_crd.png') }}" alt=""
                     class="img-fluid crd_image desktop_none">
                 <div class="context_crd">
-                    <h1 class="crd_tt">
+                    <h1 class="crd_tt" data-aos="fade-up">
                         Creation
                     </h1>
 
-                    <p class="crd_pp">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit arcu aliquam vitae.
+                    <p class="crd_pp" data-aos="fade-up">
+                        Our talented team of creatives will create bespoke plans to meet your needs. 
                     </p>
 
                 </div>
@@ -147,12 +127,12 @@
                 <img src="{{ asset('frontend/BrandSparkz/assets/img/mob_crd2.png') }}" alt=""
                     class="img-fluid crd_image desktop_none">
                 <div class="context_crd">
-                    <h1 class="crd_tt">
+                    <h1 class="crd_tt" data-aos="fade-up">
                         Communication
                     </h1>
 
-                    <p class="crd_pp">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit arcu aliquam vitae.
+                    <p class="crd_pp" data-aos="fade-up">
+                        Communication is key and we keep you informed every step of the way. 
                     </p>
 
                 </div>
@@ -165,12 +145,12 @@
                 <img src="{{ asset('frontend/BrandSparkz/assets/img/mob_crd3.png') }}" alt=""
                     class="img-fluid crd_image desktop_none">
                 <div class="context_crd">
-                    <h1 class="crd_tt">
+                    <h1 class="crd_tt" data-aos="fade-up">
                         Development
                     </h1>
 
-                    <p class="crd_pp">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit arcu aliquam vitae.
+                    <p class="crd_pp" data-aos="fade-up">
+                        Our development team work tirelessly in the background to build campaigns that deliver. 
                     </p>
 
                 </div>
@@ -183,12 +163,12 @@
                 <img src="{{ asset('frontend/BrandSparkz/assets/img/mob_crd4.png') }}" alt=""
                     class="img-fluid crd_image desktop_none">
                 <div class="context_crd">
-                    <h1 class="crd_tt">
+                    <h1 class="crd_tt" data-aos="fade-up">
                         Results
                     </h1>
 
-                    <p class="crd_pp">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit arcu aliquam vitae.
+                    <p class="crd_pp" data-aos="fade-up">
+                        The results speak for themselves with ROI and boosted leads and conversions. 
                     </p>
 
                 </div>
@@ -203,10 +183,8 @@
         <div class="container custom_padding2">
             <div class="sec4_1">
 
-                <h1 class="sec4_tt">Powering Brands<br> <span class="sec4_tt_span">That Mean Business</span></h1>
-                <p class="sec4_pp">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ullamcorper nunc hendrerit
-                    eget sed iaculis felis, quis viverra. Quisque donec purus ac amet fusce duis tellus facilisis
-                    pharetra. Imperdiet pellentesque nisl in tellus. Consectetur magnis at aliquet sed. </p>
+                <h1 class="sec4_tt" data-aos="fade-up">What’s included <br> <span class="sec4_tt_span">with SEO  </span></h1>
+                <p class="sec4_pp" data-aos="fade-up">Whether you’re looking to get your website ranked locally, nationally, or globally, our SEO strategies will align with your goals and help you to deliver real and lasting results while at the same time strengthening all your other marketing efforts.  </p>
 
             </div>
 
@@ -217,9 +195,8 @@
                     <img src="{{ asset('frontend/BrandSparkz/assets/img/seo1_mob.png') }}" alt=""
                         class="img-fluid crd_image2 desktop_none">
                     <div class="sec4_down">
-                        <h1 class="crd4_tt">monthly reports</h1>
-                        <p class="crd4_pp">Lorem ipsum dolor sit amet <br class="desktop_none"> consectetur. Neque
-                            integer faucibus imperdiet turpis.</p>
+                        <h1 class="crd4_tt" data-aos="fade-up">monthly reports</h1>
+                        <p class="crd4_pp" data-aos="fade-up">Monthly reports and analytics  <br class="desktop_none">to track your progress.</p>
 
                     </div>
                 </div>
@@ -230,9 +207,8 @@
                     <img src="{{ asset('frontend/BrandSparkz/assets/img/seo2_mob.png') }}" alt=""
                         class="img-fluid crd_image2 desktop_none">
                     <div class="sec4_down">
-                        <h1 class="crd4_tt">Competitor Analysis</h1>
-                        <p class="crd4_pp">Lorem ipsum dolor sit amet <br class="desktop_none"> consectetur. Neque
-                            integer faucibus imperdiet turpis.</p>
+                        <h1 class="crd4_tt" data-aos="fade-up">Competitor Analysis</h1>
+                        <p class="crd4_pp" data-aos="fade-up">Competitor analysis helps you  <br class="desktop_none">to stay ahead of the competition. </p>
 
                     </div>
                 </div>
@@ -243,9 +219,8 @@
                     <img src="{{ asset('frontend/BrandSparkz/assets/img/seo3_mob.png') }}" alt=""
                         class="img-fluid crd_image2 desktop_none">
                     <div class="sec4_down">
-                        <h1 class="crd4_tt">Keyword analysis</h1>
-                        <p class="crd4_pp">Lorem ipsum dolor sit amet <br class="desktop_none"> consectetur. Neque
-                            integer faucibus imperdiet turpis.</p>
+                        <h1 class="crd4_tt" data-aos="fade-up">Keyword analysis</h1>
+                        <p class="crd4_pp" data-aos="fade-up">Our keyword analysis will help  <br class="desktop_none"> you deliver lasting results. </p>
 
                     </div>
                 </div>
@@ -261,29 +236,26 @@
             <div class="inner_sec5_ulta">
                 <div class="left_sec5">
                     <div class="inin_sec5">
-                        <h1 class="sec5_tt">Digital Marketing <br><span class="span_sec5_tt">That Hits Different!</span>
+                        <h1 class="sec5_tt" data-aos="fade-up">Digital Marketing <br><span class="span_sec5_tt">That Hits Different!</span>
                         </h1>
-                        <p class="sec5_pp">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ullamcorper nunc
-                            hendrerit eget sed iaculis felis, quis viverra. Quisque donec purus ac amet fusce duis
-                            tellus
-                            facilisis pharetra..
+                        <p class="sec5_pp" data-aos="fade-up">The results speak for themselves when you work with Brand Sparkz. Get in touch today to find out more about us and how we can ignite your business ambitions. 
                         </p>
 
                         <div class="pointer_p">
                             <div class="pointer_line">
                                 <img src="{{ asset('frontend/BrandSparkz/assets/img/pointer.svg') }}" alt=""
                                     class="img-fluid">
-                                <p class="pointer_pp">Strategy experience and analytical expertise combine.</p>
+                                <p class="pointer_pp" data-aos="fade-up">Expertly crafted campaigns that always deliver results.</p>
                             </div>
                             <div class="pointer_line">
                                 <img src="{{ asset('frontend/BrandSparkz/assets/img/pointer.svg') }}" alt=""
                                     class="img-fluid">
-                                <p class="pointer_pp">Strategy experience and analytical expertise combine.</p>
+                                <p class="pointer_pp" data-aos="fade-up">Tailor made and bespoke packages for maximum impact. </p>
                             </div>
                             <div class="pointer_line">
                                 <img src="{{ asset('frontend/BrandSparkz/assets/img/pointer.svg') }}" alt=""
                                     class="img-fluid">
-                                <p class="pointer_pp">Strategy experience and analytical expertise combine.</p>
+                                <p class="pointer_pp" data-aos="fade-up">Constantly tracked and analysed campaigns.</p>
                             </div>
 
                         </div>
@@ -293,7 +265,7 @@
                         <img src="{{ asset('frontend/BrandSparkz/assets/img/btn_primary_pattern2.png') }}" alt=""
                             class="img-fluid btn_global_pattern2">
                         <div class="btn_global_inner2 on_phone">
-                            <p class="cart_text">Learn more about us</p>
+                            <p class="cart_text" data-aos="fade-up">Learn more about us</p>
                             <img src="{{ asset('frontend/BrandSparkz/assets/img/up_right.svg') }}" alt=""
                                 class="img-fluid cart_logo">
                         </div>
@@ -1382,9 +1354,10 @@
             <div class="insec7_s">
 
                 <div>
-                    <h1 class="form_tt">Need a something <span class="span_form_tt">bespoke?</span> </h1>
-                    <p class="form_pp">Pick and choose what features you would like in your very own custom package
-                        Simply upload a document of your brief and our team will get back to you.</p>
+                    <h1 class="form_tt" data-aos="fade-up">Need something <span class="span_form_tt">bespoke?</span> </h1>
+                    <p class="form_pp" data-aos="fade-up">We can build bespoke packages based on your unique needs as a business.  <br>
+                        Simply fill in the form below and someone will come back to you. 
+                        </p>
                 </div>
 
                 
@@ -1393,6 +1366,7 @@
                 <form class="form_section" id="requestform1" action="{{ route('contactus.store') }}" method="post"
                 enctype="multipart/form-data" onsubmit="return check_agree1(this);">
                     @csrf
+                    <input type="hidden" name="from_page" form="requestform1" value="service">
                     <div class="hori_hor">
                         <div class="one_section">
                             <p class="label_l">Full Name</p>
@@ -1436,12 +1410,11 @@
                     <div class="hori_hor">
                         <div class="one_section">
                             <p class="label_l">Additional Information</p>
-                            <textarea class="textarea_t" id="message" name="message">
-                                </textarea>
+                            <textarea class="textarea_t" id="message" name="message"></textarea>
 
                         </div>
 
-                        <div class="for_robot_checkbox">
+                        <div class="for_robot_checkbox_seo">
                             <div class="c-checkbox">
                                 <div class="c-div">
                                     <label class="d-flex justify-content-center justify-content-lg-start">
@@ -1484,9 +1457,7 @@
 </section>
 
 @endsection
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
-    integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
-    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
 @section('scripts')
 <script>
     function field_box_file() {

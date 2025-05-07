@@ -1,4 +1,6 @@
 @extends('frontend.layouts.app')
+
+
 @section('content')
     @if (Session::has('order_code'))
         @php
@@ -28,7 +30,7 @@
             <img src="{{ asset('frontend/BrandSparkz/assets/img/intersect.png') }}" alt="" class="intersect">
             <div class="container">
                 <div class="terms_div1">
-                    <h3 class="terms_heading">Payment Successful</h3>
+                    <h3 class="terms_heading">Payment <br class="desktop_none"> Successful</h3>
                     <p class="para_terms">Lorem ipsum dolor sit amet consectetur. Purus eget arcu non suscipit id.</p>
                 </div>
             </div>
@@ -97,6 +99,30 @@
     </section>
 
 @endsection
-@section('script')
+@section('scripts')
+
+<script>
+      const logo = document.getElementById('header_logo');
+      console.log(window.location.href)
+      logo.src="{{ asset('frontend/BrandSparkz/assets/img/header_bg_trans_logo_.svg') }}";
+      
+       const navbar = document.getElementById('header'); 
+         navbar.classList.add('white_header'); 
+        window.addEventListener('scroll', function () {
+          const logochange = document.getElementById('header_logo');
+             
+        
+          if (window.scrollY > 100) {
+            
+            logochange.src="{{ asset('frontend/BrandSparkz/assets/img/header_bg_dark_logo.svg') }}";
+             //navbar.classList.add('white_header'); 
+           } else {
+             
+             logochange.src="{{ asset('frontend/BrandSparkz/assets/img/header_bg_trans_logo_.svg') }}";
+              //navbar.classList.remove('white_header');  
+          }
+       });
+</script>
+
    
 @endsection

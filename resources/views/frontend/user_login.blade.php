@@ -1,5 +1,12 @@
 @extends('frontend.layouts.app')
 
+<style>
+    
+    .btn_header_link, .btn_header_drop {
+        color: #3c3c3c !important;
+    }
+</style>
+
 @section('content')
 
 <section class="register_page">
@@ -14,7 +21,7 @@
             <form class="cutter_main_div_inner_right_login" id="loginform" role="form" action="{{ route('login') }}"
                 method="POST">
                 @csrf
-                <h1 class="register_title">Welcome Back to <span>brand Sparkz!</span></h1>
+                <h1 class="register_title">Welcome Back <br class="desktop_none">to <span>brand Sparkz!</span></h1>
 
                 <div class="contact_input_div">
                     <p class="register_input_title">Email</p>
@@ -28,15 +35,15 @@
 
 
                 <div class="contact_input_div">
-                    <div class="c-checkbox mb-3">
-                        <div class="c-div">
+                    <div class="c-checkbox_m3 mb-3">
+                        <div class="c-div_m3">
                             <label class="d-flex justify-content-center justify-content-lg-start">
                                 <input type="checkbox" id="terms" name="terms">
                                 <label for="terms"></label>
                             </label>
                         </div>
-                        <div class="c-text">
-                            <p class="login_strong">Remember me</p>
+                        <div class="c-text_m3">
+                            <p class="login_strong_m3">Remember me</p>
                         </div>
                     </div>
                 </div>
@@ -53,8 +60,9 @@
                     </button>
                 </div>
                 <div class="w-100">
-                    <button class="btn btn_forgot_pass_link" data-bs-toggle="modal" data-bs-target="#staticBackdrop"
-                       >Forgot Password?</button>
+                    <button class="btn btn_forgot_pass_link" data-bs-toggle="modal" data-bs-target="#staticBackdrop2">
+                       Forgot Password?
+                    </button>
                 </div>
             </form>
             <div class="cutter_main_div_inner_left mobile_none">
@@ -97,42 +105,53 @@
     </div>
 </section>
 
-<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered custom-modal-width2">
-      <div class="modal-content custom_modal">
-        <h1 class="modal_tt">
-           Forget password
-        </h1>
+            <div class="modal fade" id="staticBackdrop2"  tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered custom-modal-width3">
+                    @if (session('status'))
+                        <div class="alert alert-success" role="alert">
+                            {{ session('status') }}
+                        </div>
+                    @endif
+                   
+                       <div class="modal-content custom_modal3 ">
+                        <button type="button" class="btn-close position-absolute top-0 end-0 m-3" data-bs-dismiss="modal" aria-label="Close"></button>
+                        <form method="POST" action="{{ route('password.email') }}">
+                           @csrf
 
-        @if (session('status'))
-            <div class="alert alert-success" role="alert">
-                {{ session('status') }}
-            </div>
-        @endif
-        <form method="POST" action="{{ route('password.email') }}">
-            @csrf
-        <div class="contact_input_div">
-            <p class="register_input_title">Email</p>
-            <input type="email" id="email" class="form-control input_global @error('email') is-invalid @enderror " name="email" value="{{ old('email') }}" required autocomplete="email" autofocus >
-                @error('email')
-                    <span class="invalid-feedback" role="alert">
-                        <strong>{{ $message }}</strong>
-                    </span>
-                @enderror
-        </div>
-        <div class="buttons_wala">
-            <button class="btn btn_global2 on_phone" type="submit">
-                <img src="./assets/img/btn_primary_pattern2.png" alt="" class="img-fluid btn_global_pattern2">
-                <div class="btn_global_inner2 on_phone">
-                    <p class="cart_text">continue shopping</p>
+                        <h1 class="modal_tt">
+                            Forgot Password
+                        </h1>
+                         
+    
+                        <p class="modal_pp2" style="margin-bottom: 24px;">
+                            Lorem ipsum dolor sit amet consectetur. Habitant arcu maecenas amet in mauris a lobortis etiam. Ultricies et.
+                        </p>
+    
+                        <p style="color: var(--Neutral-800, #3C3C3C);
+                        font-family: Poppins;
+                        font-size: 16px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: 158%; margin-bottom: 8px; width: 100%;">Email</p>
+                        <input type="email" id="email" class="form-control input_global @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus=""style="height:62px; margin-bottom:24px">
+                            @error('email')
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                            @enderror
+    
+                        <button class="btn btn_global" type="submit">
+                            <img src="{{ asset('frontend/BrandSparkz/assets/img/btn_primary_pattern.png') }}" alt="" class="img-fluid btn_global_pattern">
+                            <div class="btn_global_inner w-100">
+                                <p class="cart_text" >Reset Password</p>
+                                <img src="{{ asset('frontend/BrandSparkz/assets/img/cross.svg') }}" alt="" class="img-fluid cart_logo">
+                            </div>
+                       </button>
+                        </form>
+                      </div>
+                    
                 </div>
-            </button>
-        </div>
-        </form>
-       
-      </div>
-    </div>
-  </div>
+            </div>
 
 
 @endsection
@@ -170,4 +189,53 @@
     });
 
 </script>
+
+<script>
+      const logo = document.getElementById('header_logo');
+      console.log(window.location.href)
+      logo.src="{{ asset('frontend/BrandSparkz/assets/img/header_bg_dark_logo.svg') }}";
+      
+       const navbar = document.getElementById('header'); 
+         navbar.classList.add('white_header'); 
+        window.addEventListener('scroll', function () {
+          const logochange = document.getElementById('header_logo');
+             
+        
+          if (window.scrollY > 100) {
+            
+            logochange.src="{{ asset('frontend/BrandSparkz/assets/img/header_bg_dark_logo.svg') }}";
+             //navbar.classList.add('white_header'); 
+           } else {
+             
+             logochange.src="{{ asset('frontend/BrandSparkz/assets/img/header_bg_dark_logo.svg') }}";
+              //navbar.classList.remove('white_header');  
+          }
+       });
+</script>
+
+
+<script>
+
+    $(document).ready(function () {
+        const buttons = document.querySelectorAll('.btn_global2');
+
+        buttons.forEach(button => {
+            const img = button.querySelector('.btn_global_pattern2');
+
+            const originalSrc = "{{ asset('frontend/BrandSparkz/assets/img/btn_primary_pattern_dark.png') }}";
+            const hoverSrc = "{{ asset('frontend/BrandSparkz/assets/img/btn_primary_pattern.png') }}";
+
+            if (img) {
+                button.addEventListener('mouseover', () => {
+                    img.src = hoverSrc;
+                });
+
+                button.addEventListener('mouseout', () => {
+                    img.src = originalSrc;
+                });
+            }
+        });
+    });
+</script>
+
 @endsection

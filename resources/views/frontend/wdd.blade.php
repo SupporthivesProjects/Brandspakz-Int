@@ -14,17 +14,17 @@
             </video>
 
             <div class="sec1_video_wd">
-                <h1 class="main_tt">
+                <h1 class="main_tt" data-aos="fade-up">
                     Web Design and<br>Development
                 </h1>
-                <p class="main_pp">Capture your audience's attention with a professionally designed and developed website.
+                <p class="main_pp" data-aos="fade-up">Your website is your digital shop front, and at Brand Sparkz we make sure it looks amazing, works flawlessly, and continuously drives results. 
                 </p>
                 <button class="btn btn_global"
                     onclick="document.getElementById('socialtable').scrollIntoView({ behavior: 'smooth' });">
                     <img src="{{ asset('frontend/BrandSparkz/assets/img/btn_primary_pattern.png') }}" alt=""
                         class="img-fluid btn_global_pattern">
                     <div class="btn_global_inner w-100">
-                        <p class="cart_text">Explore our pricing</p>
+                        <p class="cart_text" data-aos="fade-up">Explore our pricing</p>
                         <img src="{{ asset('frontend/BrandSparkz/assets/img/down_arrow.svg') }}" alt=""
                             class="img-fluid cart_logo">
                     </div>
@@ -38,7 +38,7 @@
                         <circle cx="19.5" cy="19.5" r="19.5" fill="white" fill-opacity="0.56" />
                         <circle cx="19.5" cy="19.5" r="9.5" fill="white" />
                     </svg>
-                    <p class="prop_pp">Personalized Domain Name</p>
+                    <p class="prop_pp" data-aos="fade-up">Personalized Domain Name</p>
                 </div>
             </div>
 
@@ -49,13 +49,13 @@
                         <circle cx="19.5" cy="19.5" r="19.5" fill="white" fill-opacity="0.56" />
                         <circle cx="19.5" cy="19.5" r="9.5" fill="white" />
                     </svg>
-                    <p class="prop_pp">SSL Certificate</p>
+                    <p class="prop_pp" data-aos="fade-up">SSL Certificate</p>
                 </div>
             </div>
 
             <div class="mobile_none">
                 <div class="prop3">
-                    <p class="prop_pp">Search Engine Optimization</p>
+                    <p class="prop_pp" data-aos="fade-up">Search Engine Optimization</p>
                     <svg xmlns="http://www.w3.org/2000/svg" width="39" height="39" viewBox="0 0 39 39"
                         fill="none">
                         <circle cx="19.5" cy="19.5" r="19.5" fill="white" fill-opacity="0.56" />
@@ -74,26 +74,18 @@
                 <div class="inner_sec2">
                     <div class="left_inner2">
                         <div class="inin_div">
-                            <h1 class="div2_tt">
+                            <h1 class="div2_tt" data-aos="fade-up">
                                 What is web design and web development?
                             </h1>
-                            <p class="div2_pp">The Push Dynamics team of web design and development experts can build
-                                websites which will highlight your unique propositions as a business. Our team have years of
-                                experience in building websites for specific and niche markets. We will analyse your
-                                industry to build professional and relevant websites with ongoing site maintenance to make
-                                sure your brand always makes a positive first impression.</p>
+                            <p class="div2_pp" data-aos="fade-up">In the digital world where first impressions happen in seconds, great website design is much more than aesthetics. Our websites are all about creating a user experience that builds trust, tells your story, and converts visitors into paying customers. At Brand Sparkz we are specialists in crafting modern, responsive websites that align with your brand and support your marketing goals. </p>
                         </div>
                     </div>
                     <div class="right_inner2">
                         <div class="inin_div">
-                            <h1 class="div2_tt">
+                            <h1 class="div2_tt" data-aos="fade-up">
                                 SEO Focused web design and development
                             </h1>
-                            <p class="div2_pp">It takes around 0.5 seconds to capture your audience's attention and for them
-                                to form an opinion about your brand when they visit your website. With a professionally
-                                designed website which acts as the backbone of your business, you can create a unique online
-                                experience for your clients, and strengthen your brand's reputation in the highly
-                                competitive and saturated digital landscape.</p>
+                            <p class="div2_pp" data-aos="fade-up">Our websites are built with search engines in mind, giving your business a strong foundation for search engine ranking and discoverability. Every element of our websites are designed to guide the customer towards action to drive results for your business. With 75% of users saying they judge a businesses’ credibility based on its website alone, we make sure your first impression counts. </p>
                         </div>
                     </div>
                 </div>
@@ -102,9 +94,8 @@
 
         <section class="sec3_s">
             <div class="sec3_1div">
-                <h1 class="sec3_tt">How We <span class="sec3_spantt">Make<br class="desktop_none"> It Happen</span></h1>
-                <p class="sec_pp">At Push Dynamics we take time to get to know you as a business to understand your
-                    individual objectives and costs, from which we develop bespoke digital marketing packages.</p>
+                <h1 class="sec3_tt" data-aos="fade-up">How We <span class="sec3_spantt">Make<br class="desktop_none"> It Happen</span></h1>
+                <p class="sec_pp" data-aos="fade-up">At Brand Sparkz we take time to get to know you and your business so we know what is likely to resonate with your audience and ignite new interest within your customer base. </p>
             </div>
 
             <div class="cards_div container custom_padding">
@@ -114,11 +105,11 @@
                     <img src="{{ asset('frontend/BrandSparkz/assets/img/mob_crd.png') }}" alt=""
                         class="img-fluid crd_image desktop_none">
                     <div class="context_crd">
-                        <h1 class="crd_tt">
+                        <h1 class="crd_tt" data-aos="fade-up">
                             Creation
                         </h1>
-                        <p class="crd_pp">
-                            We specialise in creating winning campaigns for businesses of all sizes.
+                        <p class="crd_pp" data-aos="fade-up">
+                            Our talented team of creatives will create bespoke plans to meet your needs. 
                         </p>
                     </div>
                 </div>
@@ -129,11 +120,11 @@
                     <img src="{{ asset('frontend/BrandSparkz/assets/img/mob_crd2.png') }}" alt=""
                         class="img-fluid crd_image desktop_none">
                     <div class="context_crd">
-                        <h1 class="crd_tt">
+                        <h1 class="crd_tt" data-aos="fade-up">
                             Communication
                         </h1>
-                        <p class="crd_pp">
-                            Communication and updating our clients is key to all our campaigns.
+                        <p class="crd_pp" data-aos="fade-up">
+                            Communication is key and we keep you informed every step of the way. 
                         </p>
                     </div>
                 </div>
@@ -144,11 +135,11 @@
                     <img src="{{ asset('frontend/BrandSparkz/assets/img/mob_crd3.png') }}" alt=""
                         class="img-fluid crd_image desktop_none">
                     <div class="context_crd">
-                        <h1 class="crd_tt">
+                        <h1 class="crd_tt" data-aos="fade-up">
                             Development
                         </h1>
-                        <p class="crd_pp">
-                            We take time to develop tailor made solutions which will work for you.
+                        <p class="crd_pp" data-aos="fade-up">
+                            Our development team work tirelessly in the background to build campaigns that deliver. 
                         </p>
                     </div>
                 </div>
@@ -159,11 +150,11 @@
                     <img src="{{ asset('frontend/BrandSparkz/assets/img/mob_crd4.png') }}" alt=""
                         class="img-fluid crd_image desktop_none">
                     <div class="context_crd">
-                        <h1 class="crd_tt">
+                        <h1 class="crd_tt" data-aos="fade-up">
                             Results
                         </h1>
-                        <p class="crd_pp">
-                            When you work with Push Dynamics, the results will speak for themselves.
+                        <p class="crd_pp" data-aos="fade-up">
+                            The results speak for themselves with ROI and boosted leads and conversions. 
                         </p>
                     </div>
                 </div>
@@ -173,10 +164,8 @@
         <section class="sec4_s">
             <div class="container custom_padding2">
                 <div class="sec4_1">
-                    <h1 class="sec4_tt">Powering Brands<br> <span class="sec4_tt_span">That Mean Business</span></h1>
-                    <p class="sec4_pp">Your website will support all your other digital marketing efforts, as it acts as
-                        your primary customer touchpoint. A responsive and custom website gives your clients a clear idea of
-                        your products, services, and values as a business.</p>
+                    <h1 class="sec4_tt" data-aos="fade-up">What’s included with  <br> <span class="sec4_tt_span"> web design and development</span></h1>
+                    <p class="sec4_pp" data-aos="fade-up">Whether you’re looking to build a new website from scratch or refresh your existing website, we will use our skills of strategy, creativity, and technology to build you a website that you are proud of. </p>
                 </div>
 
                 <div class="sec4_2">
@@ -186,8 +175,8 @@
                         <img src="{{ asset('frontend/BrandSparkz/assets/img/wd1_mob.png') }}" alt=""
                             class="img-fluid crd_image2 desktop_none">
                         <div class="sec4_down">
-                            <h1 class="crd4_tt">SSL Certificate</h1>
-                            <p class="crd4_pp">Our advanced security measures keep your visitors safe.</p>
+                            <h1 class="crd4_tt" data-aos="fade-up">SSL Certificate</h1>
+                            <p class="crd4_pp" data-aos="fade-up">Security is paramount in all our web designs which come fully encrypted.  </p>
                         </div>
                     </div>
 
@@ -197,8 +186,8 @@
                         <img src="{{ asset('frontend/BrandSparkz/assets/img/wd2_mob.png') }}" alt=""
                             class="img-fluid crd_image2 desktop_none">
                         <div class="sec4_down">
-                            <h1 class="crd4_tt">Personalised Email</h1>
-                            <p class="crd4_pp">All our websites come with personalised web domains.</p>
+                            <h1 class="crd4_tt" data-aos="fade-up">Personalised Email</h1>
+                            <p class="crd4_pp" data-aos="fade-up">Personalised emails and domain names are included with all websites. </p>
                         </div>
                     </div>
 
@@ -208,8 +197,8 @@
                         <img src="{{ asset('frontend/BrandSparkz/assets/img/wd3_mob.png') }}" alt=""
                             class="img-fluid crd_image2 desktop_none">
                         <div class="sec4_down">
-                            <h1 class="crd4_tt">Search Engine Optimization</h1>
-                            <p class="crd4_pp">Combined with SEO your website will get more clicks.</p>
+                            <h1 class="crd4_tt" data-aos="fade-up">Search Engine Optimization</h1>
+                            <p class="crd4_pp" data-aos="fade-up">Personalised emails and domain names are included with all websites. </p>
                         </div>
                     </div>
                 </div>
@@ -221,29 +210,27 @@
                 <div class="inner_sec5">
                     <div class="left_sec5">
                         <div class="inin_sec5">
-                            <h1 class="sec5_tt">Digital Marketing <br><span class="span_sec5_tt">That Hits
+                            <h1 class="sec5_tt" data-aos="fade-up">Digital Marketing <br><span class="span_sec5_tt">That Hits
                                     Different!</span>
-                            </h1>
-                            <p class="sec5_pp">Ensure your clients can find and navigate your website with ease. It is
-                                worth investing in a responsive and well-designed website which will improve your brand's
-                                profitability and success rate.
+                            </h1> 
+                            <p class="sec5_pp" data-aos="fade-up">The results speak for themselves when you work with Brand Sparkz. Get in touch today to find out more about us and how we can ignite your business ambitions. 
                             </p>
 
                             <div class="pointer_p">
                                 <div class="pointer_line">
                                     <img src="{{ asset('frontend/BrandSparkz/assets/img/pointer.svg') }}" alt=""
                                         class="img-fluid">
-                                    <p class="pointer_pp">Custom and bespoke design packages.</p>
+                                    <p class="pointer_pp" data-aos="fade-up">Expertly crafted campaigns that always deliver results</p>
+                                </div> 
+                                <div class="pointer_line">
+                                    <img src="{{ asset('frontend/BrandSparkz/assets/img/pointer.svg') }}" alt=""
+                                        class="img-fluid">
+                                    <p class="pointer_pp" data-aos="fade-up">Tailor made and bespoke packages for maximum impact. </p>
                                 </div>
                                 <div class="pointer_line">
                                     <img src="{{ asset('frontend/BrandSparkz/assets/img/pointer.svg') }}" alt=""
                                         class="img-fluid">
-                                    <p class="pointer_pp">Enhanced user experience.</p>
-                                </div>
-                                <div class="pointer_line">
-                                    <img src="{{ asset('frontend/BrandSparkz/assets/img/pointer.svg') }}" alt=""
-                                        class="img-fluid">
-                                    <p class="pointer_pp">Increased conversion rates.</p>
+                                    <p class="pointer_pp" data-aos="fade-up">Constantly tracked and analysed campaigns.</p>
                                 </div>
                             </div>
                         </div>
@@ -252,7 +239,7 @@
                             <img src="{{ asset('frontend/BrandSparkz/assets/img/btn_primary_pattern2.png') }}"
                                 alt="" class="img-fluid btn_global_pattern2">
                             <div class="btn_global_inner2 on_phone">
-                                <p class="cart_text">Learn more about us</p>
+                                <p class="cart_text" data-aos="fade-up">Learn more about us</p>
                                 <img src="{{ asset('frontend/BrandSparkz/assets/img/up_right.svg') }}" alt=""
                                     class="img-fluid cart_logo">
                             </div>
@@ -318,7 +305,7 @@
                                                 @foreach ($wddProducts['1_month'] as $product)
                                                     <th scope="col" class="text-center">
                                                         <div class="social_tablehead">
-                                                            <p class="social_tabletitle">
+                                                            <p class="social_tabletitle" >
                                                                 @php
                                                                     $nameParts = explode(' - ', $product->name);
                                                                     echo count($nameParts) > 1
@@ -449,56 +436,68 @@
         </section>
 
         <section class="sec7_s">
+
             <div class="insec7_s">
+
                 <div>
-                    <h1 class="form_tt">Need a something <span class="span_form_tt">bespoke?</span> </h1>
-                    <p class="form_pp">Pick and choose what features you would like in your very own custom package</p>
-                    <p class="form_pp">Simply upload a document of your brief and our team will get back to you.</p>
+                    <h1 class="form_tt" data-aos="fade-up">Need something <span class="span_form_tt">bespoke?</span> </h1>
+                    <p class="form_pp" data-aos="fade-up">We can build bespoke packages based on your unique needs as a business. <br>
+                    Simply fill in the form below and someone will come back to you. 
+                    </p>
                 </div>
 
-                <form class="form_section" id="requestform1" action="{{ route('contactus.store') }}" method="post"
-                    enctype="multipart/form-data" onsubmit="return check_agree1(this);">
-                    @csrf
-                    <input type="hidden" name="from_page" value="service">
+                
 
+
+                <form class="form_section" id="requestform1" action="{{ route('contactus.store') }}" method="post"
+                enctype="multipart/form-data" onsubmit="return check_agree1(this);">
+                    @csrf
+                    <input type="hidden" name="from_page" form="requestform1" value="service">
                     <div class="hori_hor">
                         <div class="one_section">
                             <p class="label_l">Full Name</p>
-                            <input type="text" id="fullname" name="fullname" class="input_tag" required>
+                            <input type="text" id="fullname" name="fullname" class="input_tag"required>
+
                         </div>
                         <div class="one_section">
                             <p class="label_l">Email</p>
-                            <input type="email" id="email" name="email" class="input_tag" required>
+                            <input type="text" id="email" name="email" class="input_tag" required>
+
                         </div>
+
                     </div>
                     <div class="spacer2"></div>
 
                     <div class="hori_hor">
                         <div class="one_section">
                             <p class="label_l">Phone</p>
-                            <input type="tel" id="phone" name="phone" class="input_tag" required>
+                            <input type="text" id="phone" name="phone" class="input_tag" required>
+
                         </div>
                         <div class="one_section">
                             <p class="label_l">Upload Brief</p>
-                            <div class="upload_div" id="upload_div_trigger">
+                            <div class="upload_div" onclick="field_box_file()">
                                 <p class="upload_placeholder" id="upload_placeholder">Upload brief here</p>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25"
-                                    viewBox="0 0 24 25" fill="none">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25"
+                                    fill="none">
                                     <path
                                         d="M5.89286 15.9289C4.29518 15.9289 3 14.9291 3 13.4631C3 11.9972 4.29518 10.8088 5.89286 10.8088C6.0015 10.8088 6.10875 10.8143 6.21429 10.825V10.8088H6.25407C6.22781 10.6155 6.21429 10.4187 6.21429 10.2189C6.21429 7.61272 8.51682 5.5 11.3571 5.5C13.2805 5.5 14.9573 6.46881 15.8395 7.90361C16.0551 7.87452 16.2756 7.85945 16.5 7.85945C18.9853 7.85945 21 9.70808 21 11.9885C21 13.8657 19.6348 15.2967 17.7656 15.7684M11.858 19.5V12.7258M11.858 12.7258L8.90625 15.5196M11.858 12.7258L14.8125 15.5196"
                                         stroke="#3C3C3C" stroke-width="1.5" stroke-linecap="round"
                                         stroke-linejoin="round" />
                                 </svg>
                             </div>
-                            <input type="file" class="form-control input_upload" style="display: none;"
-                                id="document" name="document">
+
+                            <input type="file" class="form-control input_upload" style="display: contents;"
+                                id="document" name="document" >
                         </div>
+
                     </div>
                     <div class="spacer"></div>
                     <div class="hori_hor">
                         <div class="one_section">
                             <p class="label_l">Additional Information</p>
-                            <textarea class="textarea_t" id="message" name="message" required></textarea>
+                            <textarea class="textarea_t" id="message" name="message"></textarea>
+
                         </div>
 
                         <div class="for_robot_checkbox">
@@ -510,32 +509,37 @@
                                     </label>
                                 </div>
                                 <div class="c-text">
-                                    <p class="login_strong">By ticking this box, you agree to the<br> <span
-                                            class="blue_text"><a href="{{ route('termsandconditions') }}">Terms &
-                                                Conditions</a></span> & <span class="blue_text"><a
-                                                href="{{ route('privacypolicy') }}">Privacy
-                                                Policy</a></span></p>
+                                    <p class="login_strong">By ticking this box, you agree to the<br> <a href="{{ route('termsandconditions') }}"
+
+                                            class="blue_text">Terms & Conditions</a> & <a href="{{ route('privacypolicy') }}" class="blue_text">Privacy
+                                            Policy</a></p>
                                 </div>
                             </div>
-
+    
                             <div class="spacer2"></div>
-
+    
+                            <!--<img class="notrobot_1" src="./assets/img/not_a_robot.png">-->
+                            <script src="https://js.hcaptcha.com/1/api.js" async defer></script>
                             <div class="h-captcha" data-sitekey="{{ env('H_CAPTCHA_SITE_KEY') }}"></div>
                         </div>
-                    </div>
 
-                    <div class="form_button_container">
-                        <button type="submit" class="btn btn_global form_btn_wid">
-                            <img src="{{ asset('frontend/BrandSparkz/assets/img/btn_primary_pattern.png') }}"
-                                alt="" class="img-fluid btn_global_pattern">
-                            <div class="btn_global_inner w-100">
-                                <p class="cart_text">Submit Request</p>
-                            </div>
-                        </button>
                     </div>
                 </form>
+
+
+                <button class="btn btn_global form_btn_wid" type="submit" form="requestform1">
+                    <img src="{{ asset('frontend/BrandSparkz/assets/img/btn_primary_pattern.png') }}" alt="" class="img-fluid btn_global_pattern">
+                    <div class="btn_global_inner w-100">
+                        
+                        <p class="cart_text">Submit Request</p>
+                    </div>
+            </button>
+
+           
+
             </div>
-        </section>
+
+    </section>
     </section>
 @endsection
 

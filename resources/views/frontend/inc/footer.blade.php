@@ -20,15 +20,15 @@
                     </div>
                     <div class="footer_right_element">
                         <p class="footer_element_title">Our Services</p>
-                        <div class="row">
-                            <div class="col-6">
+                        <div class="rowmi">
+                            <div class="rowmi_l">
                                 <div class="footer_link_div">
                                     <button class="btn footer_links"  onclick="window.location.href='{{ route('seo') }}'">SEO</button>
                                     <button class="btn footer_links"  onclick="window.location.href='{{ route('orm') }}'">ORM</button>
                                     <button class="btn footer_links"  onclick="window.location.href='{{ route('em') }}'">Email&nbsp;Marketing</button>
                                 </div>
                             </div>
-                            <div class="col-6">
+                            <div class="rowmi_r">
                                 <div class="footer_link_div">
                                     <button class="btn footer_links"  onclick="window.location.href='{{ route('ppc') }}'">Pay-Per-Click</button>
                                     <button class="btn footer_links"  onclick="window.location.href='{{ route('wdd') }}'">UX/UI</button>
@@ -41,10 +41,9 @@
                         <p class="footer_element_title">Got Questions?</p>
                         <div class="footer_link_div">
                             <address class="footer_address">
-                                info@Brandsparkz.co <br>
-                                123 Main Street, <br>
-                                New York, <br>
-                                10030
+                                support@brandsparkz.co<br>
+                                           TBC<br>
+                                           TBC
                             </address>
                         </div>
                     </div>

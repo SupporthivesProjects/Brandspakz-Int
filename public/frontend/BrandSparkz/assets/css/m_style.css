@@ -102,6 +102,202 @@ input[type=checkbox], input[type=radio] {
 
 
 
+
+/* ----------------------- Checkbox ----------------------- */
+
+.c-checkbox_m2 input[type='checkbox']:checked~label:after, .c-checkbox_m2 input[type='checkbox']:checked~.label:after {
+    transform: scale(1);
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    opacity: 1;
+    visibility: visible;
+}
+.c-checkbox_m2>.c-div_m2>label:before, .c-checkbox_m2>.c-div_m2>.label:before {
+    content: "";
+    position: absolute;
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    margin-right: 10px;
+    background: transparent;
+    border: 2px solid #EE5921;
+    box-sizing: border-box;
+    /* box-shadow: inset 0px 4px 4px rgb(0 0 0 / 5%); */
+    border-radius: 4px;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 3px;
+}
+input[type=checkbox], input[type=radio] {
+    box-sizing: border-box;
+    padding: 0;
+}
+.c-checkbox_m2 input[type='checkbox'] {
+    display: none;
+}
+.c-checkbox_m2 input[type='checkbox']~label:after, .c-checkbox_m2 input[type='checkbox']~.label:after {
+    content: "✔";
+    display: block;
+    position: absolute;
+    color: #FFFFFF !important;
+    border-radius: 0;
+    border: 0;
+    font-family: 'Poppins';
+    font-size: 14px;
+    text-align: center;
+    line-height: 12px;
+    height: 14px;
+    width: 14px;
+    left: 5px;
+    top: 18.5px;
+    padding-top: 1px;
+    padding-left: 1px;
+    transform-origin: 50% 50%;
+    -webkit-transform-origin: 50% 50%;
+    -ms-transform-origin: 50% 50%;
+    transform: scale(0);
+    -webkit-transform: scale(0);
+    -ms-transform: scale(0);
+    -webkit-transition: all .15s ease;
+    -ms-transition: all .15s ease;
+    transition: all .15s ease;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    background: var(--Primary, #EE5921);
+}
+.c-checkbox_m2 {
+    position: relative;
+    margin-bottom: 0px;
+}
+.login_strong_m2 {
+    color: var(--Neutral-700, #656565);
+
+    /* Desktop/Body */
+    font-family: 'Poppins';
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 158%; /* 25.28px */
+    margin-bottom: 0px;
+}
+.login_strong_m2 a {
+    color: var(--Highlight, #397BFC);
+
+    /* Desktop/Body */
+    font-family: 'Poppins';
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 158%;
+    margin-bottom: 0px;
+    text-decoration: none;
+}
+.c-text_m2 {
+    margin-left: 40px;
+}
+
+
+
+
+/* ----------------------- Checkbox ----------------------- */
+
+.c-checkbox_m3 input[type='checkbox']:checked~label:after, .c-checkbox_m3 input[type='checkbox']:checked~.label:after {
+    transform: scale(1);
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    opacity: 1;
+    visibility: visible;
+}
+.c-checkbox_m3>.c-div_m3>label:before, .c-checkbox_m3>.c-div_m3>.label:before {
+    content: "";
+    position: absolute;
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    margin-right: 10px;
+    background: transparent;
+    border: 2px solid #EE5921;
+    box-sizing: border-box;
+    /* box-shadow: inset 0px 4px 4px rgb(0 0 0 / 5%); */
+    border-radius: 4px;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 3px;
+}
+input[type=checkbox], input[type=radio] {
+    box-sizing: border-box;
+    padding: 0;
+}
+.c-checkbox_m3 input[type='checkbox'] {
+    display: none;
+}
+.c-checkbox_m3 input[type='checkbox']~label:after, .c-checkbox_m3 input[type='checkbox']~.label:after {
+    content: "✔";
+    display: block;
+    position: absolute;
+    color: #FFFFFF !important;
+    border-radius: 0;
+    border: 0;
+    font-family: 'Poppins';
+    font-size: 14px;
+    text-align: center;
+    line-height: 12px;
+    height: 14px;
+    width: 14px;
+    left: 5px;
+    top: 6px;
+    padding-top: 1px;
+    padding-left: 1px;
+    transform-origin: 50% 50%;
+    -webkit-transform-origin: 50% 50%;
+    -ms-transform-origin: 50% 50%;
+    transform: scale(0);
+    -webkit-transform: scale(0);
+    -ms-transform: scale(0);
+    -webkit-transition: all .15s ease;
+    -ms-transition: all .15s ease;
+    transition: all .15s ease;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    background: var(--Primary, #EE5921);
+}
+.c-checkbox_m3 {
+    position: relative;
+    margin-bottom: 0px;
+}
+.login_strong_m3 {
+    color: var(--Neutral-700, #656565);
+
+    /* Desktop/Body */
+    font-family: 'Poppins';
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 158%; /* 25.28px */
+    margin-bottom: 0px;
+}
+.login_strong_m3 a {
+    color: var(--Highlight, #397BFC);
+
+    /* Desktop/Body */
+    font-family: 'Poppins';
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 158%;
+    margin-bottom: 0px;
+    text-decoration: none;
+}
+.c-text_m3 {
+    margin-left: 40px;
+}
+
+
+
+
+
 .contact_page {
     background: url(../img/liner_bg.png);
     background-size: contain;
@@ -230,7 +426,20 @@ input[type=checkbox], input[type=radio] {
     box-shadow: none;
     border: 2px solid #005bb996;
 }
-
+.rowmi {
+    display: flex;
+    flex-direction: row;
+    gap: 36px;
+    justify-content: center;
+    align-items: flex-start;
+}
+.btn_global_inner span {
+    position: absolute;
+    left: 32.5px;
+    top: 22px;
+    font-size: 11px;
+    color: #FFFFFF;
+}
 .input_select {
     border-radius: 8px;
     padding: 8px 16px;
@@ -624,6 +833,25 @@ section.contact_page textarea.input_global {
     text-transform: capitalize;
     width: 100%;
 }
+.btn_orange_main:hover {
+    border-radius: 5px;
+    background: var(--Primary, #3C3C3C);
+    display: flex;
+    padding: 8px 24px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    color: var(--Neutral-White, #FFF);
+
+    /* Desktop/Buttons */
+    font-family: 'Poppins';
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-transform: capitalize;
+    width: 100%;
+}
 .dash_account_tab_right_inner {
     display: flex;
     flex-direction: column;
@@ -698,10 +926,10 @@ section.contact_page textarea.input_global {
     margin-bottom: 0px;
 }
 .text_center {
-    text-align: center;
+    text-align: center!important;
 }
 .text_right {
-    text-align: right;
+    text-align: right!important;
 }
 .order_history_table thead tr th {
     padding: 0px;
@@ -1114,6 +1342,17 @@ section.contact_page textarea.input_global {
     background: var(--Primary, #EE5921);
     padding: 0px 16.5px;
 }
+.hs3_card_right_inner_orange:hover {
+    border-radius: 6px;
+    background: var(--Primary, #EE5921);
+    padding: 0px 16.5px;
+}
+.hs3_card_right_inner_arrow {
+  transition: rotate 1s;
+}
+.hs3_card_right_inner_orange:hover .hs3_card_right_inner_arrow {
+    rotate: 45deg;
+}
 .hs3_card_right {
     background: #FFFFFF;
     padding: 14px;
@@ -1293,6 +1532,7 @@ section.contact_page textarea.input_global {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    margin-bottom: 60px;
 }
 .hs5_inner video {
     border-radius: 20px;
@@ -1647,7 +1887,9 @@ section.contact_page textarea.input_global {
         height: 15px;
         top: 18px;
     }
-
+    .hs5 {
+        margin-bottom: 0px;
+    }
     .cutter_main_div_inner_left {
         position: relative;
     }
@@ -2092,6 +2334,12 @@ section.contact_page textarea.input_global {
     .ocd_box {
         position: relative;
     }
+    .contact_input_div .row .col-md-6 {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
     .hs4_card_box_main {
         display: flex;
         flex-direction: column;
@@ -2530,6 +2778,19 @@ section.contact_page textarea.input_global {
         background: #3C3C3C;
         width: 10px;
         height: 10px;
+    }
+    .contact_info .c_box_element:last-of-type {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: 16px;
+    }
+    .hs5_inner video {
+        border-radius: 0px;
+        margin-left: -12px;
+        margin-right: unset;
+        width: calc(100% + 24px);
     }
 }
 

@@ -3,6 +3,24 @@
     position: relative;
 }
 
+.custom_modal3 {
+    border-radius: 20px;
+    border: 0;
+    background: url(../img/modal_3.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top left;
+    /* width: 478px;
+    height: 267px; */
+    padding: 61px 40px 40px 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.custom-modal-width3 {
+    max-width: 566px;
+}
+
 
 .sec1_video {
     padding: 292px 0px;
@@ -787,8 +805,8 @@
 
 /* tick check box start*/
 
-.c-checkbox input[type='checkbox']:checked~label:after,
-.c-checkbox input[type='checkbox']:checked~.label:after {
+.for_robot_checkbox .c-checkbox input[type='checkbox']:checked~label:after,
+.for_robot_checkbox .c-checkbox input[type='checkbox']:checked~.label:after {
     transform: scale(1);
     -webkit-transform: scale(1);
     -ms-transform: scale(1);
@@ -796,38 +814,39 @@
     visibility: visible;
 }
 
-.c-checkbox>.c-div>label:before,
-.c-checkbox>.c-div>.label:before {
+.for_robot_checkbox .c-checkbox>.c-div>label:before,
+.for_robot_checkbox .c-checkbox>.c-div>.label:before {
     content: "";
     position: absolute;
     display: inline-block;
     width: 22px;
     height: 22px;
     margin-right: 10px;
-    border: 2px solid var(--Almost-Black, #EE5921);
+    border: 2px solid var(--Almost-Black, #fff);
     background: transparent;
     box-sizing: border-box;
     border-radius: 4px;
-    top: 14px;
+    top: 10px;
+    transform: unset;
     left: 0px;
 }
 
-input[type=checkbox],
-input[type=radio] {
+.for_robot_checkbox input[type=checkbox],
+.for_robot_checkbox input[type=radio] {
     box-sizing: border-box;
     padding: 0;
 }
 
-.c-checkbox input[type='checkbox'] {
+.for_robot_checkbox .c-checkbox input[type='checkbox'] {
     display: none;
 }
 
-.contact_para_mobo {
+.for_robot_checkbox .contact_para_mobo {
     display: none;
 }
 
-.c-checkbox input[type='checkbox']~label:after,
-.c-checkbox input[type='checkbox']~.label:after {
+.for_robot_checkbox .c-checkbox input[type='checkbox']~label:after,
+.for_robot_checkbox .c-checkbox input[type='checkbox']~.label:after {
     content: url(../img/filter_tic.svg);
     display: block;
     position: absolute;
@@ -841,7 +860,7 @@ input[type=radio] {
     height: 1px;
     width: 1px;
     left: 4px;
-    top: 14px;
+    top: 8px;
     transform-origin: 50% 50%;
     -webkit-transform-origin: 50% 50%;
     -ms-transform-origin: 50% 50%;
@@ -857,14 +876,14 @@ input[type=radio] {
     background: var(--Primary, #EE5921);
 }
 
-.c-checkbox {
+.for_robot_checkbox .c-checkbox {
     position: relative;
     margin-bottom: 0px;
 }
 
-.login_strong {
+.for_robot_checkbox .login_strong {
 
-    color: var(--Neutral-White, #656565);
+    color: var(--Neutral-White, #FFF);
 
     /* Desktop/Body */
     font-family: Poppins;
@@ -877,11 +896,11 @@ input[type=radio] {
 
 }
 
-.c-text {
+.for_robot_checkbox .c-text {
     margin-left: 35px;
 }
 
-.blue_text {
+.for_robot_checkbox .blue_text {
     color: var(--Primary, #EE5921);
 
     /* Desktop/Body */
@@ -896,6 +915,118 @@ input[type=radio] {
 
 /* tick check box end*/
 
+
+/* tick check box start*/
+
+.for_robot_checkbox_seo .c-checkbox input[type='checkbox']:checked~label:after,
+.for_robot_checkbox_seo .c-checkbox input[type='checkbox']:checked~.label:after {
+    transform: scale(1);
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    opacity: 1;
+    visibility: visible;
+}
+
+.for_robot_checkbox_seo .c-checkbox>.c-div>label:before,
+.for_robot_checkbox_seo .c-checkbox>.c-div>.label:before {
+    content: "";
+    position: absolute;
+    display: inline-block;
+    width: 22px;
+    height: 22px;
+    margin-right: 10px;
+    border: 2px solid var(--Almost-Black, #fff);
+    background: transparent;
+    box-sizing: border-box;
+    border-radius: 4px;
+    top: 10px;
+    transform: unset;
+    left: 0px;
+}
+
+.for_robot_checkbox_seo input[type=checkbox],
+.for_robot_checkbox_seo input[type=radio] {
+    box-sizing: border-box;
+    padding: 0;
+}
+
+.for_robot_checkbox_seo .c-checkbox input[type='checkbox'] {
+    display: none;
+}
+
+.for_robot_checkbox_seo .contact_para_mobo {
+    display: none;
+}
+
+.for_robot_checkbox_seo .c-checkbox input[type='checkbox']~label:after,
+.for_robot_checkbox_seo .c-checkbox input[type='checkbox']~.label:after {
+    content: url(../img/filter_tic.svg);
+    display: block;
+    position: absolute;
+    color: #FFFFFF !important;
+    border-radius: 0;
+    border: 0;
+    font-family: 'Poppins';
+    font-size: 30px;
+    text-align: center;
+    line-height: 12px;
+    height: 1px;
+    width: 1px;
+    left: 4px;
+    top: 15px;
+    transform-origin: 50% 50%;
+    -webkit-transform-origin: 50% 50%;
+    -ms-transform-origin: 50% 50%;
+    transform: scale(0);
+    -webkit-transform: scale(0);
+    -ms-transform: scale(0);
+    -webkit-transition: all .15s ease;
+    -ms-transition: all .15s ease;
+    transition: all .15s ease;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    background: var(--Primary, #EE5921);
+}
+
+.for_robot_checkbox_seo .c-checkbox {
+    position: relative;
+    margin-bottom: 0px;
+}
+
+.for_robot_checkbox_seo .login_strong {
+
+    color: var(--Neutral-White, #FFF);
+
+    /* Desktop/Body */
+    font-family: Poppins;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 158%;
+    /* 25.28px */
+    margin-bottom: 0px;
+
+}
+
+.for_robot_checkbox_seo .c-text {
+    margin-left: 35px;
+}
+
+.for_robot_checkbox_seo .blue_text {
+    color: var(--Primary, #EE5921);
+
+    /* Desktop/Body */
+    font-family: Poppins;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 158%;
+}
+
+
+
+/* tick check box end*/
 .hori_hor {
     display: flex;
     flex-direction: row;
@@ -1101,7 +1232,7 @@ input[type=radio] {
 }
 
 .accordion-header {
-    padding: 40px 35px;
+    padding: 30px 34px;
 }
 
 .accordion-body {
@@ -1122,7 +1253,8 @@ input[type=radio] {
     content: "";
     width: 44.347px;
     height: 41.5px;
-    background-image: url('/assets/img/arrowdown.svg');
+    
+    background-image: url(../img/arrowdown.svg);
     background-size: contain;
     background-repeat: no-repeat;
     margin-left: auto;
@@ -1134,9 +1266,12 @@ input[type=radio] {
 
 .accordion-button:not(.collapsed)::after {
     transform: rotate(0deg);
-    background-image: url('/assets/img/arrowup.svg');
+    
+    background-image: url('../img/arrowup.svg');
 }
-
+.sec8_s .table tbody tr td {
+    background: #FFF;
+}
 
 
 
@@ -1248,7 +1383,7 @@ input[type=radio] {
     padding: 64px 24px;
     background: url(../img/liner_bg_tt.png);
     background-repeat: repeat;
-    background-size: contain;
+    background-size: auto;
     background-position: center center;
 }
 
@@ -1838,6 +1973,13 @@ padding: 30px;
     .desktop_none {
         display: block;
     }
+    .custom_modal3 {
+        padding: 62px 24px 24px 24px;
+        background: url(../img/mob_forget.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: top left;
+    }
     .icon_icon {
         width: 111px;
         height: 111px;
@@ -1930,7 +2072,7 @@ line-height: normal;
 text-transform: capitalize;
     }
     .serv_c1,.serv_c2,.serv_c3,.serv_c4,.serv_c5,.serv_c6 {
-        height: 224px;
+        height: 244px;
     }
     .serv_gree h4 {
         color: #FFF;
@@ -2192,7 +2334,7 @@ text-transform: capitalize;
     }
 
     .floater_div_pp {
-        width: auto;
+        width: 320px;
         color: var(--Neutral-White, #FFF);
         text-align: center;
 
@@ -2203,6 +2345,7 @@ text-transform: capitalize;
         font-weight: 400;
         line-height: 158%;
         /* 25.28px */
+        height: 150px;
     }
 
     .floater_div,
@@ -2356,7 +2499,7 @@ text-transform: capitalize;
     }
 
     .intersect_tt_mob {
-        z-index: 9999;
+        z-index: 1;
         position: absolute;
         right: 0;
         top: -21px;
@@ -2471,7 +2614,7 @@ text-transform: capitalize;
     }
 
     .sec_pp {
-        color: var(--Neutral-800, #3C3C3C);
+        color: var(--Neutral-800, #656565);
         text-align: center;
 
         /* Desktop/Body */
@@ -2830,7 +2973,11 @@ text-transform: capitalize;
     }
 
     .sec5_pp {
+        color: var(--Neutral-700, #656565);
         margin-top: -17px;
+    }
+    .pointer_pp {
+            color: var(--Neutral-700, #656565);
     }
 
     .inin_sec5 {
@@ -3165,7 +3312,7 @@ text-transform: capitalize;
 
 .tab_btnbar {
     position: absolute;
-    top: 93px;
+    top: 140px;
 }
 
 .position-relative {
@@ -3176,7 +3323,7 @@ text-transform: capitalize;
     position: absolute;
     bottom: -4px;
     left: 20px;
-    width: 82%;
+    width: 84%;
     height: 3px;
     background-color: #D0D0D0;
 

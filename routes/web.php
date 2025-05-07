@@ -132,9 +132,9 @@ Route::middleware(['admin.log'])->group(function () {
         Route::get('/profile', [HomeController::class, 'profile'])->name('profile');
         Route::post('/customer/update-profile', [HomeController::class, 'customer_update_profile'])->name('customer.profile.update');
         Route::post('/seller/update-profile', [HomeController::class, 'seller_update_profile'])->name('seller.profile.update');
-
         Route::resource('purchase_history', PurchaseHistoryController::class);
-        Route::post('/purchase_history/details', [PurchaseHistoryController::class, 'purchase_history_details'])->name('purchase_history.details');
+        //Route::post('/purchase_history/details', [PurchaseHistoryController::class, 'purchase_history_details'])->name('purchase_history.details');
+        Route::get('/purchase_history/details/{id}', [PurchaseHistoryController::class, 'purchase_history_details'])->name('purchase_history.details');
         Route::get('/purchase_history/destroy/{id}', [PurchaseHistoryController::class, 'destroy'])->name('purchase_history.destroy');
     });
 

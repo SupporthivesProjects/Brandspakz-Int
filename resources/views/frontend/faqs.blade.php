@@ -6,8 +6,8 @@
 
         <section class="faq_1">
 
-            <h1 class="faq_tt">Find Your Answer</h1>
-            <p class="faq_pp">Everything you need to know about out products and billing.</p>
+            <h1 class="faq_tt" data-aos="fade-up">Find Your Answer</h1>
+            <p class="faq_pp" data-aos="fade-up">Everything you need to know about out products and billing.</p>
 
         </section>
 
@@ -27,16 +27,15 @@
 
                                 <img src="{{ asset('frontend/BrandSparkz/assets/img/left_faq_in.png') }}" alt="" class="img-fluid also_img"
                                     style="margin-bottom: 18px;">
-                                <h1 class="faq_left_tt">can’t find your answer? <span class="faq_left_tt_span">Let’s fix
+                                <h1 class="faq_left_tt" data-aos="fade-up">can’t find your<br class="desktop_none"> answer? <span class="faq_left_tt_span"><br class="mobile_none">Let’s fix
                                         that.</span></h1>
-                                <p class="faq_left_pp">Everything you need to know about out products and billing.. Cant
-                                    find the answer you're looking for? Please submit an enquiry via our contact form.</p>
+                                <p class="faq_left_pp"data-aos="fade-up">If you can’t find the answer to your query here, then please get in touch with a member of the team and someone will come back to you. </p>
                                 <button class="btn btn_global" onclick="window.location.href='{{ route('contactus') }}'">
                                     <img src="{{ asset('frontend/BrandSparkz/assets/img/btn_primary_pattern.png') }}" alt=""
                                         class="img-fluid btn_global_pattern">
                                     <div class="btn_global_inner w-100">
 
-                                        <p class="cart_text">Drop us a line</p>
+                                        <p class="cart_text" data-aos="fade-up">Drop us a line</p>
                                         <img src="{{ asset('frontend/BrandSparkz/assets/img/up_right.svg') }}" alt="" class="img-fluid cart_logo">
                                     </div>
                                 </button>
@@ -55,16 +54,13 @@
                                     <h2 class="accordion-header">
                                         <button class="accordion-button" type="button" data-bs-toggle="collapse"
                                             data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                            Can I change my plan later?
+                                            How do I sign up?
                                         </button>
                                     </h2>
                                     <div id="collapseOne" class="accordion-collapse collapse show"
                                         data-bs-parent="#accordionExample">
                                         <div class="accordion-body">
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Blandit posuere
-                                            bibendum vel purus sapien, lacus in tortor. Aliquam non est augue commodo
-                                            viverra. Pellentesque imperdiet id euismod varius in scelerisque sagittis urna.
-                                            Ac sit integer sed vestibulum ut tincidunt urna.
+                                           You’ll need to register for an account with us online before you can book any of our digital marketing services. Your account will store a record and progress reports of all your active marketing campaigns. Registration is simple and can be completed online through the form. 
                                         </div>
                                     </div>
                                 </div>
@@ -72,16 +68,13 @@
                                     <h2 class="accordion-header">
                                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                             data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                            What is your cancellation policy?
+                                            How much does it cost?
                                         </button>
                                     </h2>
                                     <div id="collapseTwo" class="accordion-collapse collapse"
                                         data-bs-parent="#accordionExample">
                                         <div class="accordion-body">
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Blandit posuere
-                                            bibendum vel purus sapien, lacus in tortor. Aliquam non est augue commodo
-                                            viverra. Pellentesque imperdiet id euismod varius in scelerisque sagittis urna.
-                                            Ac sit integer sed vestibulum ut tincidunt urna.
+                                            We have worked hard to make our prices as transparent and as clear as possible here at Brand Sparkz. We will be able to give you a fully detailed breakdown of the expected costs of your campaign once we have received and worked on your brief. 
                                         </div>
                                     </div>
                                 </div>
@@ -90,16 +83,13 @@
                                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                             data-bs-target="#collapseThree" aria-expanded="false"
                                             aria-controls="collapseThree">
-                                            What is your cancellation policy?
+                                            How do I know what campaign is right for me?
                                         </button>
                                     </h2>
                                     <div id="collapseThree" class="accordion-collapse collapse"
                                         data-bs-parent="#accordionExample">
                                         <div class="accordion-body">
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Blandit posuere
-                                            bibendum vel purus sapien, lacus in tortor. Aliquam non est augue commodo
-                                            viverra. Pellentesque imperdiet id euismod varius in scelerisque sagittis urna.
-                                            Ac sit integer sed vestibulum ut tincidunt urna.
+                                            We will need to speak to you and discuss your individual goals and objectives as a business to help you decide which of our campaigns are right for you. It may be that a combination of strategies will be best for your business to ensure maximum results. 
                                         </div>
                                     </div>
                                 </div>
@@ -108,16 +98,13 @@
                                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                             data-bs-target="#collapseFour" aria-expanded="false"
                                             aria-controls="collapseFour">
-                                            What is your cancellation policy?
+                                            What industries do you specialise in?
                                         </button>
                                     </h2>
                                     <div id="collapseFour" class="accordion-collapse collapse"
                                         data-bs-parent="#accordionExample">
                                         <div class="accordion-body">
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Blandit posuere
-                                            bibendum vel purus sapien, lacus in tortor. Aliquam non est augue commodo
-                                            viverra. Pellentesque imperdiet id euismod varius in scelerisque sagittis urna.
-                                            Ac sit integer sed vestibulum ut tincidunt urna.
+                                           We specialise in a number of industries and work with a number of experts across different sectors, so we can always provide extra insight and deep understanding into your own unique target audience and needs to deliver campaigns specifically for your audience. 
                                         </div>
                                     </div>
                                 </div>
@@ -126,33 +113,21 @@
                                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                             data-bs-target="#collapseFive" aria-expanded="false"
                                             aria-controls="collapseFive">
-                                            What is your cancellation policy?
+                                            How do I speak with a member of the team? 
                                         </button>
                                     </h2>
                                     <div id="collapseFive" class="accordion-collapse collapse"
                                         data-bs-parent="#accordionExample">
                                         <div class="accordion-body">
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Blandit posuere
-                                            bibendum vel purus sapien, lacus in tortor. Aliquam non est augue commodo
-                                            viverra. Pellentesque imperdiet id euismod varius in scelerisque sagittis urna.
-                                            Ac sit integer sed vestibulum ut tincidunt urna.
+                                            If you haven’t been able to find the answer of your question here and would like to speak with a member of the team to discuss our services and packages in more detail then please get in touch with us using the contact us page. 
                                         </div>
                                     </div>
                                 </div>
                             </div>
-
                         </div>
-
-
-
-
-
                     </div>
-
                 </div>
-
             </div>
-
         </section>
 
 
@@ -168,20 +143,19 @@
 
                 <div class="inner_floater">
                     <div>
-                        <h1 class="floater_div_tt">
+                        <h1 class="floater_div_tt" data-aos="fade-up">
                             We’re <span class="floater_div_tt_span">All In</span>, Are You?
                         </h1>
-                        <p class="floater_div_pp">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer cursus dignissim dictumst leo
-                            at fusce euismod ut eleifend. Lectus blandit amet mi in.
+                        <p class="floater_div_pp" data-aos="fade-up">
+                            If you want to ignite new interest in your business, we’re ready to get started. Register for an account today, and watch the sparks fly. 
                         </p>
 
                     </div>
 
-                    <button class="btn btn_global2 on_phone" onclick="window.location.href='{{ route('user.login') }}'">
+                    <button class="btn btn_global2 extra_button" onclick="window.location.href='{{ route('user.login') }}'">
                         <img src="{{ asset('frontend/BrandSparkz/assets/img/btn_primary_pattern2.png') }}" alt=""
                             class="img-fluid btn_global_pattern2">
-                        <div class="btn_global_inner2 on_phone">
+                        <div class="btn_global_inner2 extra_button">
                             <p class="cart_text">Get started!</p>
                         </div>
                     </button>
@@ -197,4 +171,6 @@
 @endsection
 
 @section('script')
+
+
 @endsection

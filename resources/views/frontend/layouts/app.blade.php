@@ -13,7 +13,7 @@
     <title>BrandSparkz</title>
 
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="{{ asset('frontend/Lingosphere/img/Fav.png') }}') }}">
+    <link rel="icon" type="image/x-icon" href="{{ asset('frontend/BrandSparkz/assets/img/header_bg_trans_logo_.svg') }}">
 
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
@@ -33,19 +33,28 @@
     
     <link rel="stylesheet" href="{{ asset('frontend/BrandSparkz/assets/dist/owl-carousel/css/owl.carousel.css') }}">
     <link rel="stylesheet" href="{{ asset('frontend/BrandSparkz/assets/css/main.css') }}">
+    <link rel="stylesheet" href="{{ asset('frontend/BrandSparkz/assets/css/t_style.css') }}">
     <link rel="stylesheet" href="{{ asset('frontend/BrandSparkz/assets/css/m_style.css') }}">
     <link rel="stylesheet" href="{{ asset('frontend/BrandSparkz/assets/css/sk_style.css') }}">
-    <link rel="stylesheet" href="{{ asset('frontend/BrandSparkz/assets/css/t_style.css') }}">
 
     <!-- Box Icons -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
-    <!-- Google Fonts -->
+    <!-- Google Fonts Link -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+
+ <!-- Google tag (gtag.js) -->
+ <script async src="https://www.googletagmanager.com/gtag/js?id=G-3764R7Z17X"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'G-3764R7Z17X');
+    </script>
 
 </head>
 
@@ -63,13 +72,13 @@
 
     {{-- new header code --}}
 
-    <header class="fixed-top">
+    <header class="fixed-top" id="header">
         <div class="header_top">
             <div class="container desktop_header p-0">
                 <div class="header_main_container">
                     <div class="header_left">
                         <a href="{{ route('home') }}">
-                            <img src="{{ asset('frontend/BrandSparkz/assets/img/header_bg_trans_logo_.svg') }}" alt="" class="img-fluid header_logo">
+                            <img src="{{ asset('frontend/BrandSparkz/assets/img/header_bg_trans_logo_.svg') }}" alt="" class="img-fluid header_logo" id="header_logo">
                         </a>
                     </div>
                     <div class="header_center">
@@ -197,7 +206,7 @@
                 <div class="header_mobo_main">
                     <div class="header_mobo_left">
                         <a href="{{ route('home') }}">
-                            <img src="{{ asset('frontend/BrandSparkz/assets/img/header_mobo_bg_trans_logo_.svg') }}" alt="" class="img-fluid">
+                            <img src="{{ asset('frontend/BrandSparkz/assets/img/header_mobo_bg_trans_logo_.svg') }}" alt="" class="img-fluid" id="header_logo_mobo">
                         </a>
                     </div>
                     <div class="header_mobo_right">
@@ -260,7 +269,7 @@
                     <div class="dropped_div d-none" id="currency_drop_mobo">
                         @foreach (\App\Models\Currency::getActiveCurrencies() as $key => $currency)
                             <button
-                                class="btn btn_orange_header dropdown-item {{ $currency_code == $currency->code ? 'active' : '' }}"
+                                class="btn btn_orange_header {{ $currency_code == $currency->code ? 'active' : '' }}"
                                 data-currency="{{ $currency->code }}">
                                 {{ $currency->code }} ({{ $currency->symbol }})
                             </button>
@@ -346,24 +355,226 @@
         </p>
         <div class="buttons_wala">
             <button class="btn btn_global2 on_phone"  onClick="window.location.reload();">
-                <img src="./assets/img/btn_primary_pattern2.png" alt="" class="img-fluid btn_global_pattern2">
+                <img src="{{ asset('frontend/BrandSparkz/assets/img/btn_primary_pattern2.png') }}" alt="" class="img-fluid btn_global_pattern2">
                 <div class="btn_global_inner2 on_phone">
                     <p class="cart_text">continue shopping</p>
                 </div>
             </button>
             
         <button class="btn btn_global width_for_checkoutbtn" data-bs-toggle="modal" data-bs-target="#staticBackdrop2" onclick="window.location.href='{{ route( 'checkout.shipping_info') }}'">
-            <img src="./assets/img/btn_primary_pattern.png" alt="" class="img-fluid btn_global_pattern">
+            <img src="{{ asset('frontend/BrandSparkz/assets/img/btn_primary_pattern.png') }}" alt="" class="img-fluid btn_global_pattern">
             <div class="btn_global_inner w-100">
                 
                 <p class="cart_text">Checkout</p>
             </div>
-    </button>
+         </button>
         </div>
        
       </div>
     </div>
   </div>
+  
+  <!-- register  Modal -->
+  
+  @if(session('registrationsuccess'))
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            let modal = new bootstrap.Modal(document.getElementById('registraModal'));
+            modal.show();
+        });
+    </script>
+@endif
+  
+  <div class="modal fade" id="registraModal" tabindex="-1" aria-labelledby="registraModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered custom-modal-width">
+      <div class="modal-content custom_modal2 ">
+
+        <h1 class="modal_tt">
+            Registration successful! Please verify your email address.
+        </h1>
+
+        <p class="modal_pp2">
+            Please wait while page refreshes
+        </p>
+
+        <button class="btn btn_global width_closebtn" data-bs-dismiss="modal">
+            <img src="{{ asset('frontend/BrandSparkz/assets/img/btn_primary_pattern.png') }}" alt="" class="img-fluid btn_global_pattern">
+            <div class="btn_global_inner w-100">
+                
+                <p class="cart_text" >ok</p>
+                <img src="{{ asset('frontend/BrandSparkz/assets/img/cross.svg') }}" alt="" class="img-fluid cart_logo">
+            </div>
+    </button>
+        
+      </div>
+    </div>
+  </div>
+  
+  
+
+
+ <!-- checkout  Modal -->
+ 
+ @if(session('paymentsuccess'))
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            let modal = new bootstrap.Modal(document.getElementById('paymentModal'));
+            modal.show();
+        });
+    </script>
+@endif
+  
+  <div class="modal fade" id="paymentModal" tabindex="-1" aria-labelledby="paymentModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered custom-modal-width">
+      <div class="modal-content custom_modal2 ">
+
+        <h1 class="modal_tt">
+            Checkout successful done! 
+        </h1>
+
+        <p class="modal_pp2">
+            Please wait while page refreshes
+        </p>
+
+        <button class="btn btn_global width_closebtn" data-bs-dismiss="modal">
+            <img src="{{ asset('frontend/BrandSparkz/assets/img/btn_primary_pattern.png') }}" alt="" class="img-fluid btn_global_pattern">
+            <div class="btn_global_inner w-100">
+                
+                <p class="cart_text" >ok</p>
+                <img src="{{ asset('frontend/BrandSparkz/assets/img/cross.svg') }}" alt="" class="img-fluid cart_logo">
+            </div>
+    </button>
+        
+      </div>
+    </div>
+  </div>
+  
+  
+
+
+
+
+
+<!-- contactus  Modal -->
+
+@if(session('contactsuccess'))
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            let modal = new bootstrap.Modal(document.getElementById('contactModal'));
+            modal.show();
+        });
+    </script>
+@endif
+  
+  <div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered custom-modal-width">
+      <div class="modal-content custom_modal2 ">
+
+        <h1 class="modal_tt">
+           Contactus successful done! 
+        </h1>
+
+        <p class="modal_pp2">
+            Please wait while page refreshes
+        </p>
+
+        <button class="btn btn_global width_closebtn" data-bs-dismiss="modal">
+            <img src="{{ asset('frontend/BrandSparkz/assets/img/btn_primary_pattern.png') }}" alt="" class="img-fluid btn_global_pattern">
+            <div class="btn_global_inner w-100">
+                
+                <p class="cart_text" >ok</p>
+                <img src="{{ asset('frontend/BrandSparkz/assets/img/cross.svg') }}" alt="" class="img-fluid cart_logo">
+            </div>
+    </button>
+        
+      </div>
+    </div>
+  </div>
+  
+  
+  <!-- custome pakage modal-->
+  
+  
+  @if(session('packagesuccess'))
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            let modal = new bootstrap.Modal(document.getElementById('packageModal'));
+            modal.show();
+        });
+    </script>
+@endif
+  
+  <div class="modal fade" id="packageModal" tabindex="-1" aria-labelledby="packageModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered custom-modal-width">
+      <div class="modal-content custom_modal2 ">
+
+        <h1 class="modal_tt">
+           package successful done! 
+        </h1>
+
+        <p class="modal_pp2">
+            Please wait while page refreshes
+        </p>
+
+        <button class="btn btn_global width_closebtn"  data-bs-dismiss="modal">
+            <img src="{{ asset('frontend/BrandSparkz/assets/img/btn_primary_pattern.png') }}" alt="" class="img-fluid btn_global_pattern">
+            <div class="btn_global_inner w-100">
+                
+                <p class="cart_text">ok</p>
+                <img src="{{ asset('frontend/BrandSparkz/assets/img/cross.svg') }}" alt="" class="img-fluid cart_logo">
+            </div>
+    </button>
+        
+      </div>
+    </div>
+  </div>
+  
+
+
+
+
+
+<!--reset password -->
+
+
+@if(session('resetpasswordlinksent'))
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            let modal = new bootstrap.Modal(document.getElementById('passwordModal'));
+            modal.show();
+        });
+    </script>
+@endif
+
+
+
+<div class="modal fade" id="passwordModal" tabindex="-1" aria-labelledby="passwordModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered custom-modal-width">
+      <div class="modal-content custom_modal2 ">
+
+        <h1 class="modal_tt">
+            reset password link sent!
+        </h1>
+
+        <p class="modal_pp2">
+            Please wait while page refreshes
+        </p>
+
+        <button class="btn btn_global width_closebtn" data-bs-dismiss="modal">
+            <img src="{{ asset('frontend/BrandSparkz/assets/img/btn_primary_pattern.png') }}" alt="" class="img-fluid btn_global_pattern">
+            <div class="btn_global_inner w-100">
+                
+                <p class="cart_text" >ok</p>
+                <img src="{{ asset('frontend/BrandSparkz/assets/img/cross.svg') }}" alt="" class="img-fluid cart_logo">
+            </div>
+    </button>
+        
+      </div>
+    </div>
+  </div>
+  
+  
+  
 
   
   
@@ -403,13 +614,13 @@
 
     <!-- Custom Scripts -->
     <script>
-        $(function() {
-            // Header scroll effect
-            $(document).scroll(function() {
-                var $nav = $(".fixed-top");
-                $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
-            });
-        });
+        // $(function() {
+        //     // Header scroll effect
+        //     $(document).scroll(function() {
+        //         var $nav = $(".fixed-top");
+        //         $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
+        //     });
+        // });
     </script>
     <script>
         $(document).ready(function() {
@@ -489,9 +700,9 @@
         $(document).ready(function() {
             $('#currency_drop button').on('click', function() {
                 let currency_code = $(this).data('currency');
-
+        
                 $.ajax({
-                    url: '/currency',
+                    url: "{{ url('currency') }}", // dynamically generates the correct full URL
                     type: 'POST',
                     data: {
                         currency_code: currency_code,
@@ -505,6 +716,11 @@
                 });
             });
         });
+
+        
+       
+               
+
 
         // mobile currency change 
         $(document).ready(function() {
@@ -657,32 +873,6 @@
 
     </script>
 
-<script>
-    function show_purchase_history_details(order_id) {
-        $('#order-details-modal-body').html(null);
-
-        if (!$('#modal-size').hasClass('modal-lg')) {
-            $('#modal-size').addClass('modal-lg');
-        }
-
-        $.ajax({
-            type: 'POST',
-            url: '{{ route('purchase_history.details') }}',
-            data: {
-                _token: $('meta[name="csrf-token"]').attr('content'),
-                order_id: order_id
-            },
-            success: function(data) {
-                $('#order-details-modal-body').html(data);
-                $('#order_details').modal("show");
-                $('.c-preloader').hide();
-            },
-            error: function(xhr) {
-                console.error('Error loading purchase details:', xhr.responseText);
-            }
-        });
-    }
-</script>
 
    
     

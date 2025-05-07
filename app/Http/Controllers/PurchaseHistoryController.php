@@ -23,25 +23,25 @@ class PurchaseHistoryController extends Controller
         }
     }
 
-    public function purchase_history_details(Request $request)
+    
+    public function purchase_history_details($id)
     {
         try {
-            $order = Order::findOrFail($request->order_id);
-            
+            $order = Order::findOrFail($id);
+    
             $order->update([
                 'delivery_viewed' => 1,
                 'payment_status_viewed' => 1
             ]);
-
-            return view('frontend.partials.order_details_customer', compact('order'));
+    
+            return view('frontend.order_details_customer', compact('order'));
+    
         } catch (\Exception $e) {
-            Log::error('Order details error: ' . $e->getMessage());
-            return response()->json([
-                'success' => false,
-                'message' => 'Unable to load order details'
-            ], 500);
+            \Log::error('Order details error: ' . $e->getMessage());
+            return redirect()->back()->with('error', 'Unable to load order details.');
         }
     }
+
 
     public static function order_quantity($order_id)
     {

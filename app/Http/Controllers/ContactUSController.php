@@ -41,7 +41,7 @@ class ContactUSController extends Controller
 
         $todaySubmissions = ContactUs::ipSubmissionsToday($ip);
 
-        if ($todaySubmissions >= 4) {
+        if ($todaySubmissions >= 24) {
             Flash::warning('Daily submission limit reached. Please try again tomorrow.');
             throw new \Exception('Daily submission limit reached. Please try again tomorrow.');
         }
@@ -55,11 +55,11 @@ class ContactUSController extends Controller
         try {
             $this->validateRequest($request);
 
-            // if (!$request->input('h-captcha-response')) {
-            //     Flash::error('Please complete the captcha verification');
-            //     return back()->withInput();
-            // }
-            // $this->verifyCaptcha($request);
+            if (!$request->input('h-captcha-response')) {
+                Flash::error('Please complete the captcha verification');
+                return back()->withInput();
+            }
+            $this->verifyCaptcha($request);
 
             try {
                 $ip = $this->validateIpSubmissions($request);
@@ -99,8 +99,15 @@ class ContactUSController extends Controller
                 );
             });
 
-            Flash::success('Your message has been sent successfully!');
-            return back()->with($this->getSuccessMessage($request->from_page));
+            //session()->flash('contactsuccess');
+            //return back()->with($this->getSuccessMessage($request->from_page));
+            if ($request->from_page == 'contactus') {
+                session()->flash('contactsuccess', true);
+            } else {
+                session()->flash('packagesuccess', true);
+            }
+            
+            return back();
         } catch (ValidationException $e) {
             Flash::error('Please check your input and try again.');
             return back()->withErrors($e->errors())->withInput();

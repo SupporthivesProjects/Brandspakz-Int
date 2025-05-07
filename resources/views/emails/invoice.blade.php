@@ -1,6 +1,6 @@
 @php
-    $order = $emailData['order'];
-    $shipping_address = json_decode($order->shipping_address);
+    $order = $emailData['data']['order'];
+    $shipping_address = $order->shipping_address;
 @endphp
 
 <!DOCTYPE html>
@@ -41,6 +41,7 @@
 
                         </td>
                     </tr>
+                    <!-- Order Summary Section -->
                     <tr>
                         <td style="padding: 10px 40px;padding-bottom:40px;">
                             <p style="font-size: 16px; font-weight:700;text-transform:capitalize;font-family:Arial;color:#0E0E0E;text-align:center;">Billing Details:</p>
@@ -54,60 +55,40 @@
                                     <td style="width:242px;text-align:center;">{{ $shipping_address->phone }}</td>
                                 </tr>
                             </table>
-                            <table style="margin-top:40px;padding:24px;">
-                                @php
-                                    $total = 0; 
-                                @endphp
-                                @foreach ($order as $key => $orderDetail)
+                    
+                            <table style="margin-top:40px;padding:24px;" width="100%" cellspacing="0" cellpadding="10" border="0">
+                                <tr style="background-color:#f2f2f2;font-weight:bold;text-align:center;">
+                                    <td>Product</td>
+                                    <td>Subscription</td>
+                                    <td>Quantity</td>
+                                    <td>Price</td>
+                                </tr>
+                                @php $total = 0; @endphp
+                                @foreach ($order->orderDetails as $orderDetail)
                                     @if($orderDetail->product != null)
                                         @php
                                             $product = \App\Models\Product::find($orderDetail->product->id);
-                                            $total = $total + round(convert_price($orderDetail->price), 2);
+                                            $total += round(convert_price($orderDetail->price), 2);
                                         @endphp
-                                <tr>
-                                   <td style="width:236px;">
-                                        <p style="font-family: Arial;font-weight:400;font-size: 16px;line-height: 27px;letter-spacing: 0px;vertical-align: middle;color: #1C1F26;margin: 0px;">
-                                           <b>{{ $product->name }}</b>
-                                        </p>
-                                   </td>
-                                   <td style="width:100px;">
-                                    <p style="font-family: Arial;font-weight:400;font-size: 16px;line-height: 27px;letter-spacing: 0px;vertical-align: middle;color: #1C1F26;margin: 0px;text-align: center;">
-                                        {{ $product->subscription }}<
-                                    </p>
-                               </td> 
-                                   <td style="width:50px;">
-                                <p style="font-family: Arial;font-weight:400;font-size: 16px;line-height: 27px;letter-spacing: 0px;vertical-align: middle;color: #1C1F26;margin: 0px;text-align: center;">
-                                    {{ $orderDetail->quantity }}
-                                </p>
-                           </td> 
-                                   <td style="width:150px;">
-                                        <p style="font-family: Arial;font-weight:400;font-size: 16px;line-height: 27px;letter-spacing: 0px;vertical-align: middle;color: #1C1F26;margin: 0px;text-align: center;">
-                                            {{ single_price($orderDetail->price) }}
-                                        </p>
-                                   </td> 
-                                </tr>
-                                @endif
+                                        <tr>
+                                            <td style="text-align:center;">{{ $product->name }}</td>
+                                            <td style="text-align:center;">{{ $product->subscription }}</td>
+                                            <td style="text-align:center;">{{ $orderDetail->quantity }}</td>
+                                            <td style="text-align:center;">{{ single_price($orderDetail->price) }}</td>
+                                        </tr>
+                                    @endif
                                 @endforeach
                                 <tr>
-                                    <td colspan="4">
-                                          <p style="height: 2px;border-top: 1px solid #F3F3F1"></p>
-                                    </td>
+                                    <td colspan="4"><hr style="border: 1px solid #f3f3f1;"></td>
                                 </tr>
                                 <tr>
-                                    <td colspan="3">
-                                         <p style="font-family: Arial;font-weight:700;font-size:16px;line-height: 27px;letter-spacing: 0px;vertical-align: middle;color:black;margin: 0px;text-align: right;">
-                                            Total
-                                         </p>
-                                    </td>
-                                    <td>
-                                         <p style="font-family: Arial;font-weight:700;font-size:16px;line-height: 27px;letter-spacing: 0px;vertical-align: middle;color: #EE5921;margin: 0px;text-align: center;">
-                                            {{ currency_symbol() }}{{ $total }}
-                                         </p>
-                                    </td> 
-                                 </tr>
-                            </table>  
+                                    <td colspan="3" style="text-align:right;font-weight:bold;">Total</td>
+                                    <td style="text-align:center;color:#EE5921;font-weight:bold;">{{ currency_symbol() }}{{ $total }}</td>
+                                </tr>
+                            </table>
                         </td>
-                    </tr>     
+                    </tr>
+    
                    <!-----------Footer----------->
                    <tr>
                     <td>
@@ -119,9 +100,9 @@
                                 </td> 
                                 <td style="text-align:right;">
                                     <p style="font-size: 16px; font-weight:400; color:#3C3C3C;font-style: normal;font-family:Arial;line-height:24px;padding-right:40px;">
-                                    info@Companyname.com<br>
-                                    123 Main Street, <br>
-                                    New York, 10030 
+                                     support@brandsparkz.co<br>
+                                           TBC<br>
+                                           TBC
                                     </p>
                                 </td>           
                             </tr>

@@ -1,5 +1,13 @@
 @extends('frontend.layouts.app')
 
+
+<style>
+    
+    .btn_header_link, .btn_header_drop {
+        color: #3c3c3c !important;
+    }
+</style>
+
 @section('content')
     
 
@@ -20,7 +28,7 @@
                         <button class="btn btn_global mx-auto">
                             <img src=" {{ asset('frontend/BrandSparkz/assets/img/btn_primary_pattern.png') }}" alt="" class="img-fluid btn_global_pattern">
                             <div class="btn_global_inner" >
-                                <p class="cart_text"> <a class="cart_text" href="{{ route('user.login') }}">Login </a></p>
+                                <p class="cart_text" onclick="window.location.href='{{ route('user.login') }}'">Login</p>
                                 <img src=" {{ asset('frontend/BrandSparkz/assets/img/arrow_logo.svg') }}" alt="" class="img-fluid cart_logo">
                             </div>
                         </button>
@@ -39,7 +47,7 @@
 
                         <div class="contact_input_div">
                             <p class="register_input_title">Email</p>
-                            <input type="text" class="form-control input_global" id="email" name="email" form="registerform">
+                            <input type="email" class="form-control input_global" id="email" name="email" form="registerform">
                         </div>
 
                         <div class="contact_input_div">
@@ -58,21 +66,19 @@
                         <div class="contact_input_div register_page_box">
                             <div class="row">
                                 <div class="col-md-12">
-                                    {{-- <img src=" {{ asset('frontend/BrandSparkz/assets/img/reCAPTCHA.png') }}" alt="" class="img-fluid d-flex mx-auto mb-3"> --}}
                                     <script src="https://js.hcaptcha.com/1/api.js" async defer></script>
-                                        <div class="h-captcha mx-auto my_mob_24" data-sitekey="{{ env('H_CAPTCHA_SITE_KEY') }}">
-                                        </div>
+                                    <div class="h-captcha mx-auto my_mob_24" data-sitekey="{{ env('H_CAPTCHA_SITE_KEY') }}" ></div>
                                 </div>
                                 <div class="col-md-12">
-                                    <div class="c-checkbox mb-3">
-                                        <div class="c-div">
+                                    <div class="c-checkbox_m2">
+                                        <div class="c-div_m2">
                                         <label class="d-flex justify-content-center justify-content-lg-start">
-                                            <input type="checkbox" id="terms" name="terms">
+                                            <input type="checkbox" id="terms" name="terms" form="registerform">
                                             <label for="terms"></label>
                                         </label>
                                         </div>
-                                        <div class="c-text">
-                                        <p class="login_strong">By ticking this box, you agree to the 
+                                        <div class="c-text_m2">
+                                        <p class="login_strong_m2">By ticking this box, you agree to the 
                                             <a href="{{ route('termsandconditions') }}" >Terms & Conditions</a> &
                                             <a href="{{ route('privacypolicy') }}">Privacy Policy</a></p>
                                         </div>
@@ -85,7 +91,7 @@
                             <button class="btn btn_global2 mx-auto" type="submit" form="registerform">
                                 <img src=" {{ asset('frontend/BrandSparkz/assets/img/btn_primary_pattern2.png') }}" alt="" class="img-fluid btn_global_pattern2">
                                 <div class="btn_global_inner2">
-                                    <p class="cart_text">Submit Message</p>
+                                    <p class="cart_text">Create an account</p>
                                     <img src=" {{ asset('frontend/BrandSparkz/assets/img/arrow_logo.svg') }}" alt="" class="img-fluid cart_logo">
                                 </div>
                             </button>
@@ -102,7 +108,7 @@
                     <button class="btn btn_global mx-auto">
                         <img src=" {{ asset('frontend/BrandSparkz/assets/img/btn_primary_pattern.png') }}" alt="" class="img-fluid btn_global_pattern">
                         <div class="btn_global_inner">
-                            <p class="cart_text"><a class="cart_text" href="{{ route('user.login') }}">Login</a></p>
+                            <p class="cart_text" onclick="window.location.href='{{ route('user.login') }}'">Login</p>
                             <img src=" {{ asset('frontend/BrandSparkz/assets/img/arrow_logo.svg') }}" alt="" class="img-fluid cart_logo">
                         </div>
                     </button>
@@ -111,7 +117,9 @@
         </div>
     </section>
 
+@endsection
 
+@section('scripts')
     <script type="text/javascript">
         function check_agree(form) {
 
@@ -142,5 +150,41 @@
             }
             return false;
         }
+    </script>
+    
+    <script>
+        @if (session('captcha_error'))
+            Swal.fire({
+                icon: 'warning',
+                title: 'Captcha Required',
+                text: '{{ session('captcha_error') }}',
+                confirmButtonColor: '#3085d6',
+                confirmButtonText: 'OK'
+            });
+        @endif
+    </script>
+    
+    
+    <script>
+          const logo = document.getElementById('header_logo');
+          console.log(window.location.href)
+          logo.src="{{ asset('frontend/BrandSparkz/assets/img/header_bg_dark_logo.svg') }}";
+          
+           const navbar = document.getElementById('header'); 
+             navbar.classList.add('white_header'); 
+            window.addEventListener('scroll', function () {
+              const logochange = document.getElementById('header_logo');
+                 
+            
+              if (window.scrollY > 100) {
+                
+                logochange.src="{{ asset('frontend/BrandSparkz/assets/img/header_bg_dark_logo.svg') }}";
+                 //navbar.classList.add('white_header'); 
+               } else {
+                 
+                 logochange.src="{{ asset('frontend/BrandSparkz/assets/img/header_bg_dark_logo.svg') }}";
+                  //navbar.classList.remove('white_header');  
+              }
+           });
     </script>
 @endsection

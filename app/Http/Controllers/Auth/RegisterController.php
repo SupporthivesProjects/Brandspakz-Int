@@ -11,6 +11,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
+use Illuminate\Support\Facades\Http;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Auth\Events\Registered;
 use Illuminate\Support\Facades\Mail;
@@ -37,7 +38,7 @@ class RegisterController extends Controller
             'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
-            // 'h-captcha-response' => ['required']
+            'h-captcha-response' => ['required']
         ]);
     }
 
@@ -71,50 +72,123 @@ class RegisterController extends Controller
         }
     }
 
+   
+
     public function register(Request $request)
     {
+        // Validate hCaptcha token first
+        $hcaptchaResponse = $request->input('h-captcha-response');
+    
+        if (!$hcaptchaResponse) 
+        {
+            session()->flash('captcha_error', 'Please select the captcha.');
+            return back()->withInput();
+        }
+    
+        $response = Http::asForm()->post('https://hcaptcha.com/siteverify', [
+            'secret' => env('H_CAPTCHA_SECRET_KEY'),
+            'response' => $hcaptchaResponse,
+            'remoteip' => $request->ip(),
+        ]);
+    
+        if (!($response->json()['success'] ?? false)) {
+            return back()->withErrors(['captcha' => 'Captcha verification failed.'])->withInput();
+        }
+    
+        // Then continue with your existing validation and logic
         $validator = Validator::make($request->all(), [
             'name' => 'required|string|max:255',
             'email' => 'required|string|email|max:255|unique:users',
             'password' => 'required|string|min:8|confirmed',
         ]);
-
+    
         if ($validator->fails()) {
             return back()
                 ->withErrors($validator)
                 ->withInput();
         }
-
+    
+    
         $user = DB::transaction(function () use ($request) {
-            $user = User::create([
-                'name' => $request->name,
-                'email' => $request->email,
-                'password' => Hash::make($request->password),
-                'verification_token' => Str::random(64),
-                'email_verified_at' => null
-            ]);
+        $user = User::create([
+            'name' => $request->name,
+            'email' => $request->email,
+            'password' => Hash::make($request->password),
+            'verification_token' => Str::random(64),
+            'email_verified_at' => null
+        ]);
 
-            Customer::create([
-                'user_id' => $user->id
-            ]);
-            // Using the EmailService
-            $this->emailService->send(
-                'verify',
-                [
-                    'user' => $user,
-                    'token' => $user->verification_token
-                ],
-                $user->email,
-                'Verify Your Email Address'
-            );
+        Customer::create([
+            'user_id' => $user->id
+        ]);
+        // Using the EmailService
+        $this->emailService->send(
+            'verify',
+            [
+                'user' => $user,
+                'token' => $user->verification_token
+            ],
+            $user->email,
+            'Verify Your Email Address'
+        );
 
-            return $user;
-        });
+        return $user;
+    });
 
-        auth()->login($user);
-        Flash::success('Registration successful! Please verify your email address.');
-        return redirect()->route('index');
+    auth()->login($user);
+    //Flash::success('Registration successful! Please verify your email address.');
+    session()->flash('registrationsuccess');
+    return redirect()->route('index');
+    
+        
     }
+
+
+    // public function register(Request $request)
+    // {
+    //     $validator = Validator::make($request->all(), [
+    //         'name' => 'required|string|max:255',
+    //         'email' => 'required|string|email|max:255|unique:users',
+    //         'password' => 'required|string|min:8|confirmed',
+    //     ]);
+
+    //     if ($validator->fails()) {
+    //         return back()
+    //             ->withErrors($validator)
+    //             ->withInput();
+    //     }
+        
+    //     $user = DB::transaction(function () use ($request) {
+    //         $user = User::create([
+    //             'name' => $request->name,
+    //             'email' => $request->email,
+    //             'password' => Hash::make($request->password),
+    //             'verification_token' => Str::random(64),
+    //             'email_verified_at' => null
+    //         ]);
+
+    //         Customer::create([
+    //             'user_id' => $user->id
+    //         ]);
+    //         // Using the EmailService
+    //         $this->emailService->send(
+    //             'verify',
+    //             [
+    //                 'user' => $user,
+    //                 'token' => $user->verification_token
+    //             ],
+    //             $user->email,
+    //             'Verify Your Email Address'
+    //         );
+
+    //         return $user;
+    //     });
+
+    //     auth()->login($user);
+    //     //Flash::success('Registration successful! Please verify your email address.');
+    //     session()->flash('registrationsuccess');
+    //     return redirect()->route('index');
+    // }
 
 
     protected function registered(Request $request, $user)

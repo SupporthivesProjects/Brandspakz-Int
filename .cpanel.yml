@@ -1,0 +1,5 @@
+---
+deployment:
+ tasks:
+ - export DEPLOYPATH=/home/public_html/BrandSpakz-Int
+ - /bin/cp -r * $DEPLOYPATH

@@ -16,7 +16,7 @@
                     <img src="{{ asset('frontend/BrandSparkz/assets/img/intersect.png') }}" alt="" class="intersect">
                     <div class="container">
                         <div class="terms_div1">
-                            <h3 class="terms_heading">Checkout</h3>
+                            <h3 class="Sc_heading">Checkout</h3>
                             <p class="para_terms">Lorem ipsum dolor sit amet consectetur. Purus eget arcu non suscipit id.
                             </p>
                         </div>
@@ -46,27 +46,27 @@
                                 <div class="inputSC_inner">
                                     <div class="inputparaSC">
                                         <p class="paraSC">First Name</p>
-                                        <input type="text" class="inputSC" form="shippingAddress" name="name"
+                                        <input type="text" class=" form-control input_global" form="shippingAddress" name="name"
                                             id="name" value="{{ $lastBillingAddress->name ?? '' }}" required>
                                     </div>
                                     <div class="inputparaSC">
                                         <p class="paraSC">Phone</p>
-                                        <input type="text" class="inputSC" form="shippingAddress" name="phone"
+                                        <input type="text" class="form-control input_global" form="shippingAddress" name="phone"
                                             id="phone" value="{{ $lastBillingAddress->phone ?? '' }}" required>
                                     </div>
                                     <div class="inputparaSC">
                                         <p class="paraSC">Address Line 1</p>
-                                        <input type="text" class="inputSC" form="shippingAddress" name="address"
+                                        <input type="text" class="form-control input_global" form="shippingAddress" name="address"
                                             id="address" value="{{ $lastBillingAddress->address ?? '' }}" required>
                                     </div>
                                     <div class="inputparaSC">
                                         <p class="paraSC">City</p>
-                                        <input type="text" class="inputSC" form="shippingAddress" name="city"
+                                        <input type="text" class="form-control input_global" form="shippingAddress" name="city"
                                             id="city" value="{{ $lastBillingAddress->city ?? '' }}" required>
                                     </div>
                                     <div class="inputparaSC">
                                         <p class="paraSC">Date Of Birth</p>
-                                        <input type="date" class="inputSC" value="{{ $lastBillingAddress->dob ?? '' }}"
+                                        <input type="date" class="form-control input_global" value="{{ $lastBillingAddress->dob ?? '' }}"
                                             id="dob" name="dob" form="shippingAddress"
                                             max="{{ date('Y-m-d', strtotime('18 years ago')) }}" required>
                                     </div>
@@ -74,33 +74,37 @@
                                 <div class="inputSC_inner">
                                     <div class="inputparaSC">
                                         <p class="paraSC">Last Name</p>
-                                        <input type="text" class="inputSC" form="shippingAddress" name="lname"
+                                        <input type="text" class="form-control input_global" form="shippingAddress" name="lname"
                                             id="lname" value="{{ $lastBillingAddress->lname ?? '' }}" required>
                                     </div>
 
                                     <div class="inputparaSC">
                                         <p class="paraSC">Address Line 2</p>
-                                        <input type="text" class="inputSC" form="shippingAddress" name="addressL2"
+                                        <input type="text" class="form-control input_global" form="shippingAddress" name="addressL2"
                                             id="addressL2" value="{{ $lastBillingAddress->addressL2 ?? '' }}">
                                     </div>
                                     <div class="inputparaSC">
                                         <p class="paraSC">StateProvince</p>
-                                        <input type="text" class="inputSC" form="shippingAddress" name="StateProvince"
+                                        <input type="text" class="form-control input_global" form="shippingAddress" name="StateProvince"
                                             id="StateProvince" required placeholder="StateProvince">
                                     </div>
                                     <div class="inputparaSC">
                                         <p class="paraSC">Country</p>
-                                        <select class="inputSC" id="country" name="country"
+                                        <div style="position: relative;">
+                                        <select class="form-control input_global" id="country" name="country"
                                             style="border: 1px solid #BDBDBD;" aria-label="Default select example"
                                             form="shippingAddress" required>
                                             @foreach (\App\Models\Country::all() as $key => $country)
                                                 <option value="{{ $country->code ?? '' }}">{{ $country->name }}</option>
                                             @endforeach
                                         </select>
+                                        <img src="{{ asset('frontend/BrandSparkz/assets/img/drop.svg') }}" class="image-fluid" style="position: absolute; right: 24px;top: 9px;">
+                                        
+                                        </div>
                                     </div>
                                     <div class="inputparaSC">
                                         <p class="paraSC">Postcode / Zip</p>
-                                        <input type="text" class="inputSC" form="shippingAddress" name="postal_code"
+                                        <input type="text" class="form-control input_global" form="shippingAddress" name="postal_code"
                                             id="postal_code" value="{{ $lastBillingAddress->postal_code ?? '' }}"
                                             required>
                                     </div>
@@ -327,7 +331,7 @@
 
 
 
-    <script>
+    {{--<script>
         function check_agree(form) {
             var response = grecaptcha.getResponse();
             return true;
@@ -352,5 +356,33 @@
                 return false;
             }
         }
-    </script>
+    </script>--}}
+    
+    
+<script>
+    function check_agree(form) {
+        const termsAccepted = form.terms.checked;
+        const hcaptchaResponse = document.querySelector('[name="h-captcha-response"]')?.value;
+
+        if (!termsAccepted) {
+            Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text: 'Please accept the Terms & Conditions.'
+            });
+            return false;
+        }
+
+        if (!hcaptchaResponse) {
+            Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text: 'Please complete the CAPTCHA.'
+            });
+            return false;
+        }
+
+        return true;
+    }
+</script>
 @endsection

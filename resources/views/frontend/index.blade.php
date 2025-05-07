@@ -2,16 +2,22 @@
 
 @section('content')    
     <style>
-    .carousel_mob_int{
+        .carousel_mob_int{
             display:flex;
             display:none;
         }
-    @media only screen and (max-width: 600px) {
-        .carousel_mob_int{
-            display:flex !important;
-            display:block
+        .btn_header_link, .btn_header_drop {
+            color: #3c3c3c !important;
         }
-    }
+        .header_center_bar {
+            background: #3c3c3c !important;
+        }
+        @media only screen and (max-width: 600px) {
+            .carousel_mob_int{
+                display:flex !important;
+                display:block
+            }
+        }
     </style>
 
     <section class="home_page">
@@ -57,7 +63,7 @@
                                     </div>
                                 </div>
                                 <div class="wm_text_div">
-                                    <p class="hs1_wm_text">Two Factor Authentication</p>
+                                    <p class="hs1_wm_text" data-aos="fade-up">Two Factor Authentication</p>
                                 </div>
                             </div>
 
@@ -68,7 +74,7 @@
                                     </div>
                                 </div>
                                 <div class="wm_text_div">
-                                    <p class="hs1_wm_text">Multi User Access</p>
+                                    <p class="hs1_wm_text" data-aos="fade-up">Multi User Access</p>
                                 </div>
                             </div>
 
@@ -79,7 +85,7 @@
                                     </div>
                                 </div>
                                 <div class="wm_text_div">
-                                    <p class="hs1_wm_text">A/B Testing</p>
+                                    <p class="hs1_wm_text" data-aos="fade-up">A/B Testing</p>
                                 </div>
                             </div>
 
@@ -164,12 +170,12 @@
                         <div class="hs1_content">
                             <div class="hs1_pre_title_div">
                                 <div class="hs1_pre_title_disc"></div>
-                                <p class="hs1_pre_title">Digital Marketing</p>
+                                <p class="hs1_pre_title" data-aos="fade-up">Digital Marketing</p>
                             </div>
-                            <h1 class="hs1_title">You Bring the <span>Dream</span><br>
+                            <h1 class="hs1_title" data-aos="fade-up">You Bring the <span>Dream</span><br>
                                 We Bring the <span>Spark</span></h1>
-                            <p class="hs1_subtitle">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Justo, feugiat laoreet vel, amet tristique dolor euismod sed diam. Consectetur porttitor diam mattis commodo sed elementum.
+                            <p class="hs1_subtitle" data-aos="fade-up">
+                                Let us ignite your business ambitions by giving your ideas the spark they deserve by connecting you with your ideal customer base for maximum impact. 
                             </p>
 
                             <div class="hs1_slider_div_main">
@@ -182,7 +188,7 @@
                                                 <img src="{{ asset('frontend/BrandSparkz/assets/img/owl_seo.png') }}" alt="" class="img-fluid owl_image">
                                             </div>
                                             <div class="botom_trix">
-                                                <p class="slide_btm_trix_txt">Search Engine Optimization</p>
+                                                <p class="slide_btm_trix_txt" data-aos="fade-up">Search Engine Optimization</p>
                                                 <div class="circ_btn">
                                                     <svg xmlns="http://www.w3.org/2000/svg" width="36" height="37" viewBox="0 0 36 37" fill="none">
                                                         <circle cx="18" cy="18.5" r="18" fill="#F3F3F1"/>
@@ -206,7 +212,7 @@
                                 </div>
 
                                 <div class="hs1_slider_btn_div mobile_none" style="display: inline-flex;">
-                                    <div class="">
+                                    <div class="d-flex" style="gap: 18px;">
                                         <button class="slider-btn left-btn">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="7" height="12" viewBox="0 0 7 12" fill="none">
                                                 <path d="M5.98315 10.678L1.0001 5.69493L5.98315 0.711877" stroke="#3C3C3C" stroke-linecap="round" stroke-linejoin="round"/>
@@ -252,7 +258,7 @@
                                     </div>
 
                                     <div class="index_pos_div">
-                                        <p class="index_pos"><span></span>/06</p>
+                                        <p class="index_pos" data-aos="fade-up"><span></span>/06</p>
                                     </div>
                                 </div>
 
@@ -272,15 +278,15 @@
                     </div>
                     <div class="hs2_left">
                         <div class="hs2_content">
-                            <h1 class="hs2_title">The Difference?<br>
+                            <h1 class="hs2_title" data-aos="fade-up">The Difference?<br>
                                 It's in the <span>Spark.</span></h1>
-                            <p class="hs2_subtitle">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Feugiat dictum eget etiam metus, facilisi. Congue libero, nulla sem pulvinar et commodo. Sed velit ornare at arcu semper. Adipiscing volutpat ac egestas dignissim volutpat nec vel. Eget pellentesque metus, feugiat iaculis. Odio est tortor urna libero purus at. Vitae placerat dolor ultrices lectus tristique dignissim odio purus amet. Mauris eget habitant in.
+                            <p class="hs2_subtitle" data-aos="fade-up">
+                                Here at Brand Sparkz we know to bring light and life to your business to propel it into the mainstream by connecting you with your target audience. Whether you’re a start-up looking for initial ignition, or a more established brand looking to re-ignite your online presence, we can create a tailored digital marketing plan for you. 
                             </p>
                             <button class="btn btn_global" onclick="window.location.href='{{ route('aboutus') }}'">
                                 <img src="{{ asset('frontend/BrandSparkz/assets/img/btn_primary_pattern.png') }}" alt="" class="img-fluid btn_global_pattern">
                                 <div class="btn_global_inner">
-                                    <p class="cart_text">Read More</p>
+                                    <p class="cart_text" data-aos="fade-up">Read More</p>
                                     <img src="{{ asset('frontend/BrandSparkz/assets/img/arrow_logo.svg') }}" alt="" class="img-fluid cart_logo">
                                 </div>
                             </button>
@@ -300,9 +306,9 @@
         <img src="{{ asset('frontend/BrandSparkz/assets/img/cutter_bottom_left.png') }}" alt="" class="img-fluid mobile_none cutter_bottom_left">
             <div class="container p-0">
                 <div class="hs3_title_box">
-                    <h1 class="hs3_title">The <span>Sparkz</span> Menu</h1>
-                    <p class="hs3_subtitle">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Justo, feugiat laoreet vel, amet tristique dolor euismod sed diam. Consectetur porttitor diam mattis commodo sed elementum, ultricies.
+                    <h1 class="hs3_title" data-aos="fade-up">The <span>Sparkz</span> Menu</h1>
+                    <p class="hs3_subtitle" data-aos="fade-up">
+                        As a full-service agency offering a combination of compelling digital and content-led campaigns, we can find the right solution to ignite your business. 
                     </p>
                 </div>
 
@@ -313,9 +319,9 @@
                                 <img src="{{ asset('frontend/BrandSparkz/assets/img/hs3_card_img.png') }}" alt="" class="img-fluid hs3_card_left_image">
                             </div>
                             <div class="hs3_card_left_right">
-                                <h6 class="hs3_card_title">Search Engine Optimisation ( SEO )</h6>
-                                <p class="hs3_card_subtitle">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dui ac id et facilisi. Arcu accumsan 
+                                <h6 class="hs3_card_title" data-aos="fade-up">Search Engine Optimisation ( SEO )</h6>
+                                <p class="hs3_card_subtitle" data-aos="fade-up">
+                                    See your business shoot to the top of search engine results using our analytics-led SEO strategies. 
                                 </p>
                             </div>
                         </div>
@@ -335,9 +341,9 @@
                                 <img src="{{ asset('frontend/BrandSparkz/assets/img/hs3_card_img2.png') }}" alt="" class="img-fluid hs3_card_left_image">
                             </div>
                             <div class="hs3_card_left_right">
-                                <h6 class="hs3_card_title">Pay-Per-Click ( PPC )</h6>
-                                <p class="hs3_card_subtitle">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dui ac id et facilisi. Arcu accumsan 
+                                <h6 class="hs3_card_title" data-aos="fade-up">Pay-Per-Click ( PPC )</h6>
+                                <p class="hs3_card_subtitle" data-aos="fade-up">
+                                    Get an instant boost of traffic to your website for new products and launches using paid-ads. 
                                 </p>
                             </div>
                         </div>
@@ -357,9 +363,9 @@
                                 <img src="{{ asset('frontend/BrandSparkz/assets/img/hs3_card_img3.png') }}" alt="" class="img-fluid hs3_card_left_image">
                             </div>
                             <div class="hs3_card_left_right">
-                                <h6 class="hs3_card_title">Online Reputation Management</h6>
-                                <p class="hs3_card_subtitle">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dui ac id et facilisi. Arcu accumsan 
+                                <h6 class="hs3_card_title" data-aos="fade-up">Online Reputation Management</h6>
+                                <p class="hs3_card_subtitle" data-aos="fade-up">
+                                    Send sparks flying online with a solid reputation for your brand letting your audience know your value.
                                 </p>
                             </div>
                         </div>
@@ -379,9 +385,9 @@
                                 <img src="{{ asset('frontend/BrandSparkz/assets/img/hs3_card_img4.png') }}" alt="" class="img-fluid hs3_card_left_image">
                             </div>
                             <div class="hs3_card_left_right">
-                                <h6 class="hs3_card_title">Web Design and Web Development</h6>
-                                <p class="hs3_card_subtitle">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dui ac id et facilisi. Arcu accumsan 
+                                <h6 class="hs3_card_title" data-aos="fade-up">Web Design and Web Development</h6>
+                                <p class="hs3_card_subtitle" data-aos="fade-up">
+                                    Showcase your value through an award-winning designed website which is sure to send sparks flying. 
                                 </p>
                             </div>
                         </div>
@@ -401,9 +407,9 @@
                                 <img src="{{ asset('frontend/BrandSparkz/assets/img/hs3_card_img5.png') }}" alt="" class="img-fluid hs3_card_left_image">
                             </div>
                             <div class="hs3_card_left_right">
-                                <h6 class="hs3_card_title">Email Marketing</h6>
-                                <p class="hs3_card_subtitle">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dui ac id et facilisi. Arcu accumsan 
+                                <h6 class="hs3_card_title" data-aos="fade-up">Email Marketing</h6>
+                                <p class="hs3_card_subtitle" data-aos="fade-up">
+                                   Connect with new and existing customers through engaging and highly-clickable email marketing campaigns.
                                 </p>
                             </div>
                         </div>
@@ -423,9 +429,9 @@
                                 <img src="{{ asset('frontend/BrandSparkz/assets/img/hs3_card_img6.png') }}" alt="" class="img-fluid hs3_card_left_image">
                             </div>
                             <div class="hs3_card_left_right">
-                                <h6 class="hs3_card_title">Social Media</h6>
-                                <p class="hs3_card_subtitle">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dui ac id et facilisi. Arcu accumsan 
+                                <h6 class="hs3_card_title" data-aos="fade-up">Social Media</h6>
+                                <p class="hs3_card_subtitle" data-aos="fade-up">
+                                    Keep the conversation and leads flowing through effective social media campaigns and content strategies. 
                                 </p>
                             </div>
                         </div>
@@ -447,9 +453,9 @@
         <div class="hs4">
             <div class="container">
                 <div class="hs4_title_box">
-                    <h1 class="hs4_title">The <span>Brand Sparkz</span> Flow</h1>
-                    <p class="hs4_subtitle">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Justo, feugiat laoreet vel, amet tristique dolor euismod sed diam. Consectetur porttitor diam mattis commodo sed elementum, ultricies.
+                    <h1 class="hs4_title" data-aos="fade-up">The <span>Brand Sparkz</span> Flow</h1>
+                    <p class="hs4_subtitle" data-aos="fade-up">
+                        Getting started with Brand Sparkz is easy, and we can have your business making all the right new leads and connections online in three simple steps. 
                     </p>
                 </div>
 
@@ -459,14 +465,14 @@
                         <div class="hs4_card">
                             <div class="hs4_card_box">
                                 <div class="hs4_card_box_top">
-                                    <p class="hs4_card_number">01</p>
+                                    <p class="hs4_card_number" data-aos="fade-up">01</p>
                                 </div>
-                                <h6 class="hs4_card_title">choose packages</h6>
-                                <p class="hs4_card_subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Felis phasellus condimentum feugiat dui ullamcorper tellus odio. Laoreet risus felis ultrices.</p>
+                                <h6 class="hs4_card_title" data-aos="fade-up">choose packages</h6>
+                                <p class="hs4_card_subtitle" data-aos="fade-up">Let us help you choose the packages that are right for you which can be selected individually or combined for maximum effect. </p>
                                 <button class="btn btn_global mx-auto" onclick="window.location.href='{{ route('seo') }}'">
                                     <img src="{{ asset('frontend/BrandSparkz/assets/img/btn_primary_pattern.png') }}" alt="" class="img-fluid btn_global_pattern">
                                     <div class="btn_global_inner">
-                                        <p class="cart_text">Explore the Sparkz Suite</p>
+                                        <p class="cart_text" data-aos="fade-up">Explore the Sparkz Suite</p>
                                         <img src="{{ asset('frontend/BrandSparkz/assets/img/arrow_logo.svg') }}" alt="" class="img-fluid cart_logo">
                                     </div>
                                 </button>
@@ -478,14 +484,14 @@
                         <div class="hs4_card">
                             <div class="hs4_card_box">
                                 <div class="hs4_card_box_top">
-                                    <p class="hs4_card_number">02</p>
+                                    <p class="hs4_card_number" data-aos="fade-up">02</p>
                                 </div>
-                                <h6 class="hs4_card_title">Schedule Appointment</h6>
-                                <p class="hs4_card_subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Felis phasellus condimentum feugiat dui ullamcorper tellus odio. Laoreet risus felis ultrices.</p>
+                                <h6 class="hs4_card_title" data-aos="fade-up">Schedule Appointment</h6>
+                                <p class="hs4_card_subtitle" data-aos="fade-up">Speak with a member of the team to discuss your unique needs and ambitions as a business in more detail. </p>
                                 <button class="btn btn_global mx-auto" onclick="window.location.href='{{ route('contactus') }}'">
                                     <img src="{{ asset('frontend/BrandSparkz/assets/img/btn_primary_pattern.png') }}" alt="" class="img-fluid btn_global_pattern">
                                     <div class="btn_global_inner">
-                                        <p class="cart_text">Contact Our Team</p>
+                                        <p class="cart_text" data-aos="fade-up">Contact Our Team</p>
                                         <img src="{{ asset('frontend/BrandSparkz/assets/img/arrow_logo.svg') }}" alt="" class="img-fluid cart_logo">
                                     </div>
                                 </button>
@@ -497,10 +503,10 @@
                         <div class="hs4_card">
                             <div class="hs4_card_box">
                                 <div class="hs4_card_box_top">
-                                    <p class="hs4_card_number">03</p>
+                                    <p class="hs4_card_number" data-aos="fade-up">03</p>
                                 </div>
-                                <h6 class="hs4_card_title">Grow together</h6>
-                                <p class="hs4_card_subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Felis phasellus condimentum feugiat dui ullamcorper tellus odio. Laoreet risus felis ultrices.</p>
+                                <h6 class="hs4_card_title" data-aos="fade-up">Grow together</h6>
+                                <p class="hs4_card_subtitle" data-aos="fade-up">Watch sparks fly as your campaigns come to life and ignite new interest from new and existing customers. </p>
                                 <button class="btn btn_global mx-auto" onclick="window.location.href='{{ route('seo') }}'">
                                     <img src="{{ asset('frontend/BrandSparkz/assets/img/btn_primary_pattern.png') }}" alt="" class="img-fluid btn_global_pattern">
                                     <div class="btn_global_inner">
@@ -528,6 +534,42 @@
                 </div>
             </div>
         </div>
+        
+        <section class="floater_section">
+            <div class="line_div mobile_none">
+    
+            </div>
+            <div class="grey_div mobile_none">
+    
+            </div>
+    
+            <div class="floater_div">
+    
+                <div class="inner_floater">
+                    <div>
+                        <h1 class="floater_div_tt" data-aos="fade-up">
+                            We’re <span class="floater_div_tt_span">All In</span>, Are You?
+                        </h1>
+                        <p class="floater_div_pp" data-aos="fade-up">
+                            If you want to ignite new interest in your business, we’re ready to get started. Register for an account today, and watch the sparks fly. 
+                        </p>
+    
+                    </div>
+    
+                    <button class="btn btn_global2 extra_button" onclick="window.location.href='{{ route('contactus') }}'">
+                       <img src="{{ asset('frontend/BrandSparkz/assets/img/btn_primary_pattern2.png') }}" alt=""
+                                class="img-fluid btn_global_pattern2">
+                        <div class="btn_global_inner2 extra_button">
+                            <p class="cart_text">Get started!</p>
+                        </div>
+                    </button>
+                </div>
+    
+    
+    
+            </div>
+    
+        </section>
     </section>
 @endsection
 
@@ -575,6 +617,8 @@
         smm: "{{ asset('frontend/BrandSparkz/assets/img/hs1_vid_smm_mob.mp4') }}"
     };
 </script>
+
+
 
 <!-- Owl Carousel JS Links -->
 

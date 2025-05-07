@@ -1,5 +1,12 @@
 @extends('frontend.layouts.app')
 
+<style>
+    
+        .btn_header_link, .btn_header_drop {
+            color: #3c3c3c !important;
+        }
+</style>
+
 @section('content')
     <section class="contact_page">
         <img src="{{ asset('frontend/BrandSparkz/assets/img/cutter_top_right.png') }}" alt=""
@@ -25,12 +32,12 @@
                                 </div>
                             </div>
                             <div class="wm_text_div">
-                                <p class="wm_text">Friendly support Team</p>
+                                <p class="wm_text" data-aos="fade-up">Friendly support Team</p>
                             </div>
                         </div>
                         <div class="women_mask_text_div wmtd2">
                             <div class="wm_text_div">
-                                <p class="wm_text">Real People, Real Solutions</p>
+                                <p class="wm_text" data-aos="fade-up">Real People, Real Solutions</p>
                             </div>
                             <div class="disc_div">
                                 <div class="outer_disc">
@@ -42,7 +49,7 @@
 
                     <div class="contact_info">
                         <div class="boxting">
-                            <p class="contact_info_title">Our Contacts</p>
+                            <p class="contact_info_title" data-aos="fade-up">Our Contacts</p>
                             <div class="contact_boxting_bar"></div>
                         </div>
 
@@ -51,23 +58,23 @@
                                 <img src="{{ asset('frontend/BrandSparkz/assets/img/ci1.png') }}" alt=""
                                     class="img-fluid">
                             </div>
-                            <p class="c_box_text">+44 (0)123 456 7890</p>
+                            <p class="c_box_text" data-aos="fade-up">TBC</p>
                         </div>
                         <div class="c_box_element">
                             <div class="circ_radial">
                                 <img src="{{ asset('frontend/BrandSparkz/assets/img/ci2.png') }}" alt=""
                                     class="img-fluid">
                             </div>
-                            <p class="c_box_text">info@Brandsparkz.com.com</p>
+                            <p class="c_box_text" data-aos="fade-up">support@brandsparkz.co</p>
                         </div>
                         <div class="c_box_element">
                             <div class="circ_radial">
                                 <img src="{{ asset('frontend/BrandSparkz/assets/img/ci3.png') }}" alt=""
                                     class="img-fluid">
                             </div>
-                            <p class="c_box_text">
-                                <span>Brand Sparkz Innovations FZ LLC</span>
-                                Creative Business Zone, New Metro District, United Arab Emirates.
+                            <p class="c_box_text" data-aos="fade-up">
+                                <span>TBC</span>
+                              
                             </p>
                         </div>
                     </div>
@@ -77,9 +84,9 @@
                     action="{{ route('contactus.store') }}" method="post" onsubmit="return check_agree(this);">
                     @csrf
                     <input type="hidden" name="from_page" value="contactus">
-                    <h1 class="contact_title">let's chat!</h1>
-                    <p class="contact_subtitle">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mi diam fermentum aliquam porttitor rutrum
+                    <h1 class="contact_title" data-aos="fade-up">Contact Us </h1>
+                    <p class="contact_subtitle" data-aos="fade-up">
+                        Simply fill in the form below and someone will come back to you as soon as possible. 
                     </p>
 
                     <div class="contact_input_div">
@@ -108,7 +115,7 @@
                                 <div class="c-checkbox mb-3">
                                     <div class="c-div">
                                         <label class="d-flex justify-content-center justify-content-lg-start">
-                                            <input type="checkbox" id="terms" name="terms">
+                                            <input type="checkbox" id="terms" name="terms" form="contactform">
                                             <label for="terms"></label>
                                         </label>
                                     </div>
@@ -121,14 +128,14 @@
                                 </div>
                             </div>
                             <div class="col-md-6">
-                                <div class="h-captcha mx-auto my_mob_24" data-sitekey="{{ env('H_CAPTCHA_SITE_KEY') }}"
-                                    form="contactform"></div>
+                                 <script src="https://js.hcaptcha.com/1/api.js" async defer></script>
+                                 <div class="h-captcha" data-sitekey="{{ env('H_CAPTCHA_SITE_KEY') }}" ></div>
                             </div>
                         </div>
                     </div>
 
                     <div class="contact_submit_div">
-                        <button class="btn btn_global mx-auto" type="submit">
+                        <button class="btn btn_global mx-auto" type="submit" form="contactform">
                             <img src="{{ asset('frontend/BrandSparkz/assets/img/btn_primary_pattern.png') }}"
                                 alt="" class="img-fluid btn_global_pattern">
                             <div class="btn_global_inner">
@@ -143,6 +150,13 @@
             </div>
         </div>
     </section>
+
+    
+@endsection
+
+@section('scripts')
+
+
 
     <script>
         function check_agree(form) {
@@ -190,4 +204,30 @@
             return false;
         }
     </script>
+    
+    
+<script>
+      const logo = document.getElementById('header_logo');
+      console.log(window.location.href)
+      logo.src="{{ asset('frontend/BrandSparkz/assets/img/header_bg_dark_logo.svg') }}";
+      
+       const navbar = document.getElementById('header'); 
+         navbar.classList.add('white_header'); 
+        window.addEventListener('scroll', function () {
+          const logochange = document.getElementById('header_logo');
+             
+        
+          if (window.scrollY > 100) {
+            
+            logochange.src="{{ asset('frontend/BrandSparkz/assets/img/header_bg_dark_logo.svg') }}";
+             //navbar.classList.add('white_header'); 
+           } else {
+             
+             logochange.src="{{ asset('frontend/BrandSparkz/assets/img/header_bg_dark_logo.svg') }}";
+              //navbar.classList.remove('white_header');  
+          }
+       });
+</script>
+
+
 @endsection

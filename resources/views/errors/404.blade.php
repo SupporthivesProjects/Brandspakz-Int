@@ -5,7 +5,7 @@
     <div class="error_div1">
         <div class="inner_error">
             <div class="text_error">
-                <h3 class="heading_error">oops, we lost you somewhere!</h3>
+                <h3 class="heading_error">oops, we lost you <br class="desktop_none"> somewhere!</h3>
                 <p class="para_error">Let us help you find your way back.</p>
             </div>
             <button class="btn btn_error" onclick="window.location.href='{{ route('home') }}'">Take Me Home</button>
